@@ -1,0 +1,15 @@
+{
+  "name": "svg-gallery",
+  "version": "2.0.0",
+  "description": "静态SVG图片库网站 - 支持搜索、标签筛选、预览、下载和详情页",
+  "scripts": {
+    "generate": "node scripts/generate.js",
+    "start": "npx http-server -p 3001 -c-1",
+    "build": "npm run generate",
+    "deploy": "npm run generate && git add . && git commit -m \"Update gallery\" && git push",
+    "admin": "python admin/app.py"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

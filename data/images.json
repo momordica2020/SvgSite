@@ -1,0 +1,36 @@
+[
+  {
+    "id": "item",
+    "name": "北洋国徽",
+    "tags": [
+      "中华民国",
+      "北洋",
+      "龙",
+      "十二章",
+      "中国",
+      "国徽",
+      "嘉禾",
+      "华虫"
+    ],
+    "svgFile": "Twelve_Symbols_national_emblem_of_China.svg",
+    "viewBox": null,
+    "svgWidth": "533",
+    "svgHeight": "506",
+    "originalImage": "1026 《北洋画报》民国国徽.webp",
+    "description": "1912年 中华民国（北洋政府）确定的国徽，要素为中国古代代表天子的十二章图案：\n\n- 日：即太阳，汉代以来的图案中常绘有三足乌鸦。\n- 月：即月亮，汉代以来的图案中常绘有蟾蜍或白兔。\n- 星辰：即星宿，通常以若干小圆圈表示星星，之间以直线相连，组成星宿图案。\n- 山：图案为群山之象。\n- 龙：图案为龙形。\n- 华虫：图案为鸟形，理解争议较大，孔颖达解释为“雉”即野鸡\n- 宗彝：即宗庙彝器，图案为尊形，是宗庙祭祀用的酒器。\n- 藻：即水藻，图案为水草形。\n- 火：即火焰，图案为火焰形。\n- 粉米：即白米，图案为数个米粒形。\n- 黼：图案为是黑白相次的斧形，刃白身黑。\n- 黻：图案抽象，为黑青相间的两“弓”形相背之纹饰，为刺绣之花纹。"
+  },
+  {
+    "id": "home",
+    "name": "ROC_Ministry_of_National_Defense_Flag",
+    "tags": [
+      "旗帜",
+      "国民党"
+    ],
+    "svgFile": "ROC_Ministry_of_National_Defense_Flag.svg",
+    "viewBox": null,
+    "svgWidth": "1125",
+    "svgHeight": "750",
+    "originalImage": null,
+    "description": "# Home\n\n这是一个**主页图标**，用于表示首页或主页导航。\n\n## 设计说明\n\n- 基于经典的房屋轮廓设计\n- 使用线性描边风格\n- 24x24 标准图标尺寸\n\n## 用途\n\n适用于网站导航、移动端应用等场景。"
+  }
+]
