@@ -253,6 +253,26 @@ class SvgGalleryAdmin:
             if item_id in existing_ids:
                 item_id = f"{item_id}-{datetime.now().strftime('%H%M%S')}"
 
+        # 自动将 SVG 文件重命名为 {id}.svg
+        new_svg_file = f"{item_id}.svg"
+        if svg_file != new_svg_file:
+            # 检查目标文件名是否被其他条目占用
+            for m in self.metadata:
+                if m.get('svgFile') == new_svg_file and m.get('id') != self.current_id:
+                    messagebox.showerror("错误", f"文件名 {new_svg_file} 已被其他条目占用")
+                    return
+            src_path = os.path.join(SVG_DIR, svg_file)
+            dest_path = os.path.join(SVG_DIR, new_svg_file)
+            if os.path.exists(src_path):
+                try:
+                    os.replace(src_path, dest_path)
+                except Exception as e:
+                    messagebox.showerror("重命名失败", str(e))
+                    return
+            # 无论源文件是否存在，都同步字段为规范的 {id}.svg
+            svg_file = new_svg_file
+            self.svg_file_var.set(svg_file)
+
         item_data = {
             'id': item_id,
             'name': name,
@@ -529,11 +549,14 @@ class SvgGalleryAdmin:
 
     # ========== 工具方法 ==========
     def generate_id(self, name):
-        """根据名称生成 ID"""
-        import re
-        id_str = re.sub(r'[^a-zA-Z0-9]', '-', name.lower())
+        """根据名称生成 ID（保留中文、字母、数字，其他字符替换为 -）"""
+        # 保留中文字符（\u4e00-\u9fff）、字母、数字，其他字符替换为 -
+        id_str = re.sub(r'[^\u4e00-\u9fffa-zA-Z0-9]', '-', name.lower())
         id_str = re.sub(r'-+', '-', id_str).strip('-')
-        return id_str if id_str else 'item'
+        # 名称全是特殊字符时，用时间戳作后备，避免重复生成 item
+        if not id_str:
+            id_str = f"item-{datetime.now().strftime('%Y%m%d%H%M%S')}"
+        return id_str
 
     def set_status(self, msg):
         """更新状态栏"""
