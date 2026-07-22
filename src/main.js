@@ -1,6 +1,13 @@
 let images = [];
 let currentImage = null;
 
+// 列表状态
+const PAGE_SIZE = 120;
+let currentPage = 1;
+let currentTag = 'all';
+let searchQuery = '';
+let tagCounts = {};
+
 // 缩放状态
 let zoomLevel = 1;
 let panX = 0;
@@ -20,15 +27,21 @@ async function loadImages() {
     try {
         const response = await fetch('data/images.json');
         images = await response.json();
+        computeTagCounts();
         renderTags();
-        renderGallery(images);
 
-        // 应用 URL 参数中的 tag 筛选（用于详情页跳转回来）
+        // 从 URL 读取 tag 和 page 参数（用于详情页跳转回来 / 分享链接）
         const params = new URLSearchParams(window.location.search);
         const tag = params.get('tag');
-        if (tag) {
-            handleTagClick(tag);
+        const page = parseInt(params.get('page'));
+        if (tag && tagCounts[tag] !== undefined) {
+            currentTag = tag;
         }
+        if (page && page > 0) {
+            currentPage = page;
+        }
+
+        applyFilter();
     } catch (error) {
         console.error('加载图片数据失败:', error);
         images = [];
@@ -38,6 +51,22 @@ async function loadImages() {
 function setupEventListeners() {
     const searchInput = document.getElementById('searchInput');
     searchInput.addEventListener('input', handleSearch);
+
+    // 标签搜索（侧边栏内筛选标签）
+    const tagSearchInput = document.getElementById('tagSearchInput');
+    if (tagSearchInput) {
+        tagSearchInput.addEventListener('input', filterTags);
+    }
+
+    // 移动端侧边栏抽屉控制
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    if (sidebarToggle) {
+        sidebarToggle.addEventListener('click', openSidebar);
+    }
+    if (sidebarOverlay) {
+        sidebarOverlay.addEventListener('click', closeSidebar);
+    }
 
     document.addEventListener('click', (e) => {
         // 模态框中的tag点击 - 关闭模态框并筛选该tag
@@ -49,8 +78,17 @@ function setupEventListeners() {
             }
             return;
         }
-        if (e.target.classList.contains('tag-btn')) {
-            handleTagClick(e.target.dataset.tag);
+        // 侧边栏标签按钮（含子元素点击）
+        const tagBtn = e.target.closest('.tag-btn');
+        if (tagBtn) {
+            handleTagClick(tagBtn.dataset.tag);
+            return;
+        }
+        // 分页按钮
+        const pageBtn = e.target.closest('.page-btn');
+        if (pageBtn && !pageBtn.disabled && !pageBtn.classList.contains('active')) {
+            goToPage(parseInt(pageBtn.dataset.page));
+            return;
         }
         // 阻止gallery-item-detail-btn的点击冒泡到gallery-item
         if (e.target.closest('.gallery-item-detail-btn')) {
@@ -89,23 +127,89 @@ function setupEventListeners() {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             closeModal();
+            closeSidebar();
         }
+    });
+}
+
+// 计算每个标签的图片数量
+function computeTagCounts() {
+    tagCounts = {};
+    images.forEach(img => {
+        img.tags.forEach(tag => {
+            tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+        });
     });
 }
 
 function renderTags() {
     const tagsList = document.getElementById('tagsList');
-    const allTags = new Set();
+    // "全部" 按钮
+    const allBtn = `<button class="tag-btn ${currentTag === 'all' ? 'active' : ''}" data-tag="all">
+        <span class="tag-btn-name">全部</span>
+        <span class="tag-btn-count">${images.length}</span>
+    </button>`;
 
-    images.forEach(img => {
-        img.tags.forEach(tag => allTags.add(tag));
+    // 按数量降序排序
+    const sortedTags = Object.keys(tagCounts).sort((a, b) => tagCounts[b] - tagCounts[a]);
+
+    const tagsHtml = sortedTags.map(tag =>
+        `<button class="tag-btn ${currentTag === tag ? 'active' : ''}" data-tag="${escapeHtml(tag)}">
+            <span class="tag-btn-name">${escapeHtml(tag)}</span>
+            <span class="tag-btn-count">${tagCounts[tag]}</span>
+        </button>`
+    ).join('');
+
+    tagsList.innerHTML = allBtn + tagsHtml;
+}
+
+// 侧边栏标签搜索筛选
+function filterTags() {
+    const query = document.getElementById('tagSearchInput').value.toLowerCase();
+    document.querySelectorAll('.tags-nav .tag-btn').forEach(btn => {
+        const name = btn.querySelector('.tag-btn-name').textContent.toLowerCase();
+        btn.style.display = name.includes(query) ? '' : 'none';
+    });
+}
+
+// 统一过滤逻辑
+function getFilteredItems() {
+    return images.filter(img => {
+        const matchesSearch = !searchQuery || img.name.toLowerCase().includes(searchQuery);
+        const matchesTag = currentTag === 'all' || img.tags.includes(currentTag);
+        return matchesSearch && matchesTag;
+    });
+}
+
+// 应用筛选并渲染（分页 + 图库 + 计数）
+function applyFilter() {
+    const filtered = getFilteredItems();
+    const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+
+    // 修正越界页码
+    if (currentPage > totalPages) currentPage = totalPages;
+    if (currentPage < 1) currentPage = 1;
+
+    // 更新标签激活状态
+    document.querySelectorAll('.tag-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.tag === currentTag);
     });
 
-    const sortedTags = Array.from(allTags).sort();
+    // 结果计数
+    const resultCount = document.getElementById('resultCount');
+    if (resultCount) {
+        if (filtered.length === 0) {
+            resultCount.textContent = '';
+        } else {
+            const start = (currentPage - 1) * PAGE_SIZE + 1;
+            const end = Math.min(currentPage * PAGE_SIZE, filtered.length);
+            resultCount.textContent = `${start}-${end} / 共 ${filtered.length} 张`;
+        }
+    }
 
-    tagsList.innerHTML = sortedTags.map(tag =>
-        `<button class="tag-btn" data-tag="${escapeHtml(tag)}">${escapeHtml(tag)}</button>`
-    ).join('');
+    renderGallery(filtered);
+    renderPagination(totalPages);
+    updateUrl();
 }
 
 function renderGallery(items) {
@@ -120,7 +224,11 @@ function renderGallery(items) {
 
     emptyState.style.display = 'none';
 
-    gallery.innerHTML = items.map(item => `
+    // 仅渲染当前页
+    const start = (currentPage - 1) * PAGE_SIZE;
+    const pageItems = items.slice(start, start + PAGE_SIZE);
+
+    gallery.innerHTML = pageItems.map(item => `
         <div class="gallery-item" data-id="${escapeHtml(item.id)}">
             <div class="gallery-item-image">
                 <img src="svg/${encodeURIComponent(item.svgFile)}" alt="${escapeHtml(item.name)}" loading="lazy">
@@ -142,34 +250,85 @@ function renderGallery(items) {
     `).join('');
 }
 
+// 分页控件
+function renderPagination(totalPages) {
+    const pagination = document.getElementById('pagination');
+    if (totalPages <= 1) {
+        pagination.innerHTML = '';
+        return;
+    }
+
+    let html = '';
+    // 上一页
+    html += `<button class="page-btn" data-page="${currentPage - 1}" ${currentPage === 1 ? 'disabled' : ''}>
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>`;
+
+    // 页码：显示首尾 + 当前页附近
+    const delta = 1;
+    const range = [];
+    range.push(1);
+    for (let i = currentPage - delta; i <= currentPage + delta; i++) {
+        if (i > 1 && i < totalPages) range.push(i);
+    }
+    if (totalPages > 1) range.push(totalPages);
+
+    let prev = 0;
+    for (const p of range.sort((a, b) => a - b)) {
+        if (p - prev > 1) {
+            html += `<span class="page-ellipsis">…</span>`;
+        }
+        html += `<button class="page-btn ${p === currentPage ? 'active' : ''}" data-page="${p}">${p}</button>`;
+        prev = p;
+    }
+
+    // 下一页
+    html += `<button class="page-btn" data-page="${currentPage + 1}" ${currentPage === totalPages ? 'disabled' : ''}>
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>`;
+
+    pagination.innerHTML = html;
+}
+
+function goToPage(page) {
+    currentPage = page;
+    applyFilter();
+    // 滚动到图库顶部
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 function handleSearch(e) {
-    const query = e.target.value.toLowerCase();
-    const activeTagBtn = document.querySelector('.tag-btn.active');
-    const activeTag = activeTagBtn ? activeTagBtn.dataset.tag : 'all';
-
-    const filtered = images.filter(img => {
-        const matchesSearch = img.name.toLowerCase().includes(query);
-        const matchesTag = activeTag === 'all' || img.tags.includes(activeTag);
-        return matchesSearch && matchesTag;
-    });
-
-    renderGallery(filtered);
+    searchQuery = e.target.value.toLowerCase();
+    currentPage = 1;
+    applyFilter();
 }
 
 function handleTagClick(tag) {
-    document.querySelectorAll('.tag-btn').forEach(btn => btn.classList.remove('active'));
-    const targetBtn = document.querySelector(`[data-tag="${tag}"]`);
-    if (targetBtn) targetBtn.classList.add('active');
+    currentTag = tag;
+    currentPage = 1;
+    applyFilter();
+    closeSidebar();
+}
 
-    const searchQuery = document.getElementById('searchInput').value.toLowerCase();
+// 同步 tag 和 page 到 URL（支持分享链接和详情页返回）
+function updateUrl() {
+    const params = new URLSearchParams();
+    if (currentTag !== 'all') params.set('tag', currentTag);
+    if (currentPage > 1) params.set('page', currentPage);
+    const qs = params.toString();
+    const newUrl = qs ? `${window.location.pathname}?${qs}` : window.location.pathname;
+    window.history.replaceState(null, '', newUrl);
+}
 
-    const filtered = images.filter(img => {
-        const matchesSearch = img.name.toLowerCase().includes(searchQuery);
-        const matchesTag = tag === 'all' || img.tags.includes(tag);
-        return matchesSearch && matchesTag;
-    });
+// 侧边栏抽屉控制（移动端）
+function openSidebar() {
+    document.getElementById('sidebar').classList.add('open');
+    document.getElementById('sidebarOverlay').classList.add('active');
+}
 
-    renderGallery(filtered);
+function closeSidebar() {
+    document.getElementById('sidebar').classList.remove('open');
+    document.getElementById('sidebarOverlay').classList.remove('active');
 }
 
 // ========== 模态框 ==========

@@ -133,7 +133,7 @@ function generateDetailPages(images) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${escapeHtml(img.name)} - SVG Gallery</title>
+    <title>${escapeHtml(img.name)} - Svg Site</title>
     <link rel="stylesheet" href="../src/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -162,10 +162,7 @@ function generateDetailPages(images) {
                     返回图库
                 </a>
                 <div class="logo">
-                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM4 18V6h16v12H4zm14-6l-4-4-4 4-2-2-6 6 8 8 10-10-4-4z"/>
-                    </svg>
-                    <span>SVG Gallery</span>
+                    <span>Svg Site</span>
                 </div>
                 <button class="theme-toggle-btn" id="themeToggleBtn" title="切换主题">
                     <svg id="themeIconSun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">

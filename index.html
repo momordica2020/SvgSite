@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SVG图片库</title>
+    <title>Svg Site</title>
     <link rel="stylesheet" href="src/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,10 +23,7 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
-                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM4 18V6h16v12H4zm14-6l-4-4-4 4-2-2-6 6 8 8 10-10-4-4z"/>
-                </svg>
-                <h1>SVG Gallery</h1>
+                <h1>Svg Site</h1>
             </div>
             <div class="search-container">
                 <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
@@ -55,21 +52,39 @@
     </header>
 
     <main class="main">
-        <div class="container">
-            <div class="tags-container">
-                <button class="tag-btn active" data-tag="all">全部</button>
-                <div id="tagsList" class="tags-list"></div>
-            </div>
-
-            <div id="gallery" class="gallery"></div>
-
-            <div id="emptyState" class="empty-state" style="display: none;">
-                <svg viewBox="0 0 24 24" width="64" height="64" fill="none" stroke="currentColor" stroke-width="1">
-                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                    <circle cx="8.5" cy="8.5" r="1.5"/>
-                    <polyline points="21 15 16 10 5 21"/>
-                </svg>
-                <p>没有找到匹配的图片</p>
+        <button class="sidebar-toggle" id="sidebarToggle" title="分类筛选">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+            <span>分类</span>
+        </button>
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        <div class="layout">
+            <aside class="sidebar" id="sidebar">
+                <div class="sidebar-header">
+                    <h2>分类标签</h2>
+                </div>
+                <div class="sidebar-search">
+                    <input type="text" id="tagSearchInput" placeholder="筛选标签...">
+                </div>
+                <nav class="tags-nav" id="tagsList"></nav>
+            </aside>
+            <div class="gallery-area">
+                <div class="gallery-toolbar">
+                    <span class="result-count" id="resultCount"></span>
+                </div>
+                <div id="gallery" class="gallery"></div>
+                <div id="emptyState" class="empty-state" style="display: none;">
+                    <svg viewBox="0 0 24 24" width="64" height="64" fill="none" stroke="currentColor" stroke-width="1">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <polyline points="21 15 16 10 5 21"/>
+                    </svg>
+                    <p>没有找到匹配的图片</p>
+                </div>
+                <div class="pagination" id="pagination"></div>
             </div>
         </div>
     </main>

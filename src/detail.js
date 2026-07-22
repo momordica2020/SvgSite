@@ -64,7 +64,7 @@ function renderDetail() {
     content.style.display = 'block';
 
     // 设置页面标题
-    document.title = `${currentImage.name} - SVG Gallery`;
+    document.title = `${currentImage.name} - Svg Site`;
 
     // 名称
     document.getElementById('detailName').textContent = currentImage.name;
