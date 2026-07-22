@@ -1,14 +1,14 @@
 [
   {
     "id": "roc-ministry-of-national-defense-flag",
-    "name": "ROC_Ministry_of_National_Defense_Flag",
+    "name": "中华民国国防部旗帜（后期）",
     "tags": [
       "旗帜",
       "国民党"
     ],
-    "svgFile": "ROC_Ministry_of_National_Defense_Flag.svg",
+    "svgFile": "roc-ministry-of-national-defense-flag.svg",
     "originalImage": null,
-    "description": "# Home\n\n这是一个**主页图标**，用于表示首页或主页导航。\n\n## 设计说明\n\n- 基于经典的房屋轮廓设计\n- 使用线性描边风格\n- 24x24 标准图标尺寸\n\n## 用途\n\n适用于网站导航、移动端应用等场景。"
+    "description": "可能是败退台岛之后的旗帜"
   },
   {
     "id": "北洋国徽",
@@ -119,5 +119,19 @@
     "svgFile": "中华民国北洋邮政旗帜.svg",
     "originalImage": "1926 the flag book of the German Reichsmarine (Navy)  FOTW facebook2.jpg",
     "description": "1926年德国旗帜图册中记载的，北洋时期的邮政局旗帜，左上角饰有北洋五色旗，旗帜上有浅色鸿雁图样。"
+  },
+  {
+    "id": "民国时期十二章图样",
+    "name": "民国时期十二章图样",
+    "tags": [
+      "清朝",
+      "中华民国",
+      "北洋",
+      "十二章",
+      "徽章"
+    ],
+    "svgFile": "民国时期十二章图样.svg",
+    "originalImage": "勋章章程3大宝章·正副章.jpg",
+    "description": "该图样可能如参考所示，是由清朝晚期的“大宝章”演变而来，即在大宝章的“十二章”图样外围环绕了一圈6个麦穗。\n\nsvg来自wiki所以可能有些粗糙"
   }
 ]
