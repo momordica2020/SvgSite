@@ -159,7 +159,7 @@
     ],
     "svgFile": "中华民国北洋海军旗.svg",
     "originalImage": "1912 袁世凯第19号总统令 gmic论坛贴图2.jpg",
-    "description": "北洋政府的海军旗，注意其太阳样式与后来的民国新国旗不同，即光芒尖角的长度更短"
+    "description": "北洋政府的海军旗，注意其太阳的尺寸、样式与后来的民国新国旗不同，即光芒尖角的长度更短"
   },
   {
     "id": "中华民国北洋陆军军旗",
@@ -307,5 +307,19 @@
     "svgFile": "中华民国-北洋-海岸巡防处任务船旗.svg",
     "originalImage": "1926 the flag book of the German Reichsmarine (Navy)  FOTW facebook2.jpg",
     "description": "此旗左上角是一个“巡”字的艺术化加工。\n\n江苏省长公署训令第一九六五号（中华民国十四年三月十三日）, 案准内务部咨开准海军部咨称本部拟定全国海岸巡防处任务船旗一案 - 《江苏省公报》1925 年第4013期"
+  },
+  {
+    "id": "中华民国-北洋-海军海洋测量舰艇桅旗",
+    "name": "中华民国（北洋）海军海洋测量舰艇桅旗",
+    "tags": [
+      "中华民国",
+      "北洋",
+      "海军",
+      "三角旗",
+      "船锚"
+    ],
+    "svgFile": "中华民国-北洋-海军海洋测量舰艇桅旗.svg",
+    "originalImage": "1926 the flag book of the German Reichsmarine (Navy)  FOTW facebook2.jpg",
+    "description": "系根据德国1926旗册绘制，图案细节应与北洋颁布的正始旗式有区别"
   }
 ]
