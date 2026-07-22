@@ -52,6 +52,50 @@
     "description": "该图样可能如参考所示，是由清朝晚期的“大宝章”演变而来，即在大宝章的“十二章”图样外围环绕了一圈6个麦穗。\n\nsvg来自wiki所以可能有些粗糙"
   },
   {
+    "id": "清朝晚期海关旗帜",
+    "name": "清朝晚期海关旗帜",
+    "tags": [
+      "清朝",
+      "海关"
+    ],
+    "svgFile": "清朝晚期海关旗帜.svg",
+    "viewBox": "0 0 1133.858 850.394",
+    "svgWidth": "1133.858",
+    "svgHeight": "850.394",
+    "originalImage": "v2-ee84ed5d2f34d37cdfaff763b4c94a5b_r.webp",
+    "description": "注意，该旗式是清代晚期海关旗帜的猜测还原，原旗的式样暂未得知，黄X形的宽度是全旗高度八分之一，系依据民国元年旗式中海关旗相关图案的比例。"
+  },
+  {
+    "id": "英国国旗",
+    "name": "英国国旗",
+    "tags": [
+      "英国",
+      "国旗"
+    ],
+    "svgFile": "英国国旗.svg",
+    "viewBox": "0 0 60 30",
+    "svgWidth": "1200",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "中华民国-北洋-1914年颁布盐务巡船旗",
+    "name": "中华民国（北洋）1914年颁布盐务巡船旗",
+    "tags": [
+      "中华民国",
+      "北洋",
+      "盐务",
+      "巡警"
+    ],
+    "svgFile": "中华民国-北洋-1914年颁布盐务巡船旗.svg",
+    "viewBox": "0 0 1133.858 850.394",
+    "svgWidth": "1133.858",
+    "svgHeight": "850.394",
+    "originalImage": "1914盐务巡船旗.png",
+    "description": ""
+  },
+  {
     "id": "北洋国徽",
     "name": "中华民国（北洋）国徽",
     "tags": [
@@ -85,6 +129,22 @@
     "svgHeight": "850.394",
     "originalImage": "1926 the flag book of the German Reichsmarine (Navy)  FOTW facebook2.jpg",
     "description": "此旗左上角是一个“巡”字的艺术化加工。\n\n江苏省长公署训令第一九六五号（中华民国十四年三月十三日）, 案准内务部咨开准海军部咨称本部拟定全国海岸巡防处任务船旗一案 - 《江苏省公报》1925 年第4013期"
+  },
+  {
+    "id": "中华民国-北洋-海关旗",
+    "name": "中华民国（北洋）海关旗",
+    "tags": [
+      "中华民国",
+      "北洋",
+      "海关",
+      "五色旗"
+    ],
+    "svgFile": "中华民国-北洋-海关旗.svg",
+    "viewBox": "0 0 1133.858 850.394",
+    "svgWidth": "1133.858",
+    "svgHeight": "170.079",
+    "originalImage": "0ccb5353845c5c2af98ec8280a17b309.jpg",
+    "description": "1911年北洋最初制定的海关旗，据《民国元年旗帜图式》的记录尺寸还原"
   },
   {
     "id": "中华民国-北洋-海军次长旗",
@@ -319,6 +379,36 @@
     "svgHeight": "850.39",
     "originalImage": "1926 the flag book of the German Reichsmarine (Navy)  FOTW facebook2.jpg",
     "description": "1926年德国旗帜图册中记载的，北洋时期的邮政局旗帜，左上角饰有北洋五色旗，旗帜上有浅色鸿雁图样。"
+  },
+  {
+    "id": "中华民国1935年财政部缉私处缉私大队旗帜",
+    "name": "中华民国1935年财政部缉私处缉私大队旗帜",
+    "tags": [
+      "中华民国",
+      "缉私处",
+      "军旗"
+    ],
+    "svgFile": "中华民国1935年财政部缉私处缉私大队旗帜.svg",
+    "viewBox": "0 0 850.394 850.394",
+    "svgWidth": "850.394",
+    "svgHeight": "850.394",
+    "originalImage": "中华民国法规汇编 二十四年辑 XII 三三.png",
+    "description": "旗式发布于1935年《中华民国法规汇编 二十四年辑》 XII 三三"
+  },
+  {
+    "id": "中华民国1935年财政部缉私处水队旗帜",
+    "name": "中华民国1935年财政部缉私处水队旗帜",
+    "tags": [
+      "中华民国",
+      "缉私处",
+      "军旗"
+    ],
+    "svgFile": "中华民国1935年财政部缉私处水队旗帜.svg",
+    "viewBox": "0 0 850.394 850.394",
+    "svgWidth": "850.393",
+    "svgHeight": "850.394",
+    "originalImage": "中华民国法规汇编 二十四年辑 XII 三三.png",
+    "description": "旗式发布于1935年《中华民国法规汇编 二十四年辑》 XII 三三"
   },
   {
     "id": "roc-ministry-of-national-defense-flag",
