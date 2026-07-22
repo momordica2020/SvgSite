@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_图层_2" data-name="图层_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1133.86 850.39">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d10000;
+      }
+
+      .cls-2 {
+        fill: #ffc617;
+      }
+    </style>
+  </defs>
+  <g id="_图层_38" data-name="图层_38">
+    <rect class="cls-1" width="1133.86" height="850.39"/>
+    <g>
+      <polygon points="566.93 80.6 627.16 260.72 789.08 161.45 719.44 338.15 907.28 366.19 740.36 456.78 866.23 599 680.13 561.11 685.13 750.96 566.93 602.31 448.73 750.96 453.73 561.11 267.63 599 393.5 456.78 226.57 366.19 414.42 338.15 344.78 161.45 506.7 260.72 566.93 80.6"/>
+      <circle class="cls-2" cx="566.93" cy="426.2" r="34.56"/>
+      <circle class="cls-2" cx="566.93" cy="253.4" r="34.56"/>
+      <circle class="cls-2" cx="566.93" cy="80.6" r="34.56"/>
+      <circle class="cls-2" cx="455.85" cy="293.83" r="34.56"/>
+      <circle class="cls-2" cx="344.78" cy="161.45" r="34.56"/>
+      <circle class="cls-2" cx="396.75" cy="396.19" r="34.56"/>
+      <circle class="cls-2" cx="226.57" cy="366.19" r="34.56"/>
+      <circle class="cls-2" cx="417.28" cy="512.6" r="34.56"/>
+      <circle class="cls-2" cx="267.63" cy="599" r="34.56"/>
+      <circle class="cls-2" cx="507.83" cy="588.58" r="34.56"/>
+      <circle class="cls-2" cx="448.73" cy="750.96" r="34.56"/>
+      <circle class="cls-2" cx="626.03" cy="588.58" r="34.56"/>
+      <circle class="cls-2" cx="685.13" cy="750.96" r="34.56"/>
+      <circle class="cls-2" cx="716.58" cy="512.6" r="34.56"/>
+      <circle class="cls-2" cx="866.23" cy="599" r="34.56"/>
+      <circle class="cls-2" cx="737.11" cy="396.19" r="34.56"/>
+      <circle class="cls-2" cx="907.28" cy="366.19" r="34.56"/>
+      <circle class="cls-2" cx="678" cy="293.83" r="34.56"/>
+      <circle class="cls-2" cx="789.08" cy="161.45" r="34.56"/>
+    </g>
+  </g>
+</svg>

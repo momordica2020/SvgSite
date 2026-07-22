@@ -21,6 +21,7 @@ from datetime import datetime
 from tkinter import Image, filedialog, messagebox, ttk
 from tkinter.scrolledtext import ScrolledText
 from PIL import Image, ImageTk
+import cairosvg
 from svglib.svglib import svg2rlg
 from reportlab.graphics import renderPM
 
@@ -167,7 +168,7 @@ class SvgGalleryAdmin:
                 with open(METADATA_FILE, 'r', encoding='utf-8') as f:
                     self.metadata = json.load(f)
             except Exception as e:
-                messagebox.showerror("错误", f"读取 metadata.json 失败:\n{e}")
+                self.set_status(f"读取 metadata.json 失败: {e}")
                 self.metadata = []
 
         self.refresh_list()
@@ -178,10 +179,9 @@ class SvgGalleryAdmin:
         try:
             with open(METADATA_FILE, 'w', encoding='utf-8') as f:
                 json.dump(self.metadata, f, ensure_ascii=False, indent=2)
-            self.set_status("metadata.json 已保存")
             return True
         except Exception as e:
-            messagebox.showerror("保存失败", str(e))
+            self.set_status(f"保存失败: {e}")
             return False
 
     def refresh_list(self):
@@ -229,7 +229,7 @@ class SvgGalleryAdmin:
         """保存当前编辑的条目"""
         name = self.name_var.get().strip()
         if not name:
-            messagebox.showwarning("提示", "请输入名称")
+            self.set_status("提示: 请输入名称")
             return
 
         tags_raw = self.tags_var.get().strip()
@@ -237,7 +237,7 @@ class SvgGalleryAdmin:
         tags = [t.strip() for t in re.split(r'[,，]', tags_raw) if t.strip()] if tags_raw else []
         svg_file = self.svg_file_var.get().strip()
         if not svg_file:
-            messagebox.showwarning("提示", "请选择 SVG 文件")
+            self.set_status("提示: 请选择 SVG 文件")
             return
 
         original_image = self.original_image_var.get().strip() or None
@@ -259,7 +259,7 @@ class SvgGalleryAdmin:
             # 检查目标文件名是否被其他条目占用
             for m in self.metadata:
                 if m.get('svgFile') == new_svg_file and m.get('id') != self.current_id:
-                    messagebox.showerror("错误", f"文件名 {new_svg_file} 已被其他条目占用")
+                    self.set_status(f"错误: 文件名 {new_svg_file} 已被其他条目占用")
                     return
             src_path = os.path.join(SVG_DIR, svg_file)
             dest_path = os.path.join(SVG_DIR, new_svg_file)
@@ -267,7 +267,7 @@ class SvgGalleryAdmin:
                 try:
                     os.replace(src_path, dest_path)
                 except Exception as e:
-                    messagebox.showerror("重命名失败", str(e))
+                    self.set_status(f"重命名失败: {e}")
                     return
             # 无论源文件是否存在，都同步字段为规范的 {id}.svg
             svg_file = new_svg_file
@@ -296,15 +296,15 @@ class SvgGalleryAdmin:
         if self.save_metadata():
             self.refresh_list()
             self.tree.selection_set(item_id)
-            messagebox.showinfo("成功", "保存成功！")
+            self.set_status(f"保存成功: {name} (id={item_id})")
 
     def delete_item(self):
         """删除当前条目"""
         if not self.current_id:
-            messagebox.showwarning("提示", "请先选择要删除的条目")
+            self.set_status("提示: 请先选择要删除的条目")
             return
 
-        result = messagebox.askyesno("确认", f"确定删除 \"{self.name_var.get()}\" 吗？\n\n（SVG文件和原始图片不会被删除，仅从元数据中移除）")
+        result = messagebox.askyesno("确认删除", f"确定删除 \"{self.name_var.get()}\" 吗？")
         if not result:
             return
 
@@ -322,14 +322,16 @@ class SvgGalleryAdmin:
             initialdir=SVG_DIR
         )
         if filepath:
-            # 如果文件在 svg 目录中，只取文件名
-            if os.path.dirname(filepath) == SVG_DIR:
+            # 用 abspath 规范化后比较，避免分隔符/大小写差异导致误判
+            if os.path.abspath(os.path.dirname(filepath)) == os.path.abspath(SVG_DIR):
                 self.svg_file_var.set(os.path.basename(filepath))
+                self.set_status(f"已选择 SVG: {os.path.basename(filepath)}")
             else:
                 self.svg_file_var.set(os.path.basename(filepath))
                 # 提示导入
-                if messagebox.askyesno("导入", "该文件不在 svg 目录中，是否导入？"):
-                    self.import_svg_from(filepath)
+                self.import_svg_from(filepath)
+                #if messagebox.askyesno("导入", "该文件不在 svg 目录中，是否导入？"):
+                    
 
     def import_svg(self):
         """从选择的文件导入SVG到svg目录"""
@@ -355,12 +357,15 @@ class SvgGalleryAdmin:
             initialdir=ORIGINALS_DIR
         )
         if filepath:
-            if os.path.dirname(filepath) == ORIGINALS_DIR:
+            # 用 abspath 规范化后比较，避免分隔符/大小写差异导致误判
+            if os.path.abspath(os.path.dirname(filepath)) == os.path.abspath(ORIGINALS_DIR):
                 self.original_image_var.set(os.path.basename(filepath))
+                self.set_status(f"已选择原始图片: {os.path.basename(filepath)}")
             else:
                 self.original_image_var.set(os.path.basename(filepath))
-                if messagebox.askyesno("导入", "该文件不在 originals 目录中，是否导入？"):
-                    self.import_original_from(filepath)
+                self.import_original_from(filepath)
+                #if messagebox.askyesno("导入", "该文件不在 originals 目录中，是否导入？"):
+                    
 
     def import_original(self):
         filepath = filedialog.askopenfilename(
@@ -396,58 +401,124 @@ class SvgGalleryAdmin:
             return
 
         try:
-            # ====================== 修改这一行 ======================
-            # 请把下面路径改成你电脑上 Inkscape 的实际路径
-            inkscape_path = r"D:\Inkscape\bin\inkscape.com"
-            # =====================================================
+            # 读取 SVG 文件内容
+            with open(filepath, 'r', encoding='utf-8') as f:
+                svg_content = f.read()
 
-            if not os.path.exists(inkscape_path):
-                self.preview_canvas.create_text(150, 80, 
-                    text=f"Inkscape 未找到\n{inkscape_path}", fill='#ef4444', width=250)
-                return
+            # SVG 转 PNG（内存中，清晰度高）
+            png_data = cairosvg.svg2png(
+                bytestring=svg_content.encode('utf-8'),
+                scale=2.5,                    # 提高清晰度（可调 1.5~3.0）
+                background_color='#ffffff'    # 白色背景，可改 None 透明
+            )
 
-            # 临时 PNG 文件
-            temp_png = filepath.replace('.svg', '_temp_preview.png')
-
-            # 调用 Inkscape 转换
-            result = subprocess.run([
-                inkscape_path,
-                filepath,
-                "--export-type=png",
-                f"--export-filename={temp_png}",
-                "--export-width=900",           # 可调整清晰度
-                "--export-background=#ffffff"
-            ], check=True, timeout=10, 
-            creationflags=subprocess.CREATE_NO_WINDOW)
-
-            # 读取图片
-            img = Image.open(temp_png)
+            # 转为 PIL 图像
+            img = Image.open(io.BytesIO(png_data))
             
-            # 自适应画布大小
+            # 自适应画布大小 + 保持比例
             canvas_w = self.preview_canvas.winfo_width() or 400
             canvas_h = self.preview_canvas.winfo_height() or 300
             
-            if canvas_w > 100 and canvas_h > 120:
-                ratio = min((canvas_w - 40) / img.width, (canvas_h - 120) / img.height)
+            if canvas_w > 80 and canvas_h > 120:
+                # 计算合适缩放比例
+                ratio = min((canvas_w - 40) / img.width, (canvas_h - 110) / img.height)
                 new_w = int(img.width * ratio)
                 new_h = int(img.height * ratio)
                 img = img.resize((new_w, new_h), Image.LANCZOS)
 
+            # 关键：必须保存引用，否则图片会闪烁或不显示
             self.preview_photo = ImageTk.PhotoImage(img)
 
-            self.preview_canvas.create_image(canvas_w//2, (canvas_h-80)//2, 
-                                        image=self.preview_photo, anchor='center')
+            # 显示图片
+            self.preview_canvas.create_image(
+                canvas_w // 2, 
+                (canvas_h - 70) // 2, 
+                image=self.preview_photo, 
+                anchor='center'
+            )
 
-            self.preview_canvas.create_text(canvas_w//2, canvas_h-35, 
-                                        text=svg_file, fill='#1e293b', font=('Segoe UI', 9))
+            # 显示文件名
+            self.preview_canvas.create_text(
+                canvas_w // 2, canvas_h - 30,
+                text=svg_file,
+                fill='#1e293b',
+                font=('Segoe UI', 9)
+            )
 
-            # 清理临时文件
-            try:
-                os.remove(temp_png)
-            except:
-                pass
-        except:
-            pass
+        except Exception as e:
+            error_text = str(e)[:100]
+            self.preview_canvas.create_text(
+                canvas_w//2 if 'canvas_w' in locals() else 150, 
+                canvas_h//2 if 'canvas_h' in locals() else 80,
+                text=f"SVG 渲染失败\n{error_text}",
+                fill='#ef4444',
+                justify='center',
+                width=280
+            )
+        # self.preview_canvas.delete('all')
+    
+        # svg_file = self.svg_file_var.get().strip()
+        # if not svg_file:
+        #     return
+
+        # filepath = os.path.join(SVG_DIR, svg_file)
+        # if not os.path.exists(filepath):
+        #     self.preview_canvas.create_text(100, 75, text="文件不存在", fill='#ef4444')
+        #     return
+
+        # try:
+        #     # ====================== 修改这一行 ======================
+        #     # 请把下面路径改成你电脑上 Inkscape 的实际路径
+        #     inkscape_path = r"D:\Inkscape\bin\inkscape.com"
+        #     # =====================================================
+
+        #     if not os.path.exists(inkscape_path):
+        #         self.preview_canvas.create_text(150, 80, 
+        #             text=f"Inkscape 未找到\n{inkscape_path}", fill='#ef4444', width=250)
+        #         return
+
+        #     # 临时 PNG 文件
+        #     temp_png = filepath.replace('.svg', '_temp_preview.png')
+
+        #     # 调用 Inkscape 转换
+        #     result = subprocess.run([
+        #         inkscape_path,
+        #         filepath,
+        #         "--export-type=png",
+        #         f"--export-filename={temp_png}",
+        #         "--export-width=900",           # 可调整清晰度
+        #         "--export-background=#ffffff"
+        #     ], check=True, timeout=10, 
+        #     creationflags=subprocess.CREATE_NO_WINDOW)
+
+        #     # 读取图片
+        #     img = Image.open(temp_png)
+            
+        #     # 自适应画布大小
+        #     canvas_w = self.preview_canvas.winfo_width() or 400
+        #     canvas_h = self.preview_canvas.winfo_height() or 300
+            
+        #     if canvas_w > 100 and canvas_h > 120:
+        #         ratio = min((canvas_w - 40) / img.width, (canvas_h - 120) / img.height)
+        #         new_w = int(img.width * ratio)
+        #         new_h = int(img.height * ratio)
+        #         img = img.resize((new_w, new_h), Image.LANCZOS)
+
+        #     self.preview_photo = ImageTk.PhotoImage(img)
+
+        #     self.preview_canvas.create_image(canvas_w//2, (canvas_h-80)//2, 
+        #                                 image=self.preview_photo, anchor='center')
+
+        #     self.preview_canvas.create_text(canvas_w//2, canvas_h-35, 
+        #                                 text=svg_file, fill='#1e293b', font=('Segoe UI', 9))
+
+        #     # 清理临时文件
+        #     try:
+        #         os.remove(temp_png)
+        #     except:
+        #         pass
+        # except:
+        #     pass
 
     # ========== 生成数据 ==========
     def generate_data(self):
@@ -464,44 +535,40 @@ class SvgGalleryAdmin:
                 encoding='utf-8'
             )
             if result.returncode == 0:
-                self.set_status("数据生成成功")
-                messagebox.showinfo("成功", f"数据生成成功！\n\n{result.stdout}")
+                # 从 stdout 提取摘要行（如 "成功生成 N 张图片..."），避免长文本塞满状态栏
+                summary = ''
+                for line in result.stdout.strip().splitlines():
+                    if line.startswith('成功生成'):
+                        summary = line
+                        break
+                self.set_status(summary or "数据生成成功")
             else:
-                self.set_status("生成失败")
-                messagebox.showerror("生成失败", result.stderr or result.stdout)
+                err = (result.stderr or result.stdout or '').strip().splitlines()
+                self.set_status(f"生成失败: {err[-1] if err else '未知错误'}")
         except FileNotFoundError:
-            messagebox.showerror("错误", "未找到 Node.js，请确保已安装 Node.js 并在 PATH 中")
-            self.set_status("错误: 未找到 Node.js")
+            self.set_status("错误: 未找到 Node.js，请确保已安装并在 PATH 中")
         except Exception as e:
-            messagebox.showerror("错误", str(e))
             self.set_status(f"错误: {e}")
 
     # ========== GitHub 同步 ==========
     def sync_github(self):
         """一键同步至 GitHub: 生成数据 -> git add -> git commit -> git push"""
-        result = messagebox.askyesno(
-            "确认同步",
-            "将执行以下操作:\n\n"
-            "1. 生成数据 (node generate.js)\n"
-            "2. git add .\n"
-            "3. git commit\n"
-            "4. git push\n\n"
-            "确认继续？"
-        )
-        if not result:
-            return
+        # result = messagebox.askyesno("确认同步", "将执行：生成数据 → git add → git commit → git push\n确认继续？")
+        # if not result:
+        #     return
 
+        self.set_status("开始同步...")
         # 在后台线程执行
         thread = threading.Thread(target=self._do_sync, daemon=True)
         thread.start()
 
     def _do_sync(self):
         steps = [
-            ("生成数据...", lambda: subprocess.run(
+            ("同步: 生成数据...", lambda: subprocess.run(
                 ['node', GENERATE_SCRIPT], capture_output=True, text=True,
                 cwd=PROJECT_ROOT, encoding='utf-8'
             )),
-            ("Git add...", lambda: subprocess.run(
+            ("同步: Git add...", lambda: subprocess.run(
                 ['git', 'add', '.'], capture_output=True, text=True,
                 cwd=PROJECT_ROOT, encoding='utf-8'
             )),
@@ -509,14 +576,14 @@ class SvgGalleryAdmin:
 
         commit_msg = f"Update gallery - {datetime.now().strftime('%Y-%m-%d %H:%M')}"
         steps.append((
-            "Git commit...",
+            "同步: Git commit...",
             lambda: subprocess.run(
                 ['git', 'commit', '-m', commit_msg], capture_output=True, text=True,
                 cwd=PROJECT_ROOT, encoding='utf-8'
             )
         ))
         steps.append((
-            "Git push...",
+            "同步: Git push...",
             lambda: subprocess.run(
                 ['git', 'push'], capture_output=True, text=True,
                 cwd=PROJECT_ROOT, encoding='utf-8'
@@ -531,21 +598,17 @@ class SvgGalleryAdmin:
                     # git commit 在没有变更时返回非0，这是正常的
                     if 'commit' in label and 'nothing to commit' in (result.stdout + result.stderr):
                         continue
-                    error_msg = result.stderr or result.stdout
-                    self.root.after(0, lambda msg=error_msg: messagebox.showerror("同步失败", msg))
-                    self.set_status("同步失败")
+                    err = (result.stderr or result.stdout or '').strip().splitlines()
+                    self.set_status(f"同步失败: {err[-1] if err else '未知错误'}")
                     return
             except FileNotFoundError as e:
-                self.root.after(0, lambda msg=str(e): messagebox.showerror("错误", f"命令未找到: {msg}"))
-                self.set_status("同步失败")
+                self.set_status(f"同步失败: 命令未找到 - {e}")
                 return
             except Exception as e:
-                self.root.after(0, lambda msg=str(e): messagebox.showerror("错误", msg))
-                self.set_status("同步失败")
+                self.set_status(f"同步失败: {e}")
                 return
 
-        self.set_status("同步完成！")
-        self.root.after(0, lambda: messagebox.showinfo("成功", "已成功同步至 GitHub！"))
+        self.set_status("同步完成！已推送至 GitHub")
 
     # ========== 工具方法 ==========
     def generate_id(self, name):
