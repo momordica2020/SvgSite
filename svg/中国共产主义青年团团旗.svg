@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="图层_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1025.479 683.653">
+  <g id="c" data-name="图层_1">
+    <g>
+      <rect width="1025.479" height="683.653" style="fill: #ee1c25;"/>
+      <circle cx="256.37" cy="170.913" r="113.386" style="fill: #ff0;"/>
+      <circle cx="256.37" cy="170.913" r="85.039" style="fill: #ee1c25;"/>
+      <polygon points="256.37 85.874 275.462 144.635 337.247 144.635 287.262 180.951 306.355 239.711 256.37 203.395 206.385 239.711 225.477 180.951 175.493 144.635 237.277 144.635 256.37 85.874" style="fill: #ff0;"/>
+    </g>
+  </g>
+</svg>
