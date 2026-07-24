@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="图层_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600">
+  <g id="c" data-name="图层_10">
+    <rect width="1000" height="600" style="fill: #d00;"/>
+    <circle cx="491.487" cy="300" r="225" style="fill: #fff;"/>
+    <g>
+      <polyline points="406.634 215.147 576.34 384.853 470.274 490.919" style="fill: none; stroke: #000; stroke-miterlimit: 40; stroke-width: 60px;"/>
+      <line x1="512.7" y1="109.081" x2="317.146" y2="304.636" style="fill: none; stroke: #000; stroke-miterlimit: 40; stroke-width: 60px;"/>
+      <polyline points="300.568 278.787 406.634 384.853 576.34 215.147 682.406 321.213" style="fill: none; stroke: #000; stroke-miterlimit: 40; stroke-width: 60px;"/>
+      <rect x="558.898" y="231.247" width="97.532" height="23.813" transform="translate(6.045 500.901) rotate(-45)" style="fill: #fff;"/>
+      <line x1="394.08" y1="372.299" x2="512.7" y2="490.919" style="fill: none; stroke: #000; stroke-miterlimit: 40; stroke-width: 60px;"/>
+      <rect x="385.025" y="405.12" width="97.532" height="23.813" transform="translate(-167.827 428.881) rotate(-45)" style="fill: #fff;"/>
+      <rect x="459.916" y="416.233" width="98.498" height="23.813" transform="translate(566.459 1090.913) rotate(-135)" style="fill: #fff;"/>
+    </g>
+  </g>
+</svg>
