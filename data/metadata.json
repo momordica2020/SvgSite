@@ -1390,5 +1390,24 @@
     "svgFile": "斜向闪电红白黑旗.svg",
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "吉尔吉斯斯坦国徽",
+    "name": "吉尔吉斯斯坦国徽",
+    "tags": [
+      "吉尔吉斯斯坦",
+      "国徽",
+      "太阳",
+      "鸟类",
+      "蓝色",
+      "黄色",
+      "白色",
+      "俄文",
+      "麦穗",
+      "风景"
+    ],
+    "svgFile": "吉尔吉斯斯坦国徽.svg",
+    "originalImage": null,
+    "description": ""
   }
 ]
