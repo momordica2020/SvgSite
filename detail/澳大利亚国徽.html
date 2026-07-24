@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>澳大利亚国徽 - Svg Site</title>
+    <link rel="stylesheet" href="../src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        (function() {
+            const saved = localStorage.getItem('svg-gallery-theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const isDark = saved ? saved === 'dark' : prefersDark;
+            if (isDark) {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <div class="detail-page">
+        <header class="detail-header">
+            <div class="container">
+                <a href="../index.html" class="back-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="19" y1="12" x2="5" y2="12"/>
+                        <polyline points="12 19 5 12 12 5"/>
+                    </svg>
+                    返回图库
+                </a>
+                <div class="logo">
+                    <span>Svg Site</span>
+                </div>
+                <button class="theme-toggle-btn" id="themeToggleBtn" title="切换主题">
+                    <svg id="themeIconSun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                    <svg id="themeIconMoon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+            </div>
+        </header>
+        <main class="detail-body">
+            <div class="container">
+                <div id="detailContent">
+                    <div class="detail-layout">
+                        <div class="detail-preview-section">
+                            <div class="detail-preview-container" id="detailPreviewWrapper">
+                                <div class="detail-preview-canvas" id="detailPreviewCanvas">
+                                    <img id="detailSvgImg" src="../svg/%E6%BE%B3%E5%A4%A7%E5%88%A9%E4%BA%9A%E5%9B%BD%E5%BE%BD.svg" alt="澳大利亚国徽" draggable="false">
+                                </div>
+                            </div>
+                            <div class="detail-zoom-indicator" id="detailZoomIndicator">100%</div>
+                            <div class="detail-download-actions">
+                                <button class="download-btn" id="detailDownloadSvgBtn">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="7 10 12 15 17 10"/>
+                                        <line x1="12" y1="15" x2="12" y2="3"/>
+                                    </svg>
+                                    下载 SVG
+                                </button>
+                                <div class="png-download-group">
+                                    <span class="png-label">PNG:</span>
+                                    <button class="download-btn-small" data-size="256">256px</button>
+                                    <button class="download-btn-small" data-size="512">512px</button>
+                                    <button class="download-btn-small" data-size="1024">1024px</button>
+                                    <button class="download-btn-small" data-size="2048">2048px</button>
+                                    <button class="download-btn-small" data-size="4096">4096px</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-info-section">
+                            <div class="detail-info-card">
+                                <h1 class="detail-name" id="detailName">澳大利亚国徽</h1>
+                                <div class="detail-tags" id="detailTags"><a href="../index.html?tag=%E5%8A%A8%E7%89%A9" class="tag">动物</a><a href="../index.html?tag=%E9%B8%9F%E7%B1%BB" class="tag">鸟类</a><a href="../index.html?tag=%E5%9B%BD%E5%BE%BD" class="tag">国徽</a><a href="../index.html?tag=%E4%B8%83%E8%A7%92%E6%98%9F" class="tag">七角星</a><a href="../index.html?tag=%E6%A4%8D%E7%89%A9" class="tag">植物</a><a href="../index.html?tag=%E8%8B%B1%E6%96%87" class="tag">英文</a><a href="../index.html?tag=%E7%9B%BE%E5%BE%BD" class="tag">盾徽</a></div>
+                            </div>
+                            <div class="detail-info-card" style="display: none;" id="detailOriginalCard">
+                                <h3>
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                                        <polyline points="21 15 16 10 5 21"/>
+                                    </svg>
+                                    原始来源图片
+                                </h3>
+                                <div id="detailOriginalContent"><div class="detail-no-original">暂无原始图片</div></div>
+                            </div>
+                            <div class="detail-info-card">
+                                <h3>
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                        <polyline points="14 2 14 8 20 8"/>
+                                        <line x1="16" y1="13" x2="8" y2="13"/>
+                                        <line x1="16" y1="17" x2="8" y2="17"/>
+                                        <polyline points="10 9 9 9 8 9"/>
+                                    </svg>
+                                    详细描述
+                                </h3>
+                                <div class="markdown-body" id="detailDescription"><p style="color: var(--text-secondary);">暂无描述</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        const currentImage = {"id":"澳大利亚国徽","name":"澳大利亚国徽","tags":["动物","鸟类","国徽","七角星","植物","英文","盾徽"],"svgFile":"澳大利亚国徽.svg","viewBox":"0 0 910 705","svgWidth":"1px","svgHeight":"89.406","originalImage":null,"description":""};
+    </script>
+    <script src="../src/detail.js"></script>
+</body>
+</html>

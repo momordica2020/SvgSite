@@ -127,6 +127,43 @@
     "description": ""
   },
   {
+    "id": "安卓",
+    "name": "安卓",
+    "tags": [
+      "公司",
+      "英文",
+      "logo",
+      "绿色",
+      "白色",
+      "机器人"
+    ],
+    "svgFile": "安卓.svg",
+    "viewBox": "0 0 625 625",
+    "svgWidth": "37.5",
+    "svgHeight": null,
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "澳大利亚国徽",
+    "name": "澳大利亚国徽",
+    "tags": [
+      "动物",
+      "鸟类",
+      "国徽",
+      "七角星",
+      "植物",
+      "英文",
+      "盾徽"
+    ],
+    "svgFile": "澳大利亚国徽.svg",
+    "viewBox": "0 0 910 705",
+    "svgWidth": "1px",
+    "svgHeight": "89.406",
+    "originalImage": null,
+    "description": ""
+  },
+  {
     "id": "巴勒斯坦国旗",
     "name": "巴勒斯坦国旗",
     "tags": [
@@ -161,6 +198,19 @@
     "viewBox": "0 0 790.254 444.518",
     "svgWidth": "790.254",
     "svgHeight": "44.926",
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "地球图案",
+    "name": "地球图案",
+    "tags": [
+      "地球"
+    ],
+    "svgFile": "地球图案.svg",
+    "viewBox": "0 0 550.193 550.193",
+    "svgWidth": null,
+    "svgHeight": null,
     "originalImage": null,
     "description": ""
   },
@@ -252,6 +302,23 @@
     "description": ""
   },
   {
+    "id": "国际地球旗帜-2015",
+    "name": "国际地球旗帜（2015）",
+    "tags": [
+      "意识形态",
+      "白色",
+      "蓝色",
+      "中心",
+      "圆环"
+    ],
+    "svgFile": "国际地球旗帜-2015.svg",
+    "viewBox": "-600 -400 1200 800",
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "瑞典设计师Oskar Pernefeldt于2015年提出的旗帜提案，旨在作为代表整个地球的象征符号。"
+  },
+  {
     "id": "国民党党旗",
     "name": "国民党党旗",
     "tags": [
@@ -284,6 +351,22 @@
     "viewBox": "0 0 637.795 637.795",
     "svgWidth": null,
     "svgHeight": null,
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "华为logo",
+    "name": "华为logo",
+    "tags": [
+      "公司",
+      "花",
+      "红色",
+      "logo"
+    ],
+    "svgFile": "华为logo.svg",
+    "viewBox": "0 0 35.625 36.227001",
+    "svgWidth": "35.625mm",
+    "svgHeight": "36.227001mm",
     "originalImage": null,
     "description": ""
   },
@@ -475,6 +558,21 @@
     "viewBox": null,
     "svgWidth": "750",
     "svgHeight": "500",
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "苹果公司logo",
+    "name": "苹果公司logo",
+    "tags": [
+      "公司",
+      "logo",
+      "植物"
+    ],
+    "svgFile": "苹果公司logo.svg",
+    "viewBox": null,
+    "svgWidth": "814",
+    "svgHeight": "1000",
     "originalImage": null,
     "description": ""
   },

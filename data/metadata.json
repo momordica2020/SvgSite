@@ -1409,5 +1409,85 @@
     "svgFile": "吉尔吉斯斯坦国徽.svg",
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "国际地球旗帜-2015",
+    "name": "国际地球旗帜（2015）",
+    "tags": [
+      "意识形态",
+      "白色",
+      "蓝色",
+      "中心",
+      "圆环"
+    ],
+    "svgFile": "国际地球旗帜-2015.svg",
+    "originalImage": null,
+    "description": "瑞典设计师Oskar Pernefeldt于2015年提出的旗帜提案，旨在作为代表整个地球的象征符号。"
+  },
+  {
+    "id": "地球图案",
+    "name": "地球图案",
+    "tags": [
+      "地球"
+    ],
+    "svgFile": "地球图案.svg",
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "华为logo",
+    "name": "华为logo",
+    "tags": [
+      "公司",
+      "花",
+      "红色",
+      "logo"
+    ],
+    "svgFile": "华为logo.svg",
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "安卓",
+    "name": "安卓",
+    "tags": [
+      "公司",
+      "英文",
+      "logo",
+      "绿色",
+      "白色",
+      "机器人"
+    ],
+    "svgFile": "安卓.svg",
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "苹果公司logo",
+    "name": "苹果公司logo",
+    "tags": [
+      "公司",
+      "logo",
+      "植物"
+    ],
+    "svgFile": "苹果公司logo.svg",
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "澳大利亚国徽",
+    "name": "澳大利亚国徽",
+    "tags": [
+      "动物",
+      "鸟类",
+      "国徽",
+      "七角星",
+      "植物",
+      "英文",
+      "盾徽"
+    ],
+    "svgFile": "澳大利亚国徽.svg",
+    "originalImage": null,
+    "description": ""
   }
 ]

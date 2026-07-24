@@ -139,6 +139,9 @@ class SvgGalleryAdmin:
         preview_frame.grid(row=5, column=1, sticky=tk.NSEW, pady=4)
         self.preview_canvas = tk.Canvas(preview_frame, width=400, height=300, bg='#f1f5f9')
         self.preview_canvas.pack(fill=tk.BOTH, expand=True)
+        # SVG 预览缓存：{svg_file: (mtime, PhotoImage)} 避免重复 cairosvg 转换
+        self._preview_cache = {}
+        self._preview_cache_key = None
 
         # 描述
         ttk.Label(parent, text="Markdown 描述:").grid(row=6, column=0, sticky=tk.NW, pady=4)
@@ -185,11 +188,27 @@ class SvgGalleryAdmin:
             return False
 
     def refresh_list(self):
-        """刷新左侧列表"""
+        """刷新左侧列表（全量重建，倒序：最新的在最上面）"""
         self.tree.delete(*self.tree.get_children())
-        for item in self.metadata:
+        for item in reversed(self.metadata):
             tags_str = ', '.join(item.get('tags', []))
             self.tree.insert('', tk.END, iid=item['id'], values=(item.get('name', ''), tags_str))
+
+    def update_single_row(self, item_id):
+        """仅更新指定条目对应的一行，避免全量重建造成卡顿"""
+        item = next((m for m in self.metadata if m['id'] == item_id), None)
+        if not item:
+            return
+        tags_str = ', '.join(item.get('tags', []))
+        try:
+            self.tree.item(item_id)
+            # 已存在，更新内容
+            self.tree.item(item_id, values=(item.get('name', ''), tags_str))
+        except Exception:
+            # 不存在（新建后首次保存），插入到最顶部
+            self.tree.insert('', 0, iid=item_id, values=(item.get('name', ''), tags_str))
+            # 滚动到顶部确保可见
+            self.tree.see(item_id)
 
     def on_select(self, event):
         """选中列表项时加载到编辑区"""
@@ -294,7 +313,8 @@ class SvgGalleryAdmin:
             self.current_id = item_id
 
         if self.save_metadata():
-            self.refresh_list()
+            # 仅更新当前行而非全量刷新列表，避免大量条目时卡顿
+            self.update_single_row(item_id)
             self.tree.selection_set(item_id)
             self.set_status(f"保存成功: {name} (id={item_id})")
 
@@ -388,56 +408,58 @@ class SvgGalleryAdmin:
 
     # ========== 预览 ==========
     def update_preview(self):
-        """更新SVG预览"""
+        """更新SVG预览（带缓存，避免重复 cairosvg 转换造成卡顿）"""
         self.preview_canvas.delete('all')
-    
+
         svg_file = self.svg_file_var.get().strip()
         if not svg_file:
+            self._preview_cache_key = None
             return
 
         filepath = os.path.join(SVG_DIR, svg_file)
         if not os.path.exists(filepath):
             self.preview_canvas.create_text(100, 75, text="文件不存在", fill='#ef4444')
+            self._preview_cache_key = None
             return
 
+        canvas_w = self.preview_canvas.winfo_width() or 400
+        canvas_h = self.preview_canvas.winfo_height() or 300
+
         try:
-            # 读取 SVG 文件内容
-            with open(filepath, 'r', encoding='utf-8') as f:
-                svg_content = f.read()
+            mtime = os.path.getmtime(filepath)
+            cache_key = (svg_file, mtime)
 
-            # SVG 转 PNG（内存中，清晰度高）
-            png_data = cairosvg.svg2png(
-                bytestring=svg_content.encode('utf-8'),
-                scale=2.5,                    # 提高清晰度（可调 1.5~3.0）
-                background_color='#ffffff'    # 白色背景，可改 None 透明
-            )
+            # 命中缓存则直接复用已渲染的 PhotoImage，跳过昂贵的 cairosvg 转换
+            if cache_key == self._preview_cache_key and hasattr(self, 'preview_photo') and self.preview_photo:
+                photo = self.preview_photo
+            else:
+                with open(filepath, 'r', encoding='utf-8') as f:
+                    svg_content = f.read()
 
-            # 转为 PIL 图像
-            img = Image.open(io.BytesIO(png_data))
-            
-            # 自适应画布大小 + 保持比例
-            canvas_w = self.preview_canvas.winfo_width() or 400
-            canvas_h = self.preview_canvas.winfo_height() or 300
-            
-            if canvas_w > 80 and canvas_h > 120:
-                # 计算合适缩放比例
-                ratio = min((canvas_w - 40) / img.width, (canvas_h - 110) / img.height)
-                new_w = int(img.width * ratio)
-                new_h = int(img.height * ratio)
-                img = img.resize((new_w, new_h), Image.LANCZOS)
+                png_data = cairosvg.svg2png(
+                    bytestring=svg_content.encode('utf-8'),
+                    scale=2.5,
+                    background_color='#ffffff'
+                )
+                img = Image.open(io.BytesIO(png_data))
 
-            # 关键：必须保存引用，否则图片会闪烁或不显示
-            self.preview_photo = ImageTk.PhotoImage(img)
+                if canvas_w > 80 and canvas_h > 120:
+                    ratio = min((canvas_w - 40) / img.width, (canvas_h - 110) / img.height)
+                    new_w = int(img.width * ratio)
+                    new_h = int(img.height * ratio)
+                    img = img.resize((new_w, new_h), Image.LANCZOS)
 
-            # 显示图片
+                photo = ImageTk.PhotoImage(img)
+                self.preview_photo = photo
+                self._preview_cache_key = cache_key
+
             self.preview_canvas.create_image(
-                canvas_w // 2, 
-                (canvas_h - 70) // 2, 
-                image=self.preview_photo, 
+                canvas_w // 2,
+                (canvas_h - 70) // 2,
+                image=photo,
                 anchor='center'
             )
 
-            # 显示文件名
             self.preview_canvas.create_text(
                 canvas_w // 2, canvas_h - 30,
                 text=svg_file,
