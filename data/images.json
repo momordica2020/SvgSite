@@ -212,6 +212,24 @@
     "description": ""
   },
   {
+    "id": "德国国旗",
+    "name": "德国国旗",
+    "tags": [
+      "德国",
+      "国旗",
+      "横条",
+      "红色",
+      "黄色",
+      "黑色"
+    ],
+    "svgFile": "德国国旗.svg",
+    "viewBox": "0 0 5 3",
+    "svgWidth": "1000",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": ""
+  },
+  {
     "id": "地球图案",
     "name": "地球图案",
     "tags": [
@@ -274,6 +292,27 @@
     "svgHeight": "566.929",
     "originalImage": "QQ20260713-181734.png",
     "description": "据2020年苗永珍制作复制品（北安红色文化馆馆藏）制作"
+  },
+  {
+    "id": "法国皇室徽章",
+    "name": "法国皇室徽章",
+    "tags": [
+      "法国",
+      "人物",
+      "盾徽",
+      "蓝色",
+      "黄色",
+      "白色",
+      "皇冠",
+      "植物",
+      "头盔"
+    ],
+    "svgFile": "法国皇室徽章.svg",
+    "viewBox": null,
+    "svgWidth": "1091.8639",
+    "svgHeight": "1600.8368",
+    "originalImage": null,
+    "description": ""
   },
   {
     "id": "法轮功标志",
@@ -390,6 +429,27 @@
     "description": ""
   },
   {
+    "id": "荷兰皇室徽章-1815-1907",
+    "name": "荷兰皇室徽章（1815~1907）",
+    "tags": [
+      "荷兰",
+      "狮子",
+      "盾徽",
+      "王冠",
+      "红色",
+      "黄色",
+      "蓝色",
+      "白色",
+      "英文"
+    ],
+    "svgFile": "荷兰皇室徽章-1815-1907.svg",
+    "viewBox": null,
+    "svgWidth": "952",
+    "svgHeight": "1045",
+    "originalImage": null,
+    "description": ""
+  },
+  {
     "id": "华藏宗门标志",
     "name": "华藏宗门标志",
     "tags": [
@@ -460,6 +520,25 @@
     "svgFile": "吉尔吉斯斯坦国旗.svg",
     "viewBox": "0 0 550.468667 330.2812",
     "svgWidth": "1000",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "加拿大国旗",
+    "name": "加拿大国旗",
+    "tags": [
+      "加拿大",
+      "国旗",
+      "竖条",
+      "中心",
+      "植物",
+      "白色",
+      "红色"
+    ],
+    "svgFile": "加拿大国旗.svg",
+    "viewBox": "0 0 9600 4800",
+    "svgWidth": "1200",
     "svgHeight": "600",
     "originalImage": null,
     "description": ""
@@ -1044,6 +1123,27 @@
     "viewBox": null,
     "svgWidth": "1100",
     "svgHeight": "800",
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "意大利国王徽章-1890-1946",
+    "name": "意大利国王徽章（1890~1946）",
+    "tags": [
+      "意大利",
+      "盾徽",
+      "十字",
+      "狮子",
+      "动物",
+      "头盔",
+      "红色",
+      "黄色",
+      "白色"
+    ],
+    "svgFile": "意大利国王徽章-1890-1946.svg",
+    "viewBox": "0 -0.5 476.45889 815.07092",
+    "svgWidth": "476.45889",
+    "svgHeight": "815.07092",
     "originalImage": null,
     "description": ""
   },
@@ -2655,6 +2755,24 @@
     "svgWidth": "1275.591",
     "svgHeight": "850.394",
     "originalImage": "中华社会民主党1.jpg",
+    "description": ""
+  },
+  {
+    "id": "中太众人劝归国国徽",
+    "name": "中太众人劝归国国徽",
+    "tags": [
+      "邪教",
+      "红色",
+      "太阳",
+      "五角星",
+      "月亮",
+      "汉字"
+    ],
+    "svgFile": "中太众人劝归国国徽.svg",
+    "viewBox": "0 0 894.872 969.309",
+    "svgWidth": null,
+    "svgHeight": null,
+    "originalImage": "中太众人劝归国国徽3.png",
     "description": ""
   }
 ]

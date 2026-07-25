@@ -142,6 +142,10 @@ class SvgGalleryAdmin:
         # SVG 预览缓存：{svg_file: (mtime, PhotoImage)} 避免重复 cairosvg 转换
         self._preview_cache = {}
         self._preview_cache_key = None
+        # 异步预览任务管理：防止复杂 SVG 阻塞 UI，快速切换时取消旧任务
+        self._preview_thread = None
+        self._preview_token = 0  # 任务令牌，用于取消旧任务
+        self._preview_loading_id = None  # "加载中"文字的 canvas id
 
         # 描述
         ttk.Label(parent, text="Markdown 描述:").grid(row=6, column=0, sticky=tk.NW, pady=4)
@@ -408,10 +412,30 @@ class SvgGalleryAdmin:
 
     # ========== 预览 ==========
     def update_preview(self):
-        """更新SVG预览（带缓存，避免重复 cairosvg 转换造成卡顿）"""
-        self.preview_canvas.delete('all')
-
+        """更新SVG预览（异步渲染，避免复杂 SVG 阻塞 UI）"""
         svg_file = self.svg_file_var.get().strip()
+
+        # SVG 文件名未变则跳过，避免保存后重复加载
+        if svg_file and self._preview_cache_key and self._preview_cache_key[0] == svg_file:
+            cache_mtime = self._preview_cache_key[1]
+            filepath_check = os.path.join(SVG_DIR, svg_file)
+            try:
+                if os.path.exists(filepath_check) and os.path.getmtime(filepath_check) == cache_mtime:
+                    if hasattr(self, 'preview_photo') and self.preview_photo:
+                        # 命中缓存，仅重绘（Canvas 可能已被清空）
+                        self._redraw_cached(svg_file)
+                        return
+            except Exception:
+                pass
+
+        # 取消上一个正在进行的渲染任务
+        self._preview_token += 1
+        token = self._preview_token
+
+        self.preview_canvas.delete('all')
+        if self._preview_loading_id:
+            self._preview_loading_id = None
+
         if not svg_file:
             self._preview_cache_key = None
             return
@@ -422,125 +446,138 @@ class SvgGalleryAdmin:
             self._preview_cache_key = None
             return
 
+        # 显示加载中提示
         canvas_w = self.preview_canvas.winfo_width() or 400
         canvas_h = self.preview_canvas.winfo_height() or 300
+        self._preview_loading_id = self.preview_canvas.create_text(
+            canvas_w // 2, canvas_h // 2,
+            text="加载中...",
+            fill='#64748b',
+            font=('Segoe UI', 10)
+        )
+
+        # 启动后台线程执行昂贵的 cairosvg 转换
+        thread = threading.Thread(
+            target=self._render_svg_async,
+            args=(svg_file, filepath, token),
+            daemon=True
+        )
+        self._preview_thread = thread
+        thread.start()
+
+    def _render_svg_async(self, svg_file, filepath, token):
+        """后台线程：执行 cairosvg 转换（耗时操作），完成后回主线程显示"""
+        # 任务被取消（用户已切换到其他条目）
+        if token != self._preview_token:
+            return
 
         try:
             mtime = os.path.getmtime(filepath)
             cache_key = (svg_file, mtime)
 
-            # 命中缓存则直接复用已渲染的 PhotoImage，跳过昂贵的 cairosvg 转换
+            # 再次检查缓存（可能在排队期间已被其他任务渲染）
             if cache_key == self._preview_cache_key and hasattr(self, 'preview_photo') and self.preview_photo:
-                photo = self.preview_photo
-            else:
-                with open(filepath, 'r', encoding='utf-8') as f:
-                    svg_content = f.read()
+                self.root.after(0, lambda: self._on_render_done(svg_file, self.preview_photo, token))
+                return
 
-                png_data = cairosvg.svg2png(
-                    bytestring=svg_content.encode('utf-8'),
-                    scale=2.5,
-                    background_color='#ffffff'
-                )
-                img = Image.open(io.BytesIO(png_data))
+            with open(filepath, 'r', encoding='utf-8') as f:
+                svg_content = f.read()
 
-                if canvas_w > 80 and canvas_h > 120:
-                    ratio = min((canvas_w - 40) / img.width, (canvas_h - 110) / img.height)
-                    new_w = int(img.width * ratio)
-                    new_h = int(img.height * ratio)
-                    img = img.resize((new_w, new_h), Image.LANCZOS)
-
-                photo = ImageTk.PhotoImage(img)
-                self.preview_photo = photo
-                self._preview_cache_key = cache_key
-
-            self.preview_canvas.create_image(
-                canvas_w // 2,
-                (canvas_h - 70) // 2,
-                image=photo,
-                anchor='center'
+            png_data = cairosvg.svg2png(
+                bytestring=svg_content.encode('utf-8'),
+                scale=2.5,
+                background_color='#ffffff'
             )
+            img = Image.open(io.BytesIO(png_data))
 
-            self.preview_canvas.create_text(
-                canvas_w // 2, canvas_h - 30,
-                text=svg_file,
-                fill='#1e293b',
-                font=('Segoe UI', 9)
-            )
+            # 转换完成前再次检查令牌
+            if token != self._preview_token:
+                return
 
+            self.root.after(0, lambda: self._on_render_done(svg_file, img, token, cache_key))
         except Exception as e:
-            error_text = str(e)[:100]
-            self.preview_canvas.create_text(
-                canvas_w//2 if 'canvas_w' in locals() else 150, 
-                canvas_h//2 if 'canvas_h' in locals() else 80,
-                text=f"SVG 渲染失败\n{error_text}",
-                fill='#ef4444',
-                justify='center',
-                width=280
-            )
-        # self.preview_canvas.delete('all')
-    
-        # svg_file = self.svg_file_var.get().strip()
-        # if not svg_file:
-        #     return
+            if token != self._preview_token:
+                return
+            err_text = str(e)[:100]
+            self.root.after(0, lambda: self._on_render_error(err_text, token))
 
-        # filepath = os.path.join(SVG_DIR, svg_file)
-        # if not os.path.exists(filepath):
-        #     self.preview_canvas.create_text(100, 75, text="文件不存在", fill='#ef4444')
-        #     return
+    def _on_render_done(self, svg_file, img_or_photo, token, cache_key=None):
+        """主线程：显示渲染结果"""
+        # 令牌不匹配说明用户已切换，丢弃此次结果
+        if token != self._preview_token:
+            return
 
-        # try:
-        #     # ====================== 修改这一行 ======================
-        #     # 请把下面路径改成你电脑上 Inkscape 的实际路径
-        #     inkscape_path = r"D:\Inkscape\bin\inkscape.com"
-        #     # =====================================================
+        canvas_w = self.preview_canvas.winfo_width() or 400
+        canvas_h = self.preview_canvas.winfo_height() or 300
 
-        #     if not os.path.exists(inkscape_path):
-        #         self.preview_canvas.create_text(150, 80, 
-        #             text=f"Inkscape 未找到\n{inkscape_path}", fill='#ef4444', width=250)
-        #         return
+        self.preview_canvas.delete('all')
+        self._preview_loading_id = None
 
-        #     # 临时 PNG 文件
-        #     temp_png = filepath.replace('.svg', '_temp_preview.png')
+        # 若传入的是 PIL Image，需按画布缩放后转为 PhotoImage
+        if isinstance(img_or_photo, Image.Image):
+            img = img_or_photo
+            if canvas_w > 80 and canvas_h > 120:
+                ratio = min((canvas_w - 40) / img.width, (canvas_h - 110) / img.height)
+                new_w = max(1, int(img.width * ratio))
+                new_h = max(1, int(img.height * ratio))
+                img = img.resize((new_w, new_h), Image.LANCZOS)
+            photo = ImageTk.PhotoImage(img)
+            self.preview_photo = photo
+            if cache_key:
+                self._preview_cache_key = cache_key
+        else:
+            # 已是 PhotoImage（缓存命中）
+            photo = img_or_photo
 
-        #     # 调用 Inkscape 转换
-        #     result = subprocess.run([
-        #         inkscape_path,
-        #         filepath,
-        #         "--export-type=png",
-        #         f"--export-filename={temp_png}",
-        #         "--export-width=900",           # 可调整清晰度
-        #         "--export-background=#ffffff"
-        #     ], check=True, timeout=10, 
-        #     creationflags=subprocess.CREATE_NO_WINDOW)
+        self.preview_canvas.create_image(
+            canvas_w // 2,
+            (canvas_h - 70) // 2,
+            image=photo,
+            anchor='center'
+        )
+        self.preview_canvas.create_text(
+            canvas_w // 2, canvas_h - 30,
+            text=svg_file,
+            fill='#1e293b',
+            font=('Segoe UI', 9)
+        )
 
-        #     # 读取图片
-        #     img = Image.open(temp_png)
-            
-        #     # 自适应画布大小
-        #     canvas_w = self.preview_canvas.winfo_width() or 400
-        #     canvas_h = self.preview_canvas.winfo_height() or 300
-            
-        #     if canvas_w > 100 and canvas_h > 120:
-        #         ratio = min((canvas_w - 40) / img.width, (canvas_h - 120) / img.height)
-        #         new_w = int(img.width * ratio)
-        #         new_h = int(img.height * ratio)
-        #         img = img.resize((new_w, new_h), Image.LANCZOS)
+    def _on_render_error(self, err_text, token):
+        """主线程：显示渲染错误"""
+        if token != self._preview_token:
+            return
+        self.preview_canvas.delete('all')
+        self._preview_loading_id = None
+        canvas_w = self.preview_canvas.winfo_width() or 400
+        canvas_h = self.preview_canvas.winfo_height() or 300
+        self.preview_canvas.create_text(
+            canvas_w // 2, canvas_h // 2,
+            text=f"SVG 渲染失败\n{err_text}",
+            fill='#ef4444',
+            justify='center',
+            width=280
+        )
 
-        #     self.preview_photo = ImageTk.PhotoImage(img)
-
-        #     self.preview_canvas.create_image(canvas_w//2, (canvas_h-80)//2, 
-        #                                 image=self.preview_photo, anchor='center')
-
-        #     self.preview_canvas.create_text(canvas_w//2, canvas_h-35, 
-        #                                 text=svg_file, fill='#1e293b', font=('Segoe UI', 9))
-
-        #     # 清理临时文件
-        #     try:
-        #         os.remove(temp_png)
-        #     except:
-        #         pass
-        # except:
-        #     pass
+    def _redraw_cached(self, svg_file):
+        """缓存命中时仅重绘 Canvas，不重新渲染"""
+        if not hasattr(self, 'preview_photo') or not self.preview_photo:
+            return
+        canvas_w = self.preview_canvas.winfo_width() or 400
+        canvas_h = self.preview_canvas.winfo_height() or 300
+        self.preview_canvas.delete('all')
+        self._preview_loading_id = None
+        self.preview_canvas.create_image(
+            canvas_w // 2,
+            (canvas_h - 70) // 2,
+            image=self.preview_photo,
+            anchor='center'
+        )
+        self.preview_canvas.create_text(
+            canvas_w // 2, canvas_h - 30,
+            text=svg_file,
+            fill='#1e293b',
+            font=('Segoe UI', 9)
+        )
 
     # ========== 生成数据 ==========
     def generate_data(self):
