@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D 旗帜飘扬 - Svg Site</title>
+    <link rel="stylesheet" href="src/flag.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        (function() {
+            const saved = localStorage.getItem('svg-gallery-theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const isDark = saved ? saved === 'dark' : prefersDark;
+            if (isDark) {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="flag-page">
+        <!-- 顶部工具栏 -->
+        <header class="flag-header">
+            <a href="index.html" class="back-btn">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="19" y1="12" x2="5" y2="12"/>
+                    <polyline points="12 19 5 12 12 5"/>
+                </svg>
+                返回图库
+            </a>
+            <h1 class="flag-title">3D 旗帜飘扬</h1>
+            <button class="theme-toggle-btn" id="themeToggleBtn" title="切换主题">
+                <svg id="themeIconSun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <svg id="themeIconMoon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+        </header>
+
+        <!-- 3D 场景容器 -->
+        <main class="flag-main">
+            <div id="flagCanvasContainer" class="flag-canvas-container"></div>
+
+            <!-- 控制面板 -->
+            <aside class="flag-panel" id="flagPanel">
+                <div class="flag-panel-toggle" id="flagPanelToggle">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                    </svg>
+                    设置
+                </div>
+
+                <div class="flag-panel-content">
+                    <!-- 旗面来源 -->
+                    <div class="panel-section">
+                        <label class="panel-label">旗面图案</label>
+                        <select id="flagImageSelect" class="panel-select">
+                            <option value="">-- 选择图库中的 SVG --</option>
+                        </select>
+                        <label class="panel-file-btn" for="flagUploadInput">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="17 8 12 3 7 8"/>
+                                <line x1="12" y1="3" x2="12" y2="15"/>
+                            </svg>
+                            上传图片 (PNG/JPG/SVG)
+                        </label>
+                        <input type="file" id="flagUploadInput" accept="image/png,image/jpeg,image/svg+xml" style="display: none;">
+                    </div>
+
+                    <!-- 旗杆类型 -->
+                    <div class="panel-section">
+                        <label class="panel-label">旗杆类型</label>
+                        <div class="panel-btn-group" id="poleTypeGroup">
+                            <button class="panel-type-btn active" data-pole="modern">现代金属旗杆</button>
+                            <button class="panel-type-btn" data-pole="spear">古代矛杆</button>
+                            <button class="panel-type-btn" data-pole="dadun">大纛横杆</button>
+                        </div>
+                    </div>
+
+                    <!-- 矛杆套筒颜色（仅古代矛杆时显示） -->
+                    <div class="panel-section" id="spearColorSection" style="display: none;">
+                        <label class="panel-label">套筒颜色</label>
+                        <div class="panel-color-row">
+                            <input type="color" id="spearColorPicker" value="#8B4513">
+                            <span id="spearColorValue" class="panel-color-value">#8B4513</span>
+                        </div>
+                    </div>
+
+                    <!-- 风速 -->
+                    <div class="panel-section">
+                        <label class="panel-label">
+                            风速
+                            <span id="windValue" class="panel-slider-value">3.0</span>
+                        </label>
+                        <input type="range" id="windSpeedSlider" min="0" max="10" step="0.1" value="3" class="panel-slider">
+                    </div>
+
+                    <!-- 重置视角 -->
+                    <div class="panel-section">
+                        <button class="panel-action-btn" id="resetCameraBtn">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="1 4 1 10 7 10"/>
+                                <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>
+                            </svg>
+                            重置视角
+                        </button>
+                    </div>
+
+                    <!-- 操作提示 -->
+                    <div class="panel-tips">
+                        <p>拖拽旋转视角，滚轮缩放，双指缩放（移动端）</p>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script type="module" src="src/flag.js"></script>
+</body>
+</html>

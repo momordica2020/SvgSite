@@ -82,6 +82,12 @@ function renderDetail() {
         svgImg.alt = currentImage.name;
     }
 
+    // 更新 3D 旗帜链接，携带当前 SVG id
+    const flag3dLink = document.getElementById('flag3dLink');
+    if (flag3dLink && currentImage.id) {
+        flag3dLink.href = `flag.html?svg=${encodeURIComponent(currentImage.id)}`;
+    }
+
     // 原始来源图片
     if (currentImage.originalImage) {
         const card = document.getElementById('detailOriginalCard');

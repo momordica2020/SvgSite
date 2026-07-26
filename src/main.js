@@ -349,6 +349,12 @@ function openModal(id) {
     previewSvgImg.src = `svg/${encodeURIComponent(currentImage.svgFile)}`;
     previewSvgImg.alt = currentImage.name;
 
+    // 更新 3D 旗帜链接，携带当前 SVG id
+    const flag3dLink = document.getElementById('flag3dLink');
+    if (flag3dLink) {
+        flag3dLink.href = `flag.html?svg=${encodeURIComponent(currentImage.id)}`;
+    }
+
     // 重置缩放
     resetZoom();
 
