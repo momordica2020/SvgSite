@@ -128,6 +128,36 @@
     "description": ""
   },
   {
+    "id": "阿拉伯清真言",
+    "name": "阿拉伯清真言",
+    "tags": [
+      "阿拉伯语",
+      "宗教",
+      "穆斯林"
+    ],
+    "svgFile": "阿拉伯清真言.svg",
+    "viewBox": "0 0 675 237.566",
+    "svgWidth": null,
+    "svgHeight": null,
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "阿拉伯清真言-圆形",
+    "name": "阿拉伯清真言（圆形）",
+    "tags": [
+      "阿拉伯语",
+      "宗教",
+      "穆斯林"
+    ],
+    "svgFile": "阿拉伯清真言-圆形.svg",
+    "viewBox": "0 0 722.347 702.597",
+    "svgWidth": null,
+    "svgHeight": null,
+    "originalImage": null,
+    "description": ""
+  },
+  {
     "id": "安卓",
     "name": "安卓",
     "tags": [
@@ -186,6 +216,62 @@
     "description": ""
   },
   {
+    "id": "比利时国徽",
+    "name": "比利时国徽",
+    "tags": [
+      "比利时",
+      "盾徽",
+      "王冠",
+      "狮子",
+      "动物",
+      "红色",
+      "白色",
+      "黄色",
+      "黑色"
+    ],
+    "svgFile": "比利时国徽.svg",
+    "viewBox": null,
+    "svgWidth": "972",
+    "svgHeight": "1190",
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "比利时瓦隆尼亚徽章",
+    "name": "比利时瓦隆尼亚徽章",
+    "tags": [
+      "比利时",
+      "鸡",
+      "动物",
+      "盾徽"
+    ],
+    "svgFile": "比利时瓦隆尼亚徽章.svg",
+    "viewBox": null,
+    "svgWidth": "499.56287",
+    "svgHeight": "543.27277",
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "不丹国徽",
+    "name": "不丹国徽",
+    "tags": [
+      "不丹",
+      "红色",
+      "黄色",
+      "佛教",
+      "龙",
+      "动物",
+      "植物"
+    ],
+    "svgFile": "不丹国徽.svg",
+    "viewBox": "0 0 527.77002 527.973",
+    "svgWidth": "659.71252",
+    "svgHeight": "659.96625",
+    "originalImage": null,
+    "description": ""
+  },
+  {
     "id": "成分复杂的旗",
     "name": "成分复杂的旗",
     "tags": [
@@ -226,6 +312,25 @@
     "viewBox": "0 0 5 3",
     "svgWidth": "1000",
     "svgHeight": "600",
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "德国威廉二世徽章",
+    "name": "德国威廉二世徽章",
+    "tags": [
+      "德国",
+      "鹰",
+      "盾徽",
+      "鸟类",
+      "黄色",
+      "黑色",
+      "王冠"
+    ],
+    "svgFile": "德国威廉二世徽章.svg",
+    "viewBox": null,
+    "svgWidth": "677.71564",
+    "svgHeight": "1215.8499",
     "originalImage": null,
     "description": ""
   },
@@ -376,6 +481,19 @@
     "description": ""
   },
   {
+    "id": "橄榄枝与松枝花环",
+    "name": "橄榄枝与松枝花环",
+    "tags": [
+      "植物"
+    ],
+    "svgFile": "橄榄枝与松枝花环.svg",
+    "viewBox": "0 0 839.423 740.471",
+    "svgWidth": null,
+    "svgHeight": null,
+    "originalImage": null,
+    "description": ""
+  },
+  {
     "id": "国际地球旗帜-2015",
     "name": "国际地球旗帜（2015）",
     "tags": [
@@ -425,6 +543,27 @@
     "viewBox": "0 0 637.795 637.795",
     "svgWidth": null,
     "svgHeight": null,
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "哈萨克斯坦及苏联加盟国时期国徽-1978-1992",
+    "name": "哈萨克斯坦及苏联加盟国时期国徽（1978~1992）",
+    "tags": [
+      "哈萨克斯坦",
+      "苏联",
+      "镰锤",
+      "五角星",
+      "麦穗",
+      "俄文",
+      "太阳",
+      "红色",
+      "黄色"
+    ],
+    "svgFile": "哈萨克斯坦及苏联加盟国时期国徽-1978-1992.svg",
+    "viewBox": null,
+    "svgWidth": "619.19",
+    "svgHeight": "705.78998",
     "originalImage": null,
     "description": ""
   },
@@ -558,6 +697,38 @@
     "viewBox": "0 0 800 480",
     "svgWidth": "800",
     "svgHeight": "480",
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "老虎图案1",
+    "name": "老虎图案1",
+    "tags": [
+      "虎",
+      "动物",
+      "黄色"
+    ],
+    "svgFile": "老虎图案1.svg",
+    "viewBox": "0 0 417.236 339.359",
+    "svgWidth": null,
+    "svgHeight": null,
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "立陶宛徽章-1990",
+    "name": "立陶宛徽章（1990）",
+    "tags": [
+      "立陶宛",
+      "人物",
+      "动物",
+      "马",
+      "骑士"
+    ],
+    "svgFile": "立陶宛徽章-1990.svg",
+    "viewBox": "0 0 15100 18050",
+    "svgWidth": "151mm",
+    "svgHeight": "180.5mm",
     "originalImage": null,
     "description": ""
   },
@@ -749,6 +920,42 @@
     "description": ""
   },
   {
+    "id": "麒麟图案1",
+    "name": "麒麟图案1",
+    "tags": [
+      "麒麟",
+      "神兽",
+      "动物"
+    ],
+    "svgFile": "麒麟图案1.svg",
+    "viewBox": "0 0 411.024 367.977",
+    "svgWidth": null,
+    "svgHeight": null,
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "清朝国旗-1889",
+    "name": "清朝国旗（1889）",
+    "tags": [
+      "清朝",
+      "中国",
+      "国旗",
+      "龙",
+      "中心",
+      "黄色",
+      "红色",
+      "蓝色",
+      "白色"
+    ],
+    "svgFile": "清朝国旗-1889.svg",
+    "viewBox": "0 0 907.087 566.929",
+    "svgWidth": "907.087",
+    "svgHeight": "566.929",
+    "originalImage": null,
+    "description": "该龙纹样式为wiki绘制版本（有微调），在当时并无非常明确之旗帜样式。\n\n旗样描述：\n\n查黄龙旗为与各国交接而设，旗幅必须较大，方壮观瞻。其宽长尺寸又须与升挂之处合宜。遵经妥细考校，酌拟制造。尺寸分为大小四号：\n头号横长一丈五尺六寸，直宽一丈六寸五分；\n二号横长一丈三尺九寸，直宽九尺五寸；\n三号横长一丈一尺五寸，直宽七尺六寸；\n四号横长九尺六寸，直宽六尺三寸。\n旗式一律照长方，照旧用正黄色羽纱制造。旗中青色飞龙，仍用羽纱照旧制镶嵌，龙头向上，五爪，业经制成式样呈请核定。"
+  },
+  {
     "id": "清朝晚期海关旗帜",
     "name": "清朝晚期海关旗帜",
     "tags": [
@@ -765,6 +972,56 @@
     "svgHeight": "850.394",
     "originalImage": "v2-ee84ed5d2f34d37cdfaff763b4c94a5b_r.webp",
     "description": "注意，该旗式是清代晚期海关旗帜的猜测还原，原旗的式样暂未得知，黄X形的宽度是全旗高度八分之一，系依据民国元年旗式中海关旗相关图案的比例。\n\n2012《中国海关通志》第六分册亦对此有记载，称：1867年4月26日，清朝总税务司署发布第5号通令，命令各关所辖各类巡船、关艇及趸船，一律悬挂关旗。理船厅所辖趸船及舰艇亦应悬挂关旗。关旗图案采用绿底、斜黄色十字图案，旗帜纵高小于横宽，贴旗杆部分纵高稍大于不贴旗杆部分。旗上采用黑色汉字，理船厅旗帜上加印红色绞缠锚，以示区别"
+  },
+  {
+    "id": "清代龙纹图案1",
+    "name": "清代龙纹图案1",
+    "tags": [
+      "清朝",
+      "龙",
+      "蓝色",
+      "神兽",
+      "动物"
+    ],
+    "svgFile": "清代龙纹图案1.svg",
+    "viewBox": "0 0 672.569 381.03",
+    "svgWidth": null,
+    "svgHeight": null,
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "清代龙纹图案2",
+    "name": "清代龙纹图案2",
+    "tags": [
+      "清朝",
+      "龙",
+      "动物",
+      "神兽"
+    ],
+    "svgFile": "清代龙纹图案2.svg",
+    "viewBox": "0 0 932.12 379.25",
+    "svgWidth": null,
+    "svgHeight": null,
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "清代龙纹图案3",
+    "name": "清代龙纹图案3",
+    "tags": [
+      "清朝",
+      "龙",
+      "蓝色",
+      "神兽",
+      "动物"
+    ],
+    "svgFile": "清代龙纹图案3.svg",
+    "viewBox": "0 0 825.483 520.789",
+    "svgWidth": null,
+    "svgHeight": null,
+    "originalImage": null,
+    "description": ""
   },
   {
     "id": "全能基督灭共阵线旗",
@@ -795,6 +1052,40 @@
     "viewBox": "0 0 1196.807 434.602",
     "svgWidth": null,
     "svgHeight": null,
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "神圣罗马帝国四元鹰徽章",
+    "name": "神圣罗马帝国四元鹰徽章",
+    "tags": [
+      "神圣罗马帝国",
+      "鹰",
+      "盾徽",
+      "十字",
+      "鸟类",
+      "王冠",
+      "黑色"
+    ],
+    "svgFile": "神圣罗马帝国四元鹰徽章.svg",
+    "viewBox": "0 0 525.63 385.48",
+    "svgWidth": "525.63",
+    "svgHeight": "385.48",
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "树剪影图案",
+    "name": "树剪影图案",
+    "tags": [
+      "树",
+      "植物",
+      "剪影"
+    ],
+    "svgFile": "树剪影图案.svg",
+    "viewBox": "0 0 1178.000000 1280.000000",
+    "svgWidth": "1178.000000pt",
+    "svgHeight": "1280.000000pt",
     "originalImage": null,
     "description": ""
   },
@@ -1041,6 +1332,21 @@
     "description": ""
   },
   {
+    "id": "天城文唵字",
+    "name": "天城文唵字",
+    "tags": [
+      "天成文",
+      "佛教",
+      "宗教"
+    ],
+    "svgFile": "天城文唵字.svg",
+    "viewBox": "0 0 81.83 86.094",
+    "svgWidth": null,
+    "svgHeight": null,
+    "originalImage": null,
+    "description": ""
+  },
+  {
     "id": "天德教标志",
     "name": "天德教标志",
     "tags": [
@@ -1068,6 +1374,21 @@
     "viewBox": "0 0 967.66 945.11",
     "svgWidth": null,
     "svgHeight": null,
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "蚊子",
+    "name": "蚊子剪影1",
+    "tags": [
+      "动物",
+      "昆虫",
+      "剪影"
+    ],
+    "svgFile": "蚊子.svg",
+    "viewBox": "0 0 1280.000000 640.000000",
+    "svgWidth": "1280.000000pt",
+    "svgHeight": "640.000000pt",
     "originalImage": null,
     "description": ""
   },
@@ -1103,6 +1424,20 @@
     "viewBox": "0 0 1275.593 850.394",
     "svgWidth": "1275.591",
     "svgHeight": "850.394",
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "伊斯兰花结-十瓣环",
+    "name": "伊斯兰花结（十瓣环）",
+    "tags": [
+      "穆斯林",
+      "十角形"
+    ],
+    "svgFile": "伊斯兰花结-十瓣环.svg",
+    "viewBox": "0 0 1282.014 1219.27",
+    "svgWidth": null,
+    "svgHeight": null,
     "originalImage": null,
     "description": ""
   },
@@ -1719,6 +2054,25 @@
     "description": "据1949年6月15日中国人民革命军事委员会命令中的“中国人民解放军军旗及军徽样式”制作，旗帜比例5：4。\n\n中国人民解放军军旗为红地，上缀金黄色的五角星及“八一”两字，表示中国人民解放军自一九二七年八月一日南昌起义诞生以来，经过长期奋斗，正以其灿烂的星光，普照全国。"
   },
   {
+    "id": "中国人民解放军军旗但是国旗比例",
+    "name": "中国人民解放军军旗但是国旗比例",
+    "tags": [
+      "虚构",
+      "军旗",
+      "红色",
+      "黄色",
+      "上角",
+      "五角星",
+      "汉字"
+    ],
+    "svgFile": "中国人民解放军军旗但是国旗比例.svg",
+    "viewBox": "0 0 5000 3333.333",
+    "svgWidth": "5000",
+    "svgHeight": "3333.333",
+    "originalImage": null,
+    "description": "使用中国国旗比例（3：2），并采取与国旗的大五角形尺寸位置完全一致的方式绘制五角星和“八一”徽标位置。注意，该旗帜仅为虚构，现实中的解放军并无此尺寸样式的旗帜。"
+  },
+  {
     "id": "中国人民解放军军事航天部队军旗-2025",
     "name": "中国人民解放军军事航天部队军旗（2025）",
     "tags": [
@@ -2068,6 +2422,46 @@
     "svgHeight": "850.394",
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "中华帝国国旗-1915",
+    "name": "中华帝国国旗（1915）",
+    "tags": [
+      "中国",
+      "斜切",
+      "十字",
+      "红色",
+      "黄色",
+      "白色",
+      "蓝色",
+      "黑色"
+    ],
+    "svgFile": "中华帝国国旗-1915.svg",
+    "viewBox": "0 0 907.087 566.929",
+    "svgWidth": null,
+    "svgHeight": null,
+    "originalImage": "448bf1cec75c29ddf9e1d1ff221c20b7.png",
+    "description": ""
+  },
+  {
+    "id": "中华帝国国旗草案-1915",
+    "name": "中华帝国国旗草案（1915）",
+    "tags": [
+      "中国",
+      "斜切",
+      "十字",
+      "红色",
+      "黄色",
+      "蓝色",
+      "白色",
+      "黑色"
+    ],
+    "svgFile": "中华帝国国旗草案-1915.svg",
+    "viewBox": "0 0 793.701 566.929",
+    "svgWidth": "396.847",
+    "svgHeight": "283.459",
+    "originalImage": "申报1915年12月20日第六版 要闻二.png",
+    "description": "据《申报》1915年12月20日第六版 要闻二 的相关记述绘制"
   },
   {
     "id": "中华民国-北洋-1914年颁布盐务巡船旗",
