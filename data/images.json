@@ -1024,6 +1024,25 @@
     "description": ""
   },
   {
+    "id": "清代龙纹图案4",
+    "name": "清代龙纹图案4",
+    "tags": [
+      "清朝",
+      "龙",
+      "黄色",
+      "蓝色",
+      "火焰",
+      "神兽",
+      "动物"
+    ],
+    "svgFile": "清代龙纹图案4.svg",
+    "viewBox": "0 0 600 545",
+    "svgWidth": "600",
+    "svgHeight": "545",
+    "originalImage": null,
+    "description": ""
+  },
+  {
     "id": "全能基督灭共阵线旗",
     "name": "全能基督灭共阵线旗",
     "tags": [
