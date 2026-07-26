@@ -15,8 +15,8 @@ let animationId = null;
 let time = 0;
 
 // 布料模拟参数
-const SEG_X = 30;
-const SEG_Y = 20;
+const SEG_X = 60;
+const SEG_Y = 40;
 let flagWidth = 3;
 let flagHeight = 2;
 
@@ -370,6 +370,9 @@ function createFlag() {
     // 移除旧旗帜
     if (flagMesh) {
         scene.remove(flagMesh);
+		if (flagMesh.material.map) {
+            flagMesh.material.map.dispose();
+        }
         flagMesh.geometry.dispose();
         flagMesh.material.dispose();
         flagMesh = null;
@@ -435,6 +438,7 @@ function createFlag() {
 }
 
 // ========== 布料模拟 ==========
+/*
 function simulateFlag() {
     if (!flagMesh || !originalPositions) return;
 
@@ -504,6 +508,107 @@ function simulateFlag() {
         positions[i + 2] = newZ;
     }
 
+    flagMesh.geometry.attributes.position.needsUpdate = true;
+    flagMesh.geometry.computeVertexNormals();
+}
+*/
+function simulateFlag() {
+    if (!flagMesh || !originalPositions) return;
+
+    const positions = flagMesh.geometry.attributes.position.array;
+    const timeStep = time * 0.6; // 稍微调整时间步长系数
+
+    // 物理参数
+    const windFactor = windSpeed * 0.15;
+    
+    // 基础重力常数，随着细分增高，下垂可以更明显
+    const baseGravity = 0.25; 
+
+    for (let i = 0; i < positions.length; i += 3) {
+        const ix = i / 3;
+        const col = ix % (SEG_X + 1);
+        const row = Math.floor(ix / (SEG_X + 1));
+
+        // 归一化坐标：u (0=左固定边, 1=右自由边), v (0=顶部, 1=底部)
+        const u = col / SEG_X; 
+        const v = row / SEG_Y; 
+
+        // 原始位置
+        const ox = originalPositions[i];
+        const oy = originalPositions[i + 1];
+        const oz = originalPositions[i + 2];
+
+        let newX = ox;
+        let newY = oy;
+        let newZ = oz;
+
+        switch (currentPoleType) {
+            case 'modern':
+            case 'spear': {
+                // ---- 竖直双端点悬挂模式 ----
+                
+                // 1. 判断是否为固定的两个端点（左上角和左下角）
+                // 容差设为 0.02 左右。如果接近左边缘，且高度在最上方或最下方，则完全钉死
+                const isTopCorner = (u < 0.02 && v < 0.05);
+                const isBottomCorner = (u < 0.02 && v > 0.95);
+
+                if (isTopCorner || isBottomCorner) {
+                    // 挂点完全不动
+                    newX = ox;
+                    newY = oy;
+                    newZ = oz;
+                } else {
+                    // 2. 模拟重力下垂：
+                    // 左侧没有被挂住的边缘（中间部分）会因为重力向下、向右内缩塌陷
+                    // 距离挂点越远，受重力拉扯下垂越明显。u越大（越往右边）或者接近v=0.5（中间空空荡荡）下垂越强
+                    const edgeSag = Math.sin(v * Math.PI) * (1.0 - u); // 左侧中间边缘塌陷最厉害
+                    
+                    // Y轴受到向下重力和风的托举力影响
+                    newY = oy - (baseGravity * u * 0.6) - (edgeSag * baseGravity * 0.4);
+                    // X轴因为布料向下耷拉，会向内部产生一定的缩进收敛
+                    newX = ox - (edgeSag * 0.1) + (Math.sin(timeStep + u) * 0.02 * windFactor);
+
+                    // 3. 增强风力褶皱（多层叠加正弦波，形成错落有致的布料风摆）
+                    // wave1: 主风波，从左往右传导
+                    const wave1 = Math.sin(u * 6.5 - timeStep * 4.0 + v * 2.0) * 0.18 * windFactor * u;
+                    // wave2: 次级微小褶皱，增加毛刺感和细节
+                    const wave2 = Math.sin(u * 12.0 - timeStep * 7.5 - v * 4.0) * 0.06 * windFactor * u;
+                    // wave3: 纵向随机摆动，防止旗帜只朝一个方向晃
+                    const wave3 = Math.cos(v * 5.0 + timeStep * 2.2) * 0.04 * windFactor * u;
+
+                    newZ = oz + wave1 + wave2 + wave3;
+                }
+                break;
+            }
+            case 'dadun': {
+                // ---- 大纛横挂模式（保持横向悬挂特征，两端固定） ----
+                const isLeftCorner = (v < 0.02 && u < 0.05);
+                const isRightCorner = (v < 0.02 && u > 0.95);
+
+                if (isLeftCorner || isRightCorner) {
+                    newX = ox;
+                    newY = oy;
+                    newZ = oz;
+                } else {
+                    const topSag = Math.sin(u * Math.PI) * (1.0 - v);
+                    newY = oy - (baseGravity * v * 0.4) - (topSag * baseGravity * 0.3);
+                    
+                    const wave1 = Math.sin(v * 5.5 - timeStep * 3.5 + u * 1.5) * 0.15 * windFactor * v;
+                    const wave2 = Math.sin(u * 9.0 + timeStep * 5.0) * 0.05 * windFactor * v;
+                    
+                    newZ = oz + wave1 + wave2;
+                }
+                break;
+            }
+        }
+
+        // 更新顶点缓冲数组
+        positions[i] = newX;
+        positions[i + 1] = newY;
+        positions[i + 2] = newZ;
+    }
+
+    // 通知 Three.js 更新顶点并重新计算法线以保证光影真实
     flagMesh.geometry.attributes.position.needsUpdate = true;
     flagMesh.geometry.computeVertexNormals();
 }
