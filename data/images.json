@@ -1075,6 +1075,24 @@
     "description": ""
   },
   {
+    "id": "世界台湾人大会会旗",
+    "name": "世界台湾人大会会旗",
+    "tags": [
+      "台湾",
+      "党旗",
+      "竖切",
+      "绿色",
+      "白色",
+      "地图"
+    ],
+    "svgFile": "世界台湾人大会会旗.svg",
+    "viewBox": "0 0 815 450",
+    "svgWidth": "815",
+    "svgHeight": "450",
+    "originalImage": null,
+    "description": "世界台湾人大会（World Taiwanese Congress, \"WTC\"）首倡之台湾代表旗帜，以加拿大国旗作为设计参考"
+  },
+  {
     "id": "树剪影图案",
     "name": "树剪影图案",
     "tags": [
@@ -1156,6 +1174,24 @@
     "description": ""
   },
   {
+    "id": "台湾独立建国联盟旗",
+    "name": "台湾独立建国联盟旗",
+    "tags": [
+      "台湾",
+      "意识形态",
+      "竖切",
+      "红色",
+      "白色",
+      "地图"
+    ],
+    "svgFile": "台湾独立建国联盟旗.svg",
+    "viewBox": null,
+    "svgWidth": "900.00012",
+    "svgHeight": "600.04236",
+    "originalImage": null,
+    "description": ""
+  },
+  {
     "id": "台湾工党党旗",
     "name": "台湾工党党旗",
     "tags": [
@@ -1214,6 +1250,66 @@
     "description": "原旗含义描述：\n\n红天是象征反抗压迫追求公平的满腔热血；\n黄星是全世界代表为勤劳大众奋斗的政党；\n绿地是耸立于太平洋滨的美丽之岛——台湾！"
   },
   {
+    "id": "台湾民众党党旗-1928",
+    "name": "台湾民众党党旗（1928）",
+    "tags": [
+      "台湾",
+      "党旗",
+      "横条",
+      "中心",
+      "红色",
+      "蓝色",
+      "白色",
+      "太阳"
+    ],
+    "svgFile": "台湾民众党党旗-1928.svg",
+    "viewBox": "0 0 850.394 566.929",
+    "svgWidth": "850.394",
+    "svgHeight": "566.929",
+    "originalImage": "Chiang_Wei-shui_covered_by_TPP's_first_flag.jpg",
+    "description": ""
+  },
+  {
+    "id": "台湾民众党党旗-1929",
+    "name": "台湾民众党党旗（1929）",
+    "tags": [
+      "台湾",
+      "党旗",
+      "上角",
+      "红色",
+      "白色",
+      "蓝色",
+      "五角星"
+    ],
+    "svgFile": "台湾民众党党旗-1929.svg",
+    "viewBox": "0 0 850.394 566.965",
+    "svgWidth": "850.394",
+    "svgHeight": "566.929",
+    "originalImage": "tumblr_nzrrj51DGv1qaihw2o1_1280.jpg",
+    "description": ""
+  },
+  {
+    "id": "台湾民主国国旗-黄虎旗-1895",
+    "name": "台湾民主国国旗（黄虎旗）（1895）",
+    "tags": [
+      "台湾",
+      "国旗",
+      "方旗",
+      "中心",
+      "虎",
+      "动物",
+      "蓝色",
+      "黄色",
+      "红色"
+    ],
+    "svgFile": "台湾民主国国旗-黄虎旗-1895.svg",
+    "viewBox": "0 0 270.93332 248.44377",
+    "svgWidth": "270.93332mm",
+    "svgHeight": "248.44377mm",
+    "originalImage": "Flag_of_the_Republic_of_Formosa_in_National_Taiwan_Museum_20180123.jpg",
+    "description": ""
+  },
+  {
     "id": "台湾民主进步党党徽",
     "name": "台湾民主进步党党徽",
     "tags": [
@@ -1251,6 +1347,25 @@
     "description": "廖文毅《台湾民本主义》书中的台湾独立旗帜"
   },
   {
+    "id": "台湾桃园市徽",
+    "name": "台湾桃园市徽",
+    "tags": [
+      "心形",
+      "汉字",
+      "红色",
+      "白色",
+      "蓝色",
+      "绿色",
+      "黄色"
+    ],
+    "svgFile": "台湾桃园市徽.svg",
+    "viewBox": "0 0 160.988 160.987",
+    "svgWidth": null,
+    "svgHeight": null,
+    "originalImage": null,
+    "description": ""
+  },
+  {
     "id": "台湾天一党徽章",
     "name": "台湾天一党徽章",
     "tags": [
@@ -1266,6 +1381,21 @@
     "viewBox": "0 0 1139.745 1139.745",
     "svgWidth": "210.383",
     "svgHeight": "38.809",
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "台湾西来庵起义-大明慈悲国-旗-1915",
+    "name": "台湾西来庵起义（大明慈悲国）旗（1915）",
+    "tags": [
+      "台湾",
+      "汉字",
+      "三角旗"
+    ],
+    "svgFile": "台湾西来庵起义-大明慈悲国-旗-1915.svg",
+    "viewBox": "0 0 965.014 965.014",
+    "svgWidth": "98.286",
+    "svgHeight": "542.857",
     "originalImage": null,
     "description": ""
   },
@@ -1330,6 +1460,26 @@
     "svgHeight": "850.394",
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "台字翠青旗",
+    "name": "台字翠青旗",
+    "tags": [
+      "台湾",
+      "意识形态",
+      "斜切",
+      "蓝色",
+      "白色",
+      "绿色",
+      "中心",
+      "三角"
+    ],
+    "svgFile": "台字翠青旗.svg",
+    "viewBox": "0 0 850.394 566.929",
+    "svgWidth": "850.394",
+    "svgHeight": "566.929",
+    "originalImage": null,
+    "description": "2016年台中默契咖啡店店长陈致豪（老丹）所发表的台独旗帜。深蓝色主色调，寓意大海、白色象征浪花、翠青色表达台湾主体核心的原住民的高山国、台字纹则作为台湾象征。对角线分割的描绘层层山峦，翠青色（pantone 3255C）三角为翠绿青山，以台字纹作为台湾符码，前行扬起浪花向独立建国前进。"
   },
   {
     "id": "天城文唵字",
