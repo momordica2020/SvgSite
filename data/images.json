@@ -399,6 +399,24 @@
     "description": "据2020年苗永珍制作复制品（北安红色文化馆馆藏）制作"
   },
   {
+    "id": "东突厥斯坦独立运动旗帜",
+    "name": "东突厥斯坦独立运动旗帜",
+    "tags": [
+      "蓝色",
+      "白色",
+      "月",
+      "五角星",
+      "中心",
+      "穆斯林"
+    ],
+    "svgFile": "东突厥斯坦独立运动旗帜.svg",
+    "viewBox": "0 -30000 90000 60000",
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": ""
+  },
+  {
     "id": "法国皇室徽章",
     "name": "法国皇室徽章",
     "tags": [
@@ -683,6 +701,24 @@
     "description": ""
   },
   {
+    "id": "荆楚利亚旗",
+    "name": "荆楚利亚旗",
+    "tags": [
+      "虚构",
+      "中心",
+      "黄色",
+      "蓝色",
+      "太阳",
+      "鸟类"
+    ],
+    "svgFile": "荆楚利亚旗.svg",
+    "viewBox": "0 0 961.348 566.929",
+    "svgWidth": "961.348",
+    "svgHeight": "566.929",
+    "originalImage": null,
+    "description": ""
+  },
+  {
     "id": "跨性别旗",
     "name": "跨性别旗",
     "tags": [
@@ -698,6 +734,26 @@
     "svgWidth": "800",
     "svgHeight": "480",
     "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "昆明市市旗-1922",
+    "name": "昆明市市旗（1922）",
+    "tags": [
+      "中国",
+      "中华民国",
+      "市旗",
+      "红色",
+      "黄色",
+      "蓝色",
+      "中心",
+      "汉字"
+    ],
+    "svgFile": "昆明市市旗-1922.svg",
+    "viewBox": "0 0 756.85 566.929",
+    "svgWidth": "756.85",
+    "svgHeight": "566.929",
+    "originalImage": "_2_那些人那些事_来自小红书网页版.jpg",
     "description": ""
   },
   {
@@ -787,6 +843,24 @@
     "svgWidth": "1275.591",
     "svgHeight": "850.394",
     "originalImage": "Yan-2.webp",
+    "description": ""
+  },
+  {
+    "id": "内蒙古人民党旗-1997",
+    "name": "内蒙古人民党旗（1997）",
+    "tags": [
+      "中心",
+      "蓝色",
+      "黄色",
+      "白色",
+      "红色",
+      "蒙古"
+    ],
+    "svgFile": "内蒙古人民党旗-1997.svg",
+    "viewBox": null,
+    "svgWidth": "600.00000px",
+    "svgHeight": "400.00000px",
+    "originalImage": null,
     "description": ""
   },
   {
@@ -901,6 +975,26 @@
     "viewBox": null,
     "svgWidth": "750",
     "svgHeight": "500",
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "宁夏回族国旗帜",
+    "name": "宁夏回族国旗帜",
+    "tags": [
+      "虚构",
+      "红色",
+      "绿色",
+      "黑色",
+      "白色",
+      "月",
+      "横条",
+      "中心"
+    ],
+    "svgFile": "宁夏回族国旗帜.svg",
+    "viewBox": "0 0 850.394 566.929",
+    "svgWidth": "850.394",
+    "svgHeight": "188.976",
     "originalImage": null,
     "description": ""
   },
@@ -1071,6 +1165,25 @@
     "viewBox": "0 0 1196.807 434.602",
     "svgWidth": null,
     "svgHeight": null,
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "上海国旗帜",
+    "name": "上海国旗帜",
+    "tags": [
+      "虚构",
+      "中心",
+      "斜切",
+      "十字",
+      "红色",
+      "白色",
+      "蓝色"
+    ],
+    "svgFile": "上海国旗帜.svg",
+    "viewBox": "0 0 850.394 510.236",
+    "svgWidth": "850.394",
+    "svgHeight": "510.236",
     "originalImage": null,
     "description": ""
   },
@@ -1562,6 +1675,29 @@
     "description": ""
   },
   {
+    "id": "西藏雪山狮子旗1",
+    "name": "西藏雪山狮子旗1",
+    "tags": [
+      "佛教",
+      "宗教",
+      "中心",
+      "三角",
+      "镶边",
+      "红色",
+      "黄色",
+      "蓝色",
+      "白色",
+      "狮子",
+      "动物"
+    ],
+    "svgFile": "西藏雪山狮子旗1.svg",
+    "viewBox": null,
+    "svgWidth": "1152",
+    "svgHeight": "720",
+    "originalImage": null,
+    "description": ""
+  },
+  {
     "id": "小米公司logo",
     "name": "小米公司logo",
     "tags": [
@@ -1607,6 +1743,24 @@
     "viewBox": "0 0 1282.014 1219.27",
     "svgWidth": null,
     "svgHeight": null,
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "彝族旗帜",
+    "name": "彝族旗帜",
+    "tags": [
+      "虚构",
+      "中西",
+      "黑色",
+      "红色",
+      "黄色",
+      "植物"
+    ],
+    "svgFile": "彝族旗帜.svg",
+    "viewBox": "0 0 850.394 510.236",
+    "svgWidth": "850.394",
+    "svgHeight": "510.236",
     "originalImage": null,
     "description": ""
   },
@@ -1689,6 +1843,45 @@
     "svgFile": "英国国旗.svg",
     "viewBox": "0 0 60 30",
     "svgWidth": "1200",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "幽燕西亚国旗",
+    "name": "幽燕西亚国旗",
+    "tags": [
+      "虚构",
+      "中心",
+      "横条",
+      "红色",
+      "白色",
+      "黑色",
+      "植物",
+      "十字"
+    ],
+    "svgFile": "幽燕西亚国旗.svg",
+    "viewBox": "0 0 907.087 566.929",
+    "svgWidth": "907.087",
+    "svgHeight": "566.929",
+    "originalImage": null,
+    "description": ""
+  },
+  {
+    "id": "中国澳门特别行政区区旗-1999",
+    "name": "中国澳门特别行政区区旗（1999）",
+    "tags": [
+      "中国",
+      "区旗",
+      "白色",
+      "黄色",
+      "绿色",
+      "中心",
+      "植物"
+    ],
+    "svgFile": "中国澳门特别行政区区旗-1999.svg",
+    "viewBox": "-1440 -960 2880 1920",
+    "svgWidth": "900",
     "svgHeight": "600",
     "originalImage": null,
     "description": ""
@@ -2531,6 +2724,25 @@
     "description": "据百度百科词条，中国社会文化改革协会，前身为上海市西南模范中学共产主义宣扬协会（2006年4月创立）。于2008年一月于上海市西南模范中学创立。2008年9月协会总部正式迁往徐汇中学，并设立徐汇分会。该协会秉承马克思列宁思想，毛泽东思想，邓小平理论，于校内宣扬中国共产党的光辉业绩，党的近几次大会均于校内进行宣传，并深入研读，讨论。"
   },
   {
+    "id": "中国香港特别行政区区旗-1990",
+    "name": "中国香港特别行政区区旗（1990）",
+    "tags": [
+      "中国",
+      "区旗",
+      "红色",
+      "白色",
+      "中心",
+      "五角星",
+      "植物"
+    ],
+    "svgFile": "中国香港特别行政区区旗-1990.svg",
+    "viewBox": null,
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": ""
+  },
+  {
     "id": "中华爱国同心会旗1",
     "name": "中华爱国同心会旗1",
     "tags": [
@@ -3336,6 +3548,23 @@
     "svgWidth": null,
     "svgHeight": null,
     "originalImage": "中太众人劝归国国徽3.png",
+    "description": ""
+  },
+  {
+    "id": "壮族旗帜",
+    "name": "壮族旗帜",
+    "tags": [
+      "虚构",
+      "中心",
+      "黄色",
+      "绿色",
+      "太阳"
+    ],
+    "svgFile": "壮族旗帜.svg",
+    "viewBox": "0 0 850.394 566.929",
+    "svgWidth": "850.394",
+    "svgHeight": "566.929",
+    "originalImage": null,
     "description": ""
   }
 ]
