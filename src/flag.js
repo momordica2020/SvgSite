@@ -69,6 +69,7 @@ let SEG_X = QUALITY === 'low' ? 32 : 60;
 let SEG_Y = QUALITY === 'low' ? 22 : 40;
 let flagWidth = 3;
 let flagHeight = 2;
+let isVerticalHang = false; // true=顶挂向下（大纛，旗面竖着垂下），false=沿旗杆横向展开（金属/矛杆）
 
 // 顶点原始位置缓存（用于布料模拟）
 let originalPositions = null;
@@ -85,8 +86,14 @@ let particles = null;
 let constraints = null;
 // 物理模拟参数（低端机：更少迭代 + 物理帧率 30Hz）
 const PHYSICS_DT = QUALITY === 'low' ? 1 / 30 : 1 / 60;
-const GRAVITY = 0.35;
-const DAMPING = 0.992;
+// 重力
+const GRAVITY = 0.75;
+// 竖挂时的重力倍数（竖挂时旗面沿旗杆方向，需要更大重力防止被风吹得太高）
+const GRAVITY_VERTICAL_MULTIPLIER = 1.0;
+// 竖挂时的风力衰减倍数（防止被风吹得太高）
+const WIND_VERTICAL_MULTIPLIER = 0.3;
+// 粘滞
+const DAMPING = 0.999;
 const CONSTRAINT_ITERATIONS = QUALITY === 'low' ? 3 : 4;
 const PINNED = true;
 const UNPINNED = false;
@@ -99,26 +106,25 @@ const FLAG_BUMP_SCALE = 0.0003;
 // 透光率：值越大越透光（薄织物效果）
 const FLAG_TRANSMISSION = 0.12;
 // 折射率：织物大约 1.2-1.4
-const FLAG_IOR = 1.25;
+const FLAG_IOR = 1.45;
 // 高光强度：值越小反光越弱
 const FLAG_SPECULAR = 0.01;
 
 // ========== 风力参数（统一在这里调整） ==========
 // 阵风波动幅度：值越大风速变化越剧烈
-const WIND_GUST_AMOUNT = 0.3;
+const WIND_GUST_AMOUNT = 0.1;
 // 湍流强度：值越大乱流越明显，卷动越剧烈
-const WIND_TURBULENCE = 2.3;
+const WIND_TURBULENCE = 1.3;
 // 纵向（Z轴）扰动强度：控制前后翻卷
 const WIND_Z_TURB = 0.3;
 // 垂直（Y轴）扰动强度：控制上下波动
-const WIND_Y_TURB = 0.5;
+const WIND_Y_TURB = 0.8;
 // 风的倾斜角度：负值=从斜上方吹下，正值=从斜下方吹上
-// 现在改成负值，让风从斜上方吹下，避免旗尾过分卷到天上
-const WIND_UPWARD_ANGLE = 0.15;
+const WIND_UPWARD_ANGLE = 0.45;
 
 // ========== 布料刚度参数（统一在这里调整） ==========
 // 结构约束：旗面织物不可拉伸，固定为 1.0（硬约束），与 FREEEND_SOFTEN/ROOT_STIFFEN 相乘后仍取 1
-const STIFFNESS_STRUCTURAL = 1.0;
+const STIFFNESS_STRUCTURAL = 0.9;
 // 剪切约束：控制斜切/弯折变形，值越大越硬挺不可弯折
 const STIFFNESS_SHEAR = 0.003;
 // 弯曲约束：控制弯折卷曲，值越小越柔软越容易卷
@@ -128,7 +134,7 @@ const FREEND_SOFTEN = 0.999;
 // 根部变硬系数：仅作用于剪切约束
 const ROOT_STIFFEN = 1.2;
 // 最大修正量（每次迭代），仅作用于剪切/弯曲约束
-const MAX_CORRECTION = 0.02;
+const MAX_CORRECTION = 0.01;
 
 // ========== 初始化物理布料系统 ==========
 function initClothPhysics() {
@@ -217,8 +223,18 @@ function addConstraint(i, j, type) {
     const w = SEG_X + 1;
     const col1 = i % w;
     const col2 = j % w;
+    const row1 = Math.floor(i / w);
+    const row2 = Math.floor(j / w);
+
+    // 根据挂法选择使用列方向（横挂）还是行方向（竖挂）来计算刚度衰减
     const avgCol = (col1 + col2) / 2 / SEG_X;
     const minCol = Math.min(col1, col2) / SEG_X;
+    const avgRow = (row1 + row2) / 2 / SEG_Y;
+    const minRow = Math.min(row1, row2) / SEG_Y;
+
+    // 竖挂时以行方向（顶部固定、底部自由）作为刚度衰减主方向
+    const useAvg = isVerticalHang ? avgRow : avgCol;
+    const useMin = isVerticalHang ? minRow : minCol;
 
     let baseStiffness;
     if (type === 'structural') baseStiffness = STIFFNESS_STRUCTURAL;
@@ -233,11 +249,11 @@ function addConstraint(i, j, type) {
         // 剪切/弯曲约束：可按位置变化
         // 用非线性的 softFactor：前 30% 区间保持原刚度（保持根部平整），之后指数衰减到接近 0
         // smoothstep 软过渡：t<0.3 时 ratio=1，t>0.7 时 ratio=0
-        const t = avgCol;
+        const t = useAvg;
         const smooth = t < 0.3 ? 1.0 : (t > 0.7 ? 0.0 : 1.0 - Math.pow((t - 0.3) / 0.4, 2));
         const softFactor = 1.0 - FREEND_SOFTEN * (1.0 - smooth);
         // 根部加强：仅剪切约束
-        const rootFactor = 1.0 + (ROOT_STIFFEN - 1.0) * Math.max(0, 1.0 - minCol * 2.0);
+        const rootFactor = 1.0 + (ROOT_STIFFEN - 1.0) * Math.max(0, 1.0 - useMin * 2.0);
         stiffness = baseStiffness * softFactor * (type === 'shear' ? rootFactor : 1.0);
     }
 
@@ -348,9 +364,10 @@ function settleCloth() {
             const py = particles[idx + 4];
             const pz = particles[idx + 5];
             
-            // 仅重力，逐渐增加
+            // 仅重力，逐渐增加（竖挂时使用更大重力）
             const gravityFactor = step < 5 ? 0.3 : (step < 10 ? 0.6 : 1.0);
-            const ay = -GRAVITY * gravityFactor;
+            const settleGravity = isVerticalHang ? GRAVITY * GRAVITY_VERTICAL_MULTIPLIER : GRAVITY;
+            const ay = -settleGravity * gravityFactor;
             
             const newX = x + (x - px) * DAMPING;
             const newY = y + (y - py) * DAMPING + ay * dtSq;
@@ -952,6 +969,7 @@ function createSpearPole() {
     );
     pole.position.y = poleHeight / 2 + 0.15;
     pole.castShadow = true;
+    pole.userData.poleCore = true; // 标记为参与碰撞检测的旗杆主体
     poleGroup.add(pole);
 
     // 矛头（金属三棱刃，紧贴红缨上方）
@@ -1054,6 +1072,7 @@ function createDadunPole() {
     verticalPole.position.x = dx;
     verticalPole.position.y = verticalPoleHeight / 2 + 0.15;
     verticalPole.castShadow = true;
+    verticalPole.userData.poleCore = true; // 标记为参与碰撞检测的旗杆主体
     poleGroup.add(verticalPole);
 
     // ---- 横杆：位于旗面顶端 y=5.92，长度覆盖旗面宽度 ----
@@ -1069,6 +1088,7 @@ function createDadunPole() {
     horizontalPole.rotation.z = Math.PI / 2;
     horizontalPole.position.set(horizontalCenterX+dx, horizontalY, 0);
     horizontalPole.castShadow = true;
+    horizontalPole.userData.poleCore = true; // 标记为参与碰撞检测的旗杆主体
     poleGroup.add(horizontalPole);
 
 
@@ -1149,14 +1169,13 @@ function createFlag() {
 
     // 根据旗杆类型确定旗帜槽位（最大可容纳尺寸）与挂点参考位置
     let slotWidth, slotHeight, anchorX, anchorY;
-    let verticalHang; // true=竖直挂（沿旗杆方向），false=挂旗（顶挂向下）
     switch (currentPoleType) {
         case 'modern':
             slotWidth = 3;
             slotHeight = 2;
             anchorX = 0.058; // 旗绳位置（软性绳索悬挂，无旗裤）
             anchorY = 5.92;  // 旗面顶端挂点（杆顶滑轮处）
-            verticalHang = true;
+            isVerticalHang = false;
             break;
         case 'spear':
             // 古代矛杆：旗帜尺寸与挂高与金属旗杆一致
@@ -1164,7 +1183,7 @@ function createFlag() {
             slotHeight = 2;
             anchorX = 0.058;
             anchorY = 5.92;
-            verticalHang = true;
+            isVerticalHang = false;
             break;
         case 'dadun':
             // 大纛：旗帜尺寸与金属旗杆一致，顶挂向下
@@ -1172,7 +1191,7 @@ function createFlag() {
             slotHeight = 2;
             anchorX = 0.058;
             anchorY = 5.92;
-            verticalHang = false;
+            isVerticalHang = true;
             break;
     }
 
@@ -1198,7 +1217,21 @@ function createFlag() {
 
     const THRESHOLD = 3 / 2;
     let meshCenterX, meshCenterY;
-    if (verticalHang) {
+    if (isVerticalHang) {
+         // 大纛顶挂：旗面顶部 y 固定在 anchorY（横杆高度）
+        if (aspect < THRESHOLD) {
+            flagHeight = slotHeight;
+            flagWidth = slotHeight * aspect;
+        } else {
+            flagWidth = slotWidth;
+            flagHeight = slotWidth / aspect;
+        }
+        // 旗帜左边缘对齐横杆左端装饰球位置（x = horizontalCenterX - horizontalLength/2）
+        const leftEdgeX = 1.5 - 4.0 / 2; // = -0.5
+        meshCenterX = leftEdgeX + flagWidth / 2;
+        const topEdgeY = anchorY;
+        meshCenterY = topEdgeY - flagHeight / 2;
+    } else {
         if (aspect < THRESHOLD) {
             // 窄高：以槽位高度为基准，水平居中（左右留白）
             flagHeight = slotHeight;
@@ -1212,20 +1245,6 @@ function createFlag() {
         const leftEdgeX = anchorX;
         meshCenterX = leftEdgeX + flagWidth / 2;
         // 顶端 y 固定在 anchorY
-        const topEdgeY = anchorY;
-        meshCenterY = topEdgeY - flagHeight / 2;
-    } else {
-        // 大纛顶挂：旗面顶部 y 固定在 anchorY（横杆高度）
-        if (aspect < THRESHOLD) {
-            flagHeight = slotHeight;
-            flagWidth = slotHeight * aspect;
-        } else {
-            flagWidth = slotWidth;
-            flagHeight = slotWidth / aspect;
-        }
-        // 旗帜左边缘对齐横杆左端装饰球位置（x = horizontalCenterX - horizontalLength/2）
-        const leftEdgeX = 1.5 - 4.0 / 2; // = -0.5
-        meshCenterX = leftEdgeX + flagWidth / 2;
         const topEdgeY = anchorY;
         meshCenterY = topEdgeY - flagHeight / 2;
     }
@@ -1356,11 +1375,20 @@ function simulateFlag() {
         const u = col / SEG_X;
         const v = row / SEG_Y;
 
+        // 根据挂法选择使用 u(横挂/左端固定) 还是 v(竖挂/顶端固定) 来分布风力
+        const freeFactor = isVerticalHang ? v : u;
+
         let ax = 0;
-        let ay = -GRAVITY;
+        const gravityForce = isVerticalHang ? GRAVITY * GRAVITY_VERTICAL_MULTIPLIER : GRAVITY;
+        let ay = -gravityForce;
         let az = 0;
 
-        if (windStrength > 0.01) {
+        // 竖挂时按风力衰减倍数缩放 windStrength（不增加重力，避免惯性过大）
+        const effectiveWindStrength = isVerticalHang
+            ? windStrength * WIND_VERTICAL_MULTIPLIER
+            : windStrength;
+
+        if (effectiveWindStrength > 0.01) {
             // 用 3D 时空噪声（位置 + 时间）作为风力基础，让每个粒子有真正独立的扰动
             // 产生局部孤立褶皱，而不是整面齐步走
             const physU = u * flagWidth;
@@ -1372,8 +1400,6 @@ function simulateFlag() {
                      + windNoiseY(physU * 4.0, physV * 2.0, t * 1.6) * 0.3;
             const nZ = windNoiseZ(physU * 1.6, physV * 1.4, t * 1.1) * 0.7
                      + windNoiseZ(physU * 3.8, physV * 2.3, t * 1.5) * 0.3;
-
-            const safeU = Math.max(0, u);
 
             // ---- 风的自遮蔽（基于局部法线 vs 主风向） ----
             // 用相邻 4 个粒子的位置估算局部法线。风向以 X 正向为主。
@@ -1410,16 +1436,16 @@ function simulateFlag() {
                 }
             }
 
-            // 主风力集中在自由端（u² 让根部稳，自由端猛翻）
-            const windForce = windStrength * (0.25 + 0.75 * safeU) * occlusion;
+            // 主风力集中在自由端（freeFactor 让根部稳，自由端猛翻）
+            const windForce = effectiveWindStrength * (0.25 + 0.75 * freeFactor) * occlusion;
             // X 方向：恒定主风向 + 噪声扰动（噪声让相邻粒子真正独立）
             const windX = (1.0 + nX) * windForce;
             // Z/Y 方向完全用噪声驱动，产生大尺度层叠褶皱
-            const windZ = nZ * windForce * (0.4 + 0.6 * safeU) * WIND_Z_TURB * 1.5;
+            const windZ = nZ * windForce * (0.4 + 0.6 * freeFactor) * WIND_Z_TURB * 1.5;
             const windY = (
-                WIND_UPWARD_ANGLE * (0.2 + 0.8 * Math.sqrt(safeU)) +
+                WIND_UPWARD_ANGLE * (0.2 + 0.8 * Math.sqrt(freeFactor)) +
                 nY * 0.5
-            ) * windStrength * (0.3 + 0.7 * safeU) * WIND_Y_TURB;
+            ) * effectiveWindStrength * (0.3 + 0.7 * freeFactor) * WIND_Y_TURB;
             
             az += windZ;
             ax += windX;
@@ -1523,9 +1549,12 @@ function simulateFlag() {
     }
 
     // ---- 旗杆碰撞检测 ----
-    // 全部禁用：包围盒会与挂点（modern 绳、spear 边、dadun 顶）冲突，且旗面受结构硬约束+固定边
-    // 不会真的穿过旗杆
-    // resolvePoleCollisions();
+    // modern/spear 横挂模式启用，阻止旗面穿透旗杆
+    // dadun 顶挂向下模式跳过：旗面顶行已被结构约束钉在横杆上，
+    // poleBox 包含整根竖杆（y 范围 0.15~6.45）会误把粒子推到地面
+    if (currentPoleType !== 'dadun') {
+        resolvePoleCollisions();
+    }
 
     // ---- 更新 Three.js 网格 ----
     for (let i = 0; i < totalParticles; i++) {
@@ -1563,11 +1592,16 @@ function simulateFlag() {
 // ========== 旗杆碰撞检测 ==========
 function resolvePoleCollisions() {
     if (!poleGroup || !particles || !flagMesh) return;
-    // 仅用于 spear/dadun；modern 模式下不调用
-    if (currentPoleType === 'modern') return;
 
     if (poleBoxNeedsUpdate || !cachedPoleBox) {
-        cachedPoleBox = new THREE.Box3().setFromObject(poleGroup);
+        // 只把标记为 poleCore 的元素（旗杆主体）合并到包围盒，忽略旗裤/装饰等
+        cachedPoleBox = new THREE.Box3();
+        poleGroup.traverse(obj => {
+            if (obj.isMesh && obj.userData.poleCore) {
+                const box = new THREE.Box3().setFromObject(obj);
+                cachedPoleBox.union(box);
+            }
+        });
         poleBoxNeedsUpdate = false;
     }
     
@@ -1593,7 +1627,7 @@ function resolvePoleCollisions() {
         if (wx > poleBox.min.x - margin && wx < poleBox.max.x + margin &&
             wy > poleBox.min.y - margin && wy < poleBox.max.y + margin &&
             wz > poleBox.min.z - margin && wz < poleBox.max.z + margin) {
-            
+
             const distLeft = Math.abs(wx - poleBox.min.x);
             const distRight = Math.abs(poleBox.max.x - wx);
             const distBottom = Math.abs(wy - poleBox.min.y);
@@ -1602,7 +1636,7 @@ function resolvePoleCollisions() {
             const distBack = Math.abs(poleBox.max.z - wz);
 
             const minDist = Math.min(distLeft, distRight, distBottom, distTop, distFront, distBack);
-            
+
             // 修正量写回粒子局部坐标（减去偏移）
             if (minDist === distLeft) {
                 particles[idx] = poleBox.min.x - margin - offsetX;
