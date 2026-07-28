@@ -75,36 +75,55 @@
                     <!-- 旗面来源 -->
                     <div class="panel-section">
                         <label class="panel-label">旗面图案</label>
-                        <select id="flagImageSelect" class="panel-select">
-                            <option value="">-- 选择图库中的 SVG --</option>
-                        </select>
+                        <div class="search-container">
+                            <input type="text" id="flagSearchInput" class="panel-search-input" placeholder="搜索 SVG...">
+                            <div id="flagSearchResults" class="search-results"></div>
+                        </div>
                         <label class="panel-file-btn" for="flagUploadInput">
                             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                                 <polyline points="17 8 12 3 7 8"/>
                                 <line x1="12" y1="3" x2="12" y2="15"/>
                             </svg>
-                            上传图片 (PNG/JPG/SVG)
+                            上传图片 (PNG/JPG/SVG/WebP/GIF)
                         </label>
-                        <input type="file" id="flagUploadInput" accept="image/png,image/jpeg,image/svg+xml" style="display: none;">
+                        <input type="file" id="flagUploadInput" accept="image/png,image/jpeg,image/svg+xml,image/webp,image/gif" style="display: none;">
+                    </div>
+
+                    <!-- 旗面方向 -->
+                    <div class="panel-section">
+                        <label class="panel-label">旗面方向</label>
+                        <select id="flagOrientationSelect" class="panel-select">
+                            <option value="normal">正挂</option>
+                            <option value="rotateCW">右旋 90°</option>
+                            <option value="rotateCCW">左旋 90°</option>
+                            <option value="rotate180">旋转 180°</option>
+                            <option value="flipH">左右镜像</option>
+                            <option value="flipV">上下镜像</option>
+                            <option value="flipHV">双侧镜像</option>
+                            <option value="rotateCW_flipH">右旋 90° + 左右镜像</option>
+                            <option value="rotateCW_flipV">右旋 90° + 上下镜像</option>
+                            <option value="rotateCCW_flipH">左旋 90° + 左右镜像</option>
+                            <option value="rotateCCW_flipV">左旋 90° + 上下镜像</option>
+                        </select>
                     </div>
 
                     <!-- 旗杆类型 -->
                     <div class="panel-section">
                         <label class="panel-label">旗杆类型</label>
                         <div class="panel-btn-group" id="poleTypeGroup">
-                            <button class="panel-type-btn active" data-pole="modern">现代金属旗杆</button>
-                            <button class="panel-type-btn" data-pole="spear">古代矛杆</button>
-                            <button class="panel-type-btn" data-pole="dadun">大纛横杆</button>
+                            <button class="panel-type-btn active" data-pole="modern">金属旗杆</button>
+                            <button class="panel-type-btn" data-pole="spear">木制矛杆</button>
+                            <button class="panel-type-btn" data-pole="dadun">横杆竖挂</button>
                         </div>
                     </div>
 
-                    <!-- 矛杆套筒颜色（仅古代矛杆时显示） -->
+                    <!-- 矛杆旗裤颜色（仅古代矛杆时显示） -->
                     <div class="panel-section" id="spearColorSection" style="display: none;">
-                        <label class="panel-label">套筒颜色</label>
+                        <label class="panel-label">旗裤颜色</label>
                         <div class="panel-color-row">
-                            <input type="color" id="spearColorPicker" value="#8B4513">
-                            <span id="spearColorValue" class="panel-color-value">#8B4513</span>
+                            <input type="color" id="spearColorPicker" value="#ffffff">
+                            <span id="spearColorValue" class="panel-color-value">#ffffff</span>
                         </div>
                     </div>
 
@@ -137,6 +156,6 @@
         </main>
     </div>
 
-    <script type="module" src="src/flag.js"></script>
+    <script type="module" src="src/flag.js?v=37"></script>
 </body>
 </html>
