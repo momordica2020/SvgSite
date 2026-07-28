@@ -65,8 +65,8 @@ const IS_MOBILE = /Android|iPhone|iPad|iPod|Mobile|Touch/i.test(navigator.userAg
 const QUALITY = IS_MOBILE ? 'low' : 'high';
 
 // 布料模拟参数（低端机降级）
-let SEG_X = QUALITY === 'low' ? 32 : 60;
-let SEG_Y = QUALITY === 'low' ? 22 : 40;
+let SEG_X = QUALITY === 'low' ? 32 : 32;
+let SEG_Y = QUALITY === 'low' ? 22 : 22;
 let flagWidth = 3;
 let flagHeight = 2;
 let isVerticalHang = false; // true=顶挂向下（大纛，旗面竖着垂下），false=沿旗杆横向展开（金属/矛杆）
@@ -85,7 +85,7 @@ let particles = null;
 // type: 'structural'(结构), 'shear'(剪切), 'bend'(弯曲)
 let constraints = null;
 // 物理模拟参数（低端机：更少迭代 + 物理帧率 30Hz）
-const PHYSICS_DT = QUALITY === 'low' ? 1 / 30 : 1 / 60;
+const PHYSICS_DT = QUALITY === 'low' ? 1 / 30 : 1 / 30;
 // 重力
 const GRAVITY = 0.75;
 // 竖挂时的重力倍数（竖挂时旗面沿旗杆方向，需要更大重力防止被风吹得太高）
@@ -1550,8 +1550,6 @@ function simulateFlag() {
 
     // ---- 旗杆碰撞检测 ----
     // modern/spear 横挂模式启用，阻止旗面穿透旗杆
-    // dadun 顶挂向下模式跳过：旗面顶行已被结构约束钉在横杆上，
-    // poleBox 包含整根竖杆（y 范围 0.15~6.45）会误把粒子推到地面
     if (currentPoleType !== 'dadun') {
         resolvePoleCollisions();
     }
@@ -1607,7 +1605,7 @@ function resolvePoleCollisions() {
     
     const poleBox = cachedPoleBox;
     const totalParticles = particles.length / 7;
-    const margin = 0.03;
+    const margin = 0.02; // 旗杆碰撞检测的安全边距，避免旗面紧贴杆体
     
     // 粒子坐标是几何体局部坐标，flagMesh有位置偏移（meshCenterX/Y）
     // 必须把粒子坐标转换到世界坐标才能与poleBox比较
