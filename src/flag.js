@@ -65,8 +65,8 @@ const IS_MOBILE = /Android|iPhone|iPad|iPod|Mobile|Touch/i.test(navigator.userAg
 const QUALITY = IS_MOBILE ? 'low' : 'high';
 
 // 布料模拟参数（低端机降级）
-let SEG_X = QUALITY === 'low' ? 32 : 32;
-let SEG_Y = QUALITY === 'low' ? 22 : 22;
+let SEG_X = QUALITY === 'low' ? 60 : 60;
+let SEG_Y = QUALITY === 'low' ? 40 : 40;
 let flagWidth = 3;
 let flagHeight = 2;
 let isVerticalHang = false; // true=顶挂向下（大纛，旗面竖着垂下），false=沿旗杆横向展开（金属/矛杆）
@@ -84,8 +84,8 @@ let particles = null;
 // 约束（弹簧）数组：每个约束 { p1, p2, restLength, type, stiffness }
 // type: 'structural'(结构), 'shear'(剪切), 'bend'(弯曲)
 let constraints = null;
-// 物理模拟参数（低端机：更少迭代 + 物理帧率 30Hz）
-const PHYSICS_DT = QUALITY === 'low' ? 1 / 30 : 1 / 30;
+// 物理模拟参数（低端机：更少迭代）
+const PHYSICS_DT = QUALITY === 'low' ? 1 / 40 : 1 / 60;
 // 重力
 const GRAVITY = 0.75;
 // 竖挂时的重力倍数（竖挂时旗面沿旗杆方向，需要更大重力防止被风吹得太高）
@@ -522,14 +522,16 @@ function initScene() {
     // 渲染器
     // 低端机：关闭抗锯齿、阴影、降低像素比，大幅减少 GPU 负担
     renderer = new THREE.WebGLRenderer({
-        antialias: QUALITY !== 'low',
+        antialias: true,
+        //antialias: QUALITY !== 'low',
         alpha: false,
         powerPreference: QUALITY === 'low' ? 'low-power' : 'high-performance'
     });
     renderer.setSize(w, h);
     // 低端机最高 1x 像素比，高端机最高 2x
     renderer.setPixelRatio(QUALITY === 'low' ? 1 : Math.min(window.devicePixelRatio, 2));
-    renderer.shadowMap.enabled = QUALITY !== 'low';
+    //renderer.shadowMap.enabled = QUALITY !== 'low';
+    renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = QUALITY === 'low' ? THREE.BasicShadowMap : THREE.PCFSoftShadowMap;
     container.appendChild(renderer.domElement);
 
@@ -729,7 +731,7 @@ function getFabricGrainTexture() {
     if (fabricGrainTexture) return fabricGrainTexture;
 
     // 低端机：256x256 替代 512x512（生成耗时 1/4，纹理采样开销 1/4）
-    const size = QUALITY === 'low' ? 256 : 512;
+    const size = QUALITY === 'low' ? 512 : 512;
     const canvas = document.createElement('canvas');
     canvas.width = canvas.height = size;
     const ctx = canvas.getContext('2d');
@@ -772,7 +774,7 @@ function getFabricGrainTexture() {
     texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
     texture.repeat.set(10, 6);
     // 低端机用 1x 各向异性（避免额外的 mipmap 采样）
-    texture.anisotropy = QUALITY === 'low' ? 1 : 8;
+    texture.anisotropy = QUALITY === 'low' ? 4 : 8;
     texture.colorSpace = THREE.SRGBColorSpace;
     fabricGrainTexture = texture;
     return texture;
@@ -1250,7 +1252,7 @@ function createFlag() {
     }
 
     // 动态网格分辨率：根据物理尺寸自适应，保持单位长度粒子密度一致
-    const particlesPerMeter = QUALITY === 'low' ? 10 : 20;
+    const particlesPerMeter = QUALITY === 'low' ? 20 : 20;
     SEG_X = Math.max(8, Math.round(flagWidth * particlesPerMeter));
     SEG_Y = Math.max(8, Math.round(flagHeight * particlesPerMeter));
 
@@ -1544,8 +1546,9 @@ function simulateFlag() {
     }
 
     // ---- 布料自碰撞 ----（低端机禁用以节省每帧开销；高端机保留体积感）
+    resolveSelfCollisions();
     if (QUALITY !== 'low') {
-        resolveSelfCollisions();
+        
     }
 
     // ---- 旗杆碰撞检测 ----
@@ -1895,7 +1898,8 @@ function executeTextureLoad(url, isGeneratedBlob) {
             texture.minFilter = THREE.LinearMipmapLinearFilter;
             texture.magFilter = THREE.LinearFilter;
             texture.generateMipmaps = true;
-            texture.anisotropy = QUALITY === 'low' ? 1 : renderer.capabilities.getMaxAnisotropy();
+            texture.anisotropy = renderer.capabilities.getMaxAnisotropy();
+            //texture.anisotropy = QUALITY === 'low' ? 1 : renderer.capabilities.getMaxAnisotropy();
 
             if (texture.image) {
                 originalSourceImage = texture.image;
@@ -2191,8 +2195,8 @@ function applyFlagOrientation() {
     newTexture.minFilter = THREE.LinearMipmapLinearFilter;
     newTexture.magFilter = THREE.LinearFilter;
     newTexture.generateMipmaps = true;
-    newTexture.anisotropy = QUALITY === 'low' ? 1 : renderer.capabilities.getMaxAnisotropy();
-
+    //newTexture.anisotropy = QUALITY === 'low' ? 1 : renderer.capabilities.getMaxAnisotropy();
+    newTexture.anisotropy = renderer.capabilities.getMaxAnisotropy();
     const oldMap = flagMesh.material.map;
     flagMesh.material.map = newTexture;
     flagMesh.material.needsUpdate = true;
@@ -2230,8 +2234,8 @@ function applyFlagOrientationWithRebuild() {
         newTexture.minFilter = THREE.LinearMipmapLinearFilter;
         newTexture.magFilter = THREE.LinearFilter;
         newTexture.generateMipmaps = true;
-        newTexture.anisotropy = QUALITY === 'low' ? 1 : renderer.capabilities.getMaxAnisotropy();
-
+        //newTexture.anisotropy = QUALITY === 'low' ? 1 : renderer.capabilities.getMaxAnisotropy();
+        newTexture.anisotropy =  renderer.capabilities.getMaxAnisotropy();
         if (currentTexture && currentTexture !== newTexture) {
             currentTexture.dispose();
         }
