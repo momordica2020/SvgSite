@@ -51,16 +51,22 @@ let flagMesh = null;
 let flagGroup = null;
 let poleGroup = null;
 let currentTexture = null;
-let windSpeed = 3.0;
+let windSpeed = 5.0;
 let currentPoleType = 'modern';
 let sleeveColor = '#ffffff'; // 旗裤/套筒颜色（古代矛杆）
 let images = []; // 图库数据
 let animationId = null;
 let time = 0;
 
-// 布料模拟参数
-const SEG_X = 60;
-const SEG_Y = 40;
+// ========== 设备性能档位（自动检测手机端降级） ==========
+const IS_MOBILE = /Android|iPhone|iPad|iPod|Mobile|Touch/i.test(navigator.userAgent)
+    || (window.matchMedia && window.matchMedia('(max-width: 768px)').matches)
+    || (navigator.maxTouchPoints > 1 && window.innerWidth < 1024);
+const QUALITY = IS_MOBILE ? 'low' : 'high';
+
+// 布料模拟参数（低端机降级）
+let SEG_X = QUALITY === 'low' ? 32 : 60;
+let SEG_Y = QUALITY === 'low' ? 22 : 40;
 let flagWidth = 3;
 let flagHeight = 2;
 
@@ -77,17 +83,17 @@ let particles = null;
 // 约束（弹簧）数组：每个约束 { p1, p2, restLength, type, stiffness }
 // type: 'structural'(结构), 'shear'(剪切), 'bend'(弯曲)
 let constraints = null;
-// 物理模拟参数
-const PHYSICS_DT = 1 / 60;
-const GRAVITY = 0.85;
-const DAMPING = 0.975;
-const CONSTRAINT_ITERATIONS = 8;
+// 物理模拟参数（低端机：更少迭代 + 物理帧率 30Hz）
+const PHYSICS_DT = QUALITY === 'low' ? 1 / 30 : 1 / 60;
+const GRAVITY = 0.35;
+const DAMPING = 0.992;
+const CONSTRAINT_ITERATIONS = QUALITY === 'low' ? 3 : 4;
 const PINNED = true;
 const UNPINNED = false;
 
 // ========== 材质参数（统一在这里调整） ==========
 // 基础粗糙度：值越大越哑光
-const FLAG_ROUGHNESS = 0.9;
+const FLAG_ROUGHNESS = 0.98;
 // 凹凸强度：值越大织物纹理越明显
 const FLAG_BUMP_SCALE = 0.0003;
 // 透光率：值越大越透光（薄织物效果）
@@ -95,33 +101,34 @@ const FLAG_TRANSMISSION = 0.12;
 // 折射率：织物大约 1.2-1.4
 const FLAG_IOR = 1.25;
 // 高光强度：值越小反光越弱
-const FLAG_SPECULAR = 0.2;
+const FLAG_SPECULAR = 0.01;
 
 // ========== 风力参数（统一在这里调整） ==========
 // 阵风波动幅度：值越大风速变化越剧烈
-const WIND_GUST_AMOUNT = 1.5;
+const WIND_GUST_AMOUNT = 0.3;
 // 湍流强度：值越大乱流越明显，卷动越剧烈
-const WIND_TURBULENCE = 1.0;
+const WIND_TURBULENCE = 2.3;
 // 纵向（Z轴）扰动强度：控制前后翻卷
-const WIND_Z_TURB = 2.0;
+const WIND_Z_TURB = 0.3;
 // 垂直（Y轴）扰动强度：控制上下波动
-const WIND_Y_TURB = 2.0;
-// 风的向上倾斜角度（0=水平，越大越向上吹，抵消重力让旗尾上扬）
+const WIND_Y_TURB = 0.5;
+// 风的倾斜角度：负值=从斜上方吹下，正值=从斜下方吹上
+// 现在改成负值，让风从斜上方吹下，避免旗尾过分卷到天上
 const WIND_UPWARD_ANGLE = 0.15;
 
 // ========== 布料刚度参数（统一在这里调整） ==========
-// 结构约束：控制拉伸防撕裂，0~1之间
-const STIFFNESS_STRUCTURAL = 0.75;
-// 剪切约束：控制对角线变形
-const STIFFNESS_SHEAR = 0.55;
+// 结构约束：旗面织物不可拉伸，固定为 1.0（硬约束），与 FREEEND_SOFTEN/ROOT_STIFFEN 相乘后仍取 1
+const STIFFNESS_STRUCTURAL = 1.0;
+// 剪切约束：控制斜切/弯折变形，值越大越硬挺不可弯折
+const STIFFNESS_SHEAR = 0.003;
 // 弯曲约束：控制弯折卷曲，值越小越柔软越容易卷
-const STIFFNESS_BEND = 0.2;
-// 自由端变软系数：越靠近自由端（右侧）越软，0=不变，1=最软端是根部的0倍
-const FREEND_SOFTEN = 0.85;
-// 根部变硬系数：靠近旗杆处结构约束增强（>1有效），防止两点悬挂时拉面条
-const ROOT_STIFFEN = 2.5;
-// 最大修正量（每次迭代），越小越稳，越大越弹
-const MAX_CORRECTION = 0.05;
+const STIFFNESS_BEND = 0.001;
+// 自由端变软系数：仅作用于剪切/弯曲约束（结构约束保持不可拉伸）
+const FREEND_SOFTEN = 0.999;
+// 根部变硬系数：仅作用于剪切约束
+const ROOT_STIFFEN = 1.2;
+// 最大修正量（每次迭代），仅作用于剪切/弯曲约束
+const MAX_CORRECTION = 0.02;
 
 // ========== 初始化物理布料系统 ==========
 function initClothPhysics() {
@@ -168,14 +175,12 @@ function initClothPhysics() {
         }
     }
 
-    // 剪切约束（隔一个格子加一个）
+    // 剪切约束（全网格，均匀分布避免边缘抽搐）
     for (let row = 0; row < h - 1; row++) {
         for (let col = 0; col < w - 1; col++) {
-            if ((row + col) % 2 === 0) {
-                const i = row * w + col;
-                addConstraint(i, i + w + 1, 'shear');
-                addConstraint(i + 1, i + w, 'shear');
-            }
+            const i = row * w + col;
+            addConstraint(i, i + w + 1, 'shear');
+            addConstraint(i + 1, i + w, 'shear');
         }
     }
 
@@ -185,9 +190,9 @@ function initClothPhysics() {
             const i = row * w + col;
             // 水平方向弯曲约束（更密，保持旗面展开）
             if (col < w - 2) addConstraint(i, i + 2, 'bend');
-            if (col < w - 4 && col % 2 === 0) addConstraint(i, i + 4, 'bend');
-            // 垂直方向弯曲约束
-            if (row < h - 2 && row % 2 === 0) addConstraint(i, i + 2 * w, 'bend');
+            if (col < w - 4) addConstraint(i, i + 4, 'bend');
+            // 垂直方向弯曲约束（均匀分布）
+            if (row < h - 2) addConstraint(i, i + 2 * w, 'bend');
         }
     }
 
@@ -220,12 +225,25 @@ function addConstraint(i, j, type) {
     else if (type === 'shear') baseStiffness = STIFFNESS_SHEAR;
     else baseStiffness = STIFFNESS_BEND;
 
-    const softFactor = 1.0 - FREEND_SOFTEN * avgCol;
-    // 根部加强：前半段逐渐衰减，近杆侧最硬
-    const rootFactor = 1.0 + (ROOT_STIFFEN - 1.0) * Math.max(0, 1.0 - minCol * 2.0);
-    const stiffness = Math.min(1.0, baseStiffness * softFactor * (type === 'structural' ? rootFactor : 1.0));
-    
-    constraints.push({ i, j, restLength, type, stiffness });
+    let stiffness;
+    if (type === 'structural') {
+        // 结构约束：硬约束（不可拉伸），不应用自由端/根部系数
+        stiffness = 1.0;
+    } else {
+        // 剪切/弯曲约束：可按位置变化
+        // 用非线性的 softFactor：前 30% 区间保持原刚度（保持根部平整），之后指数衰减到接近 0
+        // smoothstep 软过渡：t<0.3 时 ratio=1，t>0.7 时 ratio=0
+        const t = avgCol;
+        const smooth = t < 0.3 ? 1.0 : (t > 0.7 ? 0.0 : 1.0 - Math.pow((t - 0.3) / 0.4, 2));
+        const softFactor = 1.0 - FREEND_SOFTEN * (1.0 - smooth);
+        // 根部加强：仅剪切约束
+        const rootFactor = 1.0 + (ROOT_STIFFEN - 1.0) * Math.max(0, 1.0 - minCol * 2.0);
+        stiffness = baseStiffness * softFactor * (type === 'shear' ? rootFactor : 1.0);
+    }
+
+    // 是否硬约束（结构约束）：求解时不做 MAX_CORRECTION 截断，完全消除拉伸
+    const isRigid = (type === 'structural') ? 1 : 0;
+    constraints.push({ i, j, restLength, type, stiffness, isRigid });
 }
 
 // 检查并修复 NaN 和 Infinity 值
@@ -277,10 +295,10 @@ function pinVerticesByType() {
     const h = SEG_Y + 1;
 
     if (currentPoleType === 'modern') {
-        // 金属旗杆：仅左上、左下两个角固定
-        pinParticle(0);                         // 左上角
-        pinParticle((h - 1) * w);               // 左下角
-        // 左边缘的粒子会在约束求解时自然下垂
+        // 金属旗杆：整条左边沿旗绳固定（与木制杆一致）
+        for (let row = 0; row < h; row++) {
+            pinParticle(row * w);
+        }
     } else if (currentPoleType === 'spear') {
         // 矛杆：整条左边固定（第一列）
         for (let row = 0; row < h; row++) {
@@ -373,10 +391,17 @@ function settleCloth() {
                 if (dist < 0.0001) continue;
                 
                 let stiffness = 1.0;
-                if (constraint.type === 'shear') stiffness = 0.6;
-                if (constraint.type === 'bend') stiffness = 0.3;
+                if (constraint.type === 'shear') stiffness = 0.3;
+                if (constraint.type === 'bend') stiffness = 0.05;
                 
-                const diff = (dist - constraint.restLength) / dist;
+                let diff = (dist - constraint.restLength) / dist;
+                // 预热阶段：结构约束也走硬约束，避免初始下垂时拉伸
+                if (constraint.type !== 'structural') {
+                    const maxDiff = 0.05 / Math.max(constraint.restLength, 0.01);
+                    if (Math.abs(diff) > maxDiff) {
+                        diff = Math.sign(diff) * maxDiff;
+                    }
+                }
                 const offsetX = dx * 0.5 * diff * stiffness;
                 const offsetY = dy * 0.5 * diff * stiffness;
                 const offsetZ = dz * 0.5 * diff * stiffness;
@@ -478,11 +503,17 @@ function initScene() {
     camera.position.set(3, 5, 6);
 
     // 渲染器
-    renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
+    // 低端机：关闭抗锯齿、阴影、降低像素比，大幅减少 GPU 负担
+    renderer = new THREE.WebGLRenderer({
+        antialias: QUALITY !== 'low',
+        alpha: false,
+        powerPreference: QUALITY === 'low' ? 'low-power' : 'high-performance'
+    });
     renderer.setSize(w, h);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    renderer.shadowMap.enabled = true;
-    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    // 低端机最高 1x 像素比，高端机最高 2x
+    renderer.setPixelRatio(QUALITY === 'low' ? 1 : Math.min(window.devicePixelRatio, 2));
+    renderer.shadowMap.enabled = QUALITY !== 'low';
+    renderer.shadowMap.type = QUALITY === 'low' ? THREE.BasicShadowMap : THREE.PCFSoftShadowMap;
     container.appendChild(renderer.domElement);
 
     // 控制器
@@ -595,7 +626,8 @@ function createFallbackSky() {
     ctx.fillRect(0, 0, w, h);
     const texture = new THREE.CanvasTexture(canvas);
     texture.colorSpace = THREE.SRGBColorSpace;
-    const skyGeo = new THREE.SphereGeometry(95, 48, 32);
+    // 低端机：减少天球分段（24x16 顶点数 1/4）
+    const skyGeo = new THREE.SphereGeometry(95, QUALITY === 'low' ? 24 : 48, QUALITY === 'low' ? 16 : 32);
     const skyMat = new THREE.MeshBasicMaterial({
         map: texture,
         side: THREE.BackSide,
@@ -628,24 +660,43 @@ function makeNoise2D(seed) {
         const v = (h & 1) === 0 ? y : x;
         return ((h & 2) === 0 ? u : -u) + ((h & 2) === 0 ? v : -v);
     };
-    return (x, y) => {
+    // 3D 噪声：在 2D 基础上增加 z（=time）维
+    return (x, y, z) => {
         const X = Math.floor(x) & 255;
         const Y = Math.floor(y) & 255;
+        const Z = Math.floor(z) & 255;
         x -= Math.floor(x);
         y -= Math.floor(y);
+        z -= Math.floor(z);
         const u = fade(x);
         const v = fade(y);
-        const aa = perm[perm[X] + Y];
-        const ab = perm[perm[X] + Y + 1];
-        const ba = perm[perm[X + 1] + Y];
-        const bb = perm[perm[X + 1] + Y + 1];
+        const w = fade(z);
+        const A = perm[X] + Y;
+        const AA = perm[A] + Z;
+        const AB = perm[A + 1] + Z;
+        const B = perm[X + 1] + Y;
+        const BA = perm[B] + Z;
+        const BB = perm[B + 1] + Z;
         return lerp(
-            lerp(grad(aa, x, y), grad(ba, x - 1, y), u),
-            lerp(grad(ab, x, y - 1), grad(bb, x - 1, y - 1), u),
-            v
+            lerp(
+                lerp(grad(perm[AA], x, y, z), grad(perm[BA], x - 1, y, z), u),
+                lerp(grad(perm[AB], x, y - 1, z), grad(perm[BB], x - 1, y - 1, z), u),
+                v
+            ),
+            lerp(
+                lerp(grad(perm[AA + 1], x, y, z - 1), grad(perm[BA + 1], x - 1, y, z - 1), u),
+                lerp(grad(perm[AB + 1], x, y - 1, z - 1), grad(perm[BB + 1], x - 1, y - 1, z - 1), u),
+                v
+            ),
+            w
         );
     };
 }
+
+// 风力专用噪声（X/Y/Z 三向，3D 时空噪声）
+const windNoiseX = makeNoise2D(7919);
+const windNoiseY = makeNoise2D(4093);
+const windNoiseZ = makeNoise2D(1601);
 
 function fbm(noise, x, y, octaves) {
     let val = 0, amp = 0.5, freq = 1;
@@ -660,7 +711,8 @@ function fbm(noise, x, y, octaves) {
 function getFabricGrainTexture() {
     if (fabricGrainTexture) return fabricGrainTexture;
 
-    const size = 512;
+    // 低端机：256x256 替代 512x512（生成耗时 1/4，纹理采样开销 1/4）
+    const size = QUALITY === 'low' ? 256 : 512;
     const canvas = document.createElement('canvas');
     canvas.width = canvas.height = size;
     const ctx = canvas.getContext('2d');
@@ -702,7 +754,8 @@ function getFabricGrainTexture() {
     const texture = new THREE.CanvasTexture(canvas);
     texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
     texture.repeat.set(10, 6);
-    texture.anisotropy = 8;
+    // 低端机用 1x 各向异性（避免额外的 mipmap 采样）
+    texture.anisotropy = QUALITY === 'low' ? 1 : 8;
     texture.colorSpace = THREE.SRGBColorSpace;
     fabricGrainTexture = texture;
     return texture;
@@ -1177,6 +1230,11 @@ function createFlag() {
         meshCenterY = topEdgeY - flagHeight / 2;
     }
 
+    // 动态网格分辨率：根据物理尺寸自适应，保持单位长度粒子密度一致
+    const particlesPerMeter = QUALITY === 'low' ? 10 : 20;
+    SEG_X = Math.max(8, Math.round(flagWidth * particlesPerMeter));
+    SEG_Y = Math.max(8, Math.round(flagHeight * particlesPerMeter));
+
     // 创建旗帜几何体
     const geometry = new THREE.PlaneGeometry(flagWidth, flagHeight, SEG_X, SEG_Y);
 
@@ -1192,31 +1250,45 @@ function createFlag() {
         }
     }
     
-    // 创建材质（极哑光薄织物，几乎无反光，轻微透光）
+    // 创建材质：低端机用 MeshStandardMaterial 避免 transmission 的高开销
     const grain = getFabricGrainTexture();
-    const material = new THREE.MeshPhysicalMaterial({
-        map: textureToUse,
-        side: THREE.DoubleSide,
-        roughness: FLAG_ROUGHNESS,
-        roughnessMap: grain,
-        metalness: 0.0,
-        bumpMap: grain,
-        bumpScale: FLAG_BUMP_SCALE,
-        transparent: true,
-        alphaTest: 0.01,
-        flatShading: false,
-        transmission: FLAG_TRANSMISSION,
-        ior: FLAG_IOR,
-        thickness: 0.015,
-        attenuationColor: new THREE.Color(0xffffff),
-        attenuationDistance: 0.8,
-        specularIntensity: FLAG_SPECULAR,
-        specularColor: new THREE.Color(0x888888)
-    });
+    const material = QUALITY === 'low'
+        ? new THREE.MeshStandardMaterial({
+            map: textureToUse,
+            side: THREE.DoubleSide,
+            roughness: FLAG_ROUGHNESS,
+            roughnessMap: grain,
+            metalness: 0.0,
+            bumpMap: grain,
+            bumpScale: FLAG_BUMP_SCALE,
+            transparent: true,
+            alphaTest: 0.01,
+            flatShading: false
+        })
+        : new THREE.MeshPhysicalMaterial({
+            map: textureToUse,
+            side: THREE.DoubleSide,
+            roughness: FLAG_ROUGHNESS,
+            roughnessMap: grain,
+            metalness: 0.0,
+            bumpMap: grain,
+            bumpScale: FLAG_BUMP_SCALE,
+            transparent: true,
+            alphaTest: 0.01,
+            flatShading: false,
+            transmission: FLAG_TRANSMISSION,
+            ior: FLAG_IOR,
+            thickness: 0.015,
+            attenuationColor: new THREE.Color(0xffffff),
+            attenuationDistance: 0.8,
+            specularIntensity: FLAG_SPECULAR,
+            specularColor: new THREE.Color(0x888888)
+        });
 
     flagMesh = new THREE.Mesh(geometry, material);
-    flagMesh.castShadow = true;
-    flagMesh.receiveShadow = true;
+    // 低端机无阴影投射/接收
+    flagMesh.castShadow = QUALITY !== 'low';
+    flagMesh.receiveShadow = QUALITY !== 'low';
 
     // 旗面位置（已根据纹理原图比例与对齐规则计算）
     flagMesh.position.set(meshCenterX, meshCenterY, 0);
@@ -1267,6 +1339,7 @@ function simulateFlag() {
     const windStrength = windSpeed * 0.6 * gustClamped;
 
     // ---- Verlet 积分：更新质点位置 ----
+    const wIdx = SEG_X + 1;
     for (let i = 0; i < totalParticles; i++) {
         const idx = i * 7;
         if (particles[idx + 6]) continue;
@@ -1278,8 +1351,8 @@ function simulateFlag() {
         const py = particles[idx + 4];
         const pz = particles[idx + 5];
 
-        const col = i % (SEG_X + 1);
-        const row = Math.floor(i / (SEG_X + 1));
+        const col = i % wIdx;
+        const row = Math.floor(i / wIdx);
         const u = col / SEG_X;
         const v = row / SEG_Y;
 
@@ -1288,31 +1361,65 @@ function simulateFlag() {
         let az = 0;
 
         if (windStrength > 0.01) {
-            const windBase = Math.sin(u * 2.0 - timeStep * 1.5 + v * 0.6) * 0.12;
-            const windMedium = Math.cos(u * 5.0 - timeStep * 2.8 - v * 1.2) * 0.09;
-            const turbulence = (
-                Math.sin(u * 10.0 + v * 5.0 + timeStep * 4.0) * 0.08 +
-                Math.sin(u * 5.0 - v * 12.0 + timeStep * 5.5) * 0.07 +
-                Math.sin(u * 18.0 + v * 9.0 + timeStep * 7.5) * 0.05 +
-                Math.sin(u * 25.0 - v * 18.0 + timeStep * 10.0) * 0.035 +
-                Math.sin(u * 35.0 + v * 25.0 + timeStep * 14.0) * 0.02
-            ) * WIND_TURBULENCE;
+            // 用 3D 时空噪声（位置 + 时间）作为风力基础，让每个粒子有真正独立的扰动
+            // 产生局部孤立褶皱，而不是整面齐步走
+            const physU = u * flagWidth;
+            const physV = v * flagHeight;
+            const t = timeStep * 0.6;
+            const nX = windNoiseX(physU * 1.5, physV * 1.5, t) * 0.7
+                     + windNoiseX(physU * 3.5, physV * 2.5, t * 1.4) * 0.3;
+            const nY = windNoiseY(physU * 1.8, physV * 1.2, t * 0.9) * 0.7
+                     + windNoiseY(physU * 4.0, physV * 2.0, t * 1.6) * 0.3;
+            const nZ = windNoiseZ(physU * 1.6, physV * 1.4, t * 1.1) * 0.7
+                     + windNoiseZ(physU * 3.8, physV * 2.3, t * 1.5) * 0.3;
 
             const safeU = Math.max(0, u);
-            const windForce = windStrength * (0.2 + 0.8 * Math.sqrt(safeU));
-            const windX = (0.8 + windBase + windMedium + turbulence) * windForce;
-            const windZ = (
-                Math.sin(v * 2.5 + timeStep * 1.2) * 0.18 +
-                Math.sin(u * 7 - v * 4 + timeStep * 2.5) * 0.12 +
-                Math.sin(u * 15 + v * 8 + timeStep * 5) * 0.08 +
-                Math.sin(u * 22 - v * 12 + timeStep * 8) * 0.05
-            ) * windForce * u * WIND_Z_TURB;
+
+            // ---- 风的自遮蔽（基于局部法线 vs 主风向） ----
+            // 用相邻 4 个粒子的位置估算局部法线。风向以 X 正向为主。
+            // 法线与风向夹角 > 90°（背风面）→ 大幅衰减；前缘/迎风面 → 满风
+            let occlusion = 1.0;
+            if (col > 0 && col < SEG_X && row > 0 && row < SEG_Y) {
+                const iL = (row * wIdx + (col - 1)) * 7;
+                const iR = (row * wIdx + (col + 1)) * 7;
+                const iU = ((row - 1) * wIdx + col) * 7;
+                const iD = ((row + 1) * wIdx + col) * 7;
+                const dxU = particles[iR] - particles[iL];
+                const dyU = particles[iR + 1] - particles[iL + 1];
+                const dzU = particles[iR + 2] - particles[iL + 2];
+                const dxV = particles[iD] - particles[iU];
+                const dyV = particles[iD + 1] - particles[iU + 1];
+                const dzV = particles[iD + 2] - particles[iU + 2];
+                // 叉积得局部法线
+                let nx = dyU * dzV - dzU * dyV;
+                let ny = dzU * dxV - dxU * dzV;
+                let nz = dxU * dyV - dyU * dxV;
+                const nLen = Math.sqrt(nx * nx + ny * ny + nz * nz);
+                if (nLen > 1e-6) {
+                    nx /= nLen; ny /= nLen; nz /= nLen;
+                    // 风向 = (1, 0, 0) + 一点 Y 向上风
+                    const windDirX = 1.0;
+                    const windDirY = 0.25;
+                    const windDirZ = 0.0;
+                    const wLen = Math.sqrt(windDirX * windDirX + windDirY * windDirY + windDirZ * windDirZ);
+                    const dot = (nx * windDirX + ny * windDirY + nz * windDirZ) / wLen;
+                    // dot > 0: 迎风面（法线与风向同向），满风
+                    // dot < 0: 背风面（法线与风向反向），遮挡
+                    // 0.15 留 15% 透过（真实布也会渗风）
+                    occlusion = 0.15 + 0.85 * Math.max(0, dot);
+                }
+            }
+
+            // 主风力集中在自由端（u² 让根部稳，自由端猛翻）
+            const windForce = windStrength * (0.25 + 0.75 * safeU) * occlusion;
+            // X 方向：恒定主风向 + 噪声扰动（噪声让相邻粒子真正独立）
+            const windX = (1.0 + nX) * windForce;
+            // Z/Y 方向完全用噪声驱动，产生大尺度层叠褶皱
+            const windZ = nZ * windForce * (0.4 + 0.6 * safeU) * WIND_Z_TURB * 1.5;
             const windY = (
                 WIND_UPWARD_ANGLE * (0.2 + 0.8 * Math.sqrt(safeU)) +
-                Math.sin(u * 12 - v * 6 + timeStep * 4.5) * 0.07 +
-                Math.sin(u * 20 + v * 10 + timeStep * 7) * 0.04 +
-                Math.sin(u * 30 - v * 15 + timeStep * 11) * 0.025
-            ) * windStrength * u * WIND_Y_TURB;
+                nY * 0.5
+            ) * windStrength * (0.3 + 0.7 * safeU) * WIND_Y_TURB;
             
             az += windZ;
             ax += windX;
@@ -1385,9 +1492,12 @@ function simulateFlag() {
             const stiffness = constraint.stiffness;
 
             let diff = (dist - constraint.restLength) / dist;
-            const maxDiff = MAX_CORRECTION / Math.max(constraint.restLength, 0.01);
-            if (Math.abs(diff) > maxDiff) {
-                diff = Math.sign(diff) * maxDiff;
+            // 结构约束是硬约束：完全不截断，一次性消除拉伸
+            if (!constraint.isRigid) {
+                const maxDiff = MAX_CORRECTION / Math.max(constraint.restLength, 0.01);
+                if (Math.abs(diff) > maxDiff) {
+                    diff = Math.sign(diff) * maxDiff;
+                }
             }
 
             const offsetX = dx * 0.5 * diff * stiffness;
@@ -1407,13 +1517,15 @@ function simulateFlag() {
         }
     }
 
-    // ---- 布料自碰撞 ----（暂时禁用，避免锯齿和收缩）
-    // resolveSelfCollisions();
+    // ---- 布料自碰撞 ----（低端机禁用以节省每帧开销；高端机保留体积感）
+    if (QUALITY !== 'low') {
+        resolveSelfCollisions();
+    }
 
     // ---- 旗杆碰撞检测 ----
-    if (currentPoleType === 'modern') {
-        resolvePoleCollisions();
-    }
+    // 全部禁用：包围盒会与挂点（modern 绳、spear 边、dadun 顶）冲突，且旗面受结构硬约束+固定边
+    // 不会真的穿过旗杆
+    // resolvePoleCollisions();
 
     // ---- 更新 Three.js 网格 ----
     for (let i = 0; i < totalParticles; i++) {
@@ -1450,7 +1562,9 @@ function simulateFlag() {
 
 // ========== 旗杆碰撞检测 ==========
 function resolvePoleCollisions() {
-    if (!poleGroup || !particles) return;
+    if (!poleGroup || !particles || !flagMesh) return;
+    // 仅用于 spear/dadun；modern 模式下不调用
+    if (currentPoleType === 'modern') return;
 
     if (poleBoxNeedsUpdate || !cachedPoleBox) {
         cachedPoleBox = new THREE.Box3().setFromObject(poleGroup);
@@ -1461,87 +1575,137 @@ function resolvePoleCollisions() {
     const totalParticles = particles.length / 7;
     const margin = 0.03;
     
+    // 粒子坐标是几何体局部坐标，flagMesh有位置偏移（meshCenterX/Y）
+    // 必须把粒子坐标转换到世界坐标才能与poleBox比较
+    const offsetX = flagMesh.position.x;
+    const offsetY = flagMesh.position.y;
+    const offsetZ = flagMesh.position.z;
+    
     for (let i = 0; i < totalParticles; i++) {
         const idx = i * 7;
         if (particles[idx + 6]) continue;
 
-        const x = particles[idx];
-        const y = particles[idx + 1];
-        const z = particles[idx + 2];
+        // 粒子世界坐标
+        const wx = particles[idx] + offsetX;
+        const wy = particles[idx + 1] + offsetY;
+        const wz = particles[idx + 2] + offsetZ;
 
-        if (x > poleBox.min.x - margin && x < poleBox.max.x + margin &&
-            y > poleBox.min.y - margin && y < poleBox.max.y + margin &&
-            z > poleBox.min.z - margin && z < poleBox.max.z + margin) {
+        if (wx > poleBox.min.x - margin && wx < poleBox.max.x + margin &&
+            wy > poleBox.min.y - margin && wy < poleBox.max.y + margin &&
+            wz > poleBox.min.z - margin && wz < poleBox.max.z + margin) {
             
-            const distLeft = Math.abs(x - poleBox.min.x);
-            const distRight = Math.abs(poleBox.max.x - x);
-            const distBottom = Math.abs(y - poleBox.min.y);
-            const distTop = Math.abs(poleBox.max.y - y);
-            const distFront = Math.abs(z - poleBox.min.z);
-            const distBack = Math.abs(poleBox.max.z - z);
+            const distLeft = Math.abs(wx - poleBox.min.x);
+            const distRight = Math.abs(poleBox.max.x - wx);
+            const distBottom = Math.abs(wy - poleBox.min.y);
+            const distTop = Math.abs(poleBox.max.y - wy);
+            const distFront = Math.abs(wz - poleBox.min.z);
+            const distBack = Math.abs(poleBox.max.z - wz);
 
             const minDist = Math.min(distLeft, distRight, distBottom, distTop, distFront, distBack);
             
+            // 修正量写回粒子局部坐标（减去偏移）
             if (minDist === distLeft) {
-                particles[idx] = poleBox.min.x - margin;
+                particles[idx] = poleBox.min.x - margin - offsetX;
                 particles[idx + 3] = particles[idx];
             } else if (minDist === distRight) {
-                particles[idx] = poleBox.max.x + margin;
+                particles[idx] = poleBox.max.x + margin - offsetX;
                 particles[idx + 3] = particles[idx];
             } else if (minDist === distBottom) {
-                particles[idx + 1] = poleBox.min.y - margin;
+                particles[idx + 1] = poleBox.min.y - margin - offsetY;
                 particles[idx + 4] = particles[idx + 1];
             } else if (minDist === distTop) {
-                particles[idx + 1] = poleBox.max.y + margin;
+                particles[idx + 1] = poleBox.max.y + margin - offsetY;
                 particles[idx + 4] = particles[idx + 1];
             } else if (minDist === distFront) {
-                particles[idx + 2] = poleBox.min.z - margin;
+                particles[idx + 2] = poleBox.min.z - margin - offsetZ;
                 particles[idx + 5] = particles[idx + 2];
             } else {
-                particles[idx + 2] = poleBox.max.z + margin;
+                particles[idx + 2] = poleBox.max.z + margin - offsetZ;
                 particles[idx + 5] = particles[idx + 2];
             }
         }
     }
 }
 
-// ========== 布料自碰撞检测 ==========
+// ========== 布料自碰撞检测（3D 空间哈希） ==========
+// 用空间哈希在 3D 空间检查近邻粒子对，避免旗面正反两面完全重叠
 function resolveSelfCollisions() {
     if (!particles) return;
-    
+
     const totalParticles = particles.length / 7;
-    const minDist = 0.015;
-    const minDistSq = minDist * minDist;
+    // 旗面"厚度"：小于这个距离的两点视为穿透，强行分开
+    const thickness = 0.04;
+    const thicknessSq = thickness * thickness;
+    // 空间哈希 cell 边长 = thickness * 2，让邻近粒子落到同一格或相邻格
+    const cellSize = thickness * 2.0;
+    const invCell = 1.0 / cellSize;
+
+    // 构建空间哈希
+    const grid = new Map();
+    for (let i = 0; i < totalParticles; i++) {
+        const idx = i * 7;
+        const cx = Math.floor(particles[idx] * invCell);
+        const cy = Math.floor(particles[idx + 1] * invCell);
+        const cz = Math.floor(particles[idx + 2] * invCell);
+        const key = cx * 73856093 ^ cy * 19349663 ^ cz * 83492791;
+        if (!grid.has(key)) grid.set(key, []);
+        grid.get(key).push(i);
+    }
+
+    // 检查每个粒子与 27 个相邻 cell 内粒子的距离
+    // 跳过结构约束的近邻（左右上下前后 6 个直接邻居）以免破坏旗面本身
     const w = SEG_X + 1;
-    
-    for (let row = 1; row < SEG_Y; row++) {
-        for (let col = 0; col <= SEG_X; col++) {
-            const i = row * w + col;
-            const idx = i * 7;
-            
-            if (particles[idx + 6]) continue;
-            
-            const j = (row - 1) * w + col;
-            const jdx = j * 7;
-            
-            const dx = particles[idx] - particles[jdx];
-            const dy = particles[idx + 1] - particles[jdx + 1];
-            const dz = particles[idx + 2] - particles[jdx + 2];
-            const distSq = dx * dx + dy * dy + dz * dz;
-            
-            if (distSq < minDistSq && distSq > 1e-10) {
-                const dist = Math.sqrt(distSq);
-                const overlap = (minDist - dist) * 0.5;
-                const nx = dx / dist;
-                const ny = dy / dist;
-                const nz = dz / dist;
-                
-                particles[idx] += nx * overlap;
-                particles[idx + 1] += ny * overlap;
-                particles[idx + 2] += nz * overlap;
-                particles[jdx] -= nx * overlap;
-                particles[jdx + 1] -= ny * overlap;
-                particles[jdx + 2] -= nz * overlap;
+    const isStructuralNeighbor = (a, b) => {
+        const ca = a % w, ra = Math.floor(a / w);
+        const cb = b % w, rb = Math.floor(b / w);
+        const dc = Math.abs(ca - cb), dr = Math.abs(ra - rb);
+        // 水平/垂直紧邻
+        if (dc + dr === 1) return true;
+        return false;
+    };
+
+    for (let i = 0; i < totalParticles; i++) {
+        const idx = i * 7;
+        if (particles[idx + 6]) continue;
+        const cx = Math.floor(particles[idx] * invCell);
+        const cy = Math.floor(particles[idx + 1] * invCell);
+        const cz = Math.floor(particles[idx + 2] * invCell);
+
+        const ix = particles[idx], iy = particles[idx + 1], iz = particles[idx + 2];
+
+        for (let dx = -1; dx <= 1; dx++) {
+            for (let dy = -1; dy <= 1; dy++) {
+                for (let dz = -1; dz <= 1; dz++) {
+                    const key = (cx + dx) * 73856093 ^ (cy + dy) * 19349663 ^ (cz + dz) * 83492791;
+                    const cell = grid.get(key);
+                    if (!cell) continue;
+                    for (let k = 0; k < cell.length; k++) {
+                        const j = cell[k];
+                        if (j <= i) continue; // 每对只处理一次
+                        if (isStructuralNeighbor(i, j)) continue;
+
+                        const jdx = j * 7;
+                        if (particles[jdx + 6]) continue;
+
+                        const ddx = particles[jdx] - ix;
+                        const ddy = particles[jdx + 1] - iy;
+                        const ddz = particles[jdx + 2] - iz;
+                        const distSq = ddx * ddx + ddy * ddy + ddz * ddz;
+                        if (distSq < thicknessSq && distSq > 1e-10) {
+                            const dist = Math.sqrt(distSq);
+                            const overlap = (thickness - dist) * 0.5;
+                            const nx = ddx / dist;
+                            const ny = ddy / dist;
+                            const nz = ddz / dist;
+                            particles[idx] -= nx * overlap;
+                            particles[idx + 1] -= ny * overlap;
+                            particles[idx + 2] -= nz * overlap;
+                            particles[jdx] += nx * overlap;
+                            particles[jdx + 1] += ny * overlap;
+                            particles[jdx + 2] += nz * overlap;
+                        }
+                    }
+                }
             }
         }
     }
@@ -1699,7 +1863,7 @@ function executeTextureLoad(url, isGeneratedBlob) {
             texture.minFilter = THREE.LinearMipmapLinearFilter;
             texture.magFilter = THREE.LinearFilter;
             texture.generateMipmaps = true;
-            texture.anisotropy = renderer.capabilities.getMaxAnisotropy();
+            texture.anisotropy = QUALITY === 'low' ? 1 : renderer.capabilities.getMaxAnisotropy();
 
             if (texture.image) {
                 originalSourceImage = texture.image;
@@ -1995,7 +2159,7 @@ function applyFlagOrientation() {
     newTexture.minFilter = THREE.LinearMipmapLinearFilter;
     newTexture.magFilter = THREE.LinearFilter;
     newTexture.generateMipmaps = true;
-    newTexture.anisotropy = renderer.capabilities.getMaxAnisotropy();
+    newTexture.anisotropy = QUALITY === 'low' ? 1 : renderer.capabilities.getMaxAnisotropy();
 
     const oldMap = flagMesh.material.map;
     flagMesh.material.map = newTexture;
@@ -2034,7 +2198,7 @@ function applyFlagOrientationWithRebuild() {
         newTexture.minFilter = THREE.LinearMipmapLinearFilter;
         newTexture.magFilter = THREE.LinearFilter;
         newTexture.generateMipmaps = true;
-        newTexture.anisotropy = renderer.capabilities.getMaxAnisotropy();
+        newTexture.anisotropy = QUALITY === 'low' ? 1 : renderer.capabilities.getMaxAnisotropy();
 
         if (currentTexture && currentTexture !== newTexture) {
             currentTexture.dispose();
