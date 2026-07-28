@@ -518,6 +518,7 @@ function initScene() {
     // 相机
     camera = new THREE.PerspectiveCamera(50, w / h, 0.1, 200);
     camera.position.set(3, 5, 6);
+    camera.lookAt(1.56, 3, 0);
 
     // 渲染器
     // 低端机：关闭抗锯齿、阴影、降低像素比，大幅减少 GPU 负担
@@ -541,7 +542,7 @@ function initScene() {
     controls.dampingFactor = 0.05;
     controls.minDistance = 1;
     controls.maxDistance = 30;
-    controls.target.set(0, 4, 0);
+    controls.target.set(1.56, 4, 0);
     controls.update();
 
     // 灯光
@@ -2296,7 +2297,7 @@ function setupEventListeners() {
     // 重置视角
     document.getElementById('resetCameraBtn').addEventListener('click', () => {
         camera.position.set(3, 5, 6);
-        controls.target.set(0, 4, 0);
+        controls.target.set(1.56, 4, 0);
         controls.update();
     });
 
