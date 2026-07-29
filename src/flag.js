@@ -87,14 +87,16 @@ let constraints = null;
 // 物理模拟参数（低端机：更少迭代）
 const PHYSICS_DT = QUALITY === 'low' ? 1 / 40 : 1 / 60;
 // 重力
-const GRAVITY = 0.75;
+const GRAVITY = 0.15;
 // 竖挂时的重力倍数（竖挂时旗面沿旗杆方向，需要更大重力防止被风吹得太高）
 const GRAVITY_VERTICAL_MULTIPLIER = 1.0;
 // 竖挂时的风力衰减倍数（防止被风吹得太高）
-const WIND_VERTICAL_MULTIPLIER = 0.3;
+const WIND_VERTICAL_MULTIPLIER = 0.1;
 // 粘滞
 const DAMPING = 0.999;
-const CONSTRAINT_ITERATIONS = QUALITY === 'low' ? 3 : 4;
+// 空气阻力（Blender-style）：对速度施加二次阻尼，遏制惯性钟摆
+const AIR_DRAG = 0.15;
+const CONSTRAINT_ITERATIONS = QUALITY === 'low' ? 6 : 6;
 const PINNED = true;
 const UNPINNED = false;
 
@@ -112,29 +114,29 @@ const FLAG_SPECULAR = 0.01;
 
 // ========== 风力参数（统一在这里调整） ==========
 // 阵风波动幅度：值越大风速变化越剧烈
-const WIND_GUST_AMOUNT = 0.1;
+const WIND_GUST_AMOUNT = 0.2;
 // 湍流强度：值越大乱流越明显，卷动越剧烈
 const WIND_TURBULENCE = 1.3;
 // 纵向（Z轴）扰动强度：控制前后翻卷
-const WIND_Z_TURB = 0.3;
+const WIND_Z_TURB = 1.3;
 // 垂直（Y轴）扰动强度：控制上下波动
-const WIND_Y_TURB = 0.8;
+const WIND_Y_TURB = 0.2;
 // 风的倾斜角度：负值=从斜上方吹下，正值=从斜下方吹上
-const WIND_UPWARD_ANGLE = 0.45;
+const WIND_UPWARD_ANGLE = 0.75;
 
 // ========== 布料刚度参数（统一在这里调整） ==========
 // 结构约束：旗面织物不可拉伸，固定为 1.0（硬约束），与 FREEEND_SOFTEN/ROOT_STIFFEN 相乘后仍取 1
-const STIFFNESS_STRUCTURAL = 0.9;
+const STIFFNESS_STRUCTURAL = 1;
 // 剪切约束：控制斜切/弯折变形，值越大越硬挺不可弯折
-const STIFFNESS_SHEAR = 0.003;
+const STIFFNESS_SHEAR = 0.001;
 // 弯曲约束：控制弯折卷曲，值越小越柔软越容易卷
-const STIFFNESS_BEND = 0.001;
+const STIFFNESS_BEND = 0.0005;
 // 自由端变软系数：仅作用于剪切/弯曲约束（结构约束保持不可拉伸）
-const FREEND_SOFTEN = 0.999;
+const FREEND_SOFTEN = 1.0;
 // 根部变硬系数：仅作用于剪切约束
-const ROOT_STIFFEN = 1.2;
+const ROOT_STIFFEN = 1.8;
 // 最大修正量（每次迭代），仅作用于剪切/弯曲约束
-const MAX_CORRECTION = 0.01;
+const MAX_CORRECTION = 0.33;
 
 // ========== 初始化物理布料系统 ==========
 function initClothPhysics() {
@@ -180,8 +182,7 @@ function initClothPhysics() {
             }
         }
     }
-
-    // 剪切约束（全网格，均匀分布避免边缘抽搐）
+    // 1. 剪切约束（保持不变，它负责对角线抗扭）
     for (let row = 0; row < h - 1; row++) {
         for (let col = 0; col < w - 1; col++) {
             const i = row * w + col;
@@ -190,17 +191,44 @@ function initClothPhysics() {
         }
     }
 
-    // 弯曲约束（多种跨度，水平方向更强，保持旗面展开）
+    // 2. 弯曲约束（重构：降低水平锁定，引入对角线弯曲以形成海波层叠）
     for (let row = 0; row < h; row++) {
         for (let col = 0; col < w; col++) {
             const i = row * w + col;
-            // 水平方向弯曲约束（更密，保持旗面展开）
+            
+            // 水平弯曲：只保留跨度2，去掉跨度4！(让水平方向能够荡起大波浪)
             if (col < w - 2) addConstraint(i, i + 2, 'bend');
-            if (col < w - 4) addConstraint(i, i + 4, 'bend');
-            // 垂直方向弯曲约束（均匀分布）
+            
+            // 垂直弯曲：保持跨度2 (允许上下波动)
             if (row < h - 2) addConstraint(i, i + 2 * w, 'bend');
+            
+            // 对角线弯曲约束（跨度2），这是形成交错卷动和海波层叠感的关键！
+            if (row < h - 2 && col < w - 2) {
+                addConstraint(i, i + 2 * w + 2, 'bend');
+                addConstraint(i + 2, i + 2 * w, 'bend');
+            }
         }
     }
+    // // 剪切约束（全网格，均匀分布避免边缘抽搐）
+    // for (let row = 0; row < h - 1; row++) {
+    //     for (let col = 0; col < w - 1; col++) {
+    //         const i = row * w + col;
+    //         addConstraint(i, i + w + 1, 'shear');
+    //         addConstraint(i + 1, i + w, 'shear');
+    //     }
+    // }
+
+    // // 弯曲约束（多种跨度，水平方向更强，保持旗面展开）
+    // for (let row = 0; row < h; row++) {
+    //     for (let col = 0; col < w; col++) {
+    //         const i = row * w + col;
+    //         // 水平方向弯曲约束（更密，保持旗面展开）
+    //         if (col < w - 2) addConstraint(i, i + 2, 'bend');
+    //         if (col < w - 4) addConstraint(i, i + 4, 'bend');
+    //         // 垂直方向弯曲约束（均匀分布）
+    //         if (row < h - 2) addConstraint(i, i + 2 * w, 'bend');
+    //     }
+    // }
 
     pinVerticesByType();
     
@@ -246,19 +274,25 @@ function addConstraint(i, j, type) {
         // 结构约束：硬约束（不可拉伸），不应用自由端/根部系数
         stiffness = 1.0;
     } else {
-        // 剪切/弯曲约束：可按位置变化
-        // 用非线性的 softFactor：前 30% 区间保持原刚度（保持根部平整），之后指数衰减到接近 0
-        // smoothstep 软过渡：t<0.3 时 ratio=1，t>0.7 时 ratio=0
-        const t = useAvg;
-        const smooth = t < 0.3 ? 1.0 : (t > 0.7 ? 0.0 : 1.0 - Math.pow((t - 0.3) / 0.4, 2));
-        const softFactor = 1.0 - FREEND_SOFTEN * (1.0 - smooth);
-        // 根部加强：仅剪切约束
-        const rootFactor = 1.0 + (ROOT_STIFFEN - 1.0) * Math.max(0, 1.0 - useMin * 2.0);
-        stiffness = baseStiffness * softFactor * (type === 'shear' ? rootFactor : 1.0);
+        // 金属杆模式下：靠近旗杆的第一列约束保持高刚度（模拟绷紧的绳索）
+        const isNearPole = (currentPoleType === 'modern' && (col1 === 0 || col2 === 0));
+        if (isNearPole) {
+            stiffness = baseStiffness * 2.5; // 第一列加硬
+        } else {
+            // 剪切/弯曲约束：可按位置变化
+            // 旗尾快速衰减：前15%保持刚度，之后急剧衰减
+            const t = useAvg;
+            const smooth = t < 0.15 ? 1.0 : (t > 0.5 ? 0.0 : 1.0 - Math.pow((t - 0.15) / 0.35, 1.5));
+            const softFactor = 1.0 - FREEND_SOFTEN * (1.0 - smooth);
+            // 根部加强：仅剪切约束
+            const rootFactor = 1.0 + (ROOT_STIFFEN - 1.0) * Math.max(0, 1.0 - useMin * 2.0);
+            stiffness = baseStiffness * softFactor * (type === 'shear' ? rootFactor : 1.0);
+        }
     }
 
     // 是否硬约束（结构约束）：求解时不做 MAX_CORRECTION 截断，完全消除拉伸
-    const isRigid = (type === 'structural') ? 1 : 0;
+    //const isRigid = (type === 'structural') ? 1 : 0;
+    const isRigid = 0;
     constraints.push({ i, j, restLength, type, stiffness, isRigid });
 }
 
@@ -311,10 +345,9 @@ function pinVerticesByType() {
     const h = SEG_Y + 1;
 
     if (currentPoleType === 'modern') {
-        // 金属旗杆：整条左边沿旗绳固定（与木制杆一致）
-        for (let row = 0; row < h; row++) {
-            pinParticle(row * w);
-        }
+        // 金属旗杆：仅使用两个角进行硬连接约束（绳索悬挂）
+        pinParticle(0);               // 左上角
+        pinParticle((h - 1) * w);     // 左下角
     } else if (currentPoleType === 'spear') {
         // 矛杆：整条左边固定（第一列）
         for (let row = 0; row < h; row++) {
@@ -938,10 +971,10 @@ function createModernPole() {
     ringTop.position.set(0.058, 5.92, 0);
     ringTop.rotation.y = Math.PI / 2;
     poleGroup.add(ringTop);
-    const ringBottom = new THREE.Mesh(ringGeo, hardwareMat);
-    ringBottom.position.set(0.058, 3.92, 0);
-    ringBottom.rotation.y = Math.PI / 2;
-    poleGroup.add(ringBottom);
+    // const ringBottom = new THREE.Mesh(ringGeo, hardwareMat);
+    // ringBottom.position.set(0.058, 3.92, 0);
+    // ringBottom.rotation.y = Math.PI / 2;
+    // poleGroup.add(ringBottom);
 
     // 底座
     const baseMat = new THREE.MeshStandardMaterial({
@@ -1358,7 +1391,7 @@ function simulateFlag() {
         Math.sin(timeStep * 4.7 + 2.8) * 0.05 +
         Math.sin(timeStep * 8.3 + 6.1) * 0.03) * WIND_GUST_AMOUNT;
     const gustClamped = Math.max(0.15, Math.min(1.8, gust));
-    const windStrength = windSpeed * 0.6 * gustClamped;
+    const windStrength = windSpeed * 0.9 * gustClamped;
 
     // ---- Verlet 积分：更新质点位置 ----
     const wIdx = SEG_X + 1;
@@ -1394,15 +1427,22 @@ function simulateFlag() {
         if (effectiveWindStrength > 0.01) {
             // 用 3D 时空噪声（位置 + 时间）作为风力基础，让每个粒子有真正独立的扰动
             // 产生局部孤立褶皱，而不是整面齐步走
+            // 将粒子实际世界 Y/Z 坐标混入噪声输入，使旗面卷曲移动时采样到不同噪声区域
+            // 从而打破基于网格坐标的规律条纹，产生时空交错的湍流
             const physU = u * flagWidth;
             const physV = v * flagHeight;
             const t = timeStep * 0.6;
-            const nX = windNoiseX(physU * 1.5, physV * 1.5, t) * 0.7
-                     + windNoiseX(physU * 3.5, physV * 2.5, t * 1.4) * 0.3;
-            const nY = windNoiseY(physU * 1.8, physV * 1.2, t * 0.9) * 0.7
-                     + windNoiseY(physU * 4.0, physV * 2.0, t * 1.6) * 0.3;
-            const nZ = windNoiseZ(physU * 1.6, physV * 1.4, t * 1.1) * 0.7
-                     + windNoiseZ(physU * 3.8, physV * 2.3, t * 1.5) * 0.3;
+            // 三层噪声叠加：低频大褶皱 + 中频卷动 + 高频细节，旗尾频率更高
+            const tailBoost = 1.0 + freeFactor * 1.5;
+            const nX = windNoiseX(physU * 1.5 + z * 0.8, physV * 1.5 + y * 0.6, t) * 0.5
+                     + windNoiseX(physU * 3.5 + z * 1.2, physV * 2.5 + y * 1.0, t * 1.4) * 0.3
+                     + windNoiseX(physU * 7.0 * tailBoost + z * 2.0, physV * 5.0 + y * 1.5, t * 2.2) * 0.2;
+            const nY = windNoiseY(physU * 1.8 + z * 0.7, physV * 1.2 + y * 0.5, t * 0.9) * 0.5
+                     + windNoiseY(physU * 4.0 + z * 1.1, physV * 2.0 + y * 0.9, t * 1.6) * 0.3
+                     + windNoiseY(physU * 8.0 * tailBoost + z * 1.8, physV * 4.5 + y * 1.3, t * 2.5) * 0.2;
+            const nZ = windNoiseZ(physU * 1.6 + z * 0.9, physV * 1.4 + y * 0.7, t * 1.1) * 0.5
+                     + windNoiseZ(physU * 3.8 + z * 1.3, physV * 2.3 + y * 1.1, t * 1.5) * 0.3
+                     + windNoiseZ(physU * 7.5 * tailBoost + z * 2.2, physV * 4.8 + y * 1.6, t * 2.3) * 0.2;
 
             // ---- 风的自遮蔽（基于局部法线 vs 主风向） ----
             // 用相邻 4 个粒子的位置估算局部法线。风向以 X 正向为主。
@@ -1433,22 +1473,27 @@ function simulateFlag() {
                     const wLen = Math.sqrt(windDirX * windDirX + windDirY * windDirY + windDirZ * windDirZ);
                     const dot = (nx * windDirX + ny * windDirY + nz * windDirZ) / wLen;
                     // dot > 0: 迎风面（法线与风向同向），满风
-                    // dot < 0: 背风面（法线与风向反向），遮挡
-                    // 0.15 留 15% 透过（真实布也会渗风）
-                    occlusion = 0.15 + 0.85 * Math.max(0, dot);
+                    // dot < 0: 背风面（法线与风向反向），风被完全吸收
+                    occlusion = Math.max(0, dot);
                 }
             }
 
-            // 主风力集中在自由端（freeFactor 让根部稳，自由端猛翻）
+            // 主风力集中在自由端（freeFactor 让根部稳，自由端展开）
             const windForce = effectiveWindStrength * (0.25 + 0.75 * freeFactor) * occlusion;
             // X 方向：恒定主风向 + 噪声扰动（噪声让相邻粒子真正独立）
             const windX = (1.0 + nX) * windForce;
-            // Z/Y 方向完全用噪声驱动，产生大尺度层叠褶皱
-            const windZ = nZ * windForce * (0.4 + 0.6 * freeFactor) * WIND_Z_TURB * 1.5;
+
+            // 扰动因子（近杆端 1.0 → 自由端 0.1）
+            // 让空气扰动集中在近旗杆侧，自由端自身扰动微弱，主要由近侧通过约束"拽着"运动
+            const disturbFactor = 1.0 - 1 * freeFactor;
+
+            // Z 方向：近杆端有强湍流（拽着旗面动），旗尾保留适度湍流使其自然翻卷
+            const windZ = nZ * windForce * WIND_Z_TURB * (0.6 + 0.4 * freeFactor);
+            // Y 方向扰动集中在近杆端，自由端保持几乎被动的自然漂浮
             const windY = (
                 WIND_UPWARD_ANGLE * (0.2 + 0.8 * Math.sqrt(freeFactor)) +
-                nY * 0.5
-            ) * effectiveWindStrength * (0.3 + 0.7 * freeFactor) * WIND_Y_TURB;
+                nY * 0.5 * disturbFactor
+            ) * effectiveWindStrength * (0.3 + 0.7 * disturbFactor) * WIND_Y_TURB * disturbFactor;
             
             az += windZ;
             ax += windX;
@@ -1459,6 +1504,15 @@ function simulateFlag() {
         let velX = (x - px) * DAMPING;
         let velY = (y - py) * DAMPING;
         let velZ = (z - pz) * DAMPING;
+
+        // 空气阻力（Blender-style）：对速度施加二次阻尼，遏制惯性钟摆
+        const velMag = Math.sqrt(velX * velX + velY * velY + velZ * velZ);
+        if (velMag > 0.001) {
+            const dragFactor = Math.max(0, 1 - AIR_DRAG * velMag);
+            velX *= dragFactor;
+            velY *= dragFactor;
+            velZ *= dragFactor;
+        }
 
         // 速度限制
         const velMagSq = velX * velX + velY * velY + velZ * velZ;
