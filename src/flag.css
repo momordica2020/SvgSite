@@ -134,7 +134,7 @@ html, body {
 }
 
 .flag-panel-toggle {
-    display: none;
+    display: flex;
     align-items: center;
     gap: 0.375rem;
     padding: 0.5rem 0.75rem;
@@ -415,5 +415,16 @@ html, body {
 
     .panel-type-btn {
         min-width: calc(50% - 0.125rem);
+    }
+}
+
+/* 桌面端最小化：面板内容隐藏，仅保留标题栏 */
+@media (min-width: 641px) {
+    .flag-panel-content {
+        display: flex;
+    }
+
+    .flag-panel.minimized .flag-panel-content {
+        display: none;
     }
 }

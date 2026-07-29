@@ -62,7 +62,7 @@ let time = 0;
 const IS_MOBILE = /Android|iPhone|iPad|iPod|Mobile|Touch/i.test(navigator.userAgent)
     || (window.matchMedia && window.matchMedia('(max-width: 768px)').matches)
     || (navigator.maxTouchPoints > 1 && window.innerWidth < 1024);
-const QUALITY = IS_MOBILE ? 'low' : 'high';
+const QUALITY = 'high';
 
 // 布料模拟参数（低端机降级）
 let SEG_X = QUALITY === 'low' ? 60 : 60;
@@ -345,9 +345,10 @@ function pinVerticesByType() {
     const h = SEG_Y + 1;
 
     if (currentPoleType === 'modern') {
-        // 金属旗杆：仅使用两个角进行硬连接约束（绳索悬挂）
-        pinParticle(0);               // 左上角
-        pinParticle((h - 1) * w);     // 左下角
+        // 金属旗杆：整条左边固定（与木制杆一致）
+        for (let row = 0; row < h; row++) {
+            pinParticle(row * w);
+        }
     } else if (currentPoleType === 'spear') {
         // 矛杆：整条左边固定（第一列）
         for (let row = 0; row < h; row++) {
@@ -553,20 +554,16 @@ function initScene() {
     camera.position.set(3, 5, 6);
     camera.lookAt(1.56, 3, 0);
 
-    // 渲染器
-    // 低端机：关闭抗锯齿、阴影、降低像素比，大幅减少 GPU 负担
+    // 渲染器：统一高画质，保持各端渲染一致
     renderer = new THREE.WebGLRenderer({
         antialias: true,
-        //antialias: QUALITY !== 'low',
         alpha: false,
-        powerPreference: QUALITY === 'low' ? 'low-power' : 'high-performance'
+        powerPreference: 'high-performance'
     });
     renderer.setSize(w, h);
-    // 低端机最高 1x 像素比，高端机最高 2x
-    renderer.setPixelRatio(QUALITY === 'low' ? 1 : Math.min(window.devicePixelRatio, 2));
-    //renderer.shadowMap.enabled = QUALITY !== 'low';
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.shadowMap.enabled = true;
-    renderer.shadowMap.type = QUALITY === 'low' ? THREE.BasicShadowMap : THREE.PCFSoftShadowMap;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     container.appendChild(renderer.domElement);
 
     // 控制器
@@ -1305,45 +1302,31 @@ function createFlag() {
         }
     }
     
-    // 创建材质：低端机用 MeshStandardMaterial 避免 transmission 的高开销
+    // 创建材质：统一使用 MeshPhysicalMaterial 保持各端渲染一致
     const grain = getFabricGrainTexture();
-    const material = QUALITY === 'low'
-        ? new THREE.MeshStandardMaterial({
-            map: textureToUse,
-            side: THREE.DoubleSide,
-            roughness: FLAG_ROUGHNESS,
-            roughnessMap: grain,
-            metalness: 0.0,
-            bumpMap: grain,
-            bumpScale: FLAG_BUMP_SCALE,
-            transparent: true,
-            alphaTest: 0.01,
-            flatShading: false
-        })
-        : new THREE.MeshPhysicalMaterial({
-            map: textureToUse,
-            side: THREE.DoubleSide,
-            roughness: FLAG_ROUGHNESS,
-            roughnessMap: grain,
-            metalness: 0.0,
-            bumpMap: grain,
-            bumpScale: FLAG_BUMP_SCALE,
-            transparent: true,
-            alphaTest: 0.01,
-            flatShading: false,
-            transmission: FLAG_TRANSMISSION,
-            ior: FLAG_IOR,
-            thickness: 0.015,
-            attenuationColor: new THREE.Color(0xffffff),
-            attenuationDistance: 0.8,
-            specularIntensity: FLAG_SPECULAR,
-            specularColor: new THREE.Color(0x888888)
-        });
+    const material = new THREE.MeshPhysicalMaterial({
+        map: textureToUse,
+        side: THREE.DoubleSide,
+        roughness: FLAG_ROUGHNESS,
+        roughnessMap: grain,
+        metalness: 0.0,
+        bumpMap: grain,
+        bumpScale: FLAG_BUMP_SCALE,
+        transparent: true,
+        alphaTest: 0.01,
+        flatShading: false,
+        transmission: FLAG_TRANSMISSION,
+        ior: FLAG_IOR,
+        thickness: 0.015,
+        attenuationColor: new THREE.Color(0xffffff),
+        attenuationDistance: 0.8,
+        specularIntensity: FLAG_SPECULAR,
+        specularColor: new THREE.Color(0x888888)
+    });
 
     flagMesh = new THREE.Mesh(geometry, material);
-    // 低端机无阴影投射/接收
-    flagMesh.castShadow = QUALITY !== 'low';
-    flagMesh.receiveShadow = QUALITY !== 'low';
+    flagMesh.castShadow = true;
+    flagMesh.receiveShadow = true;
 
     // 旗面位置（已根据纹理原图比例与对齐规则计算）
     flagMesh.position.set(meshCenterX, meshCenterY, 0);
@@ -2355,9 +2338,16 @@ function setupEventListeners() {
         controls.update();
     });
 
-    // 面板折叠（移动端）
+    // 面板折叠/最小化
     document.getElementById('flagPanelToggle').addEventListener('click', () => {
-        document.getElementById('flagPanel').classList.toggle('expanded');
+        const panel = document.getElementById('flagPanel');
+        if (window.innerWidth <= 640) {
+            // 移动端：展开/折叠
+            panel.classList.toggle('expanded');
+        } else {
+            // 桌面端：最小化/还原
+            panel.classList.toggle('minimized');
+        }
     });
 }
 
