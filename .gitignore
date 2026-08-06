@@ -2,3 +2,12 @@ node_modules/
 .DS_Store
 Thumbs.db
 *.log
+
+# FOTW flags encyclopedia - downloaded resources (will be replaced with SVG gradually)
+fotw/images/
+fotw/images-png/
+fotw/misc/
+fotw/flags/
+fotw/zips/
+__pycache__/
+*.pyc

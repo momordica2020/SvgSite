@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旗帜百科全书 - Flags of the World</title>
+    <link rel="stylesheet" href="../src/style.css">
+    <link rel="stylesheet" href="web/fotw.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        (function() {
+            // 环境检测
+            var host = location.hostname;
+            if (host !== 'localhost' && host !== '127.0.0.1' && location.protocol !== 'file:') {
+                document.documentElement.classList.add('remote-mode');
+            }
+            // 主题
+            var saved = localStorage.getItem('svg-gallery-theme');
+            var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            var isDark = saved ? saved === 'dark' : prefersDark;
+            if (isDark) {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+</head>
+<body class="fotw-page">
+    <header class="fotw-header">
+        <div class="container">
+            <div class="fotw-header-top">
+                <a href="index.html" class="fotw-logo">
+                    <div class="fotw-logo-flag"></div>
+                    <div class="fotw-logo-text">
+                        <h1>旗帜百科全书</h1>
+                        <p>Flags of the World (FOTW)</p>
+                    </div>
+                </a>
+                <a href="index.html" class="fotw-back-btn">← 返回首页</a>
+            </div>
+            <div class="fotw-search-bar">
+                <input type="text" class="fotw-search-input" id="searchInput" placeholder="搜索旗帜名称、国家、关键词...">
+                <span class="fotw-stats" id="statsText">加载中...</span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="fotw-nav-tabs">
+        <div class="container" style="max-width:1400px;margin:0 auto;padding:0 1.5rem;display:flex;">
+            <button class="fotw-nav-tab active" data-tab="country">按国家/地区</button>
+            <button class="fotw-nav-tab" data-tab="subject">按主题分类</button>
+            <button class="fotw-nav-tab" data-tab="map">地图索引</button>
+            <a href="commons.html" class="fotw-nav-tab commons-nav-link local-only" style="text-decoration:none;margin-left:auto;background:linear-gradient(135deg,#006699,#003d5c);color:white;border-radius:4px 4px 0 0;">🖼️ SVG图库 (Wikimedia)</a>
+        </div>
+    </nav>
+
+    <main class="fotw-main">
+        <!-- 国家/地区索引 -->
+        <div id="tab-country" class="fotw-tab-content">
+            <div class="fotw-letter-index" id="letterIndex"></div>
+            <div id="flagGrid" class="fotw-grid">
+                <div class="fotw-loading">
+                    <div class="fotw-loading-spinner"></div>
+                    <p>正在加载旗帜数据...</p>
+                </div>
+            </div>
+            <div class="fotw-pagination" id="pagination"></div>
+        </div>
+
+        <!-- 主题分类 -->
+        <div id="tab-subject" class="fotw-tab-content" style="display:none;">
+            <div class="fotw-subject-grid" id="subjectGrid">
+                <div class="fotw-subject-card" data-subject="national" onclick="showSubject('national')">
+                    <h3>🏳️ 国旗</h3>
+                    <p>世界各国的国旗</p>
+                </div>
+                <div class="fotw-subject-card" data-subject="ensign" onclick="showSubject('ensign')">
+                    <h3>⚓ 军旗/舰旗</h3>
+                    <p>海军旗、陆军旗、空军旗等军旗</p>
+                </div>
+                <div class="fotw-subject-card" data-subject="government" onclick="showSubject('government')">
+                    <h3>🏛️ 政府旗</h3>
+                    <p>政府机构、总统/国家元首旗帜</p>
+                </div>
+                <div class="fotw-subject-card" data-subject="historical" onclick="showSubject('historical')">
+                    <h3>📜 历史旗帜</h3>
+                    <p>历史上存在过的政权、帝国旗帜</p>
+                </div>
+                <div class="fotw-subject-card" data-subject="regional" onclick="showSubject('regional')">
+                    <h3>🗺️ 地方旗帜</h3>
+                    <p>省、州、市等地方行政区旗帜</p>
+                </div>
+                <div class="fotw-subject-card" data-subject="organization" onclick="showSubject('organization')">
+                    <h3>🌐 国际组织</h3>
+                    <p>联合国、北约、欧盟等国际组织旗帜</p>
+                </div>
+                <div class="fotw-subject-card" data-subject="political" onclick="showSubject('political')">
+                    <h3>✊ 政党/运动</h3>
+                    <p>政党、政治运动、民兵组织旗帜</p>
+                </div>
+                <div class="fotw-subject-card" data-subject="military" onclick="showSubject('military')">
+                    <h3>🎖️ 军事单位</h3>
+                    <p>部队、军团、军事单位旗帜</p>
+                </div>
+                <div class="fotw-subject-card" data-subject="maritime" onclick="showSubject('maritime')">
+                    <h3>🚢 海事信号</h3>
+                    <p>国际信号旗、海事标识</p>
+                </div>
+                <div class="fotw-subject-card" data-subject="sports" onclick="showSubject('sports')">
+                    <h3>⚽ 体育协会</h3>
+                    <p>奥委会、体育协会旗帜</p>
+                </div>
+                <div class="fotw-subject-card" data-subject="corporate" onclick="showSubject('corporate')">
+                    <h3>🏢 企业/机构</h3>
+                    <p>公司、机构、民间组织旗帜</p>
+                </div>
+                <div class="fotw-subject-card" data-subject="cultural" onclick="showSubject('cultural')">
+                    <h3>🎭 文化/民族</h3>
+                    <p>民族、文化、宗教旗帜</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 地图索引 -->
+        <div id="tab-map" class="fotw-tab-content" style="display:none;">
+            <div class="fotw-map-container" id="mapContainer">
+                <h2 style="margin-bottom:1rem;color:var(--fotw-navy);">世界地图索引</h2>
+                <p style="margin-bottom:1.5rem;color:var(--text-secondary);">点击大洲区域浏览该地区的旗帜</p>
+                <div class="fotw-region-grid" id="regionGrid"></div>
+                <div id="regionFlagList" style="margin-top:2rem;display:none;">
+                    <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
+                        <button class="fotw-back-btn" id="regionBackBtn" style="font-size:0.85rem;padding:0.4rem 0.8rem;">← 返回大洲列表</button>
+                        <h3 id="regionTitle" style="color:var(--fotw-navy);margin:0;"></h3>
+                    </div>
+                    <div class="fotw-grid" id="regionFlags"></div>
+                    <div class="fotw-pagination" id="regionPagination"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="web/fotw.js"></script>
+</body>
+</html>

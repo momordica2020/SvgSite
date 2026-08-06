@@ -115,6 +115,29 @@ body {
     font-weight: 600;
 }
 
+.fotw-entry-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 0.85rem;
+    background: linear-gradient(135deg, #b91c1c, #991b1b);
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: all 0.2s;
+}
+
+.fotw-entry-btn:hover {
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+    box-shadow: 0 2px 8px rgba(185, 28, 28, 0.3);
+}
+
 .search-container {
     position: relative;
     width: 100%;
@@ -1080,6 +1103,10 @@ body {
         align-items: stretch;
     }
 
+    .fotw-entry-btn {
+        justify-content: center;
+    }
+
     .search-container {
         max-width: none;
     }
@@ -1097,4 +1124,10 @@ html.dark-mode .zoom-indicator {
 
 html.dark-mode .modal-overlay {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* === 环境模式：本地 vs 远端(GitHub Pages) === */
+/* 远端模式下隐藏仅本地可用的功能按钮（FOTW百科、Wikimedia SVG图库） */
+html.remote-mode .local-only {
+    display: none !important;
 }

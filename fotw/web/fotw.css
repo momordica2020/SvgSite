@@ -1,0 +1,1051 @@
+/* FOTW Flags Encyclopedia - 沿用主站CSS变量和风格 */
+
+:root {
+    --fotw-primary: #b91c1c;
+    --fotw-primary-hover: #991b1b;
+    --fotw-gold: #d97706;
+    --fotw-navy: #1e3a5f;
+}
+
+.fotw-page {
+    min-height: 100vh;
+    background: var(--background-color);
+}
+
+/* 顶部导航 */
+.fotw-header {
+    background: linear-gradient(135deg, var(--fotw-navy) 0%, #0f172a 100%);
+    color: white;
+    padding: 1.5rem 0;
+    border-bottom: 3px solid var(--fotw-gold);
+}
+
+.fotw-header .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.fotw-header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.fotw-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: white;
+}
+
+.fotw-logo-flag {
+    width: 48px;
+    height: 32px;
+    background: linear-gradient(90deg, #b91c1c 0%, #b91c1c 33%, #fff 33%, #fff 66%, #1e3a5f 66%);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.fotw-logo-text h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.fotw-logo-text p {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    font-weight: 300;
+}
+
+.fotw-back-btn {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(255,255,255,0.3);
+    transition: all 0.2s;
+}
+
+.fotw-back-btn:hover {
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+/* 搜索栏 */
+.fotw-search-bar {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.fotw-search-input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 2px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.1);
+    color: white;
+    outline: none;
+    font-family: inherit;
+}
+
+.fotw-search-input::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+.fotw-search-input:focus {
+    border-color: var(--fotw-gold);
+    background: rgba(255,255,255,0.15);
+}
+
+.fotw-stats {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.7);
+    white-space: nowrap;
+}
+
+/* 导航方式切换 */
+.fotw-nav-tabs {
+    background: var(--card-background);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    gap: 0;
+}
+
+.fotw-nav-tab {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-family: inherit;
+}
+
+.fotw-nav-tab:hover {
+    color: var(--fotw-primary);
+    background: var(--surface-color);
+}
+
+.fotw-nav-tab.active {
+    color: var(--fotw-primary);
+    border-bottom-color: var(--fotw-primary);
+    font-weight: 600;
+}
+
+/* 主内容区 */
+.fotw-main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+/* 字母索引 */
+.fotw-letter-index {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+}
+
+.fotw-letter-btn {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    background: var(--surface-color);
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.15s;
+}
+
+.fotw-letter-btn:hover {
+    background: var(--fotw-primary);
+    color: white;
+}
+
+.fotw-letter-btn.active {
+    background: var(--fotw-primary);
+    color: white;
+}
+
+.fotw-letter-btn.empty {
+    opacity: 0.3;
+    cursor: default;
+}
+
+/* 旗帜网格 */
+.fotw-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.fotw-card {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.fotw-card:hover {
+    border-color: var(--fotw-primary);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.fotw-card-img {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface-color);
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+}
+
+.fotw-card-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+.fotw-card-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+.fotw-card-code {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-top: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.fotw-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    margin-top: 0.5rem;
+    justify-content: center;
+}
+
+.fotw-card-tag {
+    font-size: 0.6rem;
+    padding: 1px 5px;
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.fotw-card-tag:hover {
+    background: var(--fotw-primary);
+    color: white;
+    border-color: var(--fotw-primary);
+}
+
+.fotw-subject-count {
+    float: right;
+    font-size: 0.75rem;
+    background: var(--surface-color);
+    padding: 2px 8px;
+    border-radius: 10px;
+    color: var(--text-secondary);
+    font-weight: normal;
+}
+
+/* 主题分类 */
+.fotw-subject-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.fotw-subject-card {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    padding: 1.25rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.fotw-subject-card:hover {
+    border-color: var(--fotw-gold);
+    box-shadow: var(--shadow-md);
+}
+
+.fotw-subject-card h3 {
+    font-size: 1rem;
+    color: var(--fotw-navy);
+    margin-bottom: 0.5rem;
+}
+
+html.dark-mode .fotw-subject-card h3 {
+    color: #93c5fd;
+}
+
+.fotw-subject-card p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* 详情页 */
+.fotw-detail-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .fotw-detail-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.fotw-detail-sidebar {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    position: sticky;
+    top: 1rem;
+    align-self: start;
+}
+
+.fotw-detail-main-img {
+    width: 100%;
+    background: var(--surface-color);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    min-height: 200px;
+}
+
+.fotw-detail-main-img img {
+    max-width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+.fotw-detail-info h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.fotw-detail-meta {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.fotw-detail-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+
+.fotw-detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+
+.fotw-detail-tags-section {
+    margin-top: 0.8rem;
+}
+
+.fotw-detail-section-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.fotw-keyword-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    background: var(--primary-light);
+    color: var(--primary-color);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.15s;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+}
+
+.fotw-keyword-tag:hover {
+    background: var(--fotw-primary);
+    color: white;
+    transform: translateY(-1px);
+}
+
+a.fotw-keyword-tag {
+    text-decoration: none;
+}
+
+html.dark-mode .fotw-keyword-tag {
+    background: rgba(129,140,248,0.2);
+    color: #a5b4fc;
+}
+
+html.dark-mode .fotw-keyword-tag:hover {
+    background: var(--fotw-primary);
+    color: white;
+}
+
+.fotw-tag-link {
+    background: rgba(234, 179, 8, 0.15);
+    color: #b45309;
+}
+
+html.dark-mode .fotw-tag-link {
+    background: rgba(234, 179, 8, 0.2);
+    color: #fbbf24;
+}
+
+.fotw-detail-content {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+}
+
+.fotw-detail-content h2 {
+    font-size: 1.25rem;
+    color: var(--fotw-navy);
+    border-bottom: 2px solid var(--fotw-gold);
+    padding-bottom: 0.5rem;
+    margin: 1.5rem 0 1rem;
+}
+
+html.dark-mode .fotw-detail-content h2 {
+    color: #93c5fd;
+    border-bottom-color: var(--fotw-gold);
+}
+
+.fotw-detail-content h2:first-child {
+    margin-top: 0;
+}
+
+.fotw-detail-content p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+}
+
+.fotw-detail-content a {
+    color: var(--fotw-primary);
+    text-decoration: none;
+}
+
+.fotw-detail-content a:hover {
+    text-decoration: underline;
+}
+
+.fotw-detail-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.fotw-detail-gallery-item {
+    background: var(--surface-color);
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.fotw-detail-gallery-item img {
+    max-width: 100%;
+    height: 80px;
+    object-fit: contain;
+    image-rendering: pixelated;
+    margin-bottom: 0.5rem;
+}
+
+.fotw-detail-gallery-item span {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    display: block;
+}
+
+.fotw-related-links {
+    list-style: none;
+    padding: 0;
+}
+
+.fotw-related-links li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.fotw-related-links li:last-child {
+    border-bottom: none;
+}
+
+.fotw-related-links a {
+    color: var(--fotw-primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.fotw-related-links a:hover {
+    text-decoration: underline;
+}
+
+/* 面包屑 */
+.fotw-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.fotw-breadcrumb a {
+    color: var(--fotw-primary);
+    text-decoration: none;
+}
+
+.fotw-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.fotw-breadcrumb span {
+    color: var(--text-secondary);
+}
+
+/* 加载状态 */
+.fotw-loading {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--text-secondary);
+}
+
+.fotw-loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--border-color);
+    border-top-color: var(--fotw-primary);
+    border-radius: 50%;
+    animation: fotw-spin 0.8s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes fotw-spin {
+    to { transform: rotate(360deg); }
+}
+
+.fotw-empty {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--text-secondary);
+}
+
+/* 地图区域 */
+.fotw-map-container {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.fotw-map-placeholder {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    background: var(--surface-color);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    border: 2px dashed var(--border-color);
+}
+
+/* 3D飘扬入口按钮 */
+.fotw-3d-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: var(--fotw-primary);
+    color: white;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s;
+    width: 100%;
+    justify-content: center;
+}
+
+.fotw-3d-btn:hover {
+    background: var(--fotw-primary-hover);
+}
+
+/* 分页 */
+.fotw-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.25rem;
+    margin-top: 2rem;
+}
+
+.fotw-page-btn {
+    width: 2.25rem;
+    height: 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    background: var(--card-background);
+    color: var(--text-primary);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.85rem;
+}
+
+.fotw-page-btn:hover {
+    border-color: var(--fotw-primary);
+    color: var(--fotw-primary);
+}
+
+.fotw-page-btn.active {
+    background: var(--fotw-primary);
+    color: white;
+    border-color: var(--fotw-primary);
+}
+
+.fotw-page-btn[disabled] {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* 地区/大洲卡片（地图索引） */
+.fotw-region-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.fotw-region-card {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.fotw-region-card:hover {
+    border-color: var(--fotw-primary);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+
+.fotw-region-icon {
+    font-size: 3rem;
+    margin-bottom: 0.75rem;
+}
+
+.fotw-region-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.35rem;
+}
+
+.fotw-region-card p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* 新增内容类型样式 */
+.fotw-intro {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+    background: var(--surface-color);
+    padding: 1rem 1.25rem;
+    border-left: 4px solid var(--fotw-primary);
+    margin-bottom: 1.5rem;
+}
+
+.fotw-detail-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.fotw-detail-editor {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+}
+
+.fotw-detail-content blockquote {
+    margin: 1rem 0;
+    padding: 1rem 1.25rem;
+    background: var(--surface-color);
+    border-left: 4px solid var(--fotw-gold);
+    color: var(--text-secondary);
+    font-style: italic;
+    line-height: 1.7;
+}
+
+.fotw-content-list {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.fotw-content-list li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+}
+
+/* 目录 */
+.fotw-toc {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.fotw-toc h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--fotw-navy);
+    margin: 0 0 0.5rem 0;
+}
+
+html.dark-mode .fotw-toc h3 {
+    color: #93c5fd;
+}
+
+.fotw-toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+}
+
+.fotw-toc li {
+    font-size: 0.85rem;
+}
+
+.fotw-toc a {
+    color: var(--fotw-primary);
+    text-decoration: none;
+}
+
+.fotw-toc a:hover {
+    text-decoration: underline;
+}
+
+/* 本页旗帜缩略图索引 */
+.fotw-flags-index {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.fotw-flags-index h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--fotw-navy);
+    margin: 0 0 0.75rem 0;
+}
+
+html.dark-mode .fotw-flags-index h3 {
+    color: #93c5fd;
+}
+
+.fotw-flags-thumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.fotw-flag-thumb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+    transition: all 0.2s;
+    width: 80px;
+}
+
+.fotw-flag-thumb:hover {
+    border-color: var(--fotw-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.fotw-flag-thumb img {
+    width: 64px;
+    height: auto;
+    max-height: 48px;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+.fotw-flag-thumb span {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+    font-weight: 600;
+}
+
+/* 内容中的图片 */
+.fotw-content-image {
+    margin: 1.5rem 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fotw-content-image.fotw-img-main {
+    float: right;
+    margin: 0 0 1rem 1.5rem;
+    max-width: 280px;
+}
+
+.fotw-content-image.fotw-img-inline {
+    margin: 1.5rem auto;
+    max-width: 100%;
+}
+
+.fotw-content-image img {
+    max-width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+    border: 1px solid var(--border-color);
+    background: white;
+    padding: 0.5rem;
+}
+
+html.dark-mode .fotw-content-image img {
+    background: #f8fafc;
+}
+
+.fotw-img-caption {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-top: 0.5rem;
+    max-width: 100%;
+    line-height: 1.4;
+}
+
+/* 回到顶部按钮 */
+.fotw-back-to-top {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.2s, background 0.2s;
+    z-index: 1;
+}
+
+.fotw-back-to-top:hover {
+    background: var(--fotw-primary);
+}
+
+.fotw-section-heading .fotw-back-to-top {
+    position: static;
+    opacity: 0;
+    margin-left: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0;
+    background: var(--border-color);
+    color: var(--text-secondary);
+    border-radius: 3px;
+    vertical-align: middle;
+    display: inline-flex;
+}
+
+.fotw-content-image:hover .fotw-back-to-top,
+.fotw-section-heading:hover .fotw-back-to-top {
+    opacity: 1;
+}
+
+.fotw-section-heading .fotw-back-to-top:hover {
+    background: var(--fotw-primary);
+    color: white;
+}
+
+/* 章节标题 (h1-h4) */
+.fotw-detail-content h1.fotw-section-heading,
+.fotw-detail-content h2.fotw-section-heading,
+.fotw-detail-content h3.fotw-section-heading,
+.fotw-detail-content h4.fotw-section-heading {
+    position: relative;
+    color: var(--fotw-navy);
+    border-bottom: 2px solid var(--fotw-gold);
+    padding-bottom: 0.4rem;
+    margin: 2rem 0 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.fotw-detail-content h1.fotw-section-heading {
+    font-size: 1.4rem;
+    margin-top: 0;
+}
+
+.fotw-detail-content h2.fotw-section-heading {
+    font-size: 1.2rem;
+}
+
+.fotw-detail-content h3.fotw-section-heading {
+    font-size: 1.05rem;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--border-color);
+}
+
+.fotw-detail-content h4.fotw-section-heading {
+    font-size: 0.95rem;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+html.dark-mode .fotw-detail-content h1.fotw-section-heading,
+html.dark-mode .fotw-detail-content h2.fotw-section-heading,
+html.dark-mode .fotw-detail-content h3.fotw-section-heading,
+html.dark-mode .fotw-detail-content h4.fotw-section-heading {
+    color: #93c5fd;
+}
+
+/* 响应式：主图在移动端不浮动 */
+@media (max-width: 768px) {
+    .fotw-content-image.fotw-img-main {
+        float: none;
+        margin: 1rem auto;
+        max-width: 100%;
+    }
+}
+
+.fotw-card-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface-color);
+}
+
+.fotw-sub-pages {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: var(--surface-color);
+    border-radius: 8px;
+}
+
+.fotw-sub-pages h4 {
+    margin: 0 0 0.75rem 0;
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+
+.fotw-sub-pages-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.fotw-sub-page-link {
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    background: var(--bg-color, #fff);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.15s;
+}
+
+.fotw-sub-page-link:hover {
+    background: var(--fotw-primary);
+    color: white;
+    border-color: var(--fotw-primary);
+}
+
+.fotw-detail-img-placeholder {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface-color);
+    border-radius: 6px;
+}
+
+/* === 环境模式：远端隐藏仅本地可用的功能 === */
+html.remote-mode .local-only {
+    display: none !important;
+}

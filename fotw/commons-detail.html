@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG 详情 - Wikimedia Commons</title>
+    <link rel="stylesheet" href="../src/style.css">
+    <link rel="stylesheet" href="web/fotw.css">
+    <link rel="stylesheet" href="web/commons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        (function() {
+            var host = location.hostname;
+            if (host !== 'localhost' && host !== '127.0.0.1' && location.protocol !== 'file:') {
+                document.documentElement.classList.add('remote-mode');
+            }
+            var saved = localStorage.getItem('svg-gallery-theme');
+            var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            var isDark = saved ? saved === 'dark' : prefersDark;
+            if (isDark) document.documentElement.classList.add('dark-mode');
+        })();
+    </script>
+</head>
+<body class="fotw-page commons-page">
+    <header class="fotw-header commons-header">
+        <div class="container">
+            <div class="fotw-header-top">
+                <div style="display:flex;align-items:center;gap:1rem;">
+                    <a href="index.html" class="fotw-back-btn">← FOTW 首页</a>
+                    <a href="commons.html" class="fotw-back-btn">← SVG 列表</a>
+                </div>
+                <a id="commonsSourceLink" href="#" target="_blank" class="fotw-back-btn" style="background:rgba(255,255,255,0.15);">Wikimedia 原始页 ↗</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="fotw-main">
+        <div class="fotw-breadcrumb">
+            <a href="index.html">旗帜百科</a>
+            <span>›</span>
+            <a href="commons.html">SVG图库（Wikimedia）</a>
+            <span>›</span>
+            <span id="crumbTitle">加载中...</span>
+        </div>
+
+        <div id="detailContent">
+            <div class="fotw-loading">
+                <div class="fotw-loading-spinner"></div>
+                <p>正在加载SVG详情...</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="web/commons-detail.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikimedia Commons SVG 旗帜/国徽图库</title>
+    <link rel="stylesheet" href="../src/style.css">
+    <link rel="stylesheet" href="web/fotw.css">
+    <link rel="stylesheet" href="web/commons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        (function() {
+            var host = location.hostname;
+            if (host !== 'localhost' && host !== '127.0.0.1' && location.protocol !== 'file:') {
+                document.documentElement.classList.add('remote-mode');
+            }
+            var saved = localStorage.getItem('svg-gallery-theme');
+            var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            var isDark = saved ? saved === 'dark' : prefersDark;
+            if (isDark) document.documentElement.classList.add('dark-mode');
+        })();
+    </script>
+</head>
+<body class="fotw-page commons-page">
+    <header class="fotw-header commons-header">
+        <div class="container">
+            <div class="fotw-header-top">
+                <div style="display:flex;align-items:center;gap:1rem;">
+                    <a href="index.html" class="fotw-back-btn">← 返回 FOTW</a>
+                    <a href="commons.html" class="fotw-logo" style="margin-left:0.5rem;">
+                        <div class="commons-logo-icon">🖼️</div>
+                        <div class="fotw-logo-text">
+                            <h1>SVG 矢量图库</h1>
+                            <p>Wikimedia Commons · 旗帜与国徽</p>
+                        </div>
+                    </a>
+                </div>
+                <a href="https://commons.wikimedia.org/" target="_blank" class="fotw-back-btn" style="background:rgba(255,255,255,0.15);">Wikimedia Commons ↗</a>
+            </div>
+            <div class="fotw-search-bar">
+                <input type="text" class="fotw-search-input" id="searchInput" placeholder="搜索SVG名称、国家、作者、关键词...">
+                <span class="fotw-stats" id="statsText">加载中...</span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="fotw-nav-tabs">
+        <div class="container" style="max-width:1400px;margin:0 auto;padding:0 1.5rem;display:flex;gap:0.25rem;flex-wrap:wrap;">
+            <button class="fotw-nav-tab active" data-cat="all">全部</button>
+            <button class="fotw-nav-tab" data-cat="national">🏳️ 国旗</button>
+            <button class="fotw-nav-tab" data-cat="coat_of_arms">🛡️ 国徽/纹章</button>
+            <button class="fotw-nav-tab" data-cat="ensign">⚓ 舰旗/军旗</button>
+            <button class="fotw-nav-tab" data-cat="naval">🚢 海军</button>
+            <button class="fotw-nav-tab" data-cat="military">🎖️ 军事</button>
+            <button class="fotw-nav-tab" data-cat="government">🏛️ 政府/元首</button>
+            <button class="fotw-nav-tab" data-cat="civil">🏴 民船旗</button>
+            <button class="fotw-nav-tab" data-cat="standard">👑 元首旗</button>
+            <button class="fotw-nav-tab" data-cat="historical">📜 历史</button>
+        </div>
+    </nav>
+
+    <main class="fotw-main">
+        <div class="container" style="max-width:1400px;margin:0 auto;padding:1.5rem;">
+            <div class="commons-source-note">
+                <p>📌 本页素材来自 <a href="https://commons.wikimedia.org/" target="_blank">Wikimedia Commons</a>，所有SVG文件版权归原作者所有，遵循各自许可证（Public Domain / CC BY-SA / CC BY / CC0 等）。本页仅作本地索引与预览。点击卡片可查看详情及原始来源。</p>
+            </div>
+            <div id="svgGrid" class="commons-grid">
+                <div class="fotw-loading">
+                    <div class="fotw-loading-spinner"></div>
+                    <p>正在加载SVG数据...</p>
+                </div>
+            </div>
+            <div class="fotw-pagination" id="pagination"></div>
+        </div>
+    </main>
+
+    <script src="web/commons.js"></script>
+</body>
+</html>
