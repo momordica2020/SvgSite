@@ -154,24 +154,25 @@ function renderTags() {
     // 按分类分组渲染标签
     let tagsHtml = '';
     if (typeof TAG_CATEGORIES !== 'undefined') {
-        // 按分类分组
         for (const [cat, info] of Object.entries(TAG_CATEGORIES)) {
-            // 收集该分类下所有有图片的tag
-            const catTags = info.tags
-                .filter(t => tagCounts[t] !== undefined)
-                .sort((a, b) => tagCounts[b] - tagCounts[a]);
-            // 也收集未在预定义列表中但属于该分类的tag（通过TAG_TO_CATEGORY查找）
-            // 以及 other 分类中的tag
-            if (cat === 'other') {
-                const knownTags = new Set();
-                for (const c of Object.keys(TAG_CATEGORIES)) {
-                    TAG_CATEGORIES[c].tags.forEach(t => knownTags.add(t));
+            // 收集该分类下所有有图片的 tag：
+            // 1) 预定义列表中出现的；2) 数据中出现且反向映射到该分类的（兜底，避免漏到“其他”）
+            const catTags = [];
+            const added = new Set();
+            info.tags.forEach(t => {
+                if (tagCounts[t] !== undefined && !added.has(t)) {
+                    catTags.push(t);
+                    added.add(t);
                 }
-                const otherTags = Object.keys(tagCounts)
-                    .filter(t => !knownTags.has(t))
-                    .sort((a, b) => tagCounts[b] - tagCounts[a]);
-                catTags.push(...otherTags);
-            }
+            });
+            Object.keys(tagCounts).forEach(t => {
+                const mapped = (typeof TAG_TO_CATEGORY !== 'undefined' && TAG_TO_CATEGORY[t]) || 'other';
+                if (mapped === cat && !added.has(t)) {
+                    catTags.push(t);
+                    added.add(t);
+                }
+            });
+            catTags.sort((a, b) => tagCounts[b] - tagCounts[a]);
             if (catTags.length === 0) continue;
 
             tagsHtml += `<div class="tag-category" data-category="${cat}">
@@ -234,10 +235,45 @@ function filterTags() {
 // 统一过滤逻辑
 function getFilteredItems() {
     return images.filter(img => {
-        const matchesSearch = !searchQuery || img.name.toLowerCase().includes(searchQuery);
+        const matchesSearch = matchesSearchQuery(img, searchQuery);
         const tags = img.tagsFlat || flattenTags(img.tags) || [];
         const matchesTag = currentTag === 'all' || tags.includes(currentTag);
         return matchesSearch && matchesTag;
+    });
+}
+
+// 单个词条的模糊匹配：先尝试子串包含，再退化为“按字符顺序的子序列”匹配
+function fuzzyTokenMatch(token, text) {
+    if (!token) return true;
+    if (text.includes(token)) return true;
+    let ti = 0;
+    for (let i = 0; i < text.length && ti < token.length; i++) {
+        if (text[i] === token[ti]) ti++;
+    }
+    return ti === token.length;
+}
+
+// 搜索框模糊匹配：查询词可以匹配 SVG 名称或任意标签
+// 支持：子串（“美国”）、空格分词（“美国 旗”）、
+//       ≥3 字词的跳字模糊（“美国旗”匹配“美国国旗”）
+function matchesSearchQuery(img, query) {
+    const q = (query || '').trim().toLowerCase().replace(/\s+/g, ' ');
+    if (!q) return true;
+
+    const tokens = q.split(' ').filter(Boolean);
+    const candidates = [img.name.toLowerCase()];
+    const tags = img.tagsFlat || flattenTags(img.tags) || [];
+    tags.forEach(t => {
+        const s = String(t).toLowerCase();
+        if (s && candidates.indexOf(s) === -1) candidates.push(s);
+    });
+
+    return tokens.every(token => {
+        // 优先子串匹配（名称或任意标签）
+        if (candidates.some(candidate => candidate.includes(token))) return true;
+        // 子串未命中时，仅对较长词条启用跳字模糊匹配，避免过度命中
+        if (token.length < 3) return false;
+        return candidates.some(candidate => fuzzyTokenMatch(token, candidate));
     });
 }
 

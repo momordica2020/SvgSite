@@ -7,6 +7,7 @@ import requests
 import json
 import os
 import re
+import sys
 import time
 from pathlib import Path
 
@@ -16,7 +17,7 @@ SVGS_DIR = COMMONS_DIR / "svgs"
 DATA_DIR = COMMONS_DIR / "data"
 
 API = "https://commons.wikimedia.org/w/api.php"
-USER_AGENT = "FOTW-SVG-Browser/1.0 (local educational project)"
+USER_AGENT = "FOTW-SVG-Browser/1.0 (local educational project; contact: svg-browser@example.com)"
 HEADERS = {"User-Agent": USER_AGENT}
 
 SEARCH_QUERIES = [
@@ -41,6 +42,56 @@ SEARCH_QUERIES = [
     "National coat of arms svg",
 ]
 
+# 分类遍历根节点：覆盖绝大多数旗帜/徽章 SVG（含子分类递归）
+CATEGORY_ROOTS = [
+    "Category:SVG flags",
+    "Category:SVG national flags",
+    "Category:SVG coats of arms",
+    "Category:SVG military flags",
+    "Category:Coats of arms",
+]
+
+
+def fetch_category_titles(root_category, depth=2, max_depth=2):
+    """递归遍历分类（文件 + 子分类），返回 SVG 文件标题集合。"""
+    titles = set()
+    visited_cats = set()
+
+    def walk(category, d):
+        if d > max_depth or category in visited_cats:
+            return
+        visited_cats.add(category)
+        params = {
+            "action": "query",
+            "list": "categorymembers",
+            "cmtitle": category,
+            "cmtype": "file|subcat",
+            "cmlimit": "500",
+            "format": "json",
+        }
+        while True:
+            data = api_get(params)
+            if not data:
+                break
+            members = data.get("query", {}).get("categorymembers", [])
+            for m in members:
+                title = m.get("title", "")
+                if m.get("ns") == 14:  # 子分类
+                    if depth >= 0:
+                        walk(title, d + 1)
+                elif title.lower().endswith(".svg"):
+                    titles.add(title)
+            if "continue" in data:
+                params.update(data["continue"])
+                time.sleep(1)
+            else:
+                break
+            if len(titles) > 200000:
+                break
+
+    walk(root_category, 0)
+    return titles
+
 def api_get(params, retries=3):
     params["format"] = "json"
     params["action"] = "query"
@@ -48,8 +99,9 @@ def api_get(params, retries=3):
         try:
             r = requests.get(API, params=params, headers=HEADERS, timeout=30)
             if r.status_code == 429:
-                wait = 5 * (attempt + 1)
-                print(f"  Rate limited, waiting {wait}s...")
+                wait = int(r.headers.get('Retry-After', 0)) or (5 * (attempt + 1))
+                wait = max(wait, 5)
+                print(f"  Rate limited, waiting {wait}s...", flush=True)
                 time.sleep(wait)
                 continue
             r.raise_for_status()
@@ -166,18 +218,23 @@ def safe_filename(title):
     name = re.sub(r'[\\/:*?"<>|]', '_', name)
     return name
 
-def download_svg(url, dest_path, delay=1.0):
+def download_svg(url, dest_path, delay=60.0):
     try:
         time.sleep(delay)
-        r = requests.get(url, headers=HEADERS, timeout=60)
-        if r.status_code == 429:
-            time.sleep(8)
+        for attempt in range(12):
             r = requests.get(url, headers=HEADERS, timeout=60)
-        r.raise_for_status()
-        dest_path.parent.mkdir(parents=True, exist_ok=True)
-        with open(dest_path, 'wb') as f:
-            f.write(r.content)
-        return True
+            if r.status_code in (429, 403):
+                wait = int(r.headers.get('Retry-After', 600)) or 600
+                wait = max(wait, 60)
+                print(f"    Rate limited, waiting {wait}s...", flush=True)
+                time.sleep(wait)
+                continue
+            r.raise_for_status()
+            dest_path.parent.mkdir(parents=True, exist_ok=True)
+            with open(dest_path, 'wb') as f:
+                f.write(r.content)
+            return True
+        return False
     except Exception:
         return False
 
@@ -211,33 +268,45 @@ def main():
     existing_map = {item["title"]: item for item in existing.get("svgs", [])}
     print(f"Loaded existing: {len(existing_map)} entries")
 
-    print("\n=== Searching Wikimedia Commons ===")
-    all_titles = set(existing_map.keys())
-    for q in SEARCH_QUERIES:
-        print(f"  Query: {q}")
-        titles = search_files(q, limit=40)
-        new_count = sum(1 for t in titles if t not in all_titles)
-        for t in titles:
-            all_titles.add(t)
-        print(f"    Found {len(titles)}, {new_count} new (total: {len(all_titles)})")
-        time.sleep(1.5)
+    if '--download-only' not in sys.argv:
+        all_titles = set(existing_map.keys())
+        if '--categories' in sys.argv:
+            print("\n=== Traversing categories ===")
+            for cat in CATEGORY_ROOTS:
+                found = fetch_category_titles(cat, max_depth=2)
+                new_count = sum(1 for t in found if t not in all_titles)
+                all_titles.update(found)
+                print(f"  {cat}: {len(found)} files, {new_count} new (total: {len(all_titles)})")
+                time.sleep(2)
 
-    skip_re = re.compile(r'\bmap\b|\bicon\b|\blogo\b|\bbutton\b|\bbadge\b|\btemplate\b|\bnavbox\b|protest art|symbol flag|insignia', re.I)
-    filtered = [t for t in sorted(all_titles) if not skip_re.search(t)]
-    print(f"After filtering: {len(filtered)}")
+        print("\n=== Searching Wikimedia Commons ===")
+        for q in SEARCH_QUERIES:
+            print(f"  Query: {q}")
+            titles = search_files(q, limit=40)
+            new_count = sum(1 for t in titles if t not in all_titles)
+            for t in titles:
+                all_titles.add(t)
+            print(f"    Found {len(titles)}, {new_count} new (total: {len(all_titles)})")
+            time.sleep(1.5)
 
-    print("\n=== Fetching metadata ===")
-    new_titles = [t for t in filtered if t not in existing_map]
-    print(f"Need metadata for {len(new_titles)} new files")
+        skip_re = re.compile(r'\bmap\b|\bicon\b|\blogo\b|\bbutton\b|\bbadge\b|\btemplate\b|\bnavbox\b|protest art|symbol flag|insignia', re.I)
+        filtered = [t for t in sorted(all_titles) if not skip_re.search(t)]
+        print(f"After filtering: {len(filtered)}")
 
-    batch_size = 8
-    for i in range(0, len(new_titles), batch_size):
-        batch = new_titles[i:i+batch_size]
-        info_map = get_image_info_batch(batch)
-        for title, info in info_map.items():
-            existing_map[title] = info
-        print(f"  Batch {i//batch_size+1}/{(len(new_titles)+batch_size-1)//batch_size}: +{len(info_map)} (total: {len(existing_map)})")
-        time.sleep(1.5)
+        print("\n=== Fetching metadata ===")
+        new_titles = [t for t in filtered if t not in existing_map]
+        print(f"Need metadata for {len(new_titles)} new files")
+
+        batch_size = 8
+        for i in range(0, len(new_titles), batch_size):
+            batch = new_titles[i:i+batch_size]
+            info_map = get_image_info_batch(batch)
+            for title, info in info_map.items():
+                existing_map[title] = info
+            print(f"  Batch {i//batch_size+1}/{(len(new_titles)+batch_size-1)//batch_size}: +{len(info_map)} (total: {len(existing_map)})")
+            time.sleep(1.5)
+    else:
+        print("\n=== Download-only mode (skip search/metadata) ===")
 
     svgs_list = list(existing_map.values())
     for item in svgs_list:
@@ -245,10 +314,13 @@ def main():
 
     print("\n=== Downloading missing SVGs ===")
     downloaded = skipped = failed = 0
-    for item in svgs_list:
+    total_to_check = len(svgs_list)
+    for idx, item in enumerate(svgs_list, 1):
         lf = item.get("local_file", "")
         if lf and (SVGS_DIR.parent / lf).exists():
             skipped += 1
+            if idx % 10 == 0:
+                print(f"  [{idx}/{total_to_check}] downloaded={downloaded} skipped={skipped} failed={failed}", flush=True)
             continue
         url = item.get("url", "")
         fname = safe_filename(item["title"])
@@ -256,12 +328,18 @@ def main():
         if local_path.exists() and local_path.stat().st_size > 100:
             item["local_file"] = f"svgs/{fname}"
             skipped += 1
+            if idx % 10 == 0:
+                print(f"  [{idx}/{total_to_check}] downloaded={downloaded} skipped={skipped} failed={failed}", flush=True)
             continue
-        if url and download_svg(url, local_path, delay=1.5):
+        if url and download_svg(url, local_path, delay=60.0):
             item["local_file"] = f"svgs/{fname}"
             downloaded += 1
         else:
             failed += 1
+            if failed <= 25:
+                print(f"    FAILED: {item.get('title')}", flush=True)
+        if idx % 10 == 0:
+            print(f"  [{idx}/{total_to_check}] downloaded={downloaded} skipped={skipped} failed={failed}", flush=True)
     print(f"Downloaded: {downloaded}, Skipped: {skipped}, Failed: {failed}")
 
     for item in svgs_list:

@@ -1,5 +1,45 @@
 [
   {
+    "id": "09-F9-言论自由抗议旗帜",
+    "name": "09-F9 言论自由抗议旗帜",
+    "tags": {
+      "usage": [
+        "民运"
+      ],
+      "region": [
+        "美国"
+      ],
+      "element": [
+        "船",
+        "五角星"
+      ],
+      "color": [
+        "白色",
+        "蓝色",
+        "绿色",
+        "紫色",
+        "粉色"
+      ]
+    },
+    "tagsFlat": [
+      "白色",
+      "蓝色",
+      "绿色",
+      "紫色",
+      "粉色",
+      "船",
+      "五角星",
+      "美国",
+      "民运"
+    ],
+    "svgFile": "09-F9-言论自由抗议旗帜.svg",
+    "viewBox": null,
+    "svgWidth": "480",
+    "svgHeight": "288",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Sample 09-F9 protest art, Free Speech Flag by John Marcotte。"
+  },
+  {
     "id": "阿尔巴尼亚国旗",
     "name": "阿尔巴尼亚国旗",
     "tags": {
@@ -21,12 +61,12 @@
       ]
     },
     "tagsFlat": [
-      "阿尔巴尼亚",
-      "国旗",
-      "双头鹰",
+      "中心",
       "红色",
       "黑色",
-      "中心"
+      "双头鹰",
+      "阿尔巴尼亚",
+      "国旗"
     ],
     "svgFile": "阿尔巴尼亚国旗.svg",
     "viewBox": null,
@@ -34,6 +74,96 @@
     "svgHeight": "500",
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "阿尔巴尼亚临时政府旗-1912-1914",
+    "name": "阿尔巴尼亚临时政府旗（1912–1914）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "阿尔巴尼亚"
+      ],
+      "color": [
+        "红色",
+        "绿色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "绿色",
+      "阿尔巴尼亚",
+      "国旗"
+    ],
+    "svgFile": "阿尔巴尼亚临时政府旗-1912-1914.svg",
+    "viewBox": null,
+    "svgWidth": "800",
+    "svgHeight": "515.931",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Albanian Provisional Government (1912-1914)。"
+  },
+  {
+    "id": "阿尔及利亚总统旗",
+    "name": "阿尔及利亚总统旗",
+    "tags": {
+      "usage": [
+        "总统旗"
+      ],
+      "region": [
+        "阿尔及利亚"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "绿色",
+        "灰色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "绿色",
+      "灰色",
+      "阿尔及利亚",
+      "总统旗"
+    ],
+    "svgFile": "阿尔及利亚总统旗.svg",
+    "viewBox": "-30 -20 60 40",
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Presidential Standard of Algeria。"
+  },
+  {
+    "id": "阿富汗临时流亡政府旗-1988-1992",
+    "name": "阿富汗临时流亡政府旗（1988–1992）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "阿富汗"
+      ],
+      "color": [
+        "白色",
+        "绿色"
+      ]
+    },
+    "tagsFlat": [
+      "白色",
+      "绿色",
+      "阿富汗",
+      "国旗"
+    ],
+    "svgFile": "阿富汗临时流亡政府旗-1988-1992.svg",
+    "viewBox": null,
+    "svgWidth": "600",
+    "svgHeight": "300",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of the Afghan interim government-in-exile (1988–1992)。"
   },
   {
     "id": "阿拉伯清真言",
@@ -84,6 +214,226 @@
     "description": ""
   },
   {
+    "id": "阿扎尔自治共和国旗帜",
+    "name": "阿扎尔自治共和国旗帜",
+    "tags": {
+      "usage": [
+        "区旗"
+      ],
+      "region": [
+        "阿扎尔",
+        "格鲁吉亚"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "蓝色",
+      "阿扎尔",
+      "格鲁吉亚",
+      "区旗"
+    ],
+    "svgFile": "阿扎尔自治共和国旗帜.svg",
+    "viewBox": "0 0 630 420",
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Adjara。"
+  },
+  {
+    "id": "埃及国旗-1922-1958",
+    "name": "埃及国旗（1922–1958）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "埃及"
+      ],
+      "color": [
+        "白色",
+        "绿色"
+      ]
+    },
+    "tagsFlat": [
+      "白色",
+      "绿色",
+      "埃及",
+      "国旗"
+    ],
+    "svgFile": "埃及国旗-1922-1958.svg",
+    "viewBox": null,
+    "svgWidth": "1008",
+    "svgHeight": "672",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Egypt (1922-1958)。"
+  },
+  {
+    "id": "埃及国旗-1952-1958",
+    "name": "埃及国旗（1952–1958）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "埃及"
+      ],
+      "element": [
+        "月",
+        "五角星"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "绿色",
+        "灰色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "绿色",
+      "灰色",
+      "月",
+      "五角星",
+      "埃及",
+      "国旗"
+    ],
+    "svgFile": "埃及国旗-1952-1958.svg",
+    "viewBox": null,
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Egypt (1952–1958)。"
+  },
+  {
+    "id": "埃塞俄比亚战旗-1974-1975",
+    "name": "埃塞俄比亚战旗（1974–1975）",
+    "tags": {
+      "usage": [
+        "军旗",
+        "海军",
+        "船旗"
+      ],
+      "region": [
+        "埃塞俄比亚"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "灰色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "灰色",
+      "棕色",
+      "埃塞俄比亚",
+      "军旗",
+      "海军",
+      "船旗"
+    ],
+    "svgFile": "埃塞俄比亚战旗-1974-1975.svg",
+    "viewBox": null,
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：War Ensign of Ethiopia (1974–1975)。"
+  },
+  {
+    "id": "爱尔兰国徽",
+    "name": "爱尔兰国徽",
+    "tags": {
+      "usage": [
+        "国徽"
+      ],
+      "region": [
+        "爱尔兰"
+      ],
+      "color": [
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "橙色",
+        "灰色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "橙色",
+      "灰色",
+      "棕色",
+      "爱尔兰",
+      "国徽"
+    ],
+    "svgFile": "爱尔兰国徽.svg",
+    "viewBox": null,
+    "svgWidth": "640",
+    "svgHeight": "830",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Coat of arms of Ireland。"
+  },
+  {
+    "id": "爱沙尼亚海军旗",
+    "name": "爱沙尼亚海军旗",
+    "tags": {
+      "usage": [
+        "海军",
+        "船旗"
+      ],
+      "region": [
+        "爱沙尼亚"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "蓝色",
+        "橙色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "蓝色",
+      "橙色",
+      "棕色",
+      "爱沙尼亚",
+      "海军",
+      "船旗"
+    ],
+    "svgFile": "爱沙尼亚海军旗.svg",
+    "viewBox": "0 0 650 350",
+    "svgWidth": "650",
+    "svgHeight": "350",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Naval ensign of Estonia。"
+  },
+  {
     "id": "安卓",
     "name": "安卓",
     "tags": {
@@ -101,12 +451,12 @@
       ]
     },
     "tagsFlat": [
-      "公司",
-      "英文",
-      "logo",
       "绿色",
       "白色",
-      "机器人"
+      "英文",
+      "机器人",
+      "公司",
+      "logo"
     ],
     "svgFile": "安卓.svg",
     "viewBox": "0 0 625 625",
@@ -114,6 +464,210 @@
     "svgHeight": null,
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "敖德萨市徽",
+    "name": "敖德萨市徽",
+    "tags": {
+      "usage": [
+        "徽章"
+      ],
+      "region": [
+        "敖德萨",
+        "乌克兰"
+      ],
+      "element": [
+        "狮子",
+        "麦穗"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "黑色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "黑色",
+      "狮子",
+      "麦穗",
+      "敖德萨",
+      "乌克兰",
+      "徽章"
+    ],
+    "svgFile": "敖德萨市徽.svg",
+    "viewBox": "0 0 670 910",
+    "svgWidth": "670px",
+    "svgHeight": "910px",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Coat of Arms of Odesa。"
+  },
+  {
+    "id": "奥地利国旗-全面战争-帝国-版",
+    "name": "奥地利国旗（《全面战争：帝国》版）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "奥地利"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "橙色",
+        "紫色",
+        "灰色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "橙色",
+      "紫色",
+      "灰色",
+      "粉色",
+      "棕色",
+      "奥地利",
+      "国旗"
+    ],
+    "svgFile": "奥地利国旗-全面战争-帝国-版.svg",
+    "viewBox": "0 0 3 2",
+    "svgWidth": "1200",
+    "svgHeight": "800",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Austria (Empire Total War)。"
+  },
+  {
+    "id": "奥地利联邦之鹰徽章",
+    "name": "奥地利联邦之鹰徽章",
+    "tags": {
+      "usage": [
+        "徽章"
+      ],
+      "region": [
+        "奥地利"
+      ],
+      "element": [
+        "鹰"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "黑色",
+        "灰色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "黑色",
+      "灰色",
+      "粉色",
+      "棕色",
+      "鹰",
+      "奥地利",
+      "徽章"
+    ],
+    "svgFile": "奥地利联邦之鹰徽章.svg",
+    "viewBox": "-.644 -.977 267 283",
+    "svgWidth": "734.25",
+    "svgHeight": "778.25",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Austria Bundesadler。"
+  },
+  {
+    "id": "奥地利总统旗-1984-年以前",
+    "name": "奥地利总统旗（1984 年以前）",
+    "tags": {
+      "usage": [
+        "总统旗",
+        "军旗",
+        "国旗"
+      ],
+      "region": [
+        "奥地利"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "黑色",
+        "灰色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "黑色",
+      "灰色",
+      "粉色",
+      "棕色",
+      "奥地利",
+      "总统旗",
+      "军旗",
+      "国旗"
+    ],
+    "svgFile": "奥地利总统旗-1984-年以前.svg",
+    "viewBox": null,
+    "svgWidth": "900",
+    "svgHeight": "900",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Presidential Standard of Austria (-1984)。"
+  },
+  {
+    "id": "奥匈帝国民用船队旗-1869-1918",
+    "name": "奥匈帝国民用船队旗（1869–1918）",
+    "tags": {
+      "usage": [
+        "船旗"
+      ],
+      "region": [
+        "奥匈帝国",
+        "奥地利"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "绿色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "绿色",
+      "奥匈帝国",
+      "奥地利",
+      "船旗"
+    ],
+    "svgFile": "奥匈帝国民用船队旗-1869-1918.svg",
+    "viewBox": "0 0 648 432",
+    "svgWidth": "648",
+    "svgHeight": "432",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Ensign of Austro-Hungarian civil fleet (1869-1918)。"
   },
   {
     "id": "澳大利亚国徽",
@@ -134,11 +688,11 @@
     "tagsFlat": [
       "动物",
       "鸟类",
-      "国徽",
       "七角星",
       "植物",
       "英文",
-      "盾徽"
+      "盾徽",
+      "国徽"
     ],
     "svgFile": "澳大利亚国徽.svg",
     "viewBox": "0 0 910 705",
@@ -146,6 +700,152 @@
     "svgHeight": "89.406",
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "澳大利亚民用船旗-1903-1908",
+    "name": "澳大利亚民用船旗（1903–1908）",
+    "tags": {
+      "usage": [
+        "船旗"
+      ],
+      "region": [
+        "澳大利亚"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "蓝色",
+        "灰色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "蓝色",
+      "灰色",
+      "澳大利亚",
+      "船旗"
+    ],
+    "svgFile": "澳大利亚民用船旗-1903-1908.svg",
+    "viewBox": "0 0 30240 15119.998",
+    "svgWidth": "1279.9999",
+    "svgHeight": "639.99994",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Civil Ensign of Australia (1903–1908)。"
+  },
+  {
+    "id": "巴基斯坦空军旗",
+    "name": "巴基斯坦空军旗",
+    "tags": {
+      "usage": [
+        "空军",
+        "船旗"
+      ],
+      "region": [
+        "巴基斯坦"
+      ],
+      "element": [
+        "月",
+        "五角星"
+      ],
+      "color": [
+        "白色",
+        "绿色",
+        "粉色"
+      ]
+    },
+    "tagsFlat": [
+      "白色",
+      "绿色",
+      "粉色",
+      "月",
+      "五角星",
+      "巴基斯坦",
+      "空军",
+      "船旗"
+    ],
+    "svgFile": "巴基斯坦空军旗.svg",
+    "viewBox": "-75 -40 240 160",
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Air Force Ensign of Pakistan。"
+  },
+  {
+    "id": "巴基斯坦武装部队旗",
+    "name": "巴基斯坦武装部队旗",
+    "tags": {
+      "usage": [
+        "军旗",
+        "国旗"
+      ],
+      "region": [
+        "巴基斯坦"
+      ],
+      "element": [
+        "月",
+        "五角星"
+      ],
+      "color": [
+        "绿色",
+        "白色"
+      ]
+    },
+    "tagsFlat": [
+      "绿色",
+      "白色",
+      "月",
+      "五角星",
+      "巴基斯坦",
+      "军旗",
+      "国旗"
+    ],
+    "svgFile": "巴基斯坦武装部队旗.svg",
+    "viewBox": null,
+    "svgWidth": "2560px",
+    "svgHeight": "1707px",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Armed Forces of Pakistan Flag。"
+  },
+  {
+    "id": "巴勒斯坦国徽",
+    "name": "巴勒斯坦国徽",
+    "tags": {
+      "usage": [
+        "国徽"
+      ],
+      "region": [
+        "巴勒斯坦"
+      ],
+      "element": [
+        "鹰",
+        "盾徽"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黑色",
+        "绿色",
+        "橙色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黑色",
+      "绿色",
+      "橙色",
+      "鹰",
+      "盾徽",
+      "巴勒斯坦",
+      "国徽"
+    ],
+    "svgFile": "巴勒斯坦国徽.svg",
+    "viewBox": null,
+    "svgWidth": "600",
+    "svgHeight": "815.143",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Coat of arms of Palestine。"
   },
   {
     "id": "巴勒斯坦国旗",
@@ -170,15 +870,15 @@
       ]
     },
     "tagsFlat": [
-      "巴勒斯坦",
-      "国旗",
-      "穆斯林",
+      "三角",
+      "横条",
       "红色",
       "白色",
       "绿色",
       "黑色",
-      "三角",
-      "横条"
+      "巴勒斯坦",
+      "穆斯林",
+      "国旗"
     ],
     "svgFile": "巴勒斯坦国旗.svg",
     "viewBox": "0 0 6 3",
@@ -186,6 +886,210 @@
     "svgHeight": "600",
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "巴拿马国徽",
+    "name": "巴拿马国徽",
+    "tags": {
+      "usage": [
+        "国徽"
+      ],
+      "region": [
+        "巴拿马"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "橙色",
+        "灰色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "橙色",
+      "灰色",
+      "粉色",
+      "棕色",
+      "巴拿马",
+      "国徽"
+    ],
+    "svgFile": "巴拿马国徽.svg",
+    "viewBox": "0 0 405.516 523.847",
+    "svgWidth": "689.16",
+    "svgHeight": "760.62",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Coat of arms of Panama。"
+  },
+  {
+    "id": "巴西国徽",
+    "name": "巴西国徽",
+    "tags": {
+      "usage": [
+        "国徽"
+      ],
+      "region": [
+        "巴西"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "灰色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "灰色",
+      "粉色",
+      "棕色",
+      "巴西",
+      "国徽"
+    ],
+    "svgFile": "巴西国徽.svg",
+    "viewBox": "0 0 382 384",
+    "svgWidth": "1920",
+    "svgHeight": "1017",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Coat of arms of Brazil。"
+  },
+  {
+    "id": "白俄罗斯民族无政府主义旗帜",
+    "name": "白俄罗斯民族无政府主义旗帜",
+    "tags": {
+      "usage": [
+        "会旗"
+      ],
+      "region": [
+        "无政府主义",
+        "白俄罗斯"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黑色",
+        "灰色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黑色",
+      "灰色",
+      "无政府主义",
+      "白俄罗斯",
+      "会旗"
+    ],
+    "svgFile": "白俄罗斯民族无政府主义旗帜.svg",
+    "viewBox": "0 0 6 3",
+    "svgWidth": "1000",
+    "svgHeight": "500",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Belarusian national-anarchist flag。"
+  },
+  {
+    "id": "百慕大旗-1875-1910",
+    "name": "百慕大旗（1875–1910）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "百慕大"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "橙色",
+        "紫色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "橙色",
+      "紫色",
+      "粉色",
+      "棕色",
+      "百慕大",
+      "国旗"
+    ],
+    "svgFile": "百慕大旗-1875-1910.svg",
+    "viewBox": "0 0 1200 599.99999",
+    "svgWidth": "1200",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Bermuda (1875–1910)。"
+  },
+  {
+    "id": "保加利亚海军旗-1878-1944",
+    "name": "保加利亚海军旗（1878–1944）",
+    "tags": {
+      "usage": [
+        "海军",
+        "船旗"
+      ],
+      "region": [
+        "保加利亚"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "黑色",
+        "绿色",
+        "灰色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "黑色",
+      "绿色",
+      "灰色",
+      "粉色",
+      "棕色",
+      "保加利亚",
+      "海军",
+      "船旗"
+    ],
+    "svgFile": "保加利亚海军旗-1878-1944.svg",
+    "viewBox": "0 0 265.09 159.81",
+    "svgWidth": "265.09mm",
+    "svgHeight": "159.81mm",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Naval ensign of Bulgaria (1878–1944)。"
   },
   {
     "id": "北满铁路旗帜-1932",
@@ -212,16 +1116,16 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "苏联",
+      "横条",
       "黄色",
       "红色",
       "白色",
       "蓝色",
       "黑色",
-      "横条",
       "五角星",
       "镰锤",
+      "中国",
+      "苏联",
       "共产主义"
     ],
     "svgFile": "北满铁路旗帜-1932.svg",
@@ -252,15 +1156,15 @@
       ]
     },
     "tagsFlat": [
-      "比利时",
+      "红色",
+      "白色",
+      "黄色",
+      "黑色",
       "盾徽",
       "王冠",
       "狮子",
       "动物",
-      "红色",
-      "白色",
-      "黄色",
-      "黑色"
+      "比利时"
     ],
     "svgFile": "比利时国徽.svg",
     "viewBox": null,
@@ -268,6 +1172,36 @@
     "svgHeight": "1190",
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "比利时民用旗",
+    "name": "比利时民用旗",
+    "tags": {
+      "usage": [
+        "船旗",
+        "国旗"
+      ],
+      "region": [
+        "比利时"
+      ],
+      "color": [
+        "红色",
+        "黄色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "黄色",
+      "比利时",
+      "船旗",
+      "国旗"
+    ],
+    "svgFile": "比利时民用旗.svg",
+    "viewBox": null,
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Belgium (civil)。"
   },
   {
     "id": "比利时瓦隆尼亚徽章",
@@ -283,10 +1217,10 @@
       ]
     },
     "tagsFlat": [
-      "比利时",
       "鸡",
       "动物",
-      "盾徽"
+      "盾徽",
+      "比利时"
     ],
     "svgFile": "比利时瓦隆尼亚徽章.svg",
     "viewBox": null,
@@ -294,6 +1228,82 @@
     "svgHeight": "543.27277",
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "波斯国国旗-1907-1933",
+    "name": "波斯国国旗（1907–1933）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "波斯"
+      ],
+      "color": [
+        "白色",
+        "黄色",
+        "黑色",
+        "绿色",
+        "橙色"
+      ]
+    },
+    "tagsFlat": [
+      "白色",
+      "黄色",
+      "黑色",
+      "绿色",
+      "橙色",
+      "波斯",
+      "国旗"
+    ],
+    "svgFile": "波斯国国旗-1907-1933.svg",
+    "viewBox": null,
+    "svgWidth": "1800",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：State flag of Persia (1907–1933)。"
+  },
+  {
+    "id": "玻利维亚国旗-国家版",
+    "name": "玻利维亚国旗（国家版）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "玻利维亚"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "橙色",
+        "灰色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "橙色",
+      "灰色",
+      "棕色",
+      "玻利维亚",
+      "国旗"
+    ],
+    "svgFile": "玻利维亚国旗-国家版.svg",
+    "viewBox": null,
+    "svgWidth": "1100",
+    "svgHeight": "750",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Bolivia (state)。"
   },
   {
     "id": "不丹国徽",
@@ -314,13 +1324,13 @@
       ]
     },
     "tagsFlat": [
-      "不丹",
       "红色",
       "黄色",
-      "佛教",
       "龙",
       "动物",
-      "植物"
+      "植物",
+      "不丹",
+      "佛教"
     ],
     "svgFile": "不丹国徽.svg",
     "viewBox": "0 0 527.77002 527.973",
@@ -328,6 +1338,46 @@
     "svgHeight": "659.96625",
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "不丹国旗-1949-1956",
+    "name": "不丹国旗（1949–1956）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "不丹"
+      ],
+      "element": [
+        "龙"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "黑色",
+        "绿色",
+        "灰色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "黑色",
+      "绿色",
+      "灰色",
+      "龙",
+      "不丹",
+      "国旗"
+    ],
+    "svgFile": "不丹国旗-1949-1956.svg",
+    "viewBox": null,
+    "svgWidth": "750",
+    "svgHeight": "599.99976",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Bhutan (1949–1956)。"
   },
   {
     "id": "察南自治政府旗-1938",
@@ -352,15 +1402,15 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "地区",
-      "河北",
+      "竖条",
+      "上角",
       "红色",
       "黄色",
       "蓝色",
       "白色",
-      "竖条",
-      "上角"
+      "中国",
+      "河北",
+      "地区"
     ],
     "svgFile": "察南自治政府旗-1938.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -368,6 +1418,36 @@
     "svgHeight": "850.394",
     "originalImage": "v2-3f18247b4ba79eae3301f05c9c033bd9_1440w.png",
     "description": ""
+  },
+  {
+    "id": "朝鲜王朝国旗-1884",
+    "name": "朝鲜王朝国旗（1884）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "朝鲜王朝"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "蓝色",
+      "朝鲜王朝",
+      "国旗"
+    ],
+    "svgFile": "朝鲜王朝国旗-1884.svg",
+    "viewBox": "0 0 800 466",
+    "svgWidth": "800px",
+    "svgHeight": "466px",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Korea (1884)。"
   },
   {
     "id": "成分复杂的旗",
@@ -399,20 +1479,20 @@
       ]
     },
     "tagsFlat": [
-      "虚构",
-      "搞笑",
-      "意识形态",
+      "中心",
+      "阴阳",
+      "十字",
       "白色",
       "红色",
-      "中心",
       "五角星",
       "汉字",
       "太阳",
-      "阴阳",
       "六角星",
-      "十字",
       "英文",
-      "双头鹰"
+      "双头鹰",
+      "意识形态",
+      "虚构",
+      "搞笑"
     ],
     "svgFile": "成分复杂的旗.svg",
     "viewBox": "0 0 790.254 444.518",
@@ -446,15 +1526,15 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "军旗",
-      "汉字",
       "中心",
+      "太极",
+      "八卦",
       "黄色",
       "红色",
       "黑色",
-      "太极",
-      "八卦"
+      "汉字",
+      "中国",
+      "军旗"
     ],
     "svgFile": "大汉义军骑兵第一旅第三团团部旗-1936.svg",
     "viewBox": "0 0 793.701 567.304",
@@ -462,6 +1542,104 @@
     "svgHeight": "566.929",
     "originalImage": "王英 大汉义军旗.jpeg",
     "description": ""
+  },
+  {
+    "id": "大日本帝国陆军军旗",
+    "name": "大日本帝国陆军军旗",
+    "tags": {
+      "usage": [
+        "军旗"
+      ],
+      "region": [
+        "大日本帝国",
+        "日本"
+      ],
+      "element": [
+        "太阳"
+      ],
+      "color": [
+        "红色",
+        "白色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "太阳",
+      "大日本帝国",
+      "日本",
+      "军旗"
+    ],
+    "svgFile": "大日本帝国陆军军旗.svg",
+    "viewBox": null,
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：War flag of the Imperial Japanese Army。"
+  },
+  {
+    "id": "大日本帝国陆军军旗-1868-1945",
+    "name": "大日本帝国陆军军旗（1868–1945）",
+    "tags": {
+      "usage": [
+        "军旗"
+      ],
+      "region": [
+        "大日本帝国",
+        "日本"
+      ],
+      "element": [
+        "太阳"
+      ],
+      "color": [
+        "白色",
+        "绿色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "白色",
+      "绿色",
+      "棕色",
+      "太阳",
+      "大日本帝国",
+      "日本",
+      "军旗"
+    ],
+    "svgFile": "大日本帝国陆军军旗-1868-1945.svg",
+    "viewBox": null,
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：War flag of the Imperial Japanese Army (1868–1945)。"
+  },
+  {
+    "id": "丹麦国旗-国家版",
+    "name": "丹麦国旗（国家版）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "丹麦"
+      ],
+      "color": [
+        "红色",
+        "白色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "丹麦",
+      "国旗"
+    ],
+    "svgFile": "丹麦国旗-国家版.svg",
+    "viewBox": "0 0 107 56",
+    "svgWidth": "1070",
+    "svgHeight": "560",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Denmark (state)。"
   },
   {
     "id": "德国国旗",
@@ -483,12 +1661,12 @@
       ]
     },
     "tagsFlat": [
-      "德国",
-      "国旗",
       "横条",
       "红色",
       "黄色",
-      "黑色"
+      "黑色",
+      "德国",
+      "国旗"
     ],
     "svgFile": "德国国旗.svg",
     "viewBox": "0 0 5 3",
@@ -516,13 +1694,13 @@
       ]
     },
     "tagsFlat": [
-      "德国",
+      "黄色",
+      "黑色",
       "鹰",
       "盾徽",
       "鸟类",
-      "黄色",
-      "黑色",
-      "王冠"
+      "王冠",
+      "德国"
     ],
     "svgFile": "德国威廉二世徽章.svg",
     "viewBox": null,
@@ -530,6 +1708,246 @@
     "svgHeight": "1215.8499",
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "德国战旗-1903-1919",
+    "name": "德国战旗（1903–1919）",
+    "tags": {
+      "usage": [
+        "军旗",
+        "海军",
+        "徽章",
+        "船旗"
+      ],
+      "region": [
+        "德国"
+      ],
+      "element": [
+        "王冠"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "橙色",
+        "紫色",
+        "灰色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "橙色",
+      "紫色",
+      "灰色",
+      "粉色",
+      "棕色",
+      "王冠",
+      "德国",
+      "军旗",
+      "海军",
+      "徽章",
+      "船旗"
+    ],
+    "svgFile": "德国战旗-1903-1919.svg",
+    "viewBox": "-0.99 -0.5 1000 600",
+    "svgWidth": "1000",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：War Ensign of Germany (1903–1919)。"
+  },
+  {
+    "id": "德国战旗-1919-1921",
+    "name": "德国战旗（1919–1921）",
+    "tags": {
+      "usage": [
+        "军旗",
+        "海军",
+        "船旗"
+      ],
+      "region": [
+        "德国"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "黑色",
+        "灰色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "黑色",
+      "灰色",
+      "德国",
+      "军旗",
+      "海军",
+      "船旗"
+    ],
+    "svgFile": "德国战旗-1919-1921.svg",
+    "viewBox": "0 0 5000 3000",
+    "svgWidth": "1000.491",
+    "svgHeight": "600.00037",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：War Ensign of Germany (1919–1921)。"
+  },
+  {
+    "id": "德国战旗-1935-1938",
+    "name": "德国战旗（1935–1938）",
+    "tags": {
+      "usage": [
+        "军旗",
+        "海军",
+        "船旗"
+      ],
+      "region": [
+        "德国"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黑色",
+        "灰色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黑色",
+      "灰色",
+      "德国",
+      "军旗",
+      "海军",
+      "船旗"
+    ],
+    "svgFile": "德国战旗-1935-1938.svg",
+    "viewBox": "0 0 5000 3000",
+    "svgWidth": "1000",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：War Ensign of Germany (1935–1938)。"
+  },
+  {
+    "id": "德国战旗-1938-1945",
+    "name": "德国战旗（1938–1945）",
+    "tags": {
+      "usage": [
+        "军旗",
+        "海军",
+        "船旗"
+      ],
+      "region": [
+        "德国"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黑色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黑色",
+      "德国",
+      "军旗",
+      "海军",
+      "船旗"
+    ],
+    "svgFile": "德国战旗-1938-1945.svg",
+    "viewBox": "0 0 5000 3000",
+    "svgWidth": "1000",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：War ensign of Germany (1938–1945)。"
+  },
+  {
+    "id": "德涅斯特河沿岸国旗-国家版",
+    "name": "德涅斯特河沿岸国旗（国家版）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "德涅斯特河沿岸"
+      ],
+      "element": [
+        "镰锤"
+      ],
+      "color": [
+        "红色",
+        "黄色",
+        "绿色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "黄色",
+      "绿色",
+      "镰锤",
+      "德涅斯特河沿岸",
+      "国旗"
+    ],
+    "svgFile": "德涅斯特河沿岸国旗-国家版.svg",
+    "viewBox": null,
+    "svgWidth": "1200",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Transnistria (state)。"
+  },
+  {
+    "id": "德意志邦联战旗",
+    "name": "德意志邦联战旗",
+    "tags": {
+      "usage": [
+        "军旗",
+        "海军",
+        "国旗",
+        "船旗"
+      ],
+      "region": [
+        "德意志邦联"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "黑色",
+        "灰色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "黑色",
+      "灰色",
+      "棕色",
+      "德意志邦联",
+      "军旗",
+      "海军",
+      "国旗",
+      "船旗"
+    ],
+    "svgFile": "德意志邦联战旗.svg",
+    "viewBox": "0 0 241.5 266.5",
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of the German Confederation (war)。"
   },
   {
     "id": "地球图案",
@@ -577,10 +1995,6 @@
       ]
     },
     "tagsFlat": [
-      "东北",
-      "军校",
-      "校旗",
-      "中国",
       "上角",
       "横条",
       "白色",
@@ -588,7 +2002,11 @@
       "黑色",
       "黄色",
       "人物",
-      "汉字"
+      "汉字",
+      "东北",
+      "中国",
+      "军校",
+      "校旗"
     ],
     "svgFile": "1946东北军政大学校旗.svg",
     "viewBox": "0 0 977.612 622.207",
@@ -626,19 +2044,19 @@
       ]
     },
     "tagsFlat": [
-      "东北",
-      "军校",
-      "校旗",
-      "中国",
+      "上角",
+      "横条",
+      "波浪",
       "红色",
       "黄色",
       "黑色",
       "人物",
       "汉字",
-      "上角",
       "五角星",
-      "横条",
-      "波浪"
+      "东北",
+      "中国",
+      "军校",
+      "校旗"
     ],
     "svgFile": "东北军政大学校旗1.svg",
     "viewBox": "0 0 977.612 622.207",
@@ -677,10 +2095,9 @@
       ]
     },
     "tagsFlat": [
-      "东北",
-      "军校",
-      "校旗",
-      "中国",
+      "上角",
+      "横条",
+      "波浪",
       "红色",
       "黄色",
       "白色",
@@ -688,9 +2105,10 @@
       "汉字",
       "人物",
       "五角星",
-      "上角",
-      "横条",
-      "波浪"
+      "东北",
+      "中国",
+      "军校",
+      "校旗"
     ],
     "svgFile": "东北军政大学校旗2.svg",
     "viewBox": "0 0 850.394 567.38",
@@ -719,11 +2137,11 @@
       ]
     },
     "tagsFlat": [
+      "中心",
       "蓝色",
       "白色",
       "月",
       "五角星",
-      "中心",
       "穆斯林"
     ],
     "svgFile": "东突厥斯坦独立运动旗帜.svg",
@@ -732,6 +2150,230 @@
     "svgHeight": "600",
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "多哥总统旗",
+    "name": "多哥总统旗",
+    "tags": {
+      "usage": [
+        "总统旗"
+      ],
+      "region": [
+        "多哥"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "黑色",
+        "绿色",
+        "橙色",
+        "灰色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "黑色",
+      "绿色",
+      "橙色",
+      "灰色",
+      "棕色",
+      "多哥",
+      "总统旗"
+    ],
+    "svgFile": "多哥总统旗.svg",
+    "viewBox": "0 0 1000 1000",
+    "svgWidth": "1000",
+    "svgHeight": "1000",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Presidential Standard of Togo。"
+  },
+  {
+    "id": "俄罗斯帝国小国徽",
+    "name": "俄罗斯帝国小国徽",
+    "tags": {
+      "usage": [
+        "国徽"
+      ],
+      "region": [
+        "俄罗斯帝国",
+        "俄罗斯"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "橙色",
+        "灰色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "橙色",
+      "灰色",
+      "粉色",
+      "棕色",
+      "俄罗斯帝国",
+      "俄罗斯",
+      "国徽"
+    ],
+    "svgFile": "俄罗斯帝国小国徽.svg",
+    "viewBox": null,
+    "svgWidth": "470",
+    "svgHeight": "568",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Lesser coat of arms of the Russian Empire。"
+  },
+  {
+    "id": "俄罗斯国旗-1991-1993",
+    "name": "俄罗斯国旗（1991–1993）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "俄罗斯"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "蓝色",
+      "俄罗斯",
+      "国旗"
+    ],
+    "svgFile": "俄罗斯国旗-1991-1993.svg",
+    "viewBox": null,
+    "svgWidth": "1200",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Russia (1991–1993)。"
+  },
+  {
+    "id": "俄罗斯海军旗",
+    "name": "俄罗斯海军旗",
+    "tags": {
+      "usage": [
+        "海军",
+        "船旗"
+      ],
+      "region": [
+        "俄罗斯"
+      ],
+      "style": [
+        "圆环"
+      ],
+      "color": [
+        "白色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "圆环",
+      "白色",
+      "蓝色",
+      "俄罗斯",
+      "海军",
+      "船旗"
+    ],
+    "svgFile": "俄罗斯海军旗.svg",
+    "viewBox": "0 0 30 20",
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Naval ensign of Russia。"
+  },
+  {
+    "id": "俄罗斯联邦武装力量旗帜-背面",
+    "name": "俄罗斯联邦武装力量旗帜（背面）",
+    "tags": {
+      "usage": [
+        "军旗"
+      ],
+      "region": [
+        "俄罗斯"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "黑色",
+        "灰色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "黑色",
+      "灰色",
+      "棕色",
+      "俄罗斯",
+      "军旗"
+    ],
+    "svgFile": "俄罗斯联邦武装力量旗帜-背面.svg",
+    "viewBox": null,
+    "svgWidth": "1700",
+    "svgHeight": "1300",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Banner of the Armed Forces of the Russian Federation (reverse)。"
+  },
+  {
+    "id": "俄罗斯联邦武装力量旗帜-正面",
+    "name": "俄罗斯联邦武装力量旗帜（正面）",
+    "tags": {
+      "usage": [
+        "军旗"
+      ],
+      "region": [
+        "俄罗斯"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "灰色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "灰色",
+      "棕色",
+      "俄罗斯",
+      "军旗"
+    ],
+    "svgFile": "俄罗斯联邦武装力量旗帜-正面.svg",
+    "viewBox": null,
+    "svgWidth": "1700",
+    "svgHeight": "1300",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Banner of the Armed Forces of the Russian Federation (obverse)。"
   },
   {
     "id": "法国皇室徽章",
@@ -754,15 +2396,15 @@
       ]
     },
     "tagsFlat": [
-      "法国",
-      "人物",
-      "盾徽",
       "蓝色",
       "黄色",
       "白色",
+      "人物",
+      "盾徽",
       "皇冠",
       "植物",
-      "头盔"
+      "头盔",
+      "法国"
     ],
     "svgFile": "法国皇室徽章.svg",
     "viewBox": null,
@@ -792,15 +2434,15 @@
       ]
     },
     "tagsFlat": [
-      "邪教",
       "太极",
-      "佛教",
+      "万字",
       "黄色",
       "白色",
       "红色",
       "蓝色",
       "黑色",
-      "万字"
+      "邪教",
+      "佛教"
     ],
     "svgFile": "法轮功标志.svg",
     "viewBox": "0 0 475.151 475.151",
@@ -833,14 +2475,14 @@
       ]
     },
     "tagsFlat": [
-      "虚构",
-      "反福瑞",
+      "横条",
+      "中心",
       "红色",
       "黑色",
       "白色",
-      "横条",
-      "中心",
-      "动物"
+      "动物",
+      "反福瑞",
+      "虚构"
     ],
     "svgFile": "反福瑞旗帜.svg",
     "viewBox": "0 0 1080 600",
@@ -873,14 +2515,14 @@
       ]
     },
     "tagsFlat": [
-      "虚构",
-      "搞笑",
-      "纳粹",
+      "中心",
       "红色",
       "黑色",
       "白色",
-      "中心",
-      "汉字"
+      "汉字",
+      "纳粹",
+      "虚构",
+      "搞笑"
     ],
     "svgFile": "仿纳粹的乐字旗.svg",
     "viewBox": "0 0 1000 600",
@@ -888,6 +2530,168 @@
     "svgHeight": "600",
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "菲律宾战旗",
+    "name": "菲律宾战旗",
+    "tags": {
+      "usage": [
+        "军旗",
+        "国旗"
+      ],
+      "region": [
+        "菲律宾"
+      ],
+      "element": [
+        "太阳",
+        "五角星"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "太阳",
+      "五角星",
+      "菲律宾",
+      "军旗",
+      "国旗"
+    ],
+    "svgFile": "菲律宾战旗.svg",
+    "viewBox": "-28 -45 180 90",
+    "svgWidth": "1200",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：War Flag of the Philippines。"
+  },
+  {
+    "id": "菲律宾战旗-1936-1985-1986-1998",
+    "name": "菲律宾战旗（1936–1985、1986–1998）",
+    "tags": {
+      "usage": [
+        "军旗",
+        "国旗"
+      ],
+      "region": [
+        "菲律宾"
+      ],
+      "element": [
+        "太阳",
+        "五角星"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "绿色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "绿色",
+      "太阳",
+      "五角星",
+      "菲律宾",
+      "军旗",
+      "国旗"
+    ],
+    "svgFile": "菲律宾战旗-1936-1985-1986-1998.svg",
+    "viewBox": "-28 -45 180 90",
+    "svgWidth": "1200",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：War Flag of the Philippines (1936–1985, 1986–1998)。"
+  },
+  {
+    "id": "芬兰军旗",
+    "name": "芬兰军旗",
+    "tags": {
+      "usage": [
+        "海军",
+        "船旗",
+        "军旗",
+        "国旗"
+      ],
+      "region": [
+        "芬兰"
+      ],
+      "element": [
+        "船"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "灰色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "灰色",
+      "船",
+      "芬兰",
+      "海军",
+      "船旗",
+      "军旗",
+      "国旗"
+    ],
+    "svgFile": "芬兰军旗.svg",
+    "viewBox": null,
+    "svgWidth": "1900",
+    "svgHeight": "1100",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Military flag of Finland。"
+  },
+  {
+    "id": "甘迪亚市旗",
+    "name": "甘迪亚市旗",
+    "tags": {
+      "usage": [
+        "市旗"
+      ],
+      "region": [
+        "甘迪亚",
+        "西班牙"
+      ],
+      "color": [
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "紫色"
+      ]
+    },
+    "tagsFlat": [
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "紫色",
+      "甘迪亚",
+      "西班牙",
+      "市旗"
+    ],
+    "svgFile": "甘迪亚市旗.svg",
+    "viewBox": "-968.28 385.32 750 500",
+    "svgWidth": "750",
+    "svgHeight": "500",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Bandera de Gandia。"
   },
   {
     "id": "橄榄枝与松枝花环",
@@ -908,6 +2712,140 @@
     "description": ""
   },
   {
+    "id": "哥斯达黎加国旗",
+    "name": "哥斯达黎加国旗",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "哥斯达黎加"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "蓝色",
+      "哥斯达黎加",
+      "国旗"
+    ],
+    "svgFile": "哥斯达黎加国旗.svg",
+    "viewBox": "0 0 10 6",
+    "svgWidth": "1000",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Costa Rica。"
+  },
+  {
+    "id": "格鲁吉亚国旗",
+    "name": "格鲁吉亚国旗",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "格鲁吉亚"
+      ],
+      "color": [
+        "红色",
+        "白色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "格鲁吉亚",
+      "国旗"
+    ],
+    "svgFile": "格鲁吉亚国旗.svg",
+    "viewBox": "0 0 30 20",
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Georgia。"
+  },
+  {
+    "id": "格鲁吉亚正教会徽章",
+    "name": "格鲁吉亚正教会徽章",
+    "tags": {
+      "usage": [
+        "徽章"
+      ],
+      "region": [
+        "格鲁吉亚"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "蓝色",
+        "橙色",
+        "灰色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "蓝色",
+      "橙色",
+      "灰色",
+      "格鲁吉亚",
+      "徽章"
+    ],
+    "svgFile": "格鲁吉亚正教会徽章.svg",
+    "viewBox": "0 0 5.6888889 5.7460287",
+    "svgWidth": "512",
+    "svgHeight": "517.14258",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Coat of Arms of Georgian Orthodox Church。"
+  },
+  {
+    "id": "圭亚那总统旗-1980-1985-伯纳姆总统时期",
+    "name": "圭亚那总统旗（1980–1985，伯纳姆总统时期）",
+    "tags": {
+      "usage": [
+        "总统旗"
+      ],
+      "region": [
+        "圭亚那"
+      ],
+      "color": [
+        "白色",
+        "黄色",
+        "黑色",
+        "绿色",
+        "橙色",
+        "紫色",
+        "灰色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "白色",
+      "黄色",
+      "黑色",
+      "绿色",
+      "橙色",
+      "紫色",
+      "灰色",
+      "粉色",
+      "棕色",
+      "圭亚那",
+      "总统旗"
+    ],
+    "svgFile": "圭亚那总统旗-1980-1985-伯纳姆总统时期.svg",
+    "viewBox": "0 0 440 293.33331",
+    "svgWidth": "440",
+    "svgHeight": "293.33331",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Presidential Standard of Guyana (1980-1985) under President LFS Burnham。"
+  },
+  {
     "id": "国际地球旗帜-2015",
     "name": "国际地球旗帜（2015）",
     "tags": {
@@ -924,11 +2862,11 @@
       ]
     },
     "tagsFlat": [
-      "意识形态",
+      "中心",
+      "圆环",
       "白色",
       "蓝色",
-      "中心",
-      "圆环"
+      "意识形态"
     ],
     "svgFile": "国际地球旗帜-2015.svg",
     "viewBox": "-600 -400 1200 800",
@@ -958,15 +2896,15 @@
       ]
     },
     "tagsFlat": [
-      "佛教",
-      "宗教",
       "竖条",
       "横条",
       "红色",
       "黄色",
       "蓝色",
       "白色",
-      "橙色"
+      "橙色",
+      "佛教",
+      "宗教"
     ],
     "svgFile": "国际佛教旗-1885.svg",
     "viewBox": null,
@@ -997,12 +2935,12 @@
       ]
     },
     "tagsFlat": [
-      "国民党",
-      "党旗",
-      "太阳",
+      "中心",
       "蓝色",
       "白色",
-      "中心"
+      "太阳",
+      "国民党",
+      "党旗"
     ],
     "svgFile": "国民党党旗.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -1023,20 +2961,20 @@
       ],
       "region": [
         "国民党",
-        "中华民国"
+        "中华民国",
+        "北洋"
       ],
       "usage": [
-        "北洋",
         "党徽"
       ]
     },
     "tagsFlat": [
-      "国民党",
-      "北洋",
-      "中华民国",
-      "党徽",
+      "白色",
       "太阳",
-      "白色"
+      "国民党",
+      "中华民国",
+      "北洋",
+      "党徽"
     ],
     "svgFile": "国民党太阳徽标.svg",
     "viewBox": "0 0 637.795 637.795",
@@ -1066,15 +3004,15 @@
       ]
     },
     "tagsFlat": [
-      "哈萨克斯坦",
-      "苏联",
+      "红色",
+      "黄色",
       "镰锤",
       "五角星",
       "麦穗",
       "俄文",
       "太阳",
-      "红色",
-      "黄色"
+      "哈萨克斯坦",
+      "苏联"
     ],
     "svgFile": "哈萨克斯坦及苏联加盟国时期国徽-1978-1992.svg",
     "viewBox": null,
@@ -1082,6 +3020,70 @@
     "svgHeight": "705.78998",
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "海地民用旗-1964-1986",
+    "name": "海地民用旗（1964–1986）",
+    "tags": {
+      "usage": [
+        "民用旗",
+        "国旗"
+      ],
+      "region": [
+        "海地"
+      ],
+      "color": [
+        "红色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "海地",
+      "民用旗",
+      "国旗"
+    ],
+    "svgFile": "海地民用旗-1964-1986.svg",
+    "viewBox": "0 0 2 1",
+    "svgWidth": "1200",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Haiti (1964–1986, civil)。"
+  },
+  {
+    "id": "韩国武装部队旗",
+    "name": "韩国武装部队旗",
+    "tags": {
+      "usage": [
+        "军旗",
+        "国旗"
+      ],
+      "region": [
+        "韩国",
+        "朝鲜王朝"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "灰色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "灰色",
+      "韩国",
+      "朝鲜王朝",
+      "军旗",
+      "国旗"
+    ],
+    "svgFile": "韩国武装部队旗.svg",
+    "viewBox": "0 0 900 599.99998",
+    "svgWidth": "254mm",
+    "svgHeight": "169.33333mm",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of the Republic of Korea Armed Forces。"
   },
   {
     "id": "荷兰皇室徽章-1815-1907",
@@ -1104,15 +3106,15 @@
       ]
     },
     "tagsFlat": [
-      "荷兰",
-      "狮子",
-      "盾徽",
-      "王冠",
       "红色",
       "黄色",
       "蓝色",
       "白色",
-      "英文"
+      "狮子",
+      "盾徽",
+      "王冠",
+      "英文",
+      "荷兰"
     ],
     "svgFile": "荷兰皇室徽章-1815-1907.svg",
     "viewBox": null,
@@ -1145,16 +3147,16 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "中国共产党",
-      "海南",
-      "红军",
-      "军旗",
       "红色",
       "黄色",
       "镰锤",
       "五角星",
-      "汉字"
+      "汉字",
+      "中国",
+      "中国共产党",
+      "海南",
+      "红军",
+      "军旗"
     ],
     "svgFile": "1931红军第二独立师第三团女子军特务连-红色娘子军.svg",
     "viewBox": "0 0 850.394 566.929",
@@ -1182,13 +3184,13 @@
       ]
     },
     "tagsFlat": [
-      "邪教",
-      "佛教",
       "万字",
       "圆环",
       "红色",
       "黄色",
-      "绿色"
+      "绿色",
+      "邪教",
+      "佛教"
     ],
     "svgFile": "华藏宗门标志.svg",
     "viewBox": "0 0 1004.882 669.922",
@@ -1196,6 +3198,48 @@
     "svgHeight": "669.922",
     "originalImage": "华藏宗门1.png",
     "description": ""
+  },
+  {
+    "id": "华盛顿州州旗",
+    "name": "华盛顿州州旗",
+    "tags": {
+      "usage": [
+        "州旗"
+      ],
+      "region": [
+        "华盛顿州",
+        "美国"
+      ],
+      "style": [
+        "中心"
+      ],
+      "color": [
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "粉色"
+      ]
+    },
+    "tagsFlat": [
+      "中心",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "粉色",
+      "华盛顿州",
+      "美国",
+      "州旗"
+    ],
+    "svgFile": "华盛顿州州旗.svg",
+    "viewBox": "-0.0001 -0.0001 1599.9999 1000",
+    "svgWidth": "1600px",
+    "svgHeight": "1000px",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Washington。"
   },
   {
     "id": "华为logo",
@@ -1213,9 +3257,9 @@
       ]
     },
     "tagsFlat": [
-      "公司",
-      "花",
       "红色",
+      "花",
+      "公司",
       "logo"
     ],
     "svgFile": "华为logo.svg",
@@ -1251,16 +3295,16 @@
       ]
     },
     "tagsFlat": [
-      "吉尔吉斯斯坦",
-      "国徽",
-      "太阳",
-      "鸟类",
+      "风景",
       "蓝色",
       "黄色",
       "白色",
+      "太阳",
+      "鸟类",
       "俄文",
       "麦穗",
-      "风景"
+      "吉尔吉斯斯坦",
+      "国徽"
     ],
     "svgFile": "吉尔吉斯斯坦国徽.svg",
     "viewBox": "0 0 1854 1854",
@@ -1291,12 +3335,12 @@
       ]
     },
     "tagsFlat": [
-      "吉尔吉斯斯坦",
-      "国旗",
+      "中心",
       "红色",
       "黄色",
       "太阳",
-      "中心"
+      "吉尔吉斯斯坦",
+      "国旗"
     ],
     "svgFile": "吉尔吉斯斯坦国旗.svg",
     "viewBox": "0 0 550.468667 330.2812",
@@ -1304,6 +3348,66 @@
     "svgHeight": "600",
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "吉尔吉斯斯坦国旗-维基版",
+    "name": "吉尔吉斯斯坦国旗（维基版）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "吉尔吉斯斯坦"
+      ],
+      "color": [
+        "红色",
+        "黄色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "黄色",
+      "吉尔吉斯斯坦",
+      "国旗"
+    ],
+    "svgFile": "吉尔吉斯斯坦国旗-维基版.svg",
+    "viewBox": "0 0 550.468667 330.2812",
+    "svgWidth": "1000",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Kyrgyzstan。"
+  },
+  {
+    "id": "加利西亚民用旗",
+    "name": "加利西亚民用旗",
+    "tags": {
+      "usage": [
+        "民用旗",
+        "区旗"
+      ],
+      "region": [
+        "加利西亚",
+        "西班牙"
+      ],
+      "color": [
+        "白色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "白色",
+      "蓝色",
+      "加利西亚",
+      "西班牙",
+      "民用旗",
+      "区旗"
+    ],
+    "svgFile": "加利西亚民用旗.svg",
+    "viewBox": null,
+    "svgWidth": "600",
+    "svgHeight": "400",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Galicia (civil)。"
   },
   {
     "id": "加拿大国旗",
@@ -1328,13 +3432,13 @@
       ]
     },
     "tagsFlat": [
-      "加拿大",
-      "国旗",
       "竖条",
       "中心",
-      "植物",
       "白色",
-      "红色"
+      "红色",
+      "植物",
+      "加拿大",
+      "国旗"
     ],
     "svgFile": "加拿大国旗.svg",
     "viewBox": "0 0 9600 4800",
@@ -1342,6 +3446,168 @@
     "svgHeight": "600",
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "加纳空军旗",
+    "name": "加纳空军旗",
+    "tags": {
+      "usage": [
+        "空军",
+        "船旗"
+      ],
+      "region": [
+        "加纳"
+      ],
+      "style": [
+        "圆环"
+      ],
+      "color": [
+        "红色",
+        "黄色",
+        "绿色",
+        "粉色"
+      ]
+    },
+    "tagsFlat": [
+      "圆环",
+      "红色",
+      "黄色",
+      "绿色",
+      "粉色",
+      "加纳",
+      "空军",
+      "船旗"
+    ],
+    "svgFile": "加纳空军旗.svg",
+    "viewBox": null,
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Air Force Ensign of Ghana。"
+  },
+  {
+    "id": "加纳空军旗-1964-1966",
+    "name": "加纳空军旗（1964–1966）",
+    "tags": {
+      "usage": [
+        "空军",
+        "船旗"
+      ],
+      "region": [
+        "加纳"
+      ],
+      "style": [
+        "三色旗"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黑色",
+        "绿色",
+        "灰色",
+        "粉色"
+      ]
+    },
+    "tagsFlat": [
+      "三色旗",
+      "红色",
+      "白色",
+      "黑色",
+      "绿色",
+      "灰色",
+      "粉色",
+      "加纳",
+      "空军",
+      "船旗"
+    ],
+    "svgFile": "加纳空军旗-1964-1966.svg",
+    "viewBox": null,
+    "svgWidth": "600",
+    "svgHeight": "400",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Air Force Ensign of Ghana (1964–1966)。"
+  },
+  {
+    "id": "加纳民用船旗-1964-1966",
+    "name": "加纳民用船旗（1964–1966）",
+    "tags": {
+      "usage": [
+        "船旗"
+      ],
+      "region": [
+        "加纳"
+      ],
+      "style": [
+        "三色旗"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黑色",
+        "绿色",
+        "灰色"
+      ]
+    },
+    "tagsFlat": [
+      "三色旗",
+      "红色",
+      "白色",
+      "黑色",
+      "绿色",
+      "灰色",
+      "加纳",
+      "船旗"
+    ],
+    "svgFile": "加纳民用船旗-1964-1966.svg",
+    "viewBox": null,
+    "svgWidth": "450.00000",
+    "svgHeight": "300.00000",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Civil Ensign of Ghana (1964–1966)。"
+  },
+  {
+    "id": "加纳民用航空旗-1964-1966",
+    "name": "加纳民用航空旗（1964–1966）",
+    "tags": {
+      "usage": [
+        "民用旗",
+        "空军",
+        "船旗"
+      ],
+      "region": [
+        "加纳"
+      ],
+      "style": [
+        "三色旗"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黑色",
+        "绿色",
+        "灰色",
+        "粉色"
+      ]
+    },
+    "tagsFlat": [
+      "三色旗",
+      "红色",
+      "白色",
+      "黑色",
+      "绿色",
+      "灰色",
+      "粉色",
+      "加纳",
+      "民用旗",
+      "空军",
+      "船旗"
+    ],
+    "svgFile": "加纳民用航空旗-1964-1966.svg",
+    "viewBox": null,
+    "svgWidth": "600",
+    "svgHeight": "400",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Civil Air Ensign of Ghana (1964–1966)。"
   },
   {
     "id": "晋北自治政府旗-1938",
@@ -1366,15 +3632,15 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "地区",
-      "山西",
+      "竖条",
+      "上角",
       "红色",
       "黄色",
       "蓝色",
       "白色",
-      "竖条",
-      "上角"
+      "中国",
+      "山西",
+      "地区"
     ],
     "svgFile": "晋北自治政府旗-1938.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -1403,12 +3669,12 @@
       ]
     },
     "tagsFlat": [
-      "虚构",
       "中心",
       "黄色",
       "蓝色",
       "太阳",
-      "鸟类"
+      "鸟类",
+      "虚构"
     ],
     "svgFile": "荆楚利亚旗.svg",
     "viewBox": "0 0 961.348 566.929",
@@ -1416,6 +3682,108 @@
     "svgHeight": "566.929",
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "克罗地亚国徽",
+    "name": "克罗地亚国徽",
+    "tags": {
+      "usage": [
+        "国徽"
+      ],
+      "region": [
+        "克罗地亚"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "克罗地亚",
+      "国徽"
+    ],
+    "svgFile": "克罗地亚国徽.svg",
+    "viewBox": null,
+    "svgWidth": "1386",
+    "svgHeight": "1844",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Coat of arms of Croatia。"
+  },
+  {
+    "id": "克罗地亚国旗-1941-1945",
+    "name": "克罗地亚国旗（1941–1945）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "克罗地亚"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "蓝色",
+        "灰色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "蓝色",
+      "灰色",
+      "克罗地亚",
+      "国旗"
+    ],
+    "svgFile": "克罗地亚国旗-1941-1945.svg",
+    "viewBox": "0 0 900 600",
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Croatia (1941–1945)。"
+  },
+  {
+    "id": "克钦邦旗-1945-1974",
+    "name": "克钦邦旗（1945–1974）",
+    "tags": {
+      "usage": [
+        "区旗"
+      ],
+      "region": [
+        "克钦邦",
+        "缅甸"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黑色",
+        "绿色",
+        "灰色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黑色",
+      "绿色",
+      "灰色",
+      "克钦邦",
+      "缅甸",
+      "区旗"
+    ],
+    "svgFile": "克钦邦旗-1945-1974.svg",
+    "viewBox": null,
+    "svgWidth": "500",
+    "svgHeight": "285",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Kachin State (1945–1974)。"
   },
   {
     "id": "跨性别旗",
@@ -1435,12 +3803,12 @@
       ]
     },
     "tagsFlat": [
-      "LGBT",
-      "意识形态",
+      "横条",
       "蓝色",
       "白色",
       "粉色",
-      "横条"
+      "LGBT",
+      "意识形态"
     ],
     "svgFile": "跨性别旗.svg",
     "viewBox": "0 0 800 480",
@@ -1473,14 +3841,14 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "中华民国",
-      "市旗",
+      "中心",
       "红色",
       "黄色",
       "蓝色",
-      "中心",
-      "汉字"
+      "汉字",
+      "中国",
+      "中华民国",
+      "市旗"
     ],
     "svgFile": "昆明市市旗-1922.svg",
     "viewBox": "0 0 756.85 566.929",
@@ -1488,6 +3856,106 @@
     "svgHeight": "566.929",
     "originalImage": "_2_那些人那些事_来自小红书网页版.jpg",
     "description": ""
+  },
+  {
+    "id": "拉瓜伊拉州州旗",
+    "name": "拉瓜伊拉州州旗",
+    "tags": {
+      "usage": [
+        "州旗"
+      ],
+      "region": [
+        "委内瑞拉",
+        "拉瓜伊拉州"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "委内瑞拉",
+      "拉瓜伊拉州",
+      "州旗"
+    ],
+    "svgFile": "拉瓜伊拉州州旗.svg",
+    "viewBox": null,
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of La Guaira State。"
+  },
+  {
+    "id": "拉姆拉市徽",
+    "name": "拉姆拉市徽",
+    "tags": {
+      "usage": [
+        "徽章"
+      ],
+      "region": [
+        "拉姆拉",
+        "以色列"
+      ],
+      "color": [
+        "白色",
+        "黑色",
+        "绿色",
+        "灰色"
+      ]
+    },
+    "tagsFlat": [
+      "白色",
+      "黑色",
+      "绿色",
+      "灰色",
+      "拉姆拉",
+      "以色列",
+      "徽章"
+    ],
+    "svgFile": "拉姆拉市徽.svg",
+    "viewBox": "0 0 321.71744 339.83673",
+    "svgWidth": "321.71744mm",
+    "svgHeight": "339.83673mm",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Coat of Arms of Ramla。"
+  },
+  {
+    "id": "拉脱维亚国旗",
+    "name": "拉脱维亚国旗",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "拉脱维亚"
+      ],
+      "style": [
+        "横条"
+      ],
+      "color": [
+        "白色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "横条",
+      "白色",
+      "棕色",
+      "拉脱维亚",
+      "国旗"
+    ],
+    "svgFile": "拉脱维亚国旗.svg",
+    "viewBox": null,
+    "svgWidth": "1200",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Latvia。"
   },
   {
     "id": "老虎图案1",
@@ -1502,9 +3970,9 @@
       ]
     },
     "tagsFlat": [
+      "黄色",
       "虎",
-      "动物",
-      "黄色"
+      "动物"
     ],
     "svgFile": "老虎图案1.svg",
     "viewBox": "0 0 417.236 339.359",
@@ -1512,6 +3980,104 @@
     "svgHeight": null,
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "老挝皇家军队旗-1952-1975",
+    "name": "老挝皇家军队旗（1952–1975）",
+    "tags": {
+      "usage": [
+        "军旗",
+        "国旗"
+      ],
+      "region": [
+        "老挝"
+      ],
+      "color": [
+        "白色",
+        "灰色"
+      ]
+    },
+    "tagsFlat": [
+      "白色",
+      "灰色",
+      "老挝",
+      "军旗",
+      "国旗"
+    ],
+    "svgFile": "老挝皇家军队旗-1952-1975.svg",
+    "viewBox": "0 0 900 600",
+    "svgWidth": "900mm",
+    "svgHeight": "600mm",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of the Royal Laos Armed Forces (1952-1975)。"
+  },
+  {
+    "id": "里奥格兰德共和国旗帜-历史",
+    "name": "里奥格兰德共和国旗帜（历史）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "里奥格兰德"
+      ],
+      "element": [
+        "狮子"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "蓝色",
+      "狮子",
+      "里奥格兰德",
+      "国旗"
+    ],
+    "svgFile": "里奥格兰德共和国旗帜-历史.svg",
+    "viewBox": null,
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of the Republic of the Rio Grande (historical)。"
+  },
+  {
+    "id": "立陶宛国旗-国家版",
+    "name": "立陶宛国旗（国家版）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "立陶宛"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "立陶宛",
+      "国旗"
+    ],
+    "svgFile": "立陶宛国旗-国家版.svg",
+    "viewBox": "0 0 566.228516 339.458984",
+    "svgWidth": "1000",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Lithuania (state)。"
   },
   {
     "id": "立陶宛徽章-1990",
@@ -1528,11 +4094,11 @@
       ]
     },
     "tagsFlat": [
-      "立陶宛",
       "人物",
       "动物",
       "马",
-      "骑士"
+      "骑士",
+      "立陶宛"
     ],
     "svgFile": "立陶宛徽章-1990.svg",
     "viewBox": "0 0 15100 18050",
@@ -1540,6 +4106,266 @@
     "svgHeight": "180.5mm",
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "利比亚国旗-1977-2011",
+    "name": "利比亚国旗（1977–2011）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "利比亚"
+      ],
+      "color": [
+        "绿色"
+      ]
+    },
+    "tagsFlat": [
+      "绿色",
+      "利比亚",
+      "国旗"
+    ],
+    "svgFile": "利比亚国旗-1977-2011.svg",
+    "viewBox": null,
+    "svgWidth": "1000",
+    "svgHeight": "500",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Libya (1977–2011)。"
+  },
+  {
+    "id": "卢森堡民用船旗",
+    "name": "卢森堡民用船旗",
+    "tags": {
+      "usage": [
+        "船旗"
+      ],
+      "region": [
+        "卢森堡"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "棕色",
+      "卢森堡",
+      "船旗"
+    ],
+    "svgFile": "卢森堡民用船旗.svg",
+    "viewBox": "0 0 3500 2500",
+    "svgWidth": "1190px",
+    "svgHeight": "850px",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Civil Ensign of Luxembourg。"
+  },
+  {
+    "id": "卢旺达国旗",
+    "name": "卢旺达国旗",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "卢旺达"
+      ],
+      "color": [
+        "黄色",
+        "蓝色",
+        "绿色"
+      ]
+    },
+    "tagsFlat": [
+      "黄色",
+      "蓝色",
+      "绿色",
+      "卢旺达",
+      "国旗"
+    ],
+    "svgFile": "卢旺达国旗.svg",
+    "viewBox": "0 0 1560 1040",
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Rwanda。"
+  },
+  {
+    "id": "罗马尼亚国旗",
+    "name": "罗马尼亚国旗",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "日本",
+        "罗马尼亚"
+      ],
+      "color": [
+        "红色",
+        "黄色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "黄色",
+      "蓝色",
+      "日本",
+      "罗马尼亚",
+      "国旗"
+    ],
+    "svgFile": "罗马尼亚国旗.svg",
+    "viewBox": "0 0 3 2",
+    "svgWidth": "600",
+    "svgHeight": "400",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Romania。"
+  },
+  {
+    "id": "马拉维国旗",
+    "name": "马拉维国旗",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "马拉维"
+      ],
+      "color": [
+        "红色",
+        "绿色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "绿色",
+      "马拉维",
+      "国旗"
+    ],
+    "svgFile": "马拉维国旗.svg",
+    "viewBox": "-225 -114 450 300",
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Malawi。"
+  },
+  {
+    "id": "马来西亚空军旗",
+    "name": "马来西亚空军旗",
+    "tags": {
+      "usage": [
+        "空军",
+        "国旗",
+        "船旗"
+      ],
+      "region": [
+        "马来西亚"
+      ],
+      "element": [
+        "月",
+        "五角星"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "月",
+      "五角星",
+      "马来西亚",
+      "空军",
+      "国旗",
+      "船旗"
+    ],
+    "svgFile": "马来西亚空军旗.svg",
+    "viewBox": null,
+    "svgWidth": "1000",
+    "svgHeight": "500",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Air Force Ensign of Malaysia。"
+  },
+  {
+    "id": "马里国旗-1959-1961",
+    "name": "马里国旗（1959–1961）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "马里"
+      ],
+      "color": [
+        "红色",
+        "黄色",
+        "绿色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "黄色",
+      "绿色",
+      "马里",
+      "国旗"
+    ],
+    "svgFile": "马里国旗-1959-1961.svg",
+    "viewBox": null,
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Mali (1959–1961)。"
+  },
+  {
+    "id": "马里兰州州旗",
+    "name": "马里兰州州旗",
+    "tags": {
+      "usage": [
+        "州旗"
+      ],
+      "region": [
+        "马里兰州",
+        "美国"
+      ],
+      "element": [
+        "齿轮"
+      ],
+      "color": [
+        "白色",
+        "黄色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "白色",
+      "黄色",
+      "棕色",
+      "齿轮",
+      "马里兰州",
+      "美国",
+      "州旗"
+    ],
+    "svgFile": "马里兰州州旗.svg",
+    "viewBox": "0 0 36 24",
+    "svgWidth": "750",
+    "svgHeight": "500",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Maryland。"
   },
   {
     "id": "满洲帝国国防妇人会会旗-1934",
@@ -1568,18 +4394,17 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "会旗",
       "斜切",
-      "植物",
-      "红色",
       "中心",
+      "十字",
       "红色",
       "黄色",
       "蓝色",
       "白色",
       "黑色",
-      "十字"
+      "植物",
+      "中国",
+      "会旗"
     ],
     "svgFile": "满洲帝国国防妇人会会旗-1934.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -1611,15 +4436,15 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "国旗",
       "上角",
       "横条",
       "黄色",
       "白色",
       "红色",
       "蓝色",
-      "黑色"
+      "黑色",
+      "中国",
+      "国旗"
     ],
     "svgFile": "满洲国国旗-1932.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -1627,6 +4452,44 @@
     "svgHeight": "850.394",
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "满洲国海军战旗",
+    "name": "满洲国海军战旗",
+    "tags": {
+      "usage": [
+        "军旗",
+        "海军",
+        "船旗"
+      ],
+      "region": [
+        "满洲国"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "满洲国",
+      "军旗",
+      "海军",
+      "船旗"
+    ],
+    "svgFile": "满洲国海军战旗.svg",
+    "viewBox": null,
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：War Ensign of Manchukuo。"
   },
   {
     "id": "满洲国皇帝旗-1934",
@@ -1643,9 +4506,9 @@
       ]
     },
     "tagsFlat": [
-      "中国",
+      "中心",
       "黄色",
-      "中心"
+      "中国"
     ],
     "svgFile": "满洲国皇帝旗-1934.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -1676,14 +4539,14 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "军旗",
       "横条",
       "红色",
       "黄色",
       "白色",
       "蓝色",
-      "黑色"
+      "黑色",
+      "中国",
+      "军旗"
     ],
     "svgFile": "满洲国军旗-海军旗-1935.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -1718,16 +4581,16 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "会旗",
       "镶边",
       "中心",
-      "汉字",
       "红色",
       "黄色",
       "蓝色",
       "白色",
-      "黑色"
+      "黑色",
+      "汉字",
+      "中国",
+      "会旗"
     ],
     "svgFile": "满洲国协和会会旗1.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -1762,16 +4625,16 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "会旗",
       "镶边",
       "中心",
-      "汉字",
       "红色",
       "黄色",
       "蓝色",
       "白色",
-      "黑色"
+      "黑色",
+      "汉字",
+      "中国",
+      "会旗"
     ],
     "svgFile": "满洲国协和会会旗2-1932.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -1803,15 +4666,15 @@
       ]
     },
     "tagsFlat": [
-      "中国",
       "镶边",
-      "汉字",
       "中心",
       "红色",
       "黄色",
       "蓝色",
       "白色",
-      "黑色"
+      "黑色",
+      "汉字",
+      "中国"
     ],
     "svgFile": "满洲国协和会仪仗旗-1932.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -1838,12 +4701,12 @@
       ]
     },
     "tagsFlat": [
-      "会旗",
+      "中心",
+      "横条",
       "红色",
       "白色",
       "黑色",
-      "中心",
-      "横条"
+      "会旗"
     ],
     "svgFile": "满洲国协和青少年团旗-圣焰-2-1938.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -1869,11 +4732,11 @@
       ]
     },
     "tagsFlat": [
-      "会旗",
+      "中心",
       "红色",
       "白色",
       "黑色",
-      "中心"
+      "会旗"
     ],
     "svgFile": "满洲国协和青少年团章-旗-圣焰-1938.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -1881,6 +4744,226 @@
     "svgHeight": "850.394",
     "originalImage": "协和会章.png",
     "description": "名称：圣焰\n意义：民族协和成一体，火焰般的热情向前猛进"
+  },
+  {
+    "id": "毛里求斯民用船旗-1906-1968",
+    "name": "毛里求斯民用船旗（1906–1968）",
+    "tags": {
+      "usage": [
+        "船旗"
+      ],
+      "region": [
+        "毛里求斯"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "棕色",
+      "毛里求斯",
+      "船旗"
+    ],
+    "svgFile": "毛里求斯民用船旗-1906-1968.svg",
+    "viewBox": null,
+    "svgWidth": "1200",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Civil Ensign of Mauritius (1906–1968)。"
+  },
+  {
+    "id": "毛里塔尼亚国旗",
+    "name": "毛里塔尼亚国旗",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "毛里塔尼亚"
+      ],
+      "element": [
+        "月",
+        "五角星"
+      ],
+      "color": [
+        "红色",
+        "黄色",
+        "绿色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "黄色",
+      "绿色",
+      "月",
+      "五角星",
+      "毛里塔尼亚",
+      "国旗"
+    ],
+    "svgFile": "毛里塔尼亚国旗.svg",
+    "viewBox": " 0 0 3000 2000",
+    "svgWidth": "1200",
+    "svgHeight": "800",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Mauritania。"
+  },
+  {
+    "id": "美国独立战争孟茅斯团旗",
+    "name": "美国独立战争孟茅斯团旗",
+    "tags": {
+      "usage": [
+        "军旗"
+      ],
+      "region": [
+        "美国"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "美国",
+      "军旗"
+    ],
+    "svgFile": "美国独立战争孟茅斯团旗.svg",
+    "viewBox": null,
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：American Revolutionary War regimental flag - the Monmouth Flag。"
+  },
+  {
+    "id": "美国国家社会主义运动旗帜",
+    "name": "美国国家社会主义运动旗帜",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "美国",
+        "纳粹"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "蓝色",
+        "黑色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "蓝色",
+      "黑色",
+      "美国",
+      "纳粹",
+      "国旗"
+    ],
+    "svgFile": "美国国家社会主义运动旗帜.svg",
+    "viewBox": null,
+    "svgWidth": "1086px",
+    "svgHeight": "650px",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of National Socialist Movement (United States)。"
+  },
+  {
+    "id": "美国国旗",
+    "name": "美国国旗",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "美国"
+      ],
+      "element": [
+        "五角星"
+      ],
+      "style": [
+        "上角",
+        "横条"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "上角",
+      "横条",
+      "红色",
+      "白色",
+      "蓝色",
+      "五角星",
+      "美国",
+      "国旗"
+    ],
+    "svgFile": "美国国旗.svg",
+    "viewBox": "0 0 7410 3900",
+    "svgWidth": "1235",
+    "svgHeight": "650",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of the United States。"
+  },
+  {
+    "id": "美国佐治亚州州旗",
+    "name": "美国佐治亚州州旗",
+    "tags": {
+      "usage": [
+        "州旗"
+      ],
+      "region": [
+        "格鲁吉亚",
+        "美国",
+        "佐治亚州"
+      ],
+      "style": [
+        "上角"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "上角",
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "格鲁吉亚",
+      "美国",
+      "佐治亚州",
+      "州旗"
+    ],
+    "svgFile": "美国佐治亚州州旗.svg",
+    "viewBox": "0 0 6912 4320",
+    "svgWidth": "960",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of the State of Georgia。"
   },
   {
     "id": "门徒会旗帜",
@@ -1898,10 +4981,10 @@
       ]
     },
     "tagsFlat": [
-      "邪教",
       "十字",
       "红色",
-      "白色"
+      "白色",
+      "邪教"
     ],
     "svgFile": "门徒会旗帜.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -1909,6 +4992,38 @@
     "svgHeight": "850.394",
     "originalImage": "QQ20260317-195058.png",
     "description": "1985年，季三保在陕西创立的组织"
+  },
+  {
+    "id": "蒙古军政府旗-1936-1937",
+    "name": "蒙古军政府旗（1936–1937）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "蒙古"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "蒙古",
+      "国旗"
+    ],
+    "svgFile": "蒙古军政府旗-1936-1937.svg",
+    "viewBox": null,
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Mongol Military Government (1936-1937)。"
   },
   {
     "id": "蒙古联合自治政府-蒙疆联合自治政府旗-1939",
@@ -1932,14 +5047,14 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "地区",
-      "内蒙古",
+      "横条",
       "红色",
       "黄色",
       "蓝色",
       "白色",
-      "横条"
+      "中国",
+      "内蒙古",
+      "地区"
     ],
     "svgFile": "蒙古联合自治政府-蒙疆联合自治政府旗-1939.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -1971,15 +5086,15 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "地区",
-      "内蒙古",
+      "竖条",
+      "上角",
       "红色",
       "黄色",
       "蓝色",
       "白色",
-      "竖条",
-      "上角"
+      "中国",
+      "内蒙古",
+      "地区"
     ],
     "svgFile": "蒙古联盟自治政府旗-1937.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -1987,6 +5102,264 @@
     "svgHeight": "850.394",
     "originalImage": "v2-3f18247b4ba79eae3301f05c9c033bd9_1440w.png",
     "description": ""
+  },
+  {
+    "id": "孟加拉国国徽",
+    "name": "孟加拉国国徽",
+    "tags": {
+      "usage": [
+        "国徽",
+        "徽章"
+      ],
+      "region": [
+        "孟加拉国"
+      ],
+      "color": [
+        "白色",
+        "黄色",
+        "黑色",
+        "橙色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "白色",
+      "黄色",
+      "黑色",
+      "橙色",
+      "棕色",
+      "孟加拉国",
+      "国徽",
+      "徽章"
+    ],
+    "svgFile": "孟加拉国国徽.svg",
+    "viewBox": "0 0 132.29167 132.29167",
+    "svgWidth": "500",
+    "svgHeight": "500",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：National emblem of Bangladesh。"
+  },
+  {
+    "id": "孟加拉国空军旗",
+    "name": "孟加拉国空军旗",
+    "tags": {
+      "usage": [
+        "空军",
+        "船旗"
+      ],
+      "region": [
+        "孟加拉国"
+      ],
+      "color": [
+        "红色",
+        "蓝色",
+        "绿色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "蓝色",
+      "绿色",
+      "孟加拉国",
+      "空军",
+      "船旗"
+    ],
+    "svgFile": "孟加拉国空军旗.svg",
+    "viewBox": null,
+    "svgWidth": "1800",
+    "svgHeight": "900",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Air Force Ensign of Bangladesh。"
+  },
+  {
+    "id": "孟加拉国总统旗",
+    "name": "孟加拉国总统旗",
+    "tags": {
+      "usage": [
+        "总统旗",
+        "国旗"
+      ],
+      "region": [
+        "孟加拉国"
+      ],
+      "color": [
+        "白色",
+        "黄色",
+        "黑色",
+        "橙色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "白色",
+      "黄色",
+      "黑色",
+      "橙色",
+      "棕色",
+      "孟加拉国",
+      "总统旗",
+      "国旗"
+    ],
+    "svgFile": "孟加拉国总统旗.svg",
+    "viewBox": "0 0 264.5833 158.75001",
+    "svgWidth": "1000",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of the President of Bangladesh。"
+  },
+  {
+    "id": "秘鲁战旗",
+    "name": "秘鲁战旗",
+    "tags": {
+      "usage": [
+        "军旗",
+        "国旗"
+      ],
+      "region": [
+        "秘鲁"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "绿色",
+        "橙色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "绿色",
+      "橙色",
+      "棕色",
+      "秘鲁",
+      "军旗",
+      "国旗"
+    ],
+    "svgFile": "秘鲁战旗.svg",
+    "viewBox": null,
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：War flag of Peru。"
+  },
+  {
+    "id": "密西西比州州旗",
+    "name": "密西西比州州旗",
+    "tags": {
+      "usage": [
+        "州旗"
+      ],
+      "region": [
+        "密西西比州",
+        "美国"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "绿色",
+        "橙色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "绿色",
+      "橙色",
+      "密西西比州",
+      "美国",
+      "州旗"
+    ],
+    "svgFile": "密西西比州州旗.svg",
+    "viewBox": "0 0 36000 21600",
+    "svgWidth": "1200",
+    "svgHeight": "720",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Mississippi。"
+  },
+  {
+    "id": "密西西比州州旗-1996-2020",
+    "name": "密西西比州州旗（1996–2020）",
+    "tags": {
+      "usage": [
+        "州旗"
+      ],
+      "region": [
+        "密西西比州",
+        "美国"
+      ],
+      "style": [
+        "上角"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "上角",
+      "红色",
+      "白色",
+      "蓝色",
+      "密西西比州",
+      "美国",
+      "州旗"
+    ],
+    "svgFile": "密西西比州州旗-1996-2020.svg",
+    "viewBox": "0 0 1107 738",
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Mississippi (1996–2020)。"
+  },
+  {
+    "id": "缅因州州旗",
+    "name": "缅因州州旗",
+    "tags": {
+      "usage": [
+        "州旗"
+      ],
+      "region": [
+        "缅因州",
+        "美国"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "橙色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "橙色",
+      "粉色",
+      "棕色",
+      "缅因州",
+      "美国",
+      "州旗"
+    ],
+    "svgFile": "缅因州州旗.svg",
+    "viewBox": "0 0 1320 1040",
+    "svgWidth": "1320",
+    "svgHeight": "1040",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of the State of Maine。"
   },
   {
     "id": "民国时期十二章图样",
@@ -2007,27 +5380,27 @@
       ],
       "region": [
         "清朝",
-        "中华民国"
+        "中华民国",
+        "北洋"
       ],
       "usage": [
-        "北洋",
         "徽章"
       ]
     },
     "tagsFlat": [
-      "清朝",
-      "中华民国",
-      "北洋",
-      "十二章",
-      "徽章",
-      "龙",
-      "华虫",
-      "嘉禾",
       "黄色",
       "蓝色",
       "绿色",
       "红色",
-      "白色"
+      "白色",
+      "十二章",
+      "龙",
+      "华虫",
+      "嘉禾",
+      "清朝",
+      "中华民国",
+      "北洋",
+      "徽章"
     ],
     "svgFile": "民国时期十二章图样.svg",
     "viewBox": null,
@@ -2052,10 +5425,10 @@
       ]
     },
     "tagsFlat": [
-      "民运",
+      "中心",
       "蓝色",
       "白色",
-      "中心"
+      "民运"
     ],
     "svgFile": "民主中国阵线旗.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -2063,6 +5436,200 @@
     "svgHeight": "850.394",
     "originalImage": "Yan-2.webp",
     "description": ""
+  },
+  {
+    "id": "摩洛哥国旗-1666-1915",
+    "name": "摩洛哥国旗（1666–1915）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "摩洛哥"
+      ],
+      "color": [
+        "红色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "摩洛哥",
+      "国旗"
+    ],
+    "svgFile": "摩洛哥国旗-1666-1915.svg",
+    "viewBox": null,
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Morocco (1666–1915)。"
+  },
+  {
+    "id": "墨西哥国徽",
+    "name": "墨西哥国徽",
+    "tags": {
+      "usage": [
+        "国徽"
+      ],
+      "region": [
+        "墨西哥"
+      ],
+      "element": [
+        "盾徽"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "橙色",
+        "灰色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "橙色",
+      "灰色",
+      "粉色",
+      "棕色",
+      "盾徽",
+      "墨西哥",
+      "国徽"
+    ],
+    "svgFile": "墨西哥国徽.svg",
+    "viewBox": null,
+    "svgWidth": "578.77",
+    "svgHeight": "524.57",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Coat of arms of Mexico。"
+  },
+  {
+    "id": "墨西哥国旗",
+    "name": "墨西哥国旗",
+    "tags": {
+      "usage": [
+        "徽章",
+        "国旗"
+      ],
+      "region": [
+        "墨西哥"
+      ],
+      "element": [
+        "盾徽"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "橙色",
+        "灰色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "橙色",
+      "灰色",
+      "粉色",
+      "棕色",
+      "盾徽",
+      "墨西哥",
+      "徽章",
+      "国旗"
+    ],
+    "svgFile": "墨西哥国旗.svg",
+    "viewBox": null,
+    "svgWidth": "980",
+    "svgHeight": "560",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Mexico。"
+  },
+  {
+    "id": "纳粹德国国旗-1935-1945",
+    "name": "纳粹德国国旗（1935–1945）",
+    "tags": {
+      "usage": [
+        "国旗",
+        "船旗"
+      ],
+      "region": [
+        "德国",
+        "纳粹"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黑色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黑色",
+      "德国",
+      "纳粹",
+      "国旗",
+      "船旗"
+    ],
+    "svgFile": "纳粹德国国旗-1935-1945.svg",
+    "viewBox": "0 0 1000 600",
+    "svgWidth": "1000",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Germany (1935–1945)。"
+  },
+  {
+    "id": "南非国旗",
+    "name": "南非国旗",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "南非"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "南非",
+      "国旗"
+    ],
+    "svgFile": "南非国旗.svg",
+    "viewBox": "0 0 90 60",
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of South Africa。"
   },
   {
     "id": "内蒙古人民党旗-1997",
@@ -2122,16 +5689,16 @@
       ]
     },
     "tagsFlat": [
-      "内蒙古",
-      "内蒙古人民革命党",
-      "党旗",
-      "中国",
+      "中心",
       "红色",
       "蓝色",
       "白色",
       "五角星",
       "蒙古文",
-      "中心"
+      "内蒙古",
+      "内蒙古人民革命党",
+      "中国",
+      "党旗"
     ],
     "svgFile": "内蒙古人民革命党旗帜1.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -2164,16 +5731,16 @@
       ]
     },
     "tagsFlat": [
-      "内蒙古",
-      "中国",
+      "上角",
       "红色",
       "白色",
       "蓝色",
-      "上角",
       "汉字",
       "五角星",
       "鞭子",
-      "锄头"
+      "锄头",
+      "内蒙古",
+      "中国"
     ],
     "svgFile": "内蒙古文艺工作团团旗.svg",
     "viewBox": "0 0 1247.244 850.394",
@@ -2209,19 +5776,19 @@
       ]
     },
     "tagsFlat": [
-      "内蒙古",
-      "内蒙古自治政府",
-      "中国",
+      "横条",
+      "三等分",
+      "中心",
       "红色",
       "黄色",
       "蓝色",
       "白色",
       "五角星",
-      "横条",
-      "三等分",
       "鞭子",
       "锄头",
-      "中心"
+      "内蒙古",
+      "内蒙古自治政府",
+      "中国"
     ],
     "svgFile": "内蒙古自治政府旗1.svg",
     "viewBox": "0 0 1218.898 850.394",
@@ -2255,17 +5822,17 @@
       ]
     },
     "tagsFlat": [
-      "内蒙古",
-      "内蒙古自治政府",
-      "中国",
+      "横条",
+      "三等分",
       "红色",
       "蓝色",
       "白色",
       "五角星",
       "鞭子",
       "锄头",
-      "横条",
-      "三等分"
+      "内蒙古",
+      "内蒙古自治政府",
+      "中国"
     ],
     "svgFile": "内蒙古自治政府旗2.svg",
     "viewBox": "0 0 1218.898 850.394",
@@ -2273,6 +5840,116 @@
     "svgHeight": "283.465",
     "originalImage": "v2-e107fafe038dfef09e61ae2753a6a7e7_1440w.jpg",
     "description": "据内蒙古自治政府成立时的照片、相关博物馆复制品照片等进行制作。\n\n该旗帜的鞭、锄的形状与角度有较多个版本，大致形态相近。"
+  },
+  {
+    "id": "尼日利亚国徽",
+    "name": "尼日利亚国徽",
+    "tags": {
+      "usage": [
+        "国徽"
+      ],
+      "region": [
+        "尼日利亚"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "黑色",
+        "绿色",
+        "橙色",
+        "灰色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "黑色",
+      "绿色",
+      "橙色",
+      "灰色",
+      "棕色",
+      "尼日利亚",
+      "国徽"
+    ],
+    "svgFile": "尼日利亚国徽.svg",
+    "viewBox": "0 0 398.2417 337.58701",
+    "svgWidth": "398.2417mm",
+    "svgHeight": "337.58701mm",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Coat of arms of Nigeria。"
+  },
+  {
+    "id": "尼日利亚海军旗-1960-1998",
+    "name": "尼日利亚海军旗（1960–1998）",
+    "tags": {
+      "usage": [
+        "海军",
+        "船旗"
+      ],
+      "region": [
+        "尼日利亚"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "绿色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "绿色",
+      "尼日利亚",
+      "海军",
+      "船旗"
+    ],
+    "svgFile": "尼日利亚海军旗-1960-1998.svg",
+    "viewBox": "0 0 360 180",
+    "svgWidth": "1200px",
+    "svgHeight": "600px",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Naval Ensign of Nigeria (1960–1998)。"
+  },
+  {
+    "id": "尼日利亚总统旗-1963",
+    "name": "尼日利亚总统旗（1963）",
+    "tags": {
+      "usage": [
+        "总统旗",
+        "国旗"
+      ],
+      "region": [
+        "尼日利亚"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "黑色",
+        "绿色",
+        "灰色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "黑色",
+      "绿色",
+      "灰色",
+      "尼日利亚",
+      "总统旗",
+      "国旗"
+    ],
+    "svgFile": "尼日利亚总统旗-1963.svg",
+    "viewBox": "0 0 6 3",
+    "svgWidth": "2400",
+    "svgHeight": "1200",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Presidential Standard of Nigeria (1963)。"
   },
   {
     "id": "匿名者组织旗帜",
@@ -2301,17 +5978,17 @@
       ]
     },
     "tagsFlat": [
-      "虚构",
-      "匿名者",
-      "黑客",
+      "中心",
+      "横条",
       "黑色",
       "白色",
       "绿色",
-      "中心",
-      "横条",
       "人物",
       "麦穗",
-      "地球"
+      "地球",
+      "匿名者",
+      "黑客",
+      "虚构"
     ],
     "svgFile": "匿名者组织旗帜.svg",
     "viewBox": null,
@@ -2342,14 +6019,14 @@
       ]
     },
     "tagsFlat": [
-      "虚构",
+      "横条",
+      "中心",
       "红色",
       "绿色",
       "黑色",
       "白色",
       "月",
-      "横条",
-      "中心"
+      "虚构"
     ],
     "svgFile": "宁夏回族国旗帜.svg",
     "viewBox": "0 0 850.394 566.929",
@@ -2357,6 +6034,76 @@
     "svgHeight": "188.976",
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "欧加登民族解放阵线旗帜",
+    "name": "欧加登民族解放阵线旗帜",
+    "tags": {
+      "usage": [
+        "会旗"
+      ],
+      "region": [
+        "埃塞俄比亚",
+        "马里",
+        "欧加登"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "蓝色",
+        "绿色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "蓝色",
+      "绿色",
+      "埃塞俄比亚",
+      "马里",
+      "欧加登",
+      "会旗"
+    ],
+    "svgFile": "欧加登民族解放阵线旗帜.svg",
+    "viewBox": "0 0 90 60",
+    "svgWidth": "1200",
+    "svgHeight": "800",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Ogaden National Liberation Front(2)。"
+  },
+  {
+    "id": "帕劳总统旗",
+    "name": "帕劳总统旗",
+    "tags": {
+      "usage": [
+        "总统旗"
+      ],
+      "region": [
+        "帕劳"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "灰色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "灰色",
+      "帕劳",
+      "总统旗"
+    ],
+    "svgFile": "帕劳总统旗.svg",
+    "viewBox": null,
+    "svgWidth": "800",
+    "svgHeight": "500",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Presidential Standard of Palau。"
   },
   {
     "id": "苹果公司logo",
@@ -2371,9 +6118,9 @@
       ]
     },
     "tagsFlat": [
+      "植物",
       "公司",
-      "logo",
-      "植物"
+      "logo"
     ],
     "svgFile": "苹果公司logo.svg",
     "viewBox": null,
@@ -2381,6 +6128,96 @@
     "svgHeight": "1000",
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "葡属澳门政府旗-1976-1999",
+    "name": "葡属澳门政府旗（1976–1999）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "澳门"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "澳门",
+      "国旗"
+    ],
+    "svgFile": "葡属澳门政府旗-1976-1999.svg",
+    "viewBox": null,
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of the Government of Portuguese Macau (1976–1999)。"
+  },
+  {
+    "id": "普鲁士战旗-1816",
+    "name": "普鲁士战旗（1816）",
+    "tags": {
+      "usage": [
+        "军旗",
+        "海军",
+        "国旗",
+        "船旗"
+      ],
+      "region": [
+        "俄罗斯",
+        "普鲁士"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "橙色",
+        "紫色",
+        "灰色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "橙色",
+      "紫色",
+      "灰色",
+      "粉色",
+      "棕色",
+      "俄罗斯",
+      "普鲁士",
+      "军旗",
+      "海军",
+      "国旗",
+      "船旗"
+    ],
+    "svgFile": "普鲁士战旗-1816.svg",
+    "viewBox": null,
+    "svgWidth": "1000",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：War Ensign of Prussia (1816)。"
   },
   {
     "id": "麒麟图案1",
@@ -2429,15 +6266,15 @@
       ]
     },
     "tagsFlat": [
-      "清朝",
-      "中国",
-      "国旗",
-      "龙",
       "中心",
       "黄色",
       "红色",
       "蓝色",
-      "白色"
+      "白色",
+      "龙",
+      "清朝",
+      "中国",
+      "国旗"
     ],
     "svgFile": "清朝国旗-1889.svg",
     "viewBox": "0 0 907.087 566.929",
@@ -2466,12 +6303,12 @@
       ]
     },
     "tagsFlat": [
-      "清朝",
-      "海关",
+      "十字",
+      "斜切",
       "黄色",
       "绿色",
-      "十字",
-      "斜切"
+      "清朝",
+      "海关"
     ],
     "svgFile": "清朝晚期海关旗帜.svg",
     "viewBox": "0 0 1133.858 850.394",
@@ -2497,11 +6334,11 @@
       ]
     },
     "tagsFlat": [
-      "清朝",
-      "龙",
       "蓝色",
+      "龙",
       "神兽",
-      "动物"
+      "动物",
+      "清朝"
     ],
     "svgFile": "清代龙纹图案1.svg",
     "viewBox": "0 0 672.569 381.03",
@@ -2524,10 +6361,10 @@
       ]
     },
     "tagsFlat": [
-      "清朝",
       "龙",
       "动物",
-      "神兽"
+      "神兽",
+      "清朝"
     ],
     "svgFile": "清代龙纹图案2.svg",
     "viewBox": "0 0 932.12 379.25",
@@ -2553,11 +6390,11 @@
       ]
     },
     "tagsFlat": [
-      "清朝",
-      "龙",
       "蓝色",
+      "龙",
       "神兽",
-      "动物"
+      "动物",
+      "清朝"
     ],
     "svgFile": "清代龙纹图案3.svg",
     "viewBox": "0 0 825.483 520.789",
@@ -2585,13 +6422,13 @@
       ]
     },
     "tagsFlat": [
-      "清朝",
-      "龙",
       "黄色",
       "蓝色",
+      "龙",
       "火焰",
       "神兽",
-      "动物"
+      "动物",
+      "清朝"
     ],
     "svgFile": "清代龙纹图案4.svg",
     "viewBox": "0 0 600 545",
@@ -2622,16 +6459,16 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "中国共产党",
-      "苏维埃",
-      "琼崖",
-      "海南",
       "红色",
       "黄色",
       "镰锤",
       "五角星",
-      "汉字"
+      "汉字",
+      "中国",
+      "中国共产党",
+      "苏维埃",
+      "琼崖",
+      "海南"
     ],
     "svgFile": "1928琼崖苏维埃政府旗帜.svg",
     "viewBox": "0 0 793.701 566.929",
@@ -2656,10 +6493,10 @@
       ]
     },
     "tagsFlat": [
-      "邪教",
       "十字",
       "蓝色",
-      "白色"
+      "白色",
+      "邪教"
     ],
     "svgFile": "全能基督灭共阵线旗.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -2686,10 +6523,10 @@
       ]
     },
     "tagsFlat": [
-      "邪教",
       "十字",
+      "蓝色",
       "四角星",
-      "蓝色"
+      "邪教"
     ],
     "svgFile": "全能神教会标志.svg",
     "viewBox": "0 0 1196.807 434.602",
@@ -2697,6 +6534,428 @@
     "svgHeight": null,
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "日本国旗",
+    "name": "日本国旗",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "日本"
+      ],
+      "element": [
+        "太阳"
+      ],
+      "style": [
+        "中心"
+      ],
+      "color": [
+        "红色",
+        "白色"
+      ]
+    },
+    "tagsFlat": [
+      "中心",
+      "红色",
+      "白色",
+      "太阳",
+      "日本",
+      "国旗"
+    ],
+    "svgFile": "日本国旗.svg",
+    "viewBox": null,
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Japan。"
+  },
+  {
+    "id": "日本海军旗",
+    "name": "日本海军旗",
+    "tags": {
+      "usage": [
+        "海军",
+        "船旗"
+      ],
+      "region": [
+        "大日本帝国",
+        "日本"
+      ],
+      "element": [
+        "太阳"
+      ],
+      "color": [
+        "红色",
+        "白色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "太阳",
+      "大日本帝国",
+      "日本",
+      "海军",
+      "船旗"
+    ],
+    "svgFile": "日本海军旗.svg",
+    "viewBox": null,
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Naval Ensign of Japan。"
+  },
+  {
+    "id": "日本海军旗-1889-1945",
+    "name": "日本海军旗（1889–1945）",
+    "tags": {
+      "usage": [
+        "海军",
+        "船旗"
+      ],
+      "region": [
+        "日本"
+      ],
+      "element": [
+        "太阳"
+      ],
+      "color": [
+        "白色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "白色",
+      "棕色",
+      "太阳",
+      "日本",
+      "海军",
+      "船旗"
+    ],
+    "svgFile": "日本海军旗-1889-1945.svg",
+    "viewBox": null,
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Naval ensign of Japan (1889–1945)。"
+  },
+  {
+    "id": "柔佛武装部队旗",
+    "name": "柔佛武装部队旗",
+    "tags": {
+      "usage": [
+        "军旗",
+        "国旗"
+      ],
+      "region": [
+        "柔佛"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "柔佛",
+      "军旗",
+      "国旗"
+    ],
+    "svgFile": "柔佛武装部队旗.svg",
+    "viewBox": "0 0 1511.84 755.84003",
+    "svgWidth": "1511.84",
+    "svgHeight": "755.84003",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of the Armed Forces of Johor。"
+  },
+  {
+    "id": "瑞典海军旗",
+    "name": "瑞典海军旗",
+    "tags": {
+      "usage": [
+        "海军",
+        "船旗",
+        "军旗"
+      ],
+      "region": [
+        "瑞典"
+      ],
+      "style": [
+        "十字"
+      ],
+      "color": [
+        "黄色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "十字",
+      "黄色",
+      "蓝色",
+      "瑞典",
+      "海军",
+      "船旗",
+      "军旗"
+    ],
+    "svgFile": "瑞典海军旗.svg",
+    "viewBox": null,
+    "svgWidth": "600",
+    "svgHeight": "300",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Naval ensign of Sweden。"
+  },
+  {
+    "id": "撒丁王国国家旗与战旗-1816-1848",
+    "name": "撒丁王国国家旗与战旗（1816–1848）",
+    "tags": {
+      "usage": [
+        "军旗",
+        "海军",
+        "国旗",
+        "船旗"
+      ],
+      "region": [
+        "撒丁王国"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "灰色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "灰色",
+      "撒丁王国",
+      "军旗",
+      "海军",
+      "国旗",
+      "船旗"
+    ],
+    "svgFile": "撒丁王国国家旗与战旗-1816-1848.svg",
+    "viewBox": null,
+    "svgWidth": "1050",
+    "svgHeight": "700",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：State Flag and War Ensign of the Kingdom of Sardinia (1816-1848)。"
+  },
+  {
+    "id": "撒丁王国民用旗与民用船旗-1816-1848",
+    "name": "撒丁王国民用旗与民用船旗（1816–1848）",
+    "tags": {
+      "usage": [
+        "船旗",
+        "民用旗"
+      ],
+      "region": [
+        "撒丁王国"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "蓝色",
+      "撒丁王国",
+      "船旗",
+      "民用旗"
+    ],
+    "svgFile": "撒丁王国民用旗与民用船旗-1816-1848.svg",
+    "viewBox": null,
+    "svgWidth": "1050",
+    "svgHeight": "700",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Civil Flag and Civil Ensign of the Kingdom of Sardinia (1816-1848)。"
+  },
+  {
+    "id": "撒丁王国战旗-1816-1848-31-76-比例",
+    "name": "撒丁王国战旗（1816–1848，31:76 比例）",
+    "tags": {
+      "usage": [
+        "军旗",
+        "海军",
+        "船旗"
+      ],
+      "region": [
+        "撒丁王国"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "灰色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "灰色",
+      "撒丁王国",
+      "军旗",
+      "海军",
+      "船旗"
+    ],
+    "svgFile": "撒丁王国战旗-1816-1848-31-76-比例.svg",
+    "viewBox": null,
+    "svgWidth": "1520",
+    "svgHeight": "620",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：War Ensign of the Kingdom of Sardinia (1816-1848) aspect ratio 31-76。"
+  },
+  {
+    "id": "塞尔维亚国旗",
+    "name": "塞尔维亚国旗",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "塞尔维亚"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "塞尔维亚",
+      "国旗"
+    ],
+    "svgFile": "塞尔维亚国旗.svg",
+    "viewBox": null,
+    "svgWidth": "1350",
+    "svgHeight": "900",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Serbia。"
+  },
+  {
+    "id": "塞尔维亚民用旗",
+    "name": "塞尔维亚民用旗",
+    "tags": {
+      "usage": [
+        "民用旗",
+        "国旗"
+      ],
+      "region": [
+        "塞尔维亚"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "蓝色",
+      "塞尔维亚",
+      "民用旗",
+      "国旗"
+    ],
+    "svgFile": "塞尔维亚民用旗.svg",
+    "viewBox": null,
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Civil flag of Serbia。"
+  },
+  {
+    "id": "沙特阿拉伯国旗",
+    "name": "沙特阿拉伯国旗",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "沙特阿拉伯"
+      ],
+      "element": [
+        "阿拉伯语",
+        "武器"
+      ],
+      "color": [
+        "白色",
+        "绿色"
+      ]
+    },
+    "tagsFlat": [
+      "白色",
+      "绿色",
+      "阿拉伯语",
+      "武器",
+      "沙特阿拉伯",
+      "国旗"
+    ],
+    "svgFile": "沙特阿拉伯国旗.svg",
+    "viewBox": "0 0 900 600",
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Saudi Arabia。"
+  },
+  {
+    "id": "沙特阿拉伯王旗",
+    "name": "沙特阿拉伯王旗",
+    "tags": {
+      "usage": [
+        "王旗",
+        "国旗"
+      ],
+      "region": [
+        "沙特阿拉伯"
+      ],
+      "color": [
+        "白色",
+        "黄色",
+        "绿色"
+      ]
+    },
+    "tagsFlat": [
+      "白色",
+      "黄色",
+      "绿色",
+      "沙特阿拉伯",
+      "王旗",
+      "国旗"
+    ],
+    "svgFile": "沙特阿拉伯王旗.svg",
+    "viewBox": "0 0 900 600",
+    "svgWidth": "900px",
+    "svgHeight": "600px",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Royal Standard of Saudi Arabia。"
   },
   {
     "id": "上海国旗帜",
@@ -2717,13 +6976,13 @@
       ]
     },
     "tagsFlat": [
-      "虚构",
       "中心",
       "斜切",
       "十字",
       "红色",
       "白色",
-      "蓝色"
+      "蓝色",
+      "虚构"
     ],
     "svgFile": "上海国旗帜.svg",
     "viewBox": "0 0 850.394 510.236",
@@ -2754,14 +7013,14 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "地区",
-      "上海",
       "太极",
       "中心",
       "黄色",
       "红色",
-      "绿色"
+      "绿色",
+      "中国",
+      "上海",
+      "地区"
     ],
     "svgFile": "上海市大道政府旗-大道旗-1938.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -2791,13 +7050,13 @@
       ]
     },
     "tagsFlat": [
-      "神圣罗马帝国",
+      "十字",
+      "黑色",
       "鹰",
       "盾徽",
-      "十字",
       "鸟类",
       "王冠",
-      "黑色"
+      "神圣罗马帝国"
     ],
     "svgFile": "神圣罗马帝国四元鹰徽章.svg",
     "viewBox": "0 0 525.63 385.48",
@@ -2826,12 +7085,12 @@
       ]
     },
     "tagsFlat": [
-      "台湾",
-      "党旗",
       "竖切",
+      "地图",
       "绿色",
       "白色",
-      "地图"
+      "台湾",
+      "党旗"
     ],
     "svgFile": "世界台湾人大会会旗.svg",
     "viewBox": "0 0 815 450",
@@ -2853,9 +7112,9 @@
       ]
     },
     "tagsFlat": [
+      "剪影",
       "树",
-      "植物",
-      "剪影"
+      "植物"
     ],
     "svgFile": "树剪影图案.svg",
     "viewBox": "0 0 1178.000000 1280.000000",
@@ -2863,6 +7122,310 @@
     "svgHeight": "1280.000000pt",
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "斯里兰卡空军旗",
+    "name": "斯里兰卡空军旗",
+    "tags": {
+      "usage": [
+        "空军",
+        "船旗"
+      ],
+      "region": [
+        "斯里兰卡"
+      ],
+      "style": [
+        "圆环"
+      ],
+      "color": [
+        "红色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "橙色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "圆环",
+      "红色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "橙色",
+      "棕色",
+      "斯里兰卡",
+      "空军",
+      "船旗"
+    ],
+    "svgFile": "斯里兰卡空军旗.svg",
+    "viewBox": null,
+    "svgWidth": "2400",
+    "svgHeight": "1200",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Air Force Ensign of Sri Lanka。"
+  },
+  {
+    "id": "斯洛伐克第一共和国战旗",
+    "name": "斯洛伐克第一共和国战旗",
+    "tags": {
+      "usage": [
+        "军旗",
+        "海军",
+        "船旗"
+      ],
+      "region": [
+        "斯洛伐克第一共和国"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "蓝色",
+        "黑色",
+        "灰色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "蓝色",
+      "黑色",
+      "灰色",
+      "斯洛伐克第一共和国",
+      "军旗",
+      "海军",
+      "船旗"
+    ],
+    "svgFile": "斯洛伐克第一共和国战旗.svg",
+    "viewBox": null,
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：War ensign of the First Slovak Republic。"
+  },
+  {
+    "id": "斯洛伐克国徽",
+    "name": "斯洛伐克国徽",
+    "tags": {
+      "usage": [
+        "国徽"
+      ],
+      "region": [
+        "斯洛伐克"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "蓝色",
+      "斯洛伐克",
+      "国徽"
+    ],
+    "svgFile": "斯洛伐克国徽.svg",
+    "viewBox": "0 0 480 600",
+    "svgWidth": null,
+    "svgHeight": null,
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Coat of arms of Slovakia。"
+  },
+  {
+    "id": "斯洛文尼亚国徽",
+    "name": "斯洛文尼亚国徽",
+    "tags": {
+      "usage": [
+        "国徽"
+      ],
+      "region": [
+        "斯洛文尼亚"
+      ],
+      "element": [
+        "五角星"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "五角星",
+      "斯洛文尼亚",
+      "国徽"
+    ],
+    "svgFile": "斯洛文尼亚国徽.svg",
+    "viewBox": "-40 -102.2 80 102.2",
+    "svgWidth": "400",
+    "svgHeight": "511",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Coat of arms of Slovenia。"
+  },
+  {
+    "id": "斯威士兰国徽",
+    "name": "斯威士兰国徽",
+    "tags": {
+      "usage": [
+        "国徽"
+      ],
+      "region": [
+        "斯威士兰"
+      ],
+      "color": [
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "橙色",
+        "灰色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "橙色",
+      "灰色",
+      "粉色",
+      "棕色",
+      "斯威士兰",
+      "国徽"
+    ],
+    "svgFile": "斯威士兰国徽.svg",
+    "viewBox": "0 0 223.406 157.402",
+    "svgWidth": "279.257",
+    "svgHeight": "196.753",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Coat of arms of Eswatini。"
+  },
+  {
+    "id": "苏格兰王国皇家徽章",
+    "name": "苏格兰王国皇家徽章",
+    "tags": {
+      "usage": [
+        "徽章"
+      ],
+      "region": [
+        "苏格兰"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "橙色",
+        "紫色",
+        "灰色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "橙色",
+      "紫色",
+      "灰色",
+      "粉色",
+      "棕色",
+      "苏格兰",
+      "徽章"
+    ],
+    "svgFile": "苏格兰王国皇家徽章.svg",
+    "viewBox": null,
+    "svgWidth": "1550",
+    "svgHeight": "1500",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Royal Coat of Arms of the Kingdom of Scotland。"
+  },
+  {
+    "id": "苏里南国旗-1959-1975",
+    "name": "苏里南国旗（1959–1975）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "苏里南"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "黑色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "黑色",
+      "棕色",
+      "苏里南",
+      "国旗"
+    ],
+    "svgFile": "苏里南国旗-1959-1975.svg",
+    "viewBox": "0 0 10000 6666.0938",
+    "svgWidth": "1000",
+    "svgHeight": "667",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Suriname (1959–1975)。"
+  },
+  {
+    "id": "苏联海军旗-1950-1991",
+    "name": "苏联海军旗（1950–1991）",
+    "tags": {
+      "usage": [
+        "海军",
+        "船旗"
+      ],
+      "region": [
+        "苏联"
+      ],
+      "style": [
+        "圆环"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "圆环",
+      "红色",
+      "白色",
+      "蓝色",
+      "苏联",
+      "海军",
+      "船旗"
+    ],
+    "svgFile": "苏联海军旗-1950-1991.svg",
+    "viewBox": null,
+    "svgWidth": "1350",
+    "svgHeight": "900",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Naval Ensign of the Soviet Union (1950–1991)。"
   },
   {
     "id": "台湾-工党党旗",
@@ -2887,13 +7450,13 @@
       ]
     },
     "tagsFlat": [
+      "中心",
+      "绿色",
+      "黄色",
+      "五角星",
       "台湾",
       "政党",
-      "党旗",
-      "中心",
-      "五角星",
-      "绿色",
-      "黄色"
+      "党旗"
     ],
     "svgFile": "台湾-工党党旗.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -2929,17 +7492,17 @@
       ]
     },
     "tagsFlat": [
-      "台湾",
-      "政党",
-      "党旗",
-      "宗教",
       "横条",
       "中心",
-      "肢体",
-      "汉字",
       "红色",
       "蓝色",
-      "粉色"
+      "粉色",
+      "肢体",
+      "汉字",
+      "台湾",
+      "宗教",
+      "政党",
+      "党旗"
     ],
     "svgFile": "台湾-正神名党.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -2976,18 +7539,18 @@
       ]
     },
     "tagsFlat": [
-      "台湾",
-      "政党",
-      "党旗",
+      "上角",
+      "横条",
       "红色",
       "黄色",
       "蓝色",
       "白色",
       "黑色",
-      "上角",
-      "横条",
       "地球",
-      "五角星"
+      "五角星",
+      "台湾",
+      "政党",
+      "党旗"
     ],
     "svgFile": "台湾-中国民众党党旗.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -3014,12 +7577,12 @@
       ]
     },
     "tagsFlat": [
-      "台湾",
-      "意识形态",
       "竖切",
+      "地图",
       "红色",
       "白色",
-      "地图"
+      "台湾",
+      "意识形态"
     ],
     "svgFile": "台湾独立建国联盟旗.svg",
     "viewBox": null,
@@ -3047,11 +7610,11 @@
       ]
     },
     "tagsFlat": [
-      "台湾",
-      "党旗",
       "十字",
       "黄色",
-      "绿色"
+      "绿色",
+      "台湾",
+      "党旗"
     ],
     "svgFile": "台湾工党党旗.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -3075,25 +7638,23 @@
         "黑色"
       ],
       "region": [
-        "台湾"
+        "台湾",
+        "共产党"
       ],
       "usage": [
         "党旗"
-      ],
-      "other": [
-        "共产党"
       ]
     },
     "tagsFlat": [
-      "台湾",
-      "共产党",
-      "党旗",
       "中心",
+      "地图",
       "红色",
       "白色",
       "黄色",
       "黑色",
-      "地图"
+      "台湾",
+      "共产党",
+      "党旗"
     ],
     "svgFile": "台湾共产党-王老养-党旗.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -3126,14 +7687,14 @@
       ]
     },
     "tagsFlat": [
-      "台湾",
-      "政党",
-      "党旗",
+      "中心",
       "红色",
       "黄色",
       "绿色",
-      "中心",
-      "五角星"
+      "五角星",
+      "台湾",
+      "政党",
+      "党旗"
     ],
     "svgFile": "台湾劳动党.svg",
     "viewBox": "0 0 1277.894 850.394",
@@ -3166,14 +7727,14 @@
       ]
     },
     "tagsFlat": [
-      "台湾",
-      "党旗",
       "横条",
       "中心",
       "红色",
       "蓝色",
       "白色",
-      "太阳"
+      "太阳",
+      "台湾",
+      "党旗"
     ],
     "svgFile": "台湾民众党党旗-1928.svg",
     "viewBox": "0 0 850.394 566.929",
@@ -3205,13 +7766,13 @@
       ]
     },
     "tagsFlat": [
-      "台湾",
-      "党旗",
       "上角",
       "红色",
       "白色",
       "蓝色",
-      "五角星"
+      "五角星",
+      "台湾",
+      "党旗"
     ],
     "svgFile": "台湾民众党党旗-1929.svg",
     "viewBox": "0 0 850.394 566.965",
@@ -3245,15 +7806,15 @@
       ]
     },
     "tagsFlat": [
-      "台湾",
-      "国旗",
       "方旗",
       "中心",
-      "虎",
-      "动物",
       "蓝色",
       "黄色",
-      "红色"
+      "红色",
+      "虎",
+      "动物",
+      "台湾",
+      "国旗"
     ],
     "svgFile": "台湾民主国国旗-黄虎旗-1895.svg",
     "viewBox": "0 0 270.93332 248.44377",
@@ -3282,12 +7843,12 @@
       ]
     },
     "tagsFlat": [
-      "台湾",
-      "政党",
+      "地图",
+      "十字",
       "绿色",
       "白色",
-      "地图",
-      "十字"
+      "台湾",
+      "政党"
     ],
     "svgFile": "台湾民主进步党党徽.svg",
     "viewBox": null,
@@ -3317,13 +7878,13 @@
       ]
     },
     "tagsFlat": [
-      "台湾",
-      "意识形态",
       "中心",
       "蓝色",
       "白色",
       "太阳",
-      "月亮"
+      "月亮",
+      "台湾",
+      "意识形态"
     ],
     "svgFile": "台湾旗帜-廖文毅.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -3352,12 +7913,12 @@
     },
     "tagsFlat": [
       "心形",
-      "汉字",
       "红色",
       "白色",
       "蓝色",
       "绿色",
-      "黄色"
+      "黄色",
+      "汉字"
     ],
     "svgFile": "台湾桃园市徽.svg",
     "viewBox": "0 0 160.988 160.987",
@@ -3387,13 +7948,13 @@
       ]
     },
     "tagsFlat": [
-      "台湾",
-      "政党",
+      "万字",
       "红色",
       "紫色",
       "棕色",
       "白色",
-      "万字"
+      "台湾",
+      "政党"
     ],
     "svgFile": "台湾天一党徽章.svg",
     "viewBox": "0 0 1139.745 1139.745",
@@ -3417,9 +7978,9 @@
       ]
     },
     "tagsFlat": [
-      "台湾",
+      "三角旗",
       "汉字",
-      "三角旗"
+      "台湾"
     ],
     "svgFile": "台湾西来庵起义-大明慈悲国-旗-1915.svg",
     "viewBox": "0 0 965.014 965.014",
@@ -3451,13 +8012,13 @@
       ]
     },
     "tagsFlat": [
-      "台湾",
-      "政党",
-      "党旗",
+      "中心",
       "黄色",
       "蓝色",
-      "中心",
-      "汉字"
+      "汉字",
+      "台湾",
+      "政党",
+      "党旗"
     ],
     "svgFile": "台湾新党党旗.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -3489,13 +8050,13 @@
       ]
     },
     "tagsFlat": [
+      "中心",
+      "黄色",
+      "蓝色",
+      "汉字",
       "台湾",
       "政党",
-      "党旗",
-      "中心",
-      "汉字",
-      "黄色",
-      "蓝色"
+      "党旗"
     ],
     "svgFile": "台湾新党党旗2.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -3532,18 +8093,18 @@
       ]
     },
     "tagsFlat": [
-      "台湾",
-      "政党",
-      "党旗",
-      "整复师",
       "中心",
-      "人物",
-      "齿轮",
       "红色",
       "紫色",
       "黄色",
+      "人物",
+      "齿轮",
       "汉字",
-      "英文"
+      "英文",
+      "台湾",
+      "政党",
+      "党旗",
+      "整复师"
     ],
     "svgFile": "台湾整复师联盟工党旗.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -3572,14 +8133,14 @@
       ]
     },
     "tagsFlat": [
-      "台湾",
-      "意识形态",
       "斜切",
+      "中心",
+      "三角",
       "蓝色",
       "白色",
       "绿色",
-      "中心",
-      "三角"
+      "台湾",
+      "意识形态"
     ],
     "svgFile": "台字翠青旗.svg",
     "viewBox": "0 0 850.394 566.929",
@@ -3628,10 +8189,10 @@
       ]
     },
     "tagsFlat": [
-      "邪教",
-      "汉字",
       "红色",
-      "黑色"
+      "黑色",
+      "汉字",
+      "邪教"
     ],
     "svgFile": "天德教标志.svg",
     "viewBox": "0 0 1933.12 1933.119",
@@ -3655,9 +8216,9 @@
       ]
     },
     "tagsFlat": [
-      "邪教",
+      "圆环",
       "红色",
-      "圆环"
+      "邪教"
     ],
     "svgFile": "天帝教标志.svg",
     "viewBox": "0 0 967.66 945.11",
@@ -3665,6 +8226,316 @@
     "svgHeight": null,
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "图瓦卢国旗-国家版",
+    "name": "图瓦卢国旗（国家版）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "图瓦卢"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "橙色",
+        "灰色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "橙色",
+      "灰色",
+      "粉色",
+      "棕色",
+      "图瓦卢",
+      "国旗"
+    ],
+    "svgFile": "图瓦卢国旗-国家版.svg",
+    "viewBox": null,
+    "svgWidth": "1200",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Tuvalu (state)。"
+  },
+  {
+    "id": "土耳其国旗",
+    "name": "土耳其国旗",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "土耳其"
+      ],
+      "element": [
+        "月",
+        "五角星"
+      ],
+      "color": [
+        "红色",
+        "白色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "月",
+      "五角星",
+      "土耳其",
+      "国旗"
+    ],
+    "svgFile": "土耳其国旗.svg",
+    "viewBox": "0 -30000 90000 60000",
+    "svgWidth": "1200",
+    "svgHeight": "800",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Turkey。"
+  },
+  {
+    "id": "危地马拉国徽",
+    "name": "危地马拉国徽",
+    "tags": {
+      "usage": [
+        "国徽"
+      ],
+      "region": [
+        "危地马拉"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "黑色",
+        "绿色",
+        "灰色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "黑色",
+      "绿色",
+      "灰色",
+      "粉色",
+      "棕色",
+      "危地马拉",
+      "国徽"
+    ],
+    "svgFile": "危地马拉国徽.svg",
+    "viewBox": "0 12.323 962.963 825.991",
+    "svgWidth": "962.963px",
+    "svgHeight": "825.991px",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Coat of arms of Guatemala。"
+  },
+  {
+    "id": "危地马拉国旗",
+    "name": "危地马拉国旗",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "危地马拉"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "灰色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "灰色",
+      "粉色",
+      "棕色",
+      "危地马拉",
+      "国旗"
+    ],
+    "svgFile": "危地马拉国旗.svg",
+    "viewBox": null,
+    "svgWidth": "960",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Guatemala。"
+  },
+  {
+    "id": "威尔士旗帜",
+    "name": "威尔士旗帜",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "威尔士",
+        "英国"
+      ],
+      "element": [
+        "龙"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黑色",
+        "绿色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黑色",
+      "绿色",
+      "龙",
+      "威尔士",
+      "英国",
+      "国旗"
+    ],
+    "svgFile": "威尔士旗帜.svg",
+    "viewBox": null,
+    "svgWidth": "800",
+    "svgHeight": "480",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Wales。"
+  },
+  {
+    "id": "维也纳州旗",
+    "name": "维也纳州旗",
+    "tags": {
+      "usage": [
+        "州旗"
+      ],
+      "region": [
+        "维也纳",
+        "奥地利"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黑色",
+        "灰色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黑色",
+      "灰色",
+      "维也纳",
+      "奥地利",
+      "州旗"
+    ],
+    "svgFile": "维也纳州旗.svg",
+    "viewBox": null,
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Vienna (state)。"
+  },
+  {
+    "id": "委内瑞拉国旗-1954-2006",
+    "name": "委内瑞拉国旗（1954–2006）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "委内瑞拉"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "橙色",
+        "紫色",
+        "灰色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "橙色",
+      "紫色",
+      "灰色",
+      "粉色",
+      "棕色",
+      "委内瑞拉",
+      "国旗"
+    ],
+    "svgFile": "委内瑞拉国旗-1954-2006.svg",
+    "viewBox": null,
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：State flag of Venezuela (1954–2006)。"
+  },
+  {
+    "id": "委内瑞拉国旗-国家版",
+    "name": "委内瑞拉国旗（国家版）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "委内瑞拉"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "委内瑞拉",
+      "国旗"
+    ],
+    "svgFile": "委内瑞拉国旗-国家版.svg",
+    "viewBox": "0 0 180 120",
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Venezuela (state)。"
   },
   {
     "id": "蚊子",
@@ -3679,9 +8550,9 @@
       ]
     },
     "tagsFlat": [
+      "剪影",
       "动物",
-      "昆虫",
-      "剪影"
+      "昆虫"
     ],
     "svgFile": "蚊子.svg",
     "viewBox": "0 0 1280.000000 640.000000",
@@ -3689,6 +8560,230 @@
     "svgHeight": "640.000000pt",
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "乌干达国徽",
+    "name": "乌干达国徽",
+    "tags": {
+      "usage": [
+        "国徽"
+      ],
+      "region": [
+        "乌干达"
+      ],
+      "element": [
+        "太阳",
+        "盾徽"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "橙色",
+        "紫色",
+        "灰色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "橙色",
+      "紫色",
+      "灰色",
+      "粉色",
+      "棕色",
+      "太阳",
+      "盾徽",
+      "乌干达",
+      "国徽"
+    ],
+    "svgFile": "乌干达国徽.svg",
+    "viewBox": "0 0 600 643",
+    "svgWidth": "1px",
+    "svgHeight": null,
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Coat of arms of Uganda。"
+  },
+  {
+    "id": "乌克兰国旗-1917-1921",
+    "name": "乌克兰国旗（1917–1921）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "乌克兰"
+      ],
+      "color": [
+        "黄色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "黄色",
+      "蓝色",
+      "乌克兰",
+      "国旗"
+    ],
+    "svgFile": "乌克兰国旗-1917-1921.svg",
+    "viewBox": null,
+    "svgWidth": "1200",
+    "svgHeight": "800",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Ukraine (1917–1921)。"
+  },
+  {
+    "id": "乌克兰小国徽",
+    "name": "乌克兰小国徽",
+    "tags": {
+      "usage": [
+        "国徽"
+      ],
+      "region": [
+        "乌克兰"
+      ],
+      "element": [
+        "盾徽"
+      ],
+      "style": [
+        "圆环"
+      ],
+      "color": [
+        "黄色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "圆环",
+      "黄色",
+      "蓝色",
+      "盾徽",
+      "乌克兰",
+      "国徽"
+    ],
+    "svgFile": "乌克兰小国徽.svg",
+    "viewBox": "-82.5 0 165 230.5",
+    "svgWidth": "330",
+    "svgHeight": "461",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Lesser Coat of Arms of Ukraine。"
+  },
+  {
+    "id": "西班牙民用旗",
+    "name": "西班牙民用旗",
+    "tags": {
+      "usage": [
+        "军旗",
+        "徽章",
+        "民用旗",
+        "国旗"
+      ],
+      "region": [
+        "西班牙"
+      ],
+      "color": [
+        "红色",
+        "黄色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "黄色",
+      "西班牙",
+      "军旗",
+      "徽章",
+      "民用旗",
+      "国旗"
+    ],
+    "svgFile": "西班牙民用旗.svg",
+    "viewBox": null,
+    "svgWidth": "750",
+    "svgHeight": "500",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Spain (civil)。"
+  },
+  {
+    "id": "西班牙民用旗-变体配色",
+    "name": "西班牙民用旗（变体配色）",
+    "tags": {
+      "usage": [
+        "民用旗",
+        "国旗"
+      ],
+      "region": [
+        "西班牙"
+      ],
+      "color": [
+        "红色",
+        "黄色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "黄色",
+      "西班牙",
+      "民用旗",
+      "国旗"
+    ],
+    "svgFile": "西班牙民用旗-变体配色.svg",
+    "viewBox": null,
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Spain (Civil) alternate colours。"
+  },
+  {
+    "id": "西班牙战旗-提案",
+    "name": "西班牙战旗（提案）",
+    "tags": {
+      "usage": [
+        "军旗"
+      ],
+      "region": [
+        "西班牙"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "橙色",
+        "紫色",
+        "灰色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "橙色",
+      "紫色",
+      "灰色",
+      "粉色",
+      "棕色",
+      "西班牙",
+      "军旗"
+    ],
+    "svgFile": "西班牙战旗-提案.svg",
+    "viewBox": null,
+    "svgWidth": "1200",
+    "svgHeight": "800",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：War flag of Spain (proposal)。"
   },
   {
     "id": "西藏雪山狮子旗1",
@@ -3715,8 +8810,6 @@
       ]
     },
     "tagsFlat": [
-      "佛教",
-      "宗教",
       "中心",
       "三角",
       "镶边",
@@ -3725,7 +8818,9 @@
       "蓝色",
       "白色",
       "狮子",
-      "动物"
+      "动物",
+      "佛教",
+      "宗教"
     ],
     "svgFile": "西藏雪山狮子旗1.svg",
     "viewBox": null,
@@ -3733,6 +8828,156 @@
     "svgHeight": "720",
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "锡兰民用船旗-1875-1948",
+    "name": "锡兰民用船旗（1875–1948）",
+    "tags": {
+      "usage": [
+        "船旗"
+      ],
+      "region": [
+        "锡兰"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "粉色",
+      "棕色",
+      "锡兰",
+      "船旗"
+    ],
+    "svgFile": "锡兰民用船旗-1875-1948.svg",
+    "viewBox": null,
+    "svgWidth": "1200",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Civil Ensign of Ceylon (1875–1948)。"
+  },
+  {
+    "id": "夏威夷王国皇家徽章",
+    "name": "夏威夷王国皇家徽章",
+    "tags": {
+      "usage": [
+        "徽章"
+      ],
+      "region": [
+        "夏威夷"
+      ],
+      "element": [
+        "王冠",
+        "盾徽"
+      ],
+      "style": [
+        "十字"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "橙色",
+        "灰色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "十字",
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "橙色",
+      "灰色",
+      "粉色",
+      "棕色",
+      "王冠",
+      "盾徽",
+      "夏威夷",
+      "徽章"
+    ],
+    "svgFile": "夏威夷王国皇家徽章.svg",
+    "viewBox": null,
+    "svgWidth": "786.9245",
+    "svgHeight": "651.5",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Royal Coat of Arms of Hawaii。"
+  },
+  {
+    "id": "暹罗大纹章",
+    "name": "暹罗大纹章",
+    "tags": {
+      "usage": [
+        "国徽"
+      ],
+      "region": [
+        "暹罗"
+      ],
+      "element": [
+        "狮子",
+        "王冠",
+        "武器",
+        "盾徽"
+      ],
+      "style": [
+        "十字",
+        "圆环"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "绿色",
+        "橙色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "十字",
+      "圆环",
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "绿色",
+      "橙色",
+      "粉色",
+      "棕色",
+      "狮子",
+      "王冠",
+      "武器",
+      "盾徽",
+      "暹罗",
+      "国徽"
+    ],
+    "svgFile": "暹罗大纹章.svg",
+    "viewBox": "0 0 1e3 1200",
+    "svgWidth": "1px",
+    "svgHeight": "5.178",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Coat of arms of Siam (greater)。"
   },
   {
     "id": "香港独立运动期间龙狮旗-2011",
@@ -3761,19 +9006,19 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "香港",
+      "波浪",
+      "中心",
+      "蓝色",
+      "黄色",
+      "红色",
       "盾徽",
       "龙",
       "狮子",
       "船",
-      "波浪",
-      "蓝色",
-      "黄色",
-      "红色",
-      "中心",
       "动物",
-      "神兽"
+      "神兽",
+      "中国",
+      "香港"
     ],
     "svgFile": "香港独立运动期间龙狮旗-2011.svg",
     "viewBox": "0 0 1200 888",
@@ -3799,11 +9044,11 @@
       ]
     },
     "tagsFlat": [
-      "公司",
-      "logo",
       "橙色",
       "白色",
-      "英文"
+      "英文",
+      "公司",
+      "logo"
     ],
     "svgFile": "小米公司logo.svg",
     "viewBox": "-200.008 -199.727 512 512",
@@ -3832,12 +9077,12 @@
       ]
     },
     "tagsFlat": [
-      "虚构",
-      "闪电",
+      "斜切",
       "红色",
       "白色",
       "黑色",
-      "斜切"
+      "闪电",
+      "虚构"
     ],
     "svgFile": "斜向闪电红白黑旗.svg",
     "viewBox": "0 0 1275.593 850.394",
@@ -3845,6 +9090,112 @@
     "svgHeight": "850.394",
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "新加坡国徽",
+    "name": "新加坡国徽",
+    "tags": {
+      "usage": [
+        "国徽"
+      ],
+      "region": [
+        "新加坡"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "橙色",
+        "灰色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "橙色",
+      "灰色",
+      "粉色",
+      "棕色",
+      "新加坡",
+      "国徽"
+    ],
+    "svgFile": "新加坡国徽.svg",
+    "viewBox": "0 0 76.489996 64.690002",
+    "svgWidth": "76.489998",
+    "svgHeight": "64.690002",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Coat of arms of Singapore。"
+  },
+  {
+    "id": "新加坡国旗",
+    "name": "新加坡国旗",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "新加坡"
+      ],
+      "element": [
+        "月",
+        "五角星"
+      ],
+      "color": [
+        "红色",
+        "白色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "月",
+      "五角星",
+      "新加坡",
+      "国旗"
+    ],
+    "svgFile": "新加坡国旗.svg",
+    "viewBox": "0 0 54 36",
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Singapore。"
+  },
+  {
+    "id": "新加坡民用船旗",
+    "name": "新加坡民用船旗",
+    "tags": {
+      "usage": [
+        "船旗"
+      ],
+      "region": [
+        "新加坡"
+      ],
+      "color": [
+        "红色",
+        "白色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "新加坡",
+      "船旗"
+    ],
+    "svgFile": "新加坡民用船旗.svg",
+    "viewBox": "-36 -18 72 36",
+    "svgWidth": "1200",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Civil ensign of Singapore。"
   },
   {
     "id": "新中国联邦-郭文贵-国旗-2020",
@@ -3868,12 +9219,12 @@
       ]
     },
     "tagsFlat": [
-      "虚构",
-      "邪教",
       "中心",
-      "七角星",
       "黄色",
-      "蓝色"
+      "蓝色",
+      "七角星",
+      "邪教",
+      "虚构"
     ],
     "svgFile": "新中国联邦-郭文贵-国旗-2020.svg",
     "viewBox": "0 0 850.394 566.929",
@@ -3881,6 +9232,218 @@
     "svgHeight": "566.929",
     "originalImage": null,
     "description": "别称一：49宇宙星旗 别称二：喜马拉雅星旗 长宽比3:2 颜色：海洋蓝、太阳金\n\n形式：由49颗金色喜马拉雅星双椭圆环绕呈中字型围合而成的蓝色长方形的旗帜\n\n新中华联邦国旗于2020年5月26日正式启用。该国旗于2020年6月4日首次正式亮相。形状：蓝色长方形旗帜，有49颗金色喜马拉雅星，周围环绕着两个椭圆形图案，形状像汉字“中”。"
+  },
+  {
+    "id": "虚构奥匈帝国民用旗-1869-1918",
+    "name": "虚构奥匈帝国民用旗（1869–1918）",
+    "tags": {
+      "usage": [
+        "民用旗",
+        "虚构"
+      ],
+      "region": [
+        "奥匈帝国",
+        "奥地利"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "绿色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "绿色",
+      "奥匈帝国",
+      "奥地利",
+      "民用旗",
+      "虚构"
+    ],
+    "svgFile": "虚构奥匈帝国民用旗-1869-1918.svg",
+    "viewBox": "0 0 9 6",
+    "svgWidth": "1200",
+    "svgHeight": "800",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Fictitious Austria-Hungary civil flag 1869-1918。"
+  },
+  {
+    "id": "叙利亚过渡政府旗帜-清真言版",
+    "name": "叙利亚过渡政府旗帜（清真言版）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "叙利亚"
+      ],
+      "element": [
+        "阿拉伯语"
+      ],
+      "color": [
+        "白色",
+        "黑色"
+      ]
+    },
+    "tagsFlat": [
+      "白色",
+      "黑色",
+      "阿拉伯语",
+      "叙利亚",
+      "国旗"
+    ],
+    "svgFile": "叙利亚过渡政府旗帜-清真言版.svg",
+    "viewBox": null,
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of the Syrian transitional government (Shahada)。"
+  },
+  {
+    "id": "叙利亚救国政府旗帜",
+    "name": "叙利亚救国政府旗帜",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "叙利亚"
+      ],
+      "element": [
+        "龙"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "绿色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "绿色",
+      "龙",
+      "叙利亚",
+      "国旗"
+    ],
+    "svgFile": "叙利亚救国政府旗帜.svg",
+    "viewBox": null,
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of the Syrian Salvation Government。"
+  },
+  {
+    "id": "叙利亚武装部队旗-2025",
+    "name": "叙利亚武装部队旗（2025）",
+    "tags": {
+      "usage": [
+        "军旗",
+        "国旗"
+      ],
+      "region": [
+        "叙利亚"
+      ],
+      "color": [
+        "白色",
+        "黄色",
+        "黑色",
+        "灰色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "白色",
+      "黄色",
+      "黑色",
+      "灰色",
+      "粉色",
+      "棕色",
+      "叙利亚",
+      "军旗",
+      "国旗"
+    ],
+    "svgFile": "叙利亚武装部队旗-2025.svg",
+    "viewBox": "0 0 900 600",
+    "svgWidth": "900",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of the Syrian Armed Forces 2025。"
+  },
+  {
+    "id": "伊朗国旗",
+    "name": "伊朗国旗",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "伊朗"
+      ],
+      "element": [
+        "阿拉伯语"
+      ],
+      "style": [
+        "三色旗"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "绿色"
+      ]
+    },
+    "tagsFlat": [
+      "三色旗",
+      "红色",
+      "白色",
+      "绿色",
+      "阿拉伯语",
+      "伊朗",
+      "国旗"
+    ],
+    "svgFile": "伊朗国旗.svg",
+    "viewBox": null,
+    "svgWidth": "630",
+    "svgHeight": "360",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of Iran。"
+  },
+  {
+    "id": "伊斯兰国旗帜-伊拉克和黎凡特",
+    "name": "伊斯兰国旗帜（伊拉克和黎凡特）",
+    "tags": {
+      "usage": [
+        "党旗"
+      ],
+      "region": [
+        "伊斯兰国",
+        "伊拉克",
+        "邪教"
+      ],
+      "element": [
+        "月",
+        "阿拉伯语"
+      ],
+      "color": [
+        "白色"
+      ]
+    },
+    "tagsFlat": [
+      "白色",
+      "月",
+      "阿拉伯语",
+      "伊斯兰国",
+      "伊拉克",
+      "邪教",
+      "党旗"
+    ],
+    "svgFile": "伊斯兰国旗帜-伊拉克和黎凡特.svg",
+    "viewBox": "0 0 1024 768",
+    "svgWidth": "1280",
+    "svgHeight": "960",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of the Islamic State of Iraq and the Levant2。"
   },
   {
     "id": "伊斯兰花结-十瓣环",
@@ -3894,8 +9457,8 @@
       ]
     },
     "tagsFlat": [
-      "穆斯林",
-      "十角形"
+      "十角形",
+      "穆斯林"
     ],
     "svgFile": "伊斯兰花结-十瓣环.svg",
     "viewBox": "0 0 1282.014 1219.27",
@@ -3924,12 +9487,12 @@
       ]
     },
     "tagsFlat": [
-      "虚构",
-      "中西",
       "黑色",
       "红色",
       "黄色",
-      "植物"
+      "植物",
+      "中西",
+      "虚构"
     ],
     "svgFile": "彝族旗帜.svg",
     "viewBox": "0 0 850.394 510.236",
@@ -3962,14 +9525,14 @@
       ]
     },
     "tagsFlat": [
-      "以色列",
-      "国旗",
-      "犹太",
+      "横条",
+      "中心",
       "白色",
       "蓝色",
       "六角星",
-      "横条",
-      "中心"
+      "以色列",
+      "犹太",
+      "国旗"
     ],
     "svgFile": "以色列国旗.svg",
     "viewBox": null,
@@ -4001,15 +9564,15 @@
       ]
     },
     "tagsFlat": [
-      "意大利",
-      "盾徽",
       "十字",
+      "红色",
+      "黄色",
+      "白色",
+      "盾徽",
       "狮子",
       "动物",
       "头盔",
-      "红色",
-      "黄色",
-      "白色"
+      "意大利"
     ],
     "svgFile": "意大利国王徽章-1890-1946.svg",
     "viewBox": "0 -0.5 476.45889 815.07092",
@@ -4017,6 +9580,46 @@
     "svgHeight": "815.07092",
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "意大利社会共和国战旗",
+    "name": "意大利社会共和国战旗",
+    "tags": {
+      "usage": [
+        "军旗",
+        "民用旗",
+        "国旗"
+      ],
+      "region": [
+        "意大利"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黑色",
+        "绿色",
+        "灰色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黑色",
+      "绿色",
+      "灰色",
+      "棕色",
+      "意大利",
+      "军旗",
+      "民用旗",
+      "国旗"
+    ],
+    "svgFile": "意大利社会共和国战旗.svg",
+    "viewBox": "0 0 3 2",
+    "svgWidth": "1500",
+    "svgHeight": "1000",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：War flag of the Italian Social Republic。"
   },
   {
     "id": "意大利casapound党旗",
@@ -4043,15 +9646,15 @@
       ]
     },
     "tagsFlat": [
-      "意大利",
-      "法西斯",
-      "党旗",
+      "中心",
+      "箭头",
       "红色",
       "黑色",
       "白色",
-      "中心",
       "动物",
-      "箭头"
+      "意大利",
+      "法西斯",
+      "党旗"
     ],
     "svgFile": "意大利casapound党旗.svg",
     "viewBox": "0, 0, 400,240",
@@ -4059,6 +9662,224 @@
     "svgHeight": "240",
     "originalImage": null,
     "description": "CasaPound 翻译成中文通常被称为 “卡萨庞德”（音译）或 “庞德之家”（意译）。\n\n它是一个起源于意大利的极右翼政治组织和新法西斯主义运动。\n\nCasa 在意大利语中意为“家”或“房屋”。\n\nPound 是为了纪念美国著名诗人埃兹拉·庞德（Ezra Pound），因为他在二战期间曾公开支持法西斯主义。\n\n这个组织最初在2003年通过强占罗马的一栋空置政府大楼作为总部而闻名，后来逐渐发展成一个极右翼的政治与社会运动力量。"
+  },
+  {
+    "id": "印度海军旗",
+    "name": "印度海军旗",
+    "tags": {
+      "usage": [
+        "海军",
+        "船旗",
+        "国徽",
+        "徽章"
+      ],
+      "region": [
+        "印度"
+      ],
+      "element": [
+        "盾徽",
+        "船锚"
+      ],
+      "style": [
+        "上角"
+      ],
+      "color": [
+        "白色",
+        "黄色",
+        "蓝色",
+        "绿色",
+        "橙色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "上角",
+      "白色",
+      "黄色",
+      "蓝色",
+      "绿色",
+      "橙色",
+      "棕色",
+      "盾徽",
+      "船锚",
+      "印度",
+      "海军",
+      "船旗",
+      "国徽",
+      "徽章"
+    ],
+    "svgFile": "印度海军旗.svg",
+    "viewBox": "0 0 900 450",
+    "svgWidth": "1200",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Naval Ensign of India。"
+  },
+  {
+    "id": "印度尼西亚国徽-迦楼罗潘查希拉",
+    "name": "印度尼西亚国徽（迦楼罗潘查希拉）",
+    "tags": {
+      "usage": [
+        "国徽",
+        "徽章"
+      ],
+      "region": [
+        "印度尼西亚"
+      ],
+      "element": [
+        "神兽",
+        "盾徽",
+        "鸟类"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "橙色",
+        "紫色",
+        "灰色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "橙色",
+      "紫色",
+      "灰色",
+      "粉色",
+      "棕色",
+      "神兽",
+      "盾徽",
+      "鸟类",
+      "印度尼西亚",
+      "国徽",
+      "徽章"
+    ],
+    "svgFile": "印度尼西亚国徽-迦楼罗潘查希拉.svg",
+    "viewBox": "288 0 553.9 595.3",
+    "svgWidth": "1",
+    "svgHeight": "1",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：National emblem of Indonesia Garuda Pancasila。"
+  },
+  {
+    "id": "印度武装部队节徽章",
+    "name": "印度武装部队节徽章",
+    "tags": {
+      "usage": [
+        "徽章"
+      ],
+      "region": [
+        "印度"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "紫色",
+        "粉色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "紫色",
+      "粉色",
+      "印度",
+      "徽章"
+    ],
+    "svgFile": "印度武装部队节徽章.svg",
+    "viewBox": "0 0 659 440",
+    "svgWidth": "659",
+    "svgHeight": "440",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Armed forces flag day。"
+  },
+  {
+    "id": "印度武装部队旗",
+    "name": "印度武装部队旗",
+    "tags": {
+      "usage": [
+        "军旗",
+        "国旗"
+      ],
+      "region": [
+        "印度"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "紫色",
+        "灰色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "紫色",
+      "灰色",
+      "印度",
+      "军旗",
+      "国旗"
+    ],
+    "svgFile": "印度武装部队旗.svg",
+    "viewBox": "0 0 900.00007 600",
+    "svgWidth": "900.00006",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of the Indian Armed Forces。"
+  },
+  {
+    "id": "英格兰王旗-1406-1603",
+    "name": "英格兰王旗（1406–1603）",
+    "tags": {
+      "usage": [
+        "王旗"
+      ],
+      "region": [
+        "英格兰"
+      ],
+      "color": [
+        "红色",
+        "黄色",
+        "蓝色",
+        "黑色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "英格兰",
+      "王旗"
+    ],
+    "svgFile": "英格兰王旗-1406-1603.svg",
+    "viewBox": null,
+    "svgWidth": "1000",
+    "svgHeight": "650",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Royal standard of England (1406–1603)。"
   },
   {
     "id": "英国国旗",
@@ -4083,15 +9904,15 @@
       ]
     },
     "tagsFlat": [
-      "英国",
-      "国旗",
       "米字旗",
-      "船旗",
+      "十字",
+      "斜切",
       "红色",
       "白色",
       "蓝色",
-      "十字",
-      "斜切"
+      "英国",
+      "国旗",
+      "船旗"
     ],
     "svgFile": "英国国旗.svg",
     "viewBox": "0 0 60 30",
@@ -4099,6 +9920,248 @@
     "svgHeight": "600",
     "originalImage": null,
     "description": ""
+  },
+  {
+    "id": "英国海军旗",
+    "name": "英国海军旗",
+    "tags": {
+      "usage": [
+        "海军",
+        "船旗"
+      ],
+      "region": [
+        "英国"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "蓝色",
+      "英国",
+      "海军",
+      "船旗"
+    ],
+    "svgFile": "英国海军旗.svg",
+    "viewBox": "0 0 720 360",
+    "svgWidth": "1200",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Naval ensign of the United Kingdom。"
+  },
+  {
+    "id": "英国海峡殖民地民用船旗-1904-1946",
+    "name": "英国海峡殖民地民用船旗（1904–1946）",
+    "tags": {
+      "usage": [
+        "船旗"
+      ],
+      "region": [
+        "英国海峡殖民地"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "灰色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "灰色",
+      "英国海峡殖民地",
+      "船旗"
+    ],
+    "svgFile": "英国海峡殖民地民用船旗-1904-1946.svg",
+    "viewBox": "-15 -7.5 30 15",
+    "svgWidth": "1200",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Civil Ensign of the British Straits Settlements (1904–1946)。"
+  },
+  {
+    "id": "英国红船旗-1707-1800-方形上角",
+    "name": "英国红船旗（1707–1800，方形上角）",
+    "tags": {
+      "usage": [
+        "船旗",
+        "国旗"
+      ],
+      "region": [
+        "英国"
+      ],
+      "style": [
+        "上角"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "上角",
+      "红色",
+      "白色",
+      "蓝色",
+      "英国",
+      "船旗",
+      "国旗"
+    ],
+    "svgFile": "英国红船旗-1707-1800-方形上角.svg",
+    "viewBox": null,
+    "svgWidth": "1458",
+    "svgHeight": "972",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Red ensign of Great Britain (1707–1800, square canton)。"
+  },
+  {
+    "id": "英国红船旗-1707-1800",
+    "name": "英国红船旗（1707–1800）",
+    "tags": {
+      "usage": [
+        "船旗"
+      ],
+      "region": [
+        "英国"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "蓝色",
+      "英国",
+      "船旗"
+    ],
+    "svgFile": "英国红船旗-1707-1800.svg",
+    "viewBox": "0 0 100 60",
+    "svgWidth": "1000",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Red ensign of Great Britain (1707–1800)。"
+  },
+  {
+    "id": "英国陆军委员会成员乘车旗",
+    "name": "英国陆军委员会成员乘车旗",
+    "tags": {
+      "usage": [
+        "国旗",
+        "军旗"
+      ],
+      "region": [
+        "英国"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "灰色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "灰色",
+      "英国",
+      "国旗",
+      "军旗"
+    ],
+    "svgFile": "英国陆军委员会成员乘车旗.svg",
+    "viewBox": "0 0 228.6 228.6",
+    "svgWidth": "228.6mm",
+    "svgHeight": "228.6mm",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：British Army car flag - military member of the Army Board。"
+  },
+  {
+    "id": "英国民用船旗",
+    "name": "英国民用船旗",
+    "tags": {
+      "usage": [
+        "船旗"
+      ],
+      "region": [
+        "英国"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "蓝色",
+      "英国",
+      "船旗"
+    ],
+    "svgFile": "英国民用船旗.svg",
+    "viewBox": "0 0 120 60",
+    "svgWidth": "1200",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Civil ensign of the United Kingdom。"
+  },
+  {
+    "id": "英属索马里兰民用船旗-1903-1950",
+    "name": "英属索马里兰民用船旗（1903–1950）",
+    "tags": {
+      "usage": [
+        "船旗"
+      ],
+      "region": [
+        "英属索马里兰",
+        "马里"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "蓝色",
+        "黑色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "蓝色",
+      "黑色",
+      "棕色",
+      "英属索马里兰",
+      "马里",
+      "船旗"
+    ],
+    "svgFile": "英属索马里兰民用船旗-1903-1950.svg",
+    "viewBox": null,
+    "svgWidth": "1200",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Civil Ensign of British Somaliland (1903–1950)。"
   },
   {
     "id": "英属香港旗帜-1871",
@@ -4125,17 +10188,17 @@
       ]
     },
     "tagsFlat": [
-      "香港",
-      "英国",
+      "上角",
+      "中心",
+      "十字",
       "蓝色",
       "红色",
       "白色",
       "黄色",
-      "上角",
-      "中心",
-      "十字",
       "王冠",
-      "英文"
+      "英文",
+      "香港",
+      "英国"
     ],
     "svgFile": "英属香港旗帜-1871.svg",
     "viewBox": null,
@@ -4169,17 +10232,17 @@
       ]
     },
     "tagsFlat": [
-      "香港",
-      "英国",
+      "上角",
+      "中心",
+      "风景",
+      "十字",
       "蓝色",
       "红色",
       "白色",
       "黄色",
-      "上角",
-      "中心",
-      "风景",
       "船",
-      "十字"
+      "香港",
+      "英国"
     ],
     "svgFile": "英属香港旗帜-1876.svg",
     "viewBox": null,
@@ -4213,17 +10276,17 @@
       ]
     },
     "tagsFlat": [
-      "香港",
-      "英国",
+      "上角",
+      "中心",
+      "风景",
+      "十字",
       "蓝色",
       "红色",
       "白色",
       "黄色",
-      "上角",
-      "中心",
-      "风景",
       "船",
-      "十字"
+      "香港",
+      "英国"
     ],
     "svgFile": "英属香港旗帜-1955.svg",
     "viewBox": null,
@@ -4260,20 +10323,20 @@
       ]
     },
     "tagsFlat": [
-      "香港",
-      "英国",
+      "上角",
+      "中心",
       "蓝色",
       "红色",
       "白色",
       "黄色",
-      "上角",
-      "中心",
       "盾徽",
       "狮子",
       "龙",
       "王冠",
       "动物",
-      "神兽"
+      "神兽",
+      "香港",
+      "英国"
     ],
     "svgFile": "英属香港旗帜-1959.svg",
     "viewBox": null,
@@ -4304,14 +10367,14 @@
       ]
     },
     "tagsFlat": [
-      "虚构",
       "中心",
       "横条",
+      "十字",
       "红色",
       "白色",
       "黑色",
       "植物",
-      "十字"
+      "虚构"
     ],
     "svgFile": "幽燕西亚国旗.svg",
     "viewBox": "0 0 907.087 566.929",
@@ -4344,12 +10407,12 @@
     },
     "tagsFlat": [
       "五星红旗",
-      "中国共产党",
-      "国旗",
-      "中国",
       "红色",
       "黄色",
-      "五角星"
+      "五角星",
+      "中国共产党",
+      "中国",
+      "国旗"
     ],
     "svgFile": "1949中共地下党员制作的五星红旗.svg",
     "viewBox": "0 0 1133.858 850.394",
@@ -4374,18 +10437,20 @@
         "植物"
       ],
       "region": [
-        "中国",
+        "中国"
+      ],
+      "usage": [
         "区旗"
       ]
     },
     "tagsFlat": [
-      "中国",
-      "区旗",
+      "中心",
       "白色",
       "黄色",
       "绿色",
-      "中心",
-      "植物"
+      "植物",
+      "中国",
+      "区旗"
     ],
     "svgFile": "中国澳门特别行政区区旗-1999.svg",
     "viewBox": "-1440 -960 2880 1920",
@@ -4422,18 +10487,18 @@
       ]
     },
     "tagsFlat": [
+      "上角",
+      "红色",
+      "黄色",
+      "镰锤",
+      "五角星",
+      "汉字",
       "中国",
       "中国共产党",
       "琼崖",
       "海南",
       "红军",
-      "军旗",
-      "红色",
-      "黄色",
-      "上角",
-      "镰锤",
-      "五角星",
-      "汉字"
+      "军旗"
     ],
     "svgFile": "中国工农红军第二独立师-琼崖红军第二独立师-军旗.svg",
     "viewBox": "0 0 793.701 566.929",
@@ -4466,14 +10531,14 @@
       ]
     },
     "tagsFlat": [
+      "上角",
+      "红色",
+      "黄色",
+      "镰锤",
       "中国",
       "中国共产党",
       "中华人民共和国",
-      "党旗",
-      "红色",
-      "黄色",
-      "上角",
-      "镰锤"
+      "党旗"
     ],
     "svgFile": "中国共产党党旗-1950.svg",
     "viewBox": "0 0 850.394 566.929",
@@ -4506,14 +10571,14 @@
       ]
     },
     "tagsFlat": [
+      "上角",
+      "红色",
+      "黄色",
+      "镰锤",
       "中国",
       "中国共产党",
       "中华人民共和国",
-      "党旗",
-      "红色",
-      "黄色",
-      "上角",
-      "镰锤"
+      "党旗"
     ],
     "svgFile": "中国共产党党旗-1996之后.svg",
     "viewBox": "0 0 850.394 566.929",
@@ -4547,15 +10612,15 @@
       ]
     },
     "tagsFlat": [
+      "草案",
+      "上角",
+      "红色",
+      "黄色",
+      "镰锤",
       "中国",
       "中国共产党",
       "中华人民共和国",
-      "党旗",
-      "草案",
-      "红色",
-      "黄色",
-      "上角",
-      "镰锤"
+      "党旗"
     ],
     "svgFile": "中国共产党党旗草案-1950.svg",
     "viewBox": "0 0 850.394 566.929",
@@ -4589,15 +10654,15 @@
       ]
     },
     "tagsFlat": [
+      "草案",
+      "上角",
+      "红色",
+      "黄色",
+      "五角星",
       "中国",
       "中国共产党",
       "中华人民共和国",
-      "党旗",
-      "草案",
-      "五角星",
-      "上角",
-      "红色",
-      "黄色"
+      "党旗"
     ],
     "svgFile": "中国共产党党旗草案2-1950.svg",
     "viewBox": "0 0 850.394 566.929",
@@ -4631,15 +10696,15 @@
       ]
     },
     "tagsFlat": [
+      "草案",
+      "上角",
+      "红色",
+      "黄色",
+      "镰锤",
       "中国",
       "中国共产党",
       "中华人民共和国",
-      "党旗",
-      "草案",
-      "红色",
-      "黄色",
-      "上角",
-      "镰锤"
+      "党旗"
     ],
     "svgFile": "中国共产党党旗草案3-1950.svg",
     "viewBox": "0 0 850.394 566.929",
@@ -4672,16 +10737,16 @@
       ]
     },
     "tagsFlat": [
+      "上角",
+      "红色",
+      "黄色",
+      "五角星",
+      "镰锤",
+      "汉字",
       "中国",
       "中国共产党",
       "琼崖",
-      "海南",
-      "红色",
-      "黄色",
-      "上角",
-      "五角星",
-      "镰锤",
-      "汉字"
+      "海南"
     ],
     "svgFile": "1927中国共产党琼崖特别委员会旗帜.svg",
     "viewBox": "0 0 793.701 566.929",
@@ -4712,12 +10777,12 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "共青团",
+      "上角",
       "红色",
       "黄色",
-      "上角",
-      "五角星"
+      "五角星",
+      "中国",
+      "共青团"
     ],
     "svgFile": "中国共产主义青年团团旗.svg",
     "viewBox": "0 0 1025.479 683.653",
@@ -4743,11 +10808,11 @@
       ]
     },
     "tagsFlat": [
-      "邪教",
       "十字",
       "上角",
       "红色",
-      "黄色"
+      "黄色",
+      "邪教"
     ],
     "svgFile": "中国共和党-张国堂-旗.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -4774,12 +10839,12 @@
       ]
     },
     "tagsFlat": [
-      "民运",
       "中心",
       "方块",
       "红色",
       "蓝色",
-      "黄色"
+      "黄色",
+      "民运"
     ],
     "svgFile": "中国共和党党旗.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -4811,13 +10876,13 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "中华人民共和国",
-      "航天",
+      "中心",
       "蓝色",
       "白色",
       "麦穗",
-      "中心"
+      "中国",
+      "中华人民共和国",
+      "航天"
     ],
     "svgFile": "中国国家航天局旗帜.svg",
     "viewBox": "0 0 1168.762 779.175",
@@ -4847,13 +10912,13 @@
       ]
     },
     "tagsFlat": [
-      "民运",
       "横条",
       "上角",
-      "九角星",
       "红色",
       "蓝色",
-      "白色"
+      "白色",
+      "九角星",
+      "民运"
     ],
     "svgFile": "中国民主党及德国党部党旗.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -4885,15 +10950,15 @@
       ]
     },
     "tagsFlat": [
-      "民运",
       "横条",
       "中心",
-      "五角星",
-      "麦穗",
       "红色",
       "黄色",
       "蓝色",
-      "白色"
+      "白色",
+      "五角星",
+      "麦穗",
+      "民运"
     ],
     "svgFile": "中国民主党及中国民主党世界同盟旗.svg",
     "viewBox": "0 0 1133.858 680.315",
@@ -4922,12 +10987,12 @@
       ]
     },
     "tagsFlat": [
-      "民运",
+      "横条",
+      "中心",
       "蓝色",
       "白色",
       "四角星",
-      "横条",
-      "中心"
+      "民运"
     ],
     "svgFile": "中国民主党旧金山总部旗.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -4957,13 +11022,13 @@
       ]
     },
     "tagsFlat": [
-      "民运",
+      "上角",
+      "横条",
       "红色",
       "蓝色",
       "白色",
       "四角星",
-      "上角",
-      "横条"
+      "民运"
     ],
     "svgFile": "中国民主党全国联合总部旗.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -4993,13 +11058,13 @@
       ]
     },
     "tagsFlat": [
-      "民运",
       "三角",
       "横条",
-      "五角星",
       "红色",
       "白色",
-      "蓝色"
+      "蓝色",
+      "五角星",
+      "民运"
     ],
     "svgFile": "中国民主党世界同盟旗1.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -5027,11 +11092,11 @@
       ]
     },
     "tagsFlat": [
-      "民运",
-      "六角星",
       "中心",
       "白色",
-      "蓝色"
+      "蓝色",
+      "六角星",
+      "民运"
     ],
     "svgFile": "中国民主党世界同盟旗2.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -5059,11 +11124,11 @@
       ]
     },
     "tagsFlat": [
-      "民运",
       "中心",
-      "五角星",
       "黄色",
-      "蓝色"
+      "蓝色",
+      "五角星",
+      "民运"
     ],
     "svgFile": "中国民主党未知旗1.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -5093,13 +11158,13 @@
       ]
     },
     "tagsFlat": [
-      "民运",
+      "横条",
+      "中心",
       "红色",
       "蓝色",
       "黄色",
       "五角星",
-      "横条",
-      "中心"
+      "民运"
     ],
     "svgFile": "中国民主党中央委员会旗.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -5132,16 +11197,16 @@
       ]
     },
     "tagsFlat": [
-      "台湾",
-      "政党",
+      "上角",
+      "横条",
       "红色",
       "黄色",
       "蓝色",
       "白色",
       "黑色",
       "橙色",
-      "上角",
-      "横条"
+      "台湾",
+      "政党"
     ],
     "svgFile": "中国民主青年党-中华青少党党旗.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -5167,11 +11232,11 @@
       ]
     },
     "tagsFlat": [
-      "民运",
-      "logo",
+      "蓝色",
       "鸟类",
       "地球",
-      "蓝色"
+      "民运",
+      "logo"
     ],
     "svgFile": "中国民主人权联盟徽标.svg",
     "viewBox": "0 0 1187.619 1152.866",
@@ -5202,14 +11267,14 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "党旗",
       "横条",
       "中心",
       "红色",
       "白色",
       "绿色",
-      "黑色"
+      "黑色",
+      "中国",
+      "党旗"
     ],
     "svgFile": "中国民主社会党党旗.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -5237,11 +11302,11 @@
       ]
     },
     "tagsFlat": [
-      "民运",
+      "上角",
       "红色",
       "黄色",
-      "上角",
-      "五角星"
+      "五角星",
+      "民运"
     ],
     "svgFile": "中国民主正义党党旗.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -5271,13 +11336,13 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "党旗",
       "横条",
       "黄色",
       "白色",
       "红色",
-      "蓝色"
+      "蓝色",
+      "中国",
+      "党旗"
     ],
     "svgFile": "中国青年党党旗.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -5305,29 +11370,27 @@
         "五角星"
       ],
       "region": [
-        "中国"
+        "中国",
+        "中国人民解放军"
       ],
       "usage": [
         "军旗",
         "海军"
-      ],
-      "other": [
-        "中国人民解放军"
       ]
     },
     "tagsFlat": [
-      "中国",
-      "中国人民解放军",
-      "军旗",
-      "海军",
+      "横条",
+      "上角",
       "红色",
       "黄色",
       "蓝色",
       "白色",
-      "横条",
-      "上角",
       "汉字",
-      "五角星"
+      "五角星",
+      "中国",
+      "中国人民解放军",
+      "军旗",
+      "海军"
     ],
     "svgFile": "中国人民解放军海军军旗-1992.svg",
     "viewBox": "0 0 566.929 453.543",
@@ -5354,28 +11417,26 @@
         "五角星"
       ],
       "region": [
-        "中国"
+        "中国",
+        "中国人民解放军"
       ],
       "usage": [
         "军旗",
         "火箭军"
-      ],
-      "other": [
-        "中国人民解放军"
       ]
     },
     "tagsFlat": [
-      "中国",
-      "中国人民解放军",
-      "军旗",
-      "火箭军",
+      "上角",
+      "横条",
       "红色",
       "黄色",
       "橙色",
-      "上角",
-      "横条",
       "汉字",
-      "五角星"
+      "五角星",
+      "中国",
+      "中国人民解放军",
+      "军旗",
+      "火箭军"
     ],
     "svgFile": "中国人民解放军火箭军军旗-2015.svg",
     "viewBox": "0 0 566.929 453.543",
@@ -5397,23 +11458,21 @@
         "五角星"
       ],
       "region": [
-        "中国"
+        "中国",
+        "中国人民解放军"
       ],
       "usage": [
         "军徽"
-      ],
-      "other": [
-        "中国人民解放军"
       ]
     },
     "tagsFlat": [
-      "中国",
-      "中国人民解放军",
-      "军徽",
       "红色",
       "黄色",
       "汉字",
-      "五角星"
+      "五角星",
+      "中国",
+      "中国人民解放军",
+      "军徽"
     ],
     "svgFile": "中国人民解放军军徽-1949.svg",
     "viewBox": "0 0 755.297 718.33",
@@ -5438,24 +11497,22 @@
         "五角星"
       ],
       "region": [
-        "中国"
+        "中国",
+        "中国人民解放军"
       ],
       "usage": [
         "军旗"
-      ],
-      "other": [
-        "中国人民解放军"
       ]
     },
     "tagsFlat": [
-      "中国",
-      "中国人民解放军",
-      "军旗",
+      "上角",
       "红色",
       "黄色",
-      "上角",
       "汉字",
-      "五角星"
+      "五角星",
+      "中国",
+      "中国人民解放军",
+      "军旗"
     ],
     "svgFile": "中国人民解放军军旗-1949.svg",
     "viewBox": "0 0 566.929 453.543",
@@ -5485,13 +11542,13 @@
       ]
     },
     "tagsFlat": [
-      "虚构",
-      "军旗",
+      "上角",
       "红色",
       "黄色",
-      "上角",
       "五角星",
-      "汉字"
+      "汉字",
+      "虚构",
+      "军旗"
     ],
     "svgFile": "中国人民解放军军旗但是国旗比例.svg",
     "viewBox": "0 0 5000 3333.333",
@@ -5518,28 +11575,26 @@
         "五角星"
       ],
       "region": [
-        "中国"
+        "中国",
+        "中国人民解放军"
       ],
       "usage": [
         "军旗",
         "军事航天部队"
-      ],
-      "other": [
-        "中国人民解放军"
       ]
     },
     "tagsFlat": [
-      "中国",
-      "中国人民解放军",
-      "军旗",
-      "军事航天部队",
+      "横条",
+      "上角",
       "红色",
       "黄色",
       "蓝色",
-      "横条",
-      "上角",
       "汉字",
-      "五角星"
+      "五角星",
+      "中国",
+      "中国人民解放军",
+      "军旗",
+      "军事航天部队"
     ],
     "svgFile": "中国人民解放军军事航天部队军旗-2025.svg",
     "viewBox": "0 0 566.929 453.543",
@@ -5566,28 +11621,26 @@
         "五角星"
       ],
       "region": [
-        "中国"
+        "中国",
+        "中国人民解放军"
       ],
       "usage": [
         "军旗",
         "空军"
-      ],
-      "other": [
-        "中国人民解放军"
       ]
     },
     "tagsFlat": [
-      "中国",
-      "中国人民解放军",
-      "军旗",
-      "空军",
+      "上角",
+      "横条",
       "红色",
       "黄色",
       "蓝色",
-      "上角",
-      "横条",
       "汉字",
-      "五角星"
+      "五角星",
+      "中国",
+      "中国人民解放军",
+      "军旗",
+      "空军"
     ],
     "svgFile": "中国人民解放军空军军旗-1992.svg",
     "viewBox": "0 0 566.929 453.543",
@@ -5614,28 +11667,26 @@
         "五角星"
       ],
       "region": [
-        "中国"
+        "中国",
+        "中国人民解放军"
       ],
       "usage": [
         "军旗",
         "联勤保障部队"
-      ],
-      "other": [
-        "中国人民解放军"
       ]
     },
     "tagsFlat": [
-      "中国",
-      "中国人民解放军",
-      "军旗",
-      "联勤保障部队",
+      "上角",
+      "横条",
       "红色",
       "黄色",
       "绿色",
-      "上角",
-      "横条",
       "汉字",
-      "五角星"
+      "五角星",
+      "中国",
+      "中国人民解放军",
+      "军旗",
+      "联勤保障部队"
     ],
     "svgFile": "中国人民解放军联勤保障部队军旗-2025.svg",
     "viewBox": "0 0 566.929 453.543",
@@ -5662,28 +11713,26 @@
         "五角星"
       ],
       "region": [
-        "中国"
+        "中国",
+        "中国人民解放军"
       ],
       "usage": [
         "军旗",
         "陆军"
-      ],
-      "other": [
-        "中国人民解放军"
       ]
     },
     "tagsFlat": [
-      "中国",
-      "中国人民解放军",
-      "军旗",
-      "陆军",
+      "横条",
+      "上角",
       "红色",
       "黄色",
       "绿色",
-      "横条",
-      "上角",
       "汉字",
-      "五角星"
+      "五角星",
+      "中国",
+      "中国人民解放军",
+      "军旗",
+      "陆军"
     ],
     "svgFile": "中国人民解放军陆军军旗-1992.svg",
     "viewBox": "0 0 566.929 453.543",
@@ -5710,28 +11759,26 @@
         "五角星"
       ],
       "region": [
-        "中国"
+        "中国",
+        "中国人民解放军"
       ],
       "usage": [
         "军旗",
         "网络空间部队"
-      ],
-      "other": [
-        "中国人民解放军"
       ]
     },
     "tagsFlat": [
-      "中国",
-      "中国人民解放军",
-      "军旗",
-      "网络空间部队",
+      "横条",
+      "上角",
       "红色",
       "黄色",
       "灰色",
-      "横条",
-      "上角",
       "汉字",
-      "五角星"
+      "五角星",
+      "中国",
+      "中国人民解放军",
+      "军旗",
+      "网络空间部队"
     ],
     "svgFile": "中国人民解放军网络空间部队军旗.svg",
     "viewBox": "0 0 566.929 453.543",
@@ -5757,27 +11804,25 @@
         "五角星"
       ],
       "region": [
-        "中国"
+        "中国",
+        "中国人民解放军"
       ],
       "usage": [
         "军旗",
         "信息支援部队"
-      ],
-      "other": [
-        "中国人民解放军"
       ]
     },
     "tagsFlat": [
-      "中国",
-      "中国人民解放军",
-      "军旗",
-      "信息支援部队",
+      "上角",
       "红色",
       "黄色",
       "紫色",
-      "上角",
       "汉字",
-      "五角星"
+      "五角星",
+      "中国",
+      "中国人民解放军",
+      "军旗",
+      "信息支援部队"
     ],
     "svgFile": "中国人民解放军信息支援部队军旗-2025.svg",
     "viewBox": "0 0 566.929 453.543",
@@ -5817,21 +11862,21 @@
       ]
     },
     "tagsFlat": [
-      "抗大",
-      "中国共产党",
-      "校旗",
-      "中国",
-      "抗日战争",
+      "横条",
+      "波浪",
+      "上角",
       "红色",
       "黄色",
       "白色",
       "黑色",
-      "横条",
-      "波浪",
       "人物",
       "五角星",
       "汉字",
-      "上角"
+      "中国共产党",
+      "中国",
+      "抗大",
+      "校旗",
+      "抗日战争"
     ],
     "svgFile": "中国人民抗日军政大学校旗1.svg",
     "viewBox": "0 0 977.362 621.957",
@@ -5871,11 +11916,9 @@
       ]
     },
     "tagsFlat": [
-      "抗大",
-      "中国共产党",
-      "校旗",
-      "中国",
-      "抗日战争",
+      "波浪",
+      "横条",
+      "上角",
       "红色",
       "黄色",
       "白色",
@@ -5883,9 +11926,11 @@
       "人物",
       "五角星",
       "汉字",
-      "波浪",
-      "横条",
-      "上角"
+      "中国共产党",
+      "中国",
+      "抗大",
+      "校旗",
+      "抗日战争"
     ],
     "svgFile": "中国人民抗日军政大学校旗2.svg",
     "viewBox": "0 0 850.394 566.929",
@@ -5920,16 +11965,16 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "军旗",
-      "武警",
+      "横条",
+      "上角",
       "红色",
       "黄色",
       "绿色",
-      "横条",
       "汉字",
       "五角星",
-      "上角"
+      "中国",
+      "军旗",
+      "武警"
     ],
     "svgFile": "中国人民武装警察部队旗.svg",
     "viewBox": "0 0 566.929 453.543",
@@ -5959,13 +12004,13 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "少先队",
-      "共青团",
       "红色",
       "黄色",
       "五角星",
-      "火炬"
+      "火炬",
+      "中国",
+      "少先队",
+      "共青团"
     ],
     "svgFile": "中国少年先锋队大队旗.svg",
     "viewBox": "0 0 1133.858 850.394",
@@ -5998,14 +12043,14 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "少先队",
-      "共青团",
+      "燕尾",
       "红色",
       "黄色",
-      "燕尾",
       "五角星",
-      "火炬"
+      "火炬",
+      "中国",
+      "少先队",
+      "共青团"
     ],
     "svgFile": "中国少年先锋队中队旗.svg",
     "viewBox": "0 0 1133.858 850.611",
@@ -6031,11 +12076,11 @@
       ]
     },
     "tagsFlat": [
-      "民运",
       "横条",
       "红色",
       "蓝色",
-      "黄色"
+      "黄色",
+      "民运"
     ],
     "svgFile": "中国社会民主党党旗.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -6068,14 +12113,14 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "会旗",
+      "横条",
+      "上角",
       "红色",
       "黄色",
       "白色",
-      "横条",
-      "上角",
-      "太阳"
+      "太阳",
+      "中国",
+      "会旗"
     ],
     "svgFile": "中国社会文化改革协会-会旗.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -6100,18 +12145,20 @@
         "植物"
       ],
       "region": [
-        "中国",
+        "中国"
+      ],
+      "usage": [
         "区旗"
       ]
     },
     "tagsFlat": [
-      "中国",
-      "区旗",
+      "中心",
       "红色",
       "白色",
-      "中心",
       "五角星",
-      "植物"
+      "植物",
+      "中国",
+      "区旗"
     ],
     "svgFile": "中国香港特别行政区区旗-1990.svg",
     "viewBox": null,
@@ -6145,15 +12192,15 @@
       ]
     },
     "tagsFlat": [
-      "台湾",
-      "政党",
       "中心",
       "红色",
       "黄色",
       "蓝色",
       "白色",
       "梅花",
-      "五角星"
+      "五角星",
+      "台湾",
+      "政党"
     ],
     "svgFile": "中华爱国同心会旗1.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -6187,15 +12234,15 @@
       ]
     },
     "tagsFlat": [
-      "台湾",
-      "政党",
       "中心",
       "红色",
       "蓝色",
       "白色",
       "梅花",
       "太阳",
-      "汉字"
+      "汉字",
+      "台湾",
+      "政党"
     ],
     "svgFile": "台中华爱国同心会旗2.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -6228,14 +12275,14 @@
       ]
     },
     "tagsFlat": [
-      "台湾",
-      "党旗",
       "中心",
-      "梅花",
-      "六角星",
       "白色",
       "蓝色",
-      "太阳"
+      "梅花",
+      "六角星",
+      "太阳",
+      "台湾",
+      "党旗"
     ],
     "svgFile": "中华保台反共复国党党旗.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -6264,14 +12311,14 @@
       ]
     },
     "tagsFlat": [
-      "中国",
       "斜切",
       "十字",
       "红色",
       "黄色",
       "白色",
       "蓝色",
-      "黑色"
+      "黑色",
+      "中国"
     ],
     "svgFile": "中华帝国国旗-1915.svg",
     "viewBox": "0 0 907.087 566.929",
@@ -6300,14 +12347,14 @@
       ]
     },
     "tagsFlat": [
-      "中国",
       "斜切",
       "十字",
       "红色",
       "黄色",
       "蓝色",
       "白色",
-      "黑色"
+      "黑色",
+      "中国"
     ],
     "svgFile": "中华帝国国旗草案-1915.svg",
     "viewBox": "0 0 793.701 566.929",
@@ -6330,24 +12377,24 @@
         "白色"
       ],
       "region": [
-        "中华民国"
+        "中华民国",
+        "北洋"
       ],
       "usage": [
-        "北洋",
         "盐务",
         "巡警"
       ]
     },
     "tagsFlat": [
+      "斜切",
+      "三角",
+      "十字",
+      "蓝色",
+      "白色",
       "中华民国",
       "北洋",
       "盐务",
-      "巡警",
-      "蓝色",
-      "白色",
-      "斜切",
-      "三角",
-      "十字"
+      "巡警"
     ],
     "svgFile": "中华民国-北洋-1914年颁布盐务巡船旗.svg",
     "viewBox": "0 0 1133.858 850.394",
@@ -6374,27 +12421,26 @@
       ],
       "region": [
         "中华民国",
-        "中国"
+        "中国",
+        "北洋"
       ],
       "usage": [
-        "北洋",
         "国徽"
       ]
     },
     "tagsFlat": [
-      "中华民国",
-      "北洋",
-      "龙",
-      "十二章",
-      "中国",
-      "国徽",
-      "嘉禾",
-      "华虫",
       "红色",
       "黄色",
       "白色",
+      "龙",
+      "十二章",
+      "嘉禾",
+      "华虫",
       "鸟类",
-      "黄色"
+      "中华民国",
+      "中国",
+      "北洋",
+      "国徽"
     ],
     "svgFile": "北洋国徽.svg",
     "viewBox": null,
@@ -6420,25 +12466,25 @@
       ],
       "region": [
         "中华民国",
-        "中国"
+        "中国",
+        "北洋"
       ],
       "usage": [
-        "国旗",
-        "北洋"
+        "国旗"
       ]
     },
     "tagsFlat": [
       "五色旗",
-      "中华民国",
-      "中国",
-      "国旗",
-      "北洋",
       "横条",
       "红色",
       "黄色",
       "白色",
       "蓝色",
-      "黑色"
+      "黑色",
+      "中华民国",
+      "中国",
+      "北洋",
+      "国旗"
     ],
     "svgFile": "中华民国五色旗.svg",
     "viewBox": "0 0 1133.86 850.39",
@@ -6462,23 +12508,23 @@
         "白色"
       ],
       "region": [
-        "中华民国"
+        "中华民国",
+        "北洋"
       ],
       "usage": [
-        "北洋",
         "巡警"
       ]
     },
     "tagsFlat": [
-      "中华民国",
-      "北洋",
-      "巡警",
+      "上角",
+      "波浪",
       "红色",
       "黄色",
       "蓝色",
       "白色",
-      "上角",
-      "波浪"
+      "中华民国",
+      "北洋",
+      "巡警"
     ],
     "svgFile": "中华民国-北洋-海岸巡防处任务船旗.svg",
     "viewBox": "0 0 1133.858 850.394",
@@ -6506,27 +12552,27 @@
         "黑色"
       ],
       "region": [
-        "中华民国"
+        "中华民国",
+        "北洋"
       ],
       "usage": [
-        "北洋",
         "海关"
       ]
     },
     "tagsFlat": [
-      "中华民国",
-      "北洋",
-      "海关",
       "五色旗",
+      "上角",
+      "横条",
+      "十字",
       "红色",
       "黄色",
       "蓝色",
       "白色",
       "绿色",
       "黑色",
-      "上角",
-      "横条",
-      "十字"
+      "中华民国",
+      "北洋",
+      "海关"
     ],
     "svgFile": "中华民国-北洋-海关旗.svg",
     "viewBox": "0 0 1133.858 850.394",
@@ -6549,26 +12595,28 @@
         "蓝色"
       ],
       "region": [
-        "中华民国"
+        "中华民国",
+        "北洋"
       ],
       "usage": [
-        "北洋",
         "海军",
-        "军旗",
+        "军旗"
+      ],
+      "element": [
         "船锚"
       ]
     },
     "tagsFlat": [
-      "中华民国",
-      "北洋",
-      "海军",
-      "军旗",
-      "船锚",
       "中心",
+      "横条",
       "红色",
       "白色",
       "蓝色",
-      "横条"
+      "船锚",
+      "中华民国",
+      "北洋",
+      "海军",
+      "军旗"
     ],
     "svgFile": "中华民国-北洋-海军次长旗.svg",
     "viewBox": "0 0 1133.86 850.39",
@@ -6592,23 +12640,23 @@
         "太阳"
       ],
       "region": [
-        "中华民国"
+        "中华民国",
+        "北洋"
       ],
       "usage": [
-        "北洋",
         "海军",
         "军旗"
       ]
     },
     "tagsFlat": [
+      "燕尾",
+      "蓝色",
+      "白色",
+      "太阳",
       "中华民国",
       "北洋",
       "海军",
-      "军旗",
-      "太阳",
-      "蓝色",
-      "白色",
-      "燕尾"
+      "军旗"
     ],
     "svgFile": "中华民国-北洋-海军代将旗.svg",
     "viewBox": "0 0 1133.86 850.39",
@@ -6628,21 +12676,21 @@
         "蓝色"
       ],
       "region": [
-        "中华民国"
+        "中华民国",
+        "北洋"
       ],
       "usage": [
-        "北洋",
         "海军",
         "军旗"
       ]
     },
     "tagsFlat": [
+      "三角旗",
+      "蓝色",
       "中华民国",
       "北洋",
       "海军",
-      "军旗",
-      "三角旗",
-      "蓝色"
+      "军旗"
     ],
     "svgFile": "中华民国-北洋-海军当值旗.svg",
     "viewBox": "0 0 1133.86 850.39",
@@ -6665,28 +12713,28 @@
         "黑色"
       ],
       "element": [
-        "地球"
+        "地球",
+        "船锚"
       ],
       "region": [
-        "中华民国"
+        "中华民国",
+        "北洋"
       ],
       "usage": [
-        "北洋",
-        "海军",
-        "船锚"
+        "海军"
       ]
     },
     "tagsFlat": [
-      "中华民国",
-      "北洋",
-      "海军",
       "三角旗",
-      "船锚",
-      "地球",
+      "中心",
       "蓝色",
       "白色",
       "黑色",
-      "中心"
+      "地球",
+      "船锚",
+      "中华民国",
+      "北洋",
+      "海军"
     ],
     "svgFile": "中华民国-北洋-海军海洋测量舰艇桅旗.svg",
     "viewBox": "0 0 1133.86 850.39",
@@ -6711,24 +12759,24 @@
         "太阳"
       ],
       "region": [
-        "中华民国"
+        "中华民国",
+        "北洋"
       ],
       "usage": [
-        "北洋",
         "海军",
         "军旗"
       ]
     },
     "tagsFlat": [
-      "中华民国",
-      "北洋",
-      "海军",
-      "军旗",
-      "太阳",
       "上角",
       "红色",
       "蓝色",
-      "白色"
+      "白色",
+      "太阳",
+      "中华民国",
+      "北洋",
+      "海军",
+      "军旗"
     ],
     "svgFile": "中华民国北洋海军旗.svg",
     "viewBox": "0 0 1133.86 850.39",
@@ -6752,23 +12800,23 @@
         "太阳"
       ],
       "region": [
-        "中华民国"
+        "中华民国",
+        "北洋"
       ],
       "usage": [
-        "北洋",
         "海军",
         "军旗"
       ]
     },
     "tagsFlat": [
+      "中心",
+      "白色",
+      "蓝色",
+      "太阳",
       "中华民国",
       "北洋",
       "海军",
-      "军旗",
-      "太阳",
-      "白色",
-      "蓝色",
-      "中心"
+      "军旗"
     ],
     "svgFile": "中华民国-北洋-海军上将旗.svg",
     "viewBox": "0 0 1133.86 850.39",
@@ -6794,25 +12842,25 @@
         "太阳"
       ],
       "region": [
-        "中华民国"
+        "中华民国",
+        "北洋"
       ],
       "usage": [
-        "北洋",
         "海军",
         "军旗"
       ]
     },
     "tagsFlat": [
-      "中华民国",
-      "北洋",
-      "海军",
-      "军旗",
-      "太阳",
       "中心",
       "横条",
       "红色",
       "白色",
-      "蓝色"
+      "蓝色",
+      "太阳",
+      "中华民国",
+      "北洋",
+      "海军",
+      "军旗"
     ],
     "svgFile": "中华民国-北洋-海军少将旗.svg",
     "viewBox": "0 0 1133.86 850.39",
@@ -6839,26 +12887,26 @@
         "太阳"
       ],
       "region": [
-        "中华民国"
+        "中华民国",
+        "北洋"
       ],
       "usage": [
-        "北洋",
         "海军",
         "军旗"
       ]
     },
     "tagsFlat": [
-      "中华民国",
-      "北洋",
-      "海军",
-      "军旗",
-      "太阳",
       "中心",
       "燕尾",
+      "横条",
       "红色",
       "白色",
       "蓝色",
-      "横条"
+      "太阳",
+      "中华民国",
+      "北洋",
+      "海军",
+      "军旗"
     ],
     "svgFile": "中华民国-北洋-海军先任旗.svg",
     "viewBox": "0 0 1133.86 850.39",
@@ -6884,25 +12932,25 @@
         "太阳"
       ],
       "region": [
-        "中华民国"
+        "中华民国",
+        "北洋"
       ],
       "usage": [
-        "北洋",
         "海军",
         "军旗"
       ]
     },
     "tagsFlat": [
-      "中华民国",
-      "北洋",
-      "海军",
-      "军旗",
-      "太阳",
       "中心",
+      "横条",
       "红色",
       "蓝色",
       "白色",
-      "横条"
+      "太阳",
+      "中华民国",
+      "北洋",
+      "海军",
+      "军旗"
     ],
     "svgFile": "中华民国-北洋-海军中将旗.svg",
     "viewBox": "0 0 1133.86 850.39",
@@ -6923,24 +12971,26 @@
         "白色"
       ],
       "region": [
-        "中华民国"
+        "中华民国",
+        "北洋"
       ],
       "usage": [
-        "北洋",
         "海军",
-        "海军总长旗",
+        "海军总长旗"
+      ],
+      "element": [
         "船锚"
       ]
     },
     "tagsFlat": [
+      "中心",
+      "蓝色",
+      "白色",
+      "船锚",
       "中华民国",
       "北洋",
       "海军",
-      "海军总长旗",
-      "蓝色",
-      "白色",
-      "中心",
-      "船锚"
+      "海军总长旗"
     ],
     "svgFile": "中华民国-北洋-海军总长旗.svg",
     "viewBox": "0 0 1133.86 850.39",
@@ -6965,24 +13015,24 @@
         "九角星"
       ],
       "region": [
-        "中华民国"
+        "中华民国",
+        "北洋"
       ],
       "usage": [
-        "北洋",
         "军旗",
         "陆军"
       ]
     },
     "tagsFlat": [
-      "中华民国",
-      "北洋",
-      "军旗",
-      "陆军",
-      "九角星",
       "中心",
       "红色",
       "黄色",
-      "黑色"
+      "黑色",
+      "九角星",
+      "中华民国",
+      "北洋",
+      "军旗",
+      "陆军"
     ],
     "svgFile": "中华民国北洋陆军军旗.svg",
     "viewBox": "0 0 1133.86 850.39",
@@ -7005,22 +13055,22 @@
         "白色"
       ],
       "region": [
-        "中华民国"
+        "中华民国",
+        "北洋"
       ],
       "usage": [
-        "北洋",
         "巡警"
       ]
     },
     "tagsFlat": [
-      "中华民国",
-      "北洋",
-      "巡警",
+      "上角",
+      "波浪",
       "蓝色",
       "红色",
       "白色",
-      "上角",
-      "波浪"
+      "中华民国",
+      "北洋",
+      "巡警"
     ],
     "svgFile": "中华民国-北洋-水上巡警旗.svg",
     "viewBox": "0 0 1133.86 850.39",
@@ -7052,29 +13102,29 @@
         "鸟类"
       ],
       "region": [
-        "中华民国"
+        "中华民国",
+        "北洋"
       ],
       "usage": [
-        "北洋",
         "邮政"
       ]
     },
     "tagsFlat": [
-      "中华民国",
-      "北洋",
-      "邮政",
-      "鸿雁",
+      "上角",
+      "横条",
+      "中心",
       "红色",
       "黄色",
       "蓝色",
       "白色",
       "黑色",
-      "上角",
-      "横条",
-      "中心",
+      "鸿雁",
       "汉字",
       "英文",
-      "鸟类"
+      "鸟类",
+      "中华民国",
+      "北洋",
+      "邮政"
     ],
     "svgFile": "中华民国北洋邮政旗帜.svg",
     "viewBox": "0 0 1275.59 850.39",
@@ -7082,6 +13132,58 @@
     "svgHeight": "850.39",
     "originalImage": "1926 the flag book of the German Reichsmarine (Navy)  FOTW facebook2.jpg",
     "description": "1926年德国旗帜图册中记载的，北洋时期的邮政局旗帜，左上角饰有北洋五色旗，旗帜上有浅色鸿雁图样。"
+  },
+  {
+    "id": "中华民国-北洋政府-大元帅旗",
+    "name": "中华民国（北洋政府）大元帅旗",
+    "tags": {
+      "usage": [
+        "军旗",
+        "国旗"
+      ],
+      "region": [
+        "中华民国",
+        "北洋"
+      ],
+      "element": [
+        "龙"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色",
+        "黑色",
+        "绿色",
+        "紫色",
+        "灰色",
+        "粉色",
+        "棕色"
+      ]
+    },
+    "tagsFlat": [
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "黑色",
+      "绿色",
+      "紫色",
+      "灰色",
+      "粉色",
+      "棕色",
+      "龙",
+      "中华民国",
+      "北洋",
+      "军旗",
+      "国旗"
+    ],
+    "svgFile": "中华民国-北洋政府-大元帅旗.svg",
+    "viewBox": null,
+    "svgWidth": "540",
+    "svgHeight": "430",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Commander-in-Chief Flag of the Republic of China (Beiyang Government)。"
   },
   {
     "id": "中华民国-汪精卫-中国青少年团旗",
@@ -7107,14 +13209,14 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "团旗",
       "中心",
-      "太阳",
+      "箭",
       "红色",
       "白色",
       "蓝色",
-      "箭"
+      "太阳",
+      "中国",
+      "团旗"
     ],
     "svgFile": "中华民国-汪精卫-中国青少年团旗.svg",
     "viewBox": "0 0 850.394 566.929",
@@ -7146,13 +13248,13 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "团旗",
       "中心",
-      "太阳",
       "红色",
       "白色",
-      "蓝色"
+      "蓝色",
+      "太阳",
+      "中国",
+      "团旗"
     ],
     "svgFile": "中华民国-汪精卫-中国青少年团旗2.svg",
     "viewBox": "0 0 850.394 566.929",
@@ -7184,13 +13286,13 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "会旗",
       "中心",
       "红色",
       "蓝色",
       "白色",
-      "汉字"
+      "汉字",
+      "中国",
+      "会旗"
     ],
     "svgFile": "中华民国-汪精卫-中央政治会议旗帜.svg",
     "viewBox": "0 0 850.394 566.929",
@@ -7227,18 +13329,18 @@
       ]
     },
     "tagsFlat": [
-      "中华民国",
-      "缉私处",
-      "军旗",
+      "镶边",
+      "十字",
+      "中心",
       "黄色",
       "蓝色",
       "白色",
       "黑色",
       "汉字",
       "太阳",
-      "镶边",
-      "十字",
-      "中心"
+      "中华民国",
+      "缉私处",
+      "军旗"
     ],
     "svgFile": "中华民国1935年财政部缉私处缉私大队旗帜.svg",
     "viewBox": "0 0 850.394 850.394",
@@ -7277,20 +13379,20 @@
       ]
     },
     "tagsFlat": [
-      "中华民国",
-      "缉私处",
-      "军旗",
-      "红色",
-      "黄色",
-      "白色",
-      "蓝色",
       "波浪",
       "横条",
       "镶边",
       "方旗",
       "上角",
+      "十字",
+      "红色",
+      "黄色",
+      "白色",
+      "蓝色",
       "太阳",
-      "十字"
+      "中华民国",
+      "缉私处",
+      "军旗"
     ],
     "svgFile": "中华民国1935年财政部缉私处水队旗帜.svg",
     "viewBox": "0 0 850.394 850.394",
@@ -7318,19 +13420,17 @@
         "梅花",
         "翅膀",
         "嘉禾",
-        "太阳"
+        "太阳",
+        "船锚"
       ],
       "region": [
         "中华民国"
       ],
       "usage": [
-        "参谋部",
-        "船锚"
+        "参谋部"
       ]
     },
     "tagsFlat": [
-      "中华民国",
-      "参谋部",
       "中心",
       "镶边",
       "黄色",
@@ -7339,10 +13439,12 @@
       "灰色",
       "橙色",
       "梅花",
-      "船锚",
       "翅膀",
       "嘉禾",
-      "太阳"
+      "太阳",
+      "船锚",
+      "中华民国",
+      "参谋部"
     ],
     "svgFile": "中华民国参谋总长旗-1958.svg",
     "viewBox": "0 0 1275.59 850.394",
@@ -7376,15 +13478,15 @@
       ]
     },
     "tagsFlat": [
-      "中华民国",
-      "国防部",
       "中心",
       "镶边",
       "黄色",
       "白色",
       "蓝色",
       "盾徽",
-      "嘉禾"
+      "嘉禾",
+      "中华民国",
+      "国防部"
     ],
     "svgFile": "中华民国国防部部长旗-1958-1986.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -7410,32 +13512,31 @@
         "嘉禾",
         "梅花",
         "翅膀",
-        "麦穗"
+        "麦穗",
+        "船锚"
       ],
       "region": [
         "国民党"
       ],
       "usage": [
         "军旗",
-        "国防部",
-        "船锚"
+        "国防部"
       ]
     },
     "tagsFlat": [
-      "军旗",
-      "国民党",
-      "国防部",
-      "中心",
-      "嘉禾",
-      "梅花",
-      "船锚",
-      "翅膀",
-      "麦穗",
       "中心",
       "橙色",
       "黄色",
       "白色",
-      "蓝色"
+      "蓝色",
+      "嘉禾",
+      "梅花",
+      "翅膀",
+      "麦穗",
+      "船锚",
+      "国民党",
+      "军旗",
+      "国防部"
     ],
     "svgFile": "roc-ministry-of-national-defense-flag.svg",
     "viewBox": null,
@@ -7470,16 +13571,16 @@
       ]
     },
     "tagsFlat": [
-      "中华民国",
-      "国旗",
-      "国民党",
-      "中国",
       "青天白日",
+      "上角",
       "红色",
       "蓝色",
       "白色",
-      "上角",
-      "太阳"
+      "太阳",
+      "中华民国",
+      "国民党",
+      "中国",
+      "国旗"
     ],
     "svgFile": "中华民国国旗.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -7514,16 +13615,16 @@
       ]
     },
     "tagsFlat": [
-      "中华民国",
-      "国旗",
-      "孙中山",
       "草案",
-      "太阳",
       "上角",
       "横条",
       "红色",
       "蓝色",
-      "白色"
+      "白色",
+      "孙中山",
+      "太阳",
+      "中华民国",
+      "国旗"
     ],
     "svgFile": "中华民国国旗草案1.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -7558,16 +13659,16 @@
       ]
     },
     "tagsFlat": [
-      "中华民国",
-      "国旗",
-      "孙中山",
       "草案",
+      "横条",
+      "中心",
       "红色",
       "白色",
       "蓝色",
-      "横条",
-      "中心",
-      "太阳"
+      "孙中山",
+      "太阳",
+      "中华民国",
+      "国旗"
     ],
     "svgFile": "中华民国国旗草案2.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -7603,17 +13704,17 @@
       ]
     },
     "tagsFlat": [
-      "中华民国",
-      "中国",
-      "警察",
+      "上角",
       "红色",
       "白色",
       "蓝色",
       "黄色",
       "汉字",
-      "上角",
       "太阳",
-      "鸟类"
+      "鸟类",
+      "中华民国",
+      "中国",
+      "警察"
     ],
     "svgFile": "中华民国警察队旗-1947.svg",
     "viewBox": "-16535 0 39684 26457.6",
@@ -7648,16 +13749,16 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "团旗",
-      "军旗",
+      "镶边",
+      "横条",
+      "上角",
       "红色",
       "白色",
-      "镶边",
       "汉字",
       "五角星",
-      "横条",
-      "上角"
+      "中国",
+      "团旗",
+      "军旗"
     ],
     "svgFile": "中华民国临时政府北京南郊地区自卫总团团旗-1938.svg",
     "viewBox": "0 0 850.403 708.661",
@@ -7692,16 +13793,16 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "团旗",
-      "军旗",
+      "镶边",
+      "横条",
+      "上角",
       "红色",
       "白色",
-      "镶边",
       "汉字",
       "五角星",
-      "横条",
-      "上角"
+      "中国",
+      "团旗",
+      "军旗"
     ],
     "svgFile": "中华民国临时政府北京南郊第一地区自卫团团旗-1938.svg",
     "viewBox": "0 0 855.863 708.661",
@@ -7736,16 +13837,16 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "团旗",
-      "军旗",
+      "镶边",
+      "横条",
+      "上角",
       "红色",
       "白色",
-      "镶边",
       "汉字",
       "五角星",
-      "横条",
-      "上角"
+      "中国",
+      "团旗",
+      "军旗"
     ],
     "svgFile": "中华民国临时政府北京南郊自卫团第一团团旗-1938.svg",
     "viewBox": "0 0 708.661 566.929",
@@ -7780,16 +13881,16 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "团旗",
-      "军旗",
+      "镶边",
+      "横条",
+      "上角",
       "红色",
       "白色",
-      "镶边",
       "汉字",
       "五角星",
-      "横条",
-      "上角"
+      "中国",
+      "团旗",
+      "军旗"
     ],
     "svgFile": "北京四郊自卫总团团旗.svg",
     "viewBox": "0 0 1133.858 850.394",
@@ -7823,15 +13924,15 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "军旗",
       "横条",
       "红色",
       "黄色",
       "白色",
       "蓝色",
       "黑色",
-      "汉字"
+      "汉字",
+      "中国",
+      "军旗"
     ],
     "svgFile": "中华民国临时政府太原县北格镇灭共自卫队旗-1937.svg",
     "viewBox": "0 0 850.394 566.929",
@@ -7865,15 +13966,15 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "会旗",
+      "中心",
       "蓝色",
       "白色",
       "红色",
       "月",
       "五角星",
-      "中心",
-      "汉字"
+      "汉字",
+      "中国",
+      "会旗"
     ],
     "svgFile": "中华民国维新政府大民会会旗-1938.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -7881,6 +13982,42 @@
     "svgHeight": "850.394",
     "originalImage": "QQ20260410-213806.png",
     "description": ""
+  },
+  {
+    "id": "中华民国五色旗-1912-1928",
+    "name": "中华民国五色旗（1912–1928）",
+    "tags": {
+      "usage": [
+        "国旗"
+      ],
+      "region": [
+        "中华民国"
+      ],
+      "style": [
+        "横条"
+      ],
+      "color": [
+        "红色",
+        "白色",
+        "黄色",
+        "蓝色"
+      ]
+    },
+    "tagsFlat": [
+      "横条",
+      "红色",
+      "白色",
+      "黄色",
+      "蓝色",
+      "中华民国",
+      "国旗"
+    ],
+    "svgFile": "中华民国五色旗-1912-1928.svg",
+    "viewBox": null,
+    "svgWidth": "960",
+    "svgHeight": "600",
+    "originalImage": null,
+    "description": "来自 Wikimedia Commons 的 SVG 矢量图（旗帜/徽章）。原始名称：Flag of China (1912–1928)。"
   },
   {
     "id": "新民会会旗-1943",
@@ -7905,13 +14042,13 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "会旗",
+      "中心",
       "红色",
       "白色",
       "黑色",
       "汉字",
-      "中心"
+      "中国",
+      "会旗"
     ],
     "svgFile": "新民会会旗-1943.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -7936,10 +14073,10 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "会旗",
       "红色",
-      "白色"
+      "白色",
+      "中国",
+      "会旗"
     ],
     "svgFile": "新民会离石县总会第一期农村分会长训练旗-1943.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -7993,7 +14130,6 @@
       ]
     },
     "tagsFlat": [
-      "台湾",
       "横条",
       "中心",
       "红色",
@@ -8001,7 +14137,8 @@
       "蓝色",
       "白色",
       "黑色",
-      "太阳"
+      "太阳",
+      "台湾"
     ],
     "svgFile": "中华民国自由协会旗-网络团体.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -8033,15 +14170,15 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "中华人民共和国",
-      "国徽",
       "红色",
       "黄色",
       "五角星",
       "建筑",
       "麦穗",
-      "齿轮"
+      "齿轮",
+      "中国",
+      "中华人民共和国",
+      "国徽"
     ],
     "svgFile": "中华人民共和国国徽.svg",
     "viewBox": "0 0 1993.95996 2162.68005",
@@ -8074,14 +14211,14 @@
       ]
     },
     "tagsFlat": [
-      "中国",
-      "中华人民共和国",
-      "国旗",
       "五星红旗",
+      "上角",
       "红色",
       "黄色",
       "五角星",
-      "上角"
+      "中国",
+      "中华人民共和国",
+      "国旗"
     ],
     "svgFile": "中华人民共和国国旗.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -8113,15 +14250,15 @@
       ]
     },
     "tagsFlat": [
-      "台湾",
-      "政党",
-      "党旗",
+      "中心",
+      "横条",
       "红色",
       "黄色",
       "蓝色",
       "白色",
-      "中心",
-      "横条"
+      "台湾",
+      "政党",
+      "党旗"
     ],
     "svgFile": "中华社会民主党党旗.svg",
     "viewBox": "0 0 1275.591 850.394",
@@ -8145,9 +14282,9 @@
       ]
     },
     "tagsFlat": [
-      "虚构",
+      "武器",
       "中国",
-      "武器"
+      "虚构"
     ],
     "svgFile": "中山国符号.svg",
     "viewBox": "0 0 202.557 305.876",
@@ -8174,12 +14311,12 @@
       ]
     },
     "tagsFlat": [
-      "邪教",
       "红色",
       "太阳",
       "五角星",
       "月亮",
-      "汉字"
+      "汉字",
+      "邪教"
     ],
     "svgFile": "中太众人劝归国国徽.svg",
     "viewBox": "0 0 894.872 969.309",
@@ -8207,11 +14344,11 @@
       ]
     },
     "tagsFlat": [
-      "虚构",
       "中心",
       "黄色",
       "绿色",
-      "太阳"
+      "太阳",
+      "虚构"
     ],
     "svgFile": "壮族旗帜.svg",
     "viewBox": "0 0 850.394 566.929",
