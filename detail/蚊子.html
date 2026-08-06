@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>蚊子剪影1 - Svg Site</title>
-    <link rel="stylesheet" href="../src/style.css">
+    <link rel="stylesheet" href="../src/style.css?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -92,7 +92,13 @@
                         <div class="detail-info-section">
                             <div class="detail-info-card">
                                 <h1 class="detail-name" id="detailName">蚊子剪影1</h1>
-                                <div class="detail-tags" id="detailTags"><a href="../index.html?tag=%E5%8A%A8%E7%89%A9" class="tag">动物</a><a href="../index.html?tag=%E6%98%86%E8%99%AB" class="tag">昆虫</a><a href="../index.html?tag=%E5%89%AA%E5%BD%B1" class="tag">剪影</a></div>
+                                <div class="detail-tags" id="detailTags"><div class="tag-category-group" data-category="style">
+            <span class="tag-category-label">📐 旗帜学样式</span>
+            <div class="tag-category-tags"><a href="../index.html?tag=%E5%89%AA%E5%BD%B1" class="tag">剪影</a></div>
+        </div><div class="tag-category-group" data-category="element">
+            <span class="tag-category-label">🐉 图案要素</span>
+            <div class="tag-category-tags"><a href="../index.html?tag=%E5%8A%A8%E7%89%A9" class="tag">动物</a><a href="../index.html?tag=%E6%98%86%E8%99%AB" class="tag">昆虫</a></div>
+        </div></div>
                             </div>
                             <div class="detail-info-card" style="display: none;" id="detailOriginalCard">
                                 <h3>
@@ -125,8 +131,9 @@
         </main>
     </div>
     <script>
-        const currentImage = {"id":"蚊子","name":"蚊子剪影1","tags":["动物","昆虫","剪影"],"svgFile":"蚊子.svg","viewBox":"0 0 1280.000000 640.000000","svgWidth":"1280.000000pt","svgHeight":"640.000000pt","originalImage":null,"description":""};
+        const currentImage = {"id":"蚊子","name":"蚊子剪影1","tags":{"style":["剪影"],"element":["动物","昆虫"]},"tagsFlat":["动物","昆虫","剪影"],"svgFile":"蚊子.svg","viewBox":"0 0 1280.000000 640.000000","svgWidth":"1280.000000pt","svgHeight":"640.000000pt","originalImage":null,"description":""};
     </script>
-    <script src="../src/detail.js"></script>
+    <script src="../src/tag-categories.js?v=2"></script>
+    <script src="../src/detail.js?v=2"></script>
 </body>
 </html>

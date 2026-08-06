@@ -48,6 +48,47 @@ function renderMarkdown() {
     }
 }
 
+// 按分类分组渲染详情页标签（二级标签树）
+function renderDetailTags(img, tagBasePath) {
+    const catLabels = {
+        style: { label: '旗帜学样式', icon: '📐' },
+        color: { label: '颜色', icon: '🎨' },
+        element: { label: '图案要素', icon: '🐉' },
+        region: { label: '地区/组织', icon: '🌍' },
+        usage: { label: '用途', icon: '🏷️' },
+        other: { label: '其他', icon: '📦' },
+    };
+    const order = ['style', 'color', 'element', 'region', 'usage', 'other'];
+
+    // 兼容扁平数组格式
+    let tags = img.tags;
+    if (Array.isArray(tags)) {
+        const flat = tags;
+        tags = {};
+        flat.forEach(t => {
+            const cat = (typeof TAG_TO_CATEGORY !== 'undefined' && TAG_TO_CATEGORY[t]) || 'other';
+            if (!tags[cat]) tags[cat] = [];
+            tags[cat].push(t);
+        });
+    }
+
+    if (!tags || typeof tags !== 'object') return '';
+
+    let html = '';
+    for (const cat of order) {
+        if (!tags[cat] || tags[cat].length === 0) continue;
+        const info = catLabels[cat] || { label: cat, icon: '' };
+        const tagsHtml = tags[cat].map(tag =>
+            `<a href="${tagBasePath}?tag=${encodeURIComponent(tag)}" class="tag">${escapeHtml(tag)}</a>`
+        ).join('');
+        html += `<div class="tag-category-group" data-category="${cat}">
+            <span class="tag-category-label">${info.icon} ${info.label}</span>
+            <div class="tag-category-tags">${tagsHtml}</div>
+        </div>`;
+    }
+    return html;
+}
+
 function getSvgBasePath() {
     return window.location.pathname.includes('/detail/') ? '../svg/' : 'svg/';
 }
@@ -69,11 +110,9 @@ function renderDetail() {
     // 名称
     document.getElementById('detailName').textContent = currentImage.name;
 
-    // 标签 - 可点击跳转回主页面对应标签筛选
+    // 标签 - 按分类分组渲染，可点击跳转回主页面对应标签筛选
     const tagBasePath = window.location.pathname.includes('/detail/') ? '../index.html' : 'index.html';
-    document.getElementById('detailTags').innerHTML = currentImage.tags.map(tag =>
-        `<a href="${tagBasePath}?tag=${encodeURIComponent(tag)}" class="tag">${escapeHtml(tag)}</a>`
-    ).join('');
+    document.getElementById('detailTags').innerHTML = renderDetailTags(currentImage, tagBasePath);
 
     // SVG预览
     const svgImg = document.getElementById('detailSvgImg');

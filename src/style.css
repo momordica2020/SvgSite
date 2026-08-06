@@ -289,6 +289,65 @@ body {
     color: white;
 }
 
+/* === 标签分类树（二级标签） === */
+.tag-category {
+    margin-bottom: 0.125rem;
+}
+
+.tag-category-header {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.4rem 0.875rem;
+    cursor: pointer;
+    user-select: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.15s;
+}
+
+.tag-category-header:hover {
+    background-color: var(--surface-color);
+}
+
+.tag-category-icon {
+    font-size: 0.875rem;
+    line-height: 1;
+}
+
+.tag-category-header .tag-category-label {
+    flex: 1;
+}
+
+.tag-category-toggle {
+    font-size: 0.625rem;
+    transition: transform 0.2s;
+}
+
+.tag-category.collapsed .tag-category-toggle {
+    transform: rotate(-90deg);
+}
+
+.tag-category.collapsed .tag-category-items {
+    display: none;
+}
+
+.tag-category-items {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 分类内的tag按钮缩进 */
+.tag-category-items .tag-btn {
+    padding-left: 1.75rem;
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
 /* 图库主区域 */
 .gallery-area {
     flex: 1;
@@ -878,9 +937,6 @@ body {
 }
 
 .detail-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
     margin-bottom: 0.5rem;
 }
 
@@ -899,6 +955,27 @@ body {
 .detail-tags .tag:hover {
     background-color: var(--primary-color);
     color: white;
+}
+
+/* 详情页标签分类组 */
+.tag-category-group {
+    margin-bottom: 0.75rem;
+}
+
+.tag-category-group .tag-category-label {
+    display: block;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.tag-category-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 .detail-original-image {

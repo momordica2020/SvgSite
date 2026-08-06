@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>比利时瓦隆尼亚徽章 - Svg Site</title>
-    <link rel="stylesheet" href="../src/style.css">
+    <link rel="stylesheet" href="../src/style.css?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -92,7 +92,13 @@
                         <div class="detail-info-section">
                             <div class="detail-info-card">
                                 <h1 class="detail-name" id="detailName">比利时瓦隆尼亚徽章</h1>
-                                <div class="detail-tags" id="detailTags"><a href="../index.html?tag=%E6%AF%94%E5%88%A9%E6%97%B6" class="tag">比利时</a><a href="../index.html?tag=%E9%B8%A1" class="tag">鸡</a><a href="../index.html?tag=%E5%8A%A8%E7%89%A9" class="tag">动物</a><a href="../index.html?tag=%E7%9B%BE%E5%BE%BD" class="tag">盾徽</a></div>
+                                <div class="detail-tags" id="detailTags"><div class="tag-category-group" data-category="element">
+            <span class="tag-category-label">🐉 图案要素</span>
+            <div class="tag-category-tags"><a href="../index.html?tag=%E9%B8%A1" class="tag">鸡</a><a href="../index.html?tag=%E5%8A%A8%E7%89%A9" class="tag">动物</a><a href="../index.html?tag=%E7%9B%BE%E5%BE%BD" class="tag">盾徽</a></div>
+        </div><div class="tag-category-group" data-category="region">
+            <span class="tag-category-label">🌍 地区/组织</span>
+            <div class="tag-category-tags"><a href="../index.html?tag=%E6%AF%94%E5%88%A9%E6%97%B6" class="tag">比利时</a></div>
+        </div></div>
                             </div>
                             <div class="detail-info-card" style="display: none;" id="detailOriginalCard">
                                 <h3>
@@ -125,8 +131,9 @@
         </main>
     </div>
     <script>
-        const currentImage = {"id":"比利时瓦隆尼亚徽章","name":"比利时瓦隆尼亚徽章","tags":["比利时","鸡","动物","盾徽"],"svgFile":"比利时瓦隆尼亚徽章.svg","viewBox":null,"svgWidth":"499.56287","svgHeight":"543.27277","originalImage":null,"description":""};
+        const currentImage = {"id":"比利时瓦隆尼亚徽章","name":"比利时瓦隆尼亚徽章","tags":{"element":["鸡","动物","盾徽"],"region":["比利时"]},"tagsFlat":["比利时","鸡","动物","盾徽"],"svgFile":"比利时瓦隆尼亚徽章.svg","viewBox":null,"svgWidth":"499.56287","svgHeight":"543.27277","originalImage":null,"description":""};
     </script>
-    <script src="../src/detail.js"></script>
+    <script src="../src/tag-categories.js?v=2"></script>
+    <script src="../src/detail.js?v=2"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>华为logo - Svg Site</title>
-    <link rel="stylesheet" href="../src/style.css">
+    <link rel="stylesheet" href="../src/style.css?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -92,7 +92,16 @@
                         <div class="detail-info-section">
                             <div class="detail-info-card">
                                 <h1 class="detail-name" id="detailName">华为logo</h1>
-                                <div class="detail-tags" id="detailTags"><a href="../index.html?tag=%E5%85%AC%E5%8F%B8" class="tag">公司</a><a href="../index.html?tag=%E8%8A%B1" class="tag">花</a><a href="../index.html?tag=%E7%BA%A2%E8%89%B2" class="tag">红色</a><a href="../index.html?tag=logo" class="tag">logo</a></div>
+                                <div class="detail-tags" id="detailTags"><div class="tag-category-group" data-category="color">
+            <span class="tag-category-label">🎨 颜色</span>
+            <div class="tag-category-tags"><a href="../index.html?tag=%E7%BA%A2%E8%89%B2" class="tag">红色</a></div>
+        </div><div class="tag-category-group" data-category="element">
+            <span class="tag-category-label">🐉 图案要素</span>
+            <div class="tag-category-tags"><a href="../index.html?tag=%E8%8A%B1" class="tag">花</a></div>
+        </div><div class="tag-category-group" data-category="usage">
+            <span class="tag-category-label">🏷️ 用途</span>
+            <div class="tag-category-tags"><a href="../index.html?tag=%E5%85%AC%E5%8F%B8" class="tag">公司</a><a href="../index.html?tag=logo" class="tag">logo</a></div>
+        </div></div>
                             </div>
                             <div class="detail-info-card" style="display: none;" id="detailOriginalCard">
                                 <h3>
@@ -125,8 +134,9 @@
         </main>
     </div>
     <script>
-        const currentImage = {"id":"华为logo","name":"华为logo","tags":["公司","花","红色","logo"],"svgFile":"华为logo.svg","viewBox":"0 0 35.625 36.227001","svgWidth":"35.625mm","svgHeight":"36.227001mm","originalImage":null,"description":""};
+        const currentImage = {"id":"华为logo","name":"华为logo","tags":{"color":["红色"],"element":["花"],"usage":["公司","logo"]},"tagsFlat":["公司","花","红色","logo"],"svgFile":"华为logo.svg","viewBox":"0 0 35.625 36.227001","svgWidth":"35.625mm","svgHeight":"36.227001mm","originalImage":null,"description":""};
     </script>
-    <script src="../src/detail.js"></script>
+    <script src="../src/tag-categories.js?v=2"></script>
+    <script src="../src/detail.js?v=2"></script>
 </body>
 </html>

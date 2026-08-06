@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>台字翠青旗 - Svg Site</title>
-    <link rel="stylesheet" href="../src/style.css">
+    <link rel="stylesheet" href="../src/style.css?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -92,7 +92,16 @@
                         <div class="detail-info-section">
                             <div class="detail-info-card">
                                 <h1 class="detail-name" id="detailName">台字翠青旗</h1>
-                                <div class="detail-tags" id="detailTags"><a href="../index.html?tag=%E5%8F%B0%E6%B9%BE" class="tag">台湾</a><a href="../index.html?tag=%E6%84%8F%E8%AF%86%E5%BD%A2%E6%80%81" class="tag">意识形态</a><a href="../index.html?tag=%E6%96%9C%E5%88%87" class="tag">斜切</a><a href="../index.html?tag=%E8%93%9D%E8%89%B2" class="tag">蓝色</a><a href="../index.html?tag=%E7%99%BD%E8%89%B2" class="tag">白色</a><a href="../index.html?tag=%E7%BB%BF%E8%89%B2" class="tag">绿色</a><a href="../index.html?tag=%E4%B8%AD%E5%BF%83" class="tag">中心</a><a href="../index.html?tag=%E4%B8%89%E8%A7%92" class="tag">三角</a></div>
+                                <div class="detail-tags" id="detailTags"><div class="tag-category-group" data-category="style">
+            <span class="tag-category-label">📐 旗帜学样式</span>
+            <div class="tag-category-tags"><a href="../index.html?tag=%E6%96%9C%E5%88%87" class="tag">斜切</a><a href="../index.html?tag=%E4%B8%AD%E5%BF%83" class="tag">中心</a><a href="../index.html?tag=%E4%B8%89%E8%A7%92" class="tag">三角</a></div>
+        </div><div class="tag-category-group" data-category="color">
+            <span class="tag-category-label">🎨 颜色</span>
+            <div class="tag-category-tags"><a href="../index.html?tag=%E8%93%9D%E8%89%B2" class="tag">蓝色</a><a href="../index.html?tag=%E7%99%BD%E8%89%B2" class="tag">白色</a><a href="../index.html?tag=%E7%BB%BF%E8%89%B2" class="tag">绿色</a></div>
+        </div><div class="tag-category-group" data-category="region">
+            <span class="tag-category-label">🌍 地区/组织</span>
+            <div class="tag-category-tags"><a href="../index.html?tag=%E5%8F%B0%E6%B9%BE" class="tag">台湾</a><a href="../index.html?tag=%E6%84%8F%E8%AF%86%E5%BD%A2%E6%80%81" class="tag">意识形态</a></div>
+        </div></div>
                             </div>
                             <div class="detail-info-card" style="display: none;" id="detailOriginalCard">
                                 <h3>
@@ -125,8 +134,9 @@
         </main>
     </div>
     <script>
-        const currentImage = {"id":"台字翠青旗","name":"台字翠青旗","tags":["台湾","意识形态","斜切","蓝色","白色","绿色","中心","三角"],"svgFile":"台字翠青旗.svg","viewBox":"0 0 850.394 566.929","svgWidth":"850.394","svgHeight":"566.929","originalImage":null,"description":"2016年台中默契咖啡店店长陈致豪（老丹）所发表的台独旗帜。深蓝色主色调，寓意大海、白色象征浪花、翠青色表达台湾主体核心的原住民的高山国、台字纹则作为台湾象征。对角线分割的描绘层层山峦，翠青色（pantone 3255C）三角为翠绿青山，以台字纹作为台湾符码，前行扬起浪花向独立建国前进。"};
+        const currentImage = {"id":"台字翠青旗","name":"台字翠青旗","tags":{"style":["斜切","中心","三角"],"color":["蓝色","白色","绿色"],"region":["台湾","意识形态"]},"tagsFlat":["台湾","意识形态","斜切","蓝色","白色","绿色","中心","三角"],"svgFile":"台字翠青旗.svg","viewBox":"0 0 850.394 566.929","svgWidth":"850.394","svgHeight":"566.929","originalImage":null,"description":"2016年台中默契咖啡店店长陈致豪（老丹）所发表的台独旗帜。深蓝色主色调，寓意大海、白色象征浪花、翠青色表达台湾主体核心的原住民的高山国、台字纹则作为台湾象征。对角线分割的描绘层层山峦，翠青色（pantone 3255C）三角为翠绿青山，以台字纹作为台湾符码，前行扬起浪花向独立建国前进。"};
     </script>
-    <script src="../src/detail.js"></script>
+    <script src="../src/tag-categories.js?v=2"></script>
+    <script src="../src/detail.js?v=2"></script>
 </body>
 </html>

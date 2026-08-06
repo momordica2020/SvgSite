@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>天德教标志 - Svg Site</title>
-    <link rel="stylesheet" href="../src/style.css">
+    <link rel="stylesheet" href="../src/style.css?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -92,7 +92,16 @@
                         <div class="detail-info-section">
                             <div class="detail-info-card">
                                 <h1 class="detail-name" id="detailName">天德教标志</h1>
-                                <div class="detail-tags" id="detailTags"><a href="../index.html?tag=%E9%82%AA%E6%95%99" class="tag">邪教</a><a href="../index.html?tag=%E6%B1%89%E5%AD%97" class="tag">汉字</a><a href="../index.html?tag=%E7%BA%A2%E8%89%B2" class="tag">红色</a><a href="../index.html?tag=%E9%BB%91%E8%89%B2" class="tag">黑色</a></div>
+                                <div class="detail-tags" id="detailTags"><div class="tag-category-group" data-category="color">
+            <span class="tag-category-label">🎨 颜色</span>
+            <div class="tag-category-tags"><a href="../index.html?tag=%E7%BA%A2%E8%89%B2" class="tag">红色</a><a href="../index.html?tag=%E9%BB%91%E8%89%B2" class="tag">黑色</a></div>
+        </div><div class="tag-category-group" data-category="element">
+            <span class="tag-category-label">🐉 图案要素</span>
+            <div class="tag-category-tags"><a href="../index.html?tag=%E6%B1%89%E5%AD%97" class="tag">汉字</a></div>
+        </div><div class="tag-category-group" data-category="region">
+            <span class="tag-category-label">🌍 地区/组织</span>
+            <div class="tag-category-tags"><a href="../index.html?tag=%E9%82%AA%E6%95%99" class="tag">邪教</a></div>
+        </div></div>
                             </div>
                             <div class="detail-info-card"  id="detailOriginalCard">
                                 <h3>
@@ -125,8 +134,9 @@
         </main>
     </div>
     <script>
-        const currentImage = {"id":"天德教标志","name":"天德教标志","tags":["邪教","汉字","红色","黑色"],"svgFile":"天德教标志.svg","viewBox":"0 0 1933.12 1933.119","svgWidth":null,"svgHeight":null,"originalImage":"603824207_871206141966827_3364880897161605960_n.jpg","description":""};
+        const currentImage = {"id":"天德教标志","name":"天德教标志","tags":{"color":["红色","黑色"],"element":["汉字"],"region":["邪教"]},"tagsFlat":["邪教","汉字","红色","黑色"],"svgFile":"天德教标志.svg","viewBox":"0 0 1933.12 1933.119","svgWidth":null,"svgHeight":null,"originalImage":"603824207_871206141966827_3364880897161605960_n.jpg","description":""};
     </script>
-    <script src="../src/detail.js"></script>
+    <script src="../src/tag-categories.js?v=2"></script>
+    <script src="../src/detail.js?v=2"></script>
 </body>
 </html>

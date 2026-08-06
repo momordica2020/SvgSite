@@ -11,3 +11,8 @@ fotw/flags/
 fotw/zips/
 __pycache__/
 *.pyc
+
+# FOTW 原始未分片大文件（超过 GitHub 50MB 限制，仅本地保留）
+# 分片后的 flag_details_<letter>.json 和 flag_details_index.json 可正常同步
+fotw/data/flag_details.json
+fotw/web/data/flag_details.json

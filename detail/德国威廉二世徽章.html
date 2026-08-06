@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>德国威廉二世徽章 - Svg Site</title>
-    <link rel="stylesheet" href="../src/style.css">
+    <link rel="stylesheet" href="../src/style.css?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -92,7 +92,16 @@
                         <div class="detail-info-section">
                             <div class="detail-info-card">
                                 <h1 class="detail-name" id="detailName">德国威廉二世徽章</h1>
-                                <div class="detail-tags" id="detailTags"><a href="../index.html?tag=%E5%BE%B7%E5%9B%BD" class="tag">德国</a><a href="../index.html?tag=%E9%B9%B0" class="tag">鹰</a><a href="../index.html?tag=%E7%9B%BE%E5%BE%BD" class="tag">盾徽</a><a href="../index.html?tag=%E9%B8%9F%E7%B1%BB" class="tag">鸟类</a><a href="../index.html?tag=%E9%BB%84%E8%89%B2" class="tag">黄色</a><a href="../index.html?tag=%E9%BB%91%E8%89%B2" class="tag">黑色</a><a href="../index.html?tag=%E7%8E%8B%E5%86%A0" class="tag">王冠</a></div>
+                                <div class="detail-tags" id="detailTags"><div class="tag-category-group" data-category="color">
+            <span class="tag-category-label">🎨 颜色</span>
+            <div class="tag-category-tags"><a href="../index.html?tag=%E9%BB%84%E8%89%B2" class="tag">黄色</a><a href="../index.html?tag=%E9%BB%91%E8%89%B2" class="tag">黑色</a></div>
+        </div><div class="tag-category-group" data-category="element">
+            <span class="tag-category-label">🐉 图案要素</span>
+            <div class="tag-category-tags"><a href="../index.html?tag=%E9%B9%B0" class="tag">鹰</a><a href="../index.html?tag=%E7%9B%BE%E5%BE%BD" class="tag">盾徽</a><a href="../index.html?tag=%E9%B8%9F%E7%B1%BB" class="tag">鸟类</a><a href="../index.html?tag=%E7%8E%8B%E5%86%A0" class="tag">王冠</a></div>
+        </div><div class="tag-category-group" data-category="region">
+            <span class="tag-category-label">🌍 地区/组织</span>
+            <div class="tag-category-tags"><a href="../index.html?tag=%E5%BE%B7%E5%9B%BD" class="tag">德国</a></div>
+        </div></div>
                             </div>
                             <div class="detail-info-card" style="display: none;" id="detailOriginalCard">
                                 <h3>
@@ -125,8 +134,9 @@
         </main>
     </div>
     <script>
-        const currentImage = {"id":"德国威廉二世徽章","name":"德国威廉二世徽章","tags":["德国","鹰","盾徽","鸟类","黄色","黑色","王冠"],"svgFile":"德国威廉二世徽章.svg","viewBox":null,"svgWidth":"677.71564","svgHeight":"1215.8499","originalImage":null,"description":""};
+        const currentImage = {"id":"德国威廉二世徽章","name":"德国威廉二世徽章","tags":{"color":["黄色","黑色"],"element":["鹰","盾徽","鸟类","王冠"],"region":["德国"]},"tagsFlat":["德国","鹰","盾徽","鸟类","黄色","黑色","王冠"],"svgFile":"德国威廉二世徽章.svg","viewBox":null,"svgWidth":"677.71564","svgHeight":"1215.8499","originalImage":null,"description":""};
     </script>
-    <script src="../src/detail.js"></script>
+    <script src="../src/tag-categories.js?v=2"></script>
+    <script src="../src/detail.js?v=2"></script>
 </body>
 </html>

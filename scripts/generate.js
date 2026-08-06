@@ -7,6 +7,9 @@ const dataDir = path.join(projectRoot, 'data');
 const originalsDir = path.join(projectRoot, 'originals');
 const detailDir = path.join(projectRoot, 'detail');
 
+// 标签分类配置
+const { TAG_CATEGORIES, TAG_TO_CATEGORY, classifyTags, flattenTags } = require('../src/tag-categories.js');
+
 // 确保目录存在
 if (!fs.existsSync(dataDir)) {
     fs.mkdirSync(dataDir, { recursive: true });
@@ -86,10 +89,28 @@ function generateImagesJson() {
             }
         }
 
+        // 标签处理：兼容分类字典和扁平数组两种格式
+        let tagsCategorized = {};
+        let tagsFlat = [];
+        if (Array.isArray(meta.tags)) {
+            // 旧格式：扁平数组
+            tagsFlat = meta.tags;
+            tagsCategorized = classifyTags(meta.tags);
+        } else if (meta.tags && typeof meta.tags === 'object') {
+            // 新格式：分类字典
+            tagsCategorized = meta.tags;
+            tagsFlat = flattenTags(meta.tags);
+        }
+        // 兼容 tags_flat 字段
+        if (meta.tags_flat && Array.isArray(meta.tags_flat)) {
+            tagsFlat = meta.tags_flat;
+        }
+
         images.push({
             id: meta.id,
             name: meta.name,
-            tags: meta.tags || [],
+            tags: tagsCategorized,
+            tagsFlat: tagsFlat,
             svgFile: meta.svgFile,
             viewBox: svgInfo.viewBox,
             svgWidth: svgInfo.width,
@@ -120,13 +141,12 @@ function generateImagesJson() {
 
 function generateDetailPages(images) {
     images.forEach(img => {
-        const originalHtml = img.originalImage ? 
-            `<img src="../originals/${encodeURIComponent(img.originalImage)}" alt="${escapeHtml(img.name)} 原始图片" class="detail-original-image">` : 
+        const originalHtml = img.originalImage ?
+            `<img src="../originals/${encodeURIComponent(img.originalImage)}" alt="${escapeHtml(img.name)} 原始图片" class="detail-original-image">` :
             '<div class="detail-no-original">暂无原始图片</div>';
-        
-        const tagsHtml = img.tags.map(tag =>
-            `<a href="../index.html?tag=${encodeURIComponent(tag)}" class="tag">${escapeHtml(tag)}</a>`
-        ).join('');
+
+        // 按分类分组渲染标签
+        const tagsHtml = renderCategorizedTags(img.tags);
 
         const html = `<!DOCTYPE html>
 <html lang="zh-CN">
@@ -134,7 +154,7 @@ function generateDetailPages(images) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${escapeHtml(img.name)} - Svg Site</title>
-    <link rel="stylesheet" href="../src/style.css">
+    <link rel="stylesheet" href="../src/style.css?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -257,7 +277,8 @@ function generateDetailPages(images) {
     <script>
         const currentImage = ${JSON.stringify(img)};
     </script>
-    <script src="../src/detail.js"></script>
+    <script src="../src/tag-categories.js?v=2"></script>
+    <script src="../src/detail.js?v=2"></script>
 </body>
 </html>`;
 
@@ -265,6 +286,40 @@ function generateDetailPages(images) {
         fs.writeFileSync(detailPath, html);
     });
     console.log(`成功生成 ${images.length} 个详情页 -> detail/`);
+}
+
+// 按分类分组渲染标签HTML
+function renderCategorizedTags(tags) {
+    if (!tags) return '';
+    // 兼容扁平数组
+    if (Array.isArray(tags)) {
+        return tags.map(tag =>
+            `<a href="../index.html?tag=${encodeURIComponent(tag)}" class="tag">${escapeHtml(tag)}</a>`
+        ).join('');
+    }
+    // 分类字典
+    const catLabels = {
+        style: { label: '旗帜学样式', icon: '📐' },
+        color: { label: '颜色', icon: '🎨' },
+        element: { label: '图案要素', icon: '🐉' },
+        region: { label: '地区/组织', icon: '🌍' },
+        usage: { label: '用途', icon: '🏷️' },
+        other: { label: '其他', icon: '📦' },
+    };
+    const order = ['style', 'color', 'element', 'region', 'usage', 'other'];
+    let html = '';
+    for (const cat of order) {
+        if (!tags[cat] || tags[cat].length === 0) continue;
+        const info = catLabels[cat] || { label: cat, icon: '' };
+        const tagsHtml = tags[cat].map(tag =>
+            `<a href="../index.html?tag=${encodeURIComponent(tag)}" class="tag">${escapeHtml(tag)}</a>`
+        ).join('');
+        html += `<div class="tag-category-group" data-category="${cat}">
+            <span class="tag-category-label">${info.icon} ${info.label}</span>
+            <div class="tag-category-tags">${tagsHtml}</div>
+        </div>`;
+    }
+    return html;
 }
 
 function escapeHtml(text) {

@@ -220,6 +220,30 @@
         return count > 0 ? html : '';
     }
 
+    // 分片缓存：避免重复加载同一分片
+    const shardCache = {};
+    let detailsIndex = null;
+
+    // 按 code 首字母加载对应分片
+    async function loadDetailByCode(code) {
+        // 先查索引确定分片文件
+        if (!detailsIndex) {
+            const indexResp = await fetch('data/flag_details_index.json');
+            if (!indexResp.ok) throw new Error('索引未就绪');
+            detailsIndex = await indexResp.json();
+        }
+        const shardFile = detailsIndex[code];
+        if (!shardFile) return null;
+
+        // 加载并缓存分片
+        if (!shardCache[shardFile]) {
+            const resp = await fetch('data/' + shardFile);
+            if (!resp.ok) throw new Error('分片未就绪: ' + shardFile);
+            shardCache[shardFile] = await resp.json();
+        }
+        return shardCache[shardFile][code] || null;
+    }
+
     async function loadDetail() {
         const code = getParam('code');
         if (!code) {
@@ -232,12 +256,10 @@
         }
 
         try {
-            const resp = await fetch('data/flag_details.json');
-            if (!resp.ok) throw new Error('数据未就绪');
-            const allDetails = await resp.json();
-            const detail = allDetails[code];
+            const detail = await loadDetailByCode(code);
 
             if (!detail) {
+                // 分片中未找到，回退到 countries 列表
                 const countriesResp = await fetch('data/countries.json');
                 const countries = await countriesResp.json();
                 const country = (countries.countries || []).find(c => c.code === code);

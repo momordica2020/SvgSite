@@ -132,11 +132,12 @@ function setupEventListeners() {
     });
 }
 
-// 计算每个标签的图片数量
+// 计算每个标签的图片数量（使用 tagsFlat 兼容新格式）
 function computeTagCounts() {
     tagCounts = {};
     images.forEach(img => {
-        img.tags.forEach(tag => {
+        const tags = img.tagsFlat || flattenTags(img.tags) || [];
+        tags.forEach(tag => {
             tagCounts[tag] = (tagCounts[tag] || 0) + 1;
         });
     });
@@ -150,17 +151,64 @@ function renderTags() {
         <span class="tag-btn-count">${images.length}</span>
     </button>`;
 
-    // 按数量降序排序
-    const sortedTags = Object.keys(tagCounts).sort((a, b) => tagCounts[b] - tagCounts[a]);
+    // 按分类分组渲染标签
+    let tagsHtml = '';
+    if (typeof TAG_CATEGORIES !== 'undefined') {
+        // 按分类分组
+        for (const [cat, info] of Object.entries(TAG_CATEGORIES)) {
+            // 收集该分类下所有有图片的tag
+            const catTags = info.tags
+                .filter(t => tagCounts[t] !== undefined)
+                .sort((a, b) => tagCounts[b] - tagCounts[a]);
+            // 也收集未在预定义列表中但属于该分类的tag（通过TAG_TO_CATEGORY查找）
+            // 以及 other 分类中的tag
+            if (cat === 'other') {
+                const knownTags = new Set();
+                for (const c of Object.keys(TAG_CATEGORIES)) {
+                    TAG_CATEGORIES[c].tags.forEach(t => knownTags.add(t));
+                }
+                const otherTags = Object.keys(tagCounts)
+                    .filter(t => !knownTags.has(t))
+                    .sort((a, b) => tagCounts[b] - tagCounts[a]);
+                catTags.push(...otherTags);
+            }
+            if (catTags.length === 0) continue;
 
-    const tagsHtml = sortedTags.map(tag =>
-        `<button class="tag-btn ${currentTag === tag ? 'active' : ''}" data-tag="${escapeHtml(tag)}">
-            <span class="tag-btn-name">${escapeHtml(tag)}</span>
-            <span class="tag-btn-count">${tagCounts[tag]}</span>
-        </button>`
-    ).join('');
+            tagsHtml += `<div class="tag-category" data-category="${cat}">
+                <div class="tag-category-header" data-category="${cat}">
+                    <span class="tag-category-icon">${info.icon}</span>
+                    <span class="tag-category-label">${info.label}</span>
+                    <span class="tag-category-toggle">▾</span>
+                </div>
+                <div class="tag-category-items">`;
+            tagsHtml += catTags.map(tag =>
+                `<button class="tag-btn ${currentTag === tag ? 'active' : ''}" data-tag="${escapeHtml(tag)}">
+                    <span class="tag-btn-name">${escapeHtml(tag)}</span>
+                    <span class="tag-btn-count">${tagCounts[tag]}</span>
+                </button>`
+            ).join('');
+            tagsHtml += `</div></div>`;
+        }
+    } else {
+        // 降级：无分类配置时按数量降序
+        const sortedTags = Object.keys(tagCounts).sort((a, b) => tagCounts[b] - tagCounts[a]);
+        tagsHtml = sortedTags.map(tag =>
+            `<button class="tag-btn ${currentTag === tag ? 'active' : ''}" data-tag="${escapeHtml(tag)}">
+                <span class="tag-btn-name">${escapeHtml(tag)}</span>
+                <span class="tag-btn-count">${tagCounts[tag]}</span>
+            </button>`
+        ).join('');
+    }
 
     tagsList.innerHTML = allBtn + tagsHtml;
+
+    // 绑定分类折叠/展开
+    document.querySelectorAll('.tag-category-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const cat = header.parentElement;
+            cat.classList.toggle('collapsed');
+        });
+    });
 }
 
 // 侧边栏标签搜索筛选
@@ -170,13 +218,25 @@ function filterTags() {
         const name = btn.querySelector('.tag-btn-name').textContent.toLowerCase();
         btn.style.display = name.includes(query) ? '' : 'none';
     });
+    // 搜索时展开所有分类，无搜索词时恢复
+    document.querySelectorAll('.tag-category').forEach(cat => {
+        if (query) {
+            cat.classList.remove('collapsed');
+            // 隐藏无匹配子标签的分类
+            const hasVisible = Array.from(cat.querySelectorAll('.tag-btn')).some(b => b.style.display !== 'none');
+            cat.style.display = hasVisible ? '' : 'none';
+        } else {
+            cat.style.display = '';
+        }
+    });
 }
 
 // 统一过滤逻辑
 function getFilteredItems() {
     return images.filter(img => {
         const matchesSearch = !searchQuery || img.name.toLowerCase().includes(searchQuery);
-        const matchesTag = currentTag === 'all' || img.tags.includes(currentTag);
+        const tags = img.tagsFlat || flattenTags(img.tags) || [];
+        const matchesTag = currentTag === 'all' || tags.includes(currentTag);
         return matchesSearch && matchesTag;
     });
 }
@@ -228,7 +288,9 @@ function renderGallery(items) {
     const start = (currentPage - 1) * PAGE_SIZE;
     const pageItems = items.slice(start, start + PAGE_SIZE);
 
-    gallery.innerHTML = pageItems.map(item => `
+    gallery.innerHTML = pageItems.map(item => {
+        const tags = item.tagsFlat || flattenTags(item.tags) || [];
+        return `
         <div class="gallery-item" data-id="${escapeHtml(item.id)}">
             <div class="gallery-item-image">
                 <img src="svg/${encodeURIComponent(item.svgFile)}" alt="${escapeHtml(item.name)}" loading="lazy">
@@ -236,7 +298,7 @@ function renderGallery(items) {
             <div class="gallery-item-info">
                 <div class="gallery-item-title">${escapeHtml(item.name)}</div>
                 <div class="gallery-item-tags">
-                    ${item.tags.map(tag => `<span class="gallery-item-tag">${escapeHtml(tag)}</span>`).join('')}
+                    ${tags.map(tag => `<span class="gallery-item-tag">${escapeHtml(tag)}</span>`).join('')}
                 </div>
             </div>
             <button class="gallery-item-detail-btn" data-id="${escapeHtml(item.id)}" title="查看详情">
@@ -246,8 +308,8 @@ function renderGallery(items) {
                     <line x1="10" y1="14" x2="21" y2="3"/>
                 </svg>
             </button>
-        </div>
-    `).join('');
+        </div>`;
+    }).join('');
 }
 
 // 分页控件
@@ -342,7 +404,8 @@ function openModal(id) {
     const previewSvgImg = document.getElementById('previewSvgImg');
 
     previewTitle.textContent = currentImage.name;
-    previewTags.innerHTML = currentImage.tags.map(tag =>
+    const tags = currentImage.tagsFlat || flattenTags(currentImage.tags) || [];
+    previewTags.innerHTML = tags.map(tag =>
         `<span class="tag" data-tag="${escapeHtml(tag)}" style="cursor: pointer;">${escapeHtml(tag)}</span>`
     ).join('');
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>澳大利亚国徽 - Svg Site</title>
-    <link rel="stylesheet" href="../src/style.css">
+    <link rel="stylesheet" href="../src/style.css?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -92,7 +92,13 @@
                         <div class="detail-info-section">
                             <div class="detail-info-card">
                                 <h1 class="detail-name" id="detailName">澳大利亚国徽</h1>
-                                <div class="detail-tags" id="detailTags"><a href="../index.html?tag=%E5%8A%A8%E7%89%A9" class="tag">动物</a><a href="../index.html?tag=%E9%B8%9F%E7%B1%BB" class="tag">鸟类</a><a href="../index.html?tag=%E5%9B%BD%E5%BE%BD" class="tag">国徽</a><a href="../index.html?tag=%E4%B8%83%E8%A7%92%E6%98%9F" class="tag">七角星</a><a href="../index.html?tag=%E6%A4%8D%E7%89%A9" class="tag">植物</a><a href="../index.html?tag=%E8%8B%B1%E6%96%87" class="tag">英文</a><a href="../index.html?tag=%E7%9B%BE%E5%BE%BD" class="tag">盾徽</a></div>
+                                <div class="detail-tags" id="detailTags"><div class="tag-category-group" data-category="element">
+            <span class="tag-category-label">🐉 图案要素</span>
+            <div class="tag-category-tags"><a href="../index.html?tag=%E5%8A%A8%E7%89%A9" class="tag">动物</a><a href="../index.html?tag=%E9%B8%9F%E7%B1%BB" class="tag">鸟类</a><a href="../index.html?tag=%E4%B8%83%E8%A7%92%E6%98%9F" class="tag">七角星</a><a href="../index.html?tag=%E6%A4%8D%E7%89%A9" class="tag">植物</a><a href="../index.html?tag=%E8%8B%B1%E6%96%87" class="tag">英文</a><a href="../index.html?tag=%E7%9B%BE%E5%BE%BD" class="tag">盾徽</a></div>
+        </div><div class="tag-category-group" data-category="usage">
+            <span class="tag-category-label">🏷️ 用途</span>
+            <div class="tag-category-tags"><a href="../index.html?tag=%E5%9B%BD%E5%BE%BD" class="tag">国徽</a></div>
+        </div></div>
                             </div>
                             <div class="detail-info-card" style="display: none;" id="detailOriginalCard">
                                 <h3>
@@ -125,8 +131,9 @@
         </main>
     </div>
     <script>
-        const currentImage = {"id":"澳大利亚国徽","name":"澳大利亚国徽","tags":["动物","鸟类","国徽","七角星","植物","英文","盾徽"],"svgFile":"澳大利亚国徽.svg","viewBox":"0 0 910 705","svgWidth":"1px","svgHeight":"89.406","originalImage":null,"description":""};
+        const currentImage = {"id":"澳大利亚国徽","name":"澳大利亚国徽","tags":{"element":["动物","鸟类","七角星","植物","英文","盾徽"],"usage":["国徽"]},"tagsFlat":["动物","鸟类","国徽","七角星","植物","英文","盾徽"],"svgFile":"澳大利亚国徽.svg","viewBox":"0 0 910 705","svgWidth":"1px","svgHeight":"89.406","originalImage":null,"description":""};
     </script>
-    <script src="../src/detail.js"></script>
+    <script src="../src/tag-categories.js?v=2"></script>
+    <script src="../src/detail.js?v=2"></script>
 </body>
 </html>

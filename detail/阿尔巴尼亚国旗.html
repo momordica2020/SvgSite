@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>阿尔巴尼亚国旗 - Svg Site</title>
-    <link rel="stylesheet" href="../src/style.css">
+    <link rel="stylesheet" href="../src/style.css?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -92,7 +92,22 @@
                         <div class="detail-info-section">
                             <div class="detail-info-card">
                                 <h1 class="detail-name" id="detailName">阿尔巴尼亚国旗</h1>
-                                <div class="detail-tags" id="detailTags"><a href="../index.html?tag=%E9%98%BF%E5%B0%94%E5%B7%B4%E5%B0%BC%E4%BA%9A" class="tag">阿尔巴尼亚</a><a href="../index.html?tag=%E5%9B%BD%E6%97%97" class="tag">国旗</a><a href="../index.html?tag=%E5%8F%8C%E5%A4%B4%E9%B9%B0" class="tag">双头鹰</a><a href="../index.html?tag=%E7%BA%A2%E8%89%B2" class="tag">红色</a><a href="../index.html?tag=%E9%BB%91%E8%89%B2" class="tag">黑色</a><a href="../index.html?tag=%E4%B8%AD%E5%BF%83" class="tag">中心</a></div>
+                                <div class="detail-tags" id="detailTags"><div class="tag-category-group" data-category="style">
+            <span class="tag-category-label">📐 旗帜学样式</span>
+            <div class="tag-category-tags"><a href="../index.html?tag=%E4%B8%AD%E5%BF%83" class="tag">中心</a></div>
+        </div><div class="tag-category-group" data-category="color">
+            <span class="tag-category-label">🎨 颜色</span>
+            <div class="tag-category-tags"><a href="../index.html?tag=%E7%BA%A2%E8%89%B2" class="tag">红色</a><a href="../index.html?tag=%E9%BB%91%E8%89%B2" class="tag">黑色</a></div>
+        </div><div class="tag-category-group" data-category="element">
+            <span class="tag-category-label">🐉 图案要素</span>
+            <div class="tag-category-tags"><a href="../index.html?tag=%E5%8F%8C%E5%A4%B4%E9%B9%B0" class="tag">双头鹰</a></div>
+        </div><div class="tag-category-group" data-category="region">
+            <span class="tag-category-label">🌍 地区/组织</span>
+            <div class="tag-category-tags"><a href="../index.html?tag=%E9%98%BF%E5%B0%94%E5%B7%B4%E5%B0%BC%E4%BA%9A" class="tag">阿尔巴尼亚</a></div>
+        </div><div class="tag-category-group" data-category="usage">
+            <span class="tag-category-label">🏷️ 用途</span>
+            <div class="tag-category-tags"><a href="../index.html?tag=%E5%9B%BD%E6%97%97" class="tag">国旗</a></div>
+        </div></div>
                             </div>
                             <div class="detail-info-card" style="display: none;" id="detailOriginalCard">
                                 <h3>
@@ -125,8 +140,9 @@
         </main>
     </div>
     <script>
-        const currentImage = {"id":"阿尔巴尼亚国旗","name":"阿尔巴尼亚国旗","tags":["阿尔巴尼亚","国旗","双头鹰","红色","黑色","中心"],"svgFile":"阿尔巴尼亚国旗.svg","viewBox":null,"svgWidth":"700","svgHeight":"500","originalImage":null,"description":""};
+        const currentImage = {"id":"阿尔巴尼亚国旗","name":"阿尔巴尼亚国旗","tags":{"style":["中心"],"color":["红色","黑色"],"element":["双头鹰"],"region":["阿尔巴尼亚"],"usage":["国旗"]},"tagsFlat":["阿尔巴尼亚","国旗","双头鹰","红色","黑色","中心"],"svgFile":"阿尔巴尼亚国旗.svg","viewBox":null,"svgWidth":"700","svgHeight":"500","originalImage":null,"description":""};
     </script>
-    <script src="../src/detail.js"></script>
+    <script src="../src/tag-categories.js?v=2"></script>
+    <script src="../src/detail.js?v=2"></script>
 </body>
 </html>

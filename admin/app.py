@@ -33,6 +33,61 @@ DATA_DIR = os.path.join(PROJECT_ROOT, 'data')
 METADATA_FILE = os.path.join(DATA_DIR, 'metadata.json')
 GENERATE_SCRIPT = os.path.join(PROJECT_ROOT, 'scripts', 'generate.js')
 
+# 标签分类配置
+TAG_CATEGORIES = {
+    'style':   {'label': '旗帜学样式', 'icon': '📐', 'tags': [
+        '中心', '横条', '横线', '上角', '竖条', '竖切', '斜切', '三角', '三角旗',
+        '镶边', '波浪', '十字', '圆环', '方旗', '燕尾', '三等分', '箭头', '箭',
+        '方块', '心形', '十角形', '剪影', '风景', '地图', '三色旗', '五色旗',
+        '米字旗', '青天白日', '五星红旗', '八卦', '太极', '阴阳', '万字', '草案',
+    ]},
+    'color':   {'label': '颜色', 'icon': '🎨', 'tags': [
+        '红色', '白色', '黄色', '蓝色', '黑色', '绿色', '橙色', '紫色',
+        '灰色', '粉色', '棕色',
+    ]},
+    'element': {'label': '图案要素', 'icon': '🐉', 'tags': [
+        '五角星', '六角星', '四角星', '九角星', '七角星',
+        '动物', '鸟类', '龙', '神兽', '狮子', '鹰', '双头鹰', '虎', '马',
+        '鸡', '昆虫', '麒麟', '鸿雁', '船',
+        '植物', '花', '树', '麦穗', '嘉禾', '梅花',
+        '汉字', '英文', '阿拉伯语', '俄文', '蒙古文', '天成文',
+        '镰锤', '太阳', '月', '月亮', '地球', '火炬', '齿轮', '翅膀',
+        '王冠', '皇冠', '头盔', '盾徽', '鞭子', '锄头', '武器', '船锚',
+        '建筑', '机器人', '肢体', '火焰', '闪电', '孙中山', '人物',
+        '骑士', '十二章', '华虫', '纹章',
+    ]},
+    'region':  {'label': '地区/组织', 'icon': '🌍', 'tags': [
+        '中国', '中华民国', '台湾', '中华人民共和国', '北洋', '清朝',
+        '内蒙古', '内蒙古自治政府', '内蒙古人民革命党', '海南', '香港',
+        '东北', '琼崖', '山西', '河北', '上海', '中西', '区旗',
+        '英国', '德国', '意大利', '比利时', '苏联', '吉尔吉斯斯坦',
+        '阿尔巴尼亚', '以色列', '巴勒斯坦', '荷兰', '法国', '加拿大',
+        '不丹', '立陶宛', '哈萨克斯坦', '神圣罗马帝国', '蒙古',
+        '犹太', '穆斯林', '佛教', '宗教', '邪教', '意识形态',
+        '共产主义', '纳粹', '法西斯', '反福瑞', '匿名者', '黑客',
+        'LGBT', '苏维埃', '中国共产党', '国民党', '中国人民解放军',
+        '共产党',
+    ]},
+    'usage':   {'label': '用途', 'icon': '🏷️', 'tags': [
+        '国旗', '军旗', '党旗', '会旗', '校旗', '团旗', '海军', '陆军',
+        '空军', '市旗', '船旗', '国徽', '军徽', '党徽', '徽章', 'logo',
+        '公司', '海关', '缉私处', '巡警', '警察', '武警', '邮政',
+        '盐务', '航天', '国防部', '海军总长旗', '参谋部', '抗大', '军校',
+        '抗日战争', '红军', '共青团', '少先队', '火箭军', '军事航天部队',
+        '网络空间部队', '信息支援部队', '联勤保障部队', '整复师',
+        '搞笑', '虚构', '民运', '政党', '地区',
+    ]},
+    'other':   {'label': '其他', 'icon': '📦', 'tags': []},
+}
+
+# 反向映射
+TAG_TO_CATEGORY = {}
+for _cat, _info in TAG_CATEGORIES.items():
+    for _t in _info['tags']:
+        TAG_TO_CATEGORY[_t] = _cat
+
+TAG_CATEGORY_ORDER = ['style', 'color', 'element', 'region', 'usage', 'other']
+
 
 class SvgGalleryAdmin:
     def __init__(self, root):
@@ -109,24 +164,77 @@ class SvgGalleryAdmin:
         self.name_var = tk.StringVar()
         ttk.Entry(parent, textvariable=self.name_var, width=40).grid(row=1, column=1, sticky=tk.EW, pady=4)
 
-        # 标签
-        ttk.Label(parent, text="标签 (逗号分隔):").grid(row=2, column=0, sticky=tk.W, pady=4)
-        self.tags_var = tk.StringVar()
-        ttk.Entry(parent, textvariable=self.tags_var, width=40).grid(row=2, column=1, sticky=tk.EW, pady=4)
+        # 标签 - 按分类分栏，放在可滚动区域中
+        ttk.Label(parent, text="标签分类:").grid(row=2, column=0, sticky=tk.NW, pady=4)
+        tags_outer = ttk.Frame(parent)
+        tags_outer.grid(row=2, column=1, sticky=tk.NSEW, pady=4)
+
+        # 创建Canvas+Scrollbar实现可滚动标签区域
+        tags_canvas = tk.Canvas(tags_outer, height=180, highlightthickness=0)
+        tags_scrollbar = ttk.Scrollbar(tags_outer, orient=tk.VERTICAL, command=tags_canvas.yview)
+        tags_inner = ttk.Frame(tags_canvas)
+        tags_inner.bind(
+            '<Configure>',
+            lambda e: tags_canvas.configure(scrollregion=tags_canvas.bbox('all'))
+        )
+        tags_canvas.create_window((0, 0), window=tags_inner, anchor='nw')
+        tags_canvas.configure(yscrollcommand=tags_scrollbar.set)
+        tags_canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        tags_scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        # 鼠标滚轮支持
+        def _on_mousewheel(event):
+            tags_canvas.yview_scroll(int(-1 * (event.delta / 120)), 'units')
+        tags_canvas.bind('<Enter>', lambda e: tags_canvas.bind_all('<MouseWheel>', _on_mousewheel))
+        tags_canvas.bind('<Leave>', lambda e: tags_canvas.unbind_all('<MouseWheel>'))
+
+        self.tag_category_vars = {}  # {category: tk.StringVar}
+        self.tag_category_entries = {}  # {category: ttk.Entry}
+        for i, cat in enumerate(TAG_CATEGORY_ORDER):
+            info = TAG_CATEGORIES[cat]
+            # 分类标签行：图标+分类名 在左，输入框在右
+            row_frame = ttk.Frame(tags_inner)
+            row_frame.grid(row=i, column=0, sticky=tk.EW, pady=2, padx=4)
+            row_frame.columnconfigure(1, weight=1)
+            cat_label_text = f"{info['icon']} {info['label']}"
+            ttk.Label(row_frame, text=cat_label_text, width=12).grid(row=0, column=0, sticky=tk.W, padx=(0, 6))
+            var = tk.StringVar()
+            entry = ttk.Entry(row_frame, textvariable=var, width=40)
+            entry.grid(row=0, column=1, sticky=tk.EW)
+            self.tag_category_vars[cat] = var
+            self.tag_category_entries[cat] = entry
+            # 快捷标签按钮行（紧凑排列）
+            suggested = info['tags']
+            if suggested:
+                btn_frame = ttk.Frame(tags_inner)
+                btn_frame.grid(row=i, column=0, sticky=tk.W, padx=4, pady=(0, 4))
+                # 分类标签列宽对齐
+                ttk.Label(btn_frame, text='', width=14).grid(row=0, column=0)
+                btns_area = ttk.Frame(btn_frame)
+                btns_area.grid(row=0, column=1, sticky=tk.W)
+                # 每行最多放 N 个按钮
+                per_row = 8
+                for j, tag in enumerate(suggested):
+                    r, c = divmod(j, per_row)
+                    btn = tk.Button(btns_area, text=tag, relief=tk.FLAT, font=('Segoe UI', 8),
+                                    padx=4, pady=1, height=1,
+                                    command=lambda t=tag, c=cat: self.toggle_tag(t, c))
+                    btn.grid(row=r, column=c, padx=1, pady=1, sticky=tk.W)
 
         # SVG文件
-        ttk.Label(parent, text="SVG 文件:").grid(row=3, column=0, sticky=tk.W, pady=4)
+        svg_row = 3
+        ttk.Label(parent, text="SVG 文件:").grid(row=svg_row, column=0, sticky=tk.W, pady=4)
         svg_frame = ttk.Frame(parent)
-        svg_frame.grid(row=3, column=1, sticky=tk.EW, pady=4)
+        svg_frame.grid(row=svg_row, column=1, sticky=tk.EW, pady=4)
         self.svg_file_var = tk.StringVar()
         ttk.Entry(svg_frame, textvariable=self.svg_file_var, width=30).pack(side=tk.LEFT, fill=tk.X, expand=True)
         ttk.Button(svg_frame, text="选择...", command=self.choose_svg).pack(side=tk.LEFT, padx=4)
         ttk.Button(svg_frame, text="导入", command=self.import_svg).pack(side=tk.LEFT)
 
         # 原始图片
-        ttk.Label(parent, text="原始图片:").grid(row=4, column=0, sticky=tk.W, pady=4)
+        orig_row = svg_row + 1
+        ttk.Label(parent, text="原始图片:").grid(row=orig_row, column=0, sticky=tk.W, pady=4)
         orig_frame = ttk.Frame(parent)
-        orig_frame.grid(row=4, column=1, sticky=tk.EW, pady=4)
+        orig_frame.grid(row=orig_row, column=1, sticky=tk.EW, pady=4)
         self.original_image_var = tk.StringVar()
         ttk.Entry(orig_frame, textvariable=self.original_image_var, width=30).pack(side=tk.LEFT, fill=tk.X, expand=True)
         ttk.Button(orig_frame, text="选择...", command=self.choose_original).pack(side=tk.LEFT, padx=4)
@@ -134,26 +242,26 @@ class SvgGalleryAdmin:
         ttk.Button(orig_frame, text="清除", command=self.clear_original).pack(side=tk.LEFT, padx=4)
 
         # SVG预览
-        ttk.Label(parent, text="SVG 预览:").grid(row=5, column=0, sticky=tk.NW, pady=4)
+        preview_row = orig_row + 1
+        ttk.Label(parent, text="SVG 预览:").grid(row=preview_row, column=0, sticky=tk.NW, pady=4)
         preview_frame = ttk.Frame(parent, relief=tk.SUNKEN, borderwidth=1)
-        preview_frame.grid(row=5, column=1, sticky=tk.NSEW, pady=4)
+        preview_frame.grid(row=preview_row, column=1, sticky=tk.NSEW, pady=4)
         self.preview_canvas = tk.Canvas(preview_frame, width=400, height=300, bg='#f1f5f9')
         self.preview_canvas.pack(fill=tk.BOTH, expand=True)
-        # SVG 预览缓存：{svg_file: (mtime, PhotoImage)} 避免重复 cairosvg 转换
         self._preview_cache = {}
         self._preview_cache_key = None
-        # 异步预览任务管理：防止复杂 SVG 阻塞 UI，快速切换时取消旧任务
         self._preview_thread = None
-        self._preview_token = 0  # 任务令牌，用于取消旧任务
-        self._preview_loading_id = None  # "加载中"文字的 canvas id
+        self._preview_token = 0
+        self._preview_loading_id = None
 
         # 描述
-        ttk.Label(parent, text="Markdown 描述:").grid(row=6, column=0, sticky=tk.NW, pady=4)
+        desc_row = preview_row + 1
+        ttk.Label(parent, text="Markdown 描述:").grid(row=desc_row, column=0, sticky=tk.NW, pady=4)
         self.desc_text = ScrolledText(parent, width=50, height=12, font=('Consolas', 10))
-        self.desc_text.grid(row=6, column=1, sticky=tk.NSEW, pady=4)
+        self.desc_text.grid(row=desc_row, column=1, sticky=tk.NSEW, pady=4)
 
         parent.columnconfigure(1, weight=1)
-        parent.rowconfigure(6, weight=1)
+        parent.rowconfigure(desc_row, weight=1)
 
         # 绑定变化时刷新预览
         self.svg_file_var.trace_add('write', lambda *_: self.update_preview())
@@ -162,6 +270,78 @@ class SvgGalleryAdmin:
     def ensure_dirs(self):
         for d in [SVG_DIR, ORIGINALS_DIR, DATA_DIR]:
             os.makedirs(d, exist_ok=True)
+
+    # ========== 标签分类辅助方法 ==========
+    def toggle_tag(self, tag, category):
+        """在指定分类的输入框中切换tag的选中状态"""
+        var = self.tag_category_vars.get(category)
+        if not var:
+            return
+        current = [t.strip() for t in re.split(r'[,，]', var.get()) if t.strip()]
+        if tag in current:
+            current.remove(tag)
+        else:
+            current.append(tag)
+        var.set(', '.join(current))
+
+    def load_tags_to_fields(self, item):
+        """从metadata条目加载tags到分类输入框"""
+        tags = item.get('tags', [])
+        # 兼容分类字典和扁平数组
+        if isinstance(tags, dict):
+            for cat in TAG_CATEGORY_ORDER:
+                var = self.tag_category_vars.get(cat)
+                if var:
+                    var.set(', '.join(tags.get(cat, [])))
+        elif isinstance(tags, list):
+            # 扁平数组：按分类拆分
+            for cat in TAG_CATEGORY_ORDER:
+                var = self.tag_category_vars.get(cat)
+                if var:
+                    var.set('')
+            for tag in tags:
+                cat = TAG_TO_CATEGORY.get(tag, 'other')
+                var = self.tag_category_vars.get(cat)
+                if var:
+                    current = var.get().strip()
+                    var.set((current + ', ' + tag) if current else tag)
+
+    def collect_tags_from_fields(self):
+        """从分类输入框收集tags，返回分类字典"""
+        result = {}
+        for cat in TAG_CATEGORY_ORDER:
+            var = self.tag_category_vars.get(cat)
+            if not var:
+                continue
+            raw = var.get().strip()
+            tags = [t.strip() for t in re.split(r'[,，]', raw) if t.strip()] if raw else []
+            if tags:
+                result[cat] = tags
+        return result
+
+    def tags_to_flat_string(self, item):
+        """将item的tags（无论格式）转换为逗号分隔的字符串（用于列表显示）"""
+        tags = item.get('tags', [])
+        if isinstance(tags, dict):
+            parts = []
+            for cat in TAG_CATEGORY_ORDER:
+                parts.extend(tags.get(cat, []))
+            return ', '.join(parts)
+        elif isinstance(tags, list):
+            return ', '.join(tags)
+        return ''
+
+    def tags_to_flat_list(self, item):
+        """将item的tags（无论格式）转换为扁平数组"""
+        tags = item.get('tags', [])
+        if isinstance(tags, dict):
+            parts = []
+            for cat in TAG_CATEGORY_ORDER:
+                parts.extend(tags.get(cat, []))
+            return parts
+        elif isinstance(tags, list):
+            return tags
+        return []
 
     # ========== 元数据管理 ==========
     def load_metadata(self):
@@ -195,7 +375,7 @@ class SvgGalleryAdmin:
         """刷新左侧列表（全量重建，倒序：最新的在最上面）"""
         self.tree.delete(*self.tree.get_children())
         for item in reversed(self.metadata):
-            tags_str = ', '.join(item.get('tags', []))
+            tags_str = self.tags_to_flat_string(item)
             self.tree.insert('', tk.END, iid=item['id'], values=(item.get('name', ''), tags_str))
 
     def update_single_row(self, item_id):
@@ -203,15 +383,12 @@ class SvgGalleryAdmin:
         item = next((m for m in self.metadata if m['id'] == item_id), None)
         if not item:
             return
-        tags_str = ', '.join(item.get('tags', []))
+        tags_str = self.tags_to_flat_string(item)
         try:
             self.tree.item(item_id)
-            # 已存在，更新内容
             self.tree.item(item_id, values=(item.get('name', ''), tags_str))
         except Exception:
-            # 不存在（新建后首次保存），插入到最顶部
             self.tree.insert('', 0, iid=item_id, values=(item.get('name', ''), tags_str))
-            # 滚动到顶部确保可见
             self.tree.see(item_id)
 
     def on_select(self, event):
@@ -227,7 +404,7 @@ class SvgGalleryAdmin:
         self.current_id = item_id
         self.id_var.set(item.get('id', ''))
         self.name_var.set(item.get('name', ''))
-        self.tags_var.set(', '.join(item.get('tags', [])))
+        self.load_tags_to_fields(item)
         self.svg_file_var.set(item.get('svgFile', ''))
         self.original_image_var.set(item.get('originalImage') or '')
         self.desc_text.delete('1.0', tk.END)
@@ -241,7 +418,10 @@ class SvgGalleryAdmin:
         self.current_id = None
         self.id_var.set('(新建 - 保存时自动生成)')
         self.name_var.set('')
-        self.tags_var.set('')
+        for cat in TAG_CATEGORY_ORDER:
+            var = self.tag_category_vars.get(cat)
+            if var:
+                var.set('')
         self.svg_file_var.set('')
         self.original_image_var.set('')
         self.desc_text.delete('1.0', tk.END)
@@ -255,9 +435,10 @@ class SvgGalleryAdmin:
             self.set_status("提示: 请输入名称")
             return
 
-        tags_raw = self.tags_var.get().strip()
-        #tags = [t.strip() for t in tags_raw.split(',') if t.strip()] if tags_raw else []
-        tags = [t.strip() for t in re.split(r'[,，]', tags_raw) if t.strip()] if tags_raw else []
+        tags_categorized = self.collect_tags_from_fields()
+        tags_flat = []
+        for cat in TAG_CATEGORY_ORDER:
+            tags_flat.extend(tags_categorized.get(cat, []))
         svg_file = self.svg_file_var.get().strip()
         if not svg_file:
             self.set_status("提示: 请选择 SVG 文件")
@@ -271,7 +452,6 @@ class SvgGalleryAdmin:
             item_id = self.current_id
         else:
             item_id = self.generate_id(name)
-            # 检查ID是否已存在
             existing_ids = {m['id'] for m in self.metadata}
             if item_id in existing_ids:
                 item_id = f"{item_id}-{datetime.now().strftime('%H%M%S')}"
@@ -279,7 +459,6 @@ class SvgGalleryAdmin:
         # 自动将 SVG 文件重命名为 {id}.svg
         new_svg_file = f"{item_id}.svg"
         if svg_file != new_svg_file:
-            # 检查目标文件名是否被其他条目占用
             for m in self.metadata:
                 if m.get('svgFile') == new_svg_file and m.get('id') != self.current_id:
                     self.set_status(f"错误: 文件名 {new_svg_file} 已被其他条目占用")
@@ -292,32 +471,29 @@ class SvgGalleryAdmin:
                 except Exception as e:
                     self.set_status(f"重命名失败: {e}")
                     return
-            # 无论源文件是否存在，都同步字段为规范的 {id}.svg
             svg_file = new_svg_file
             self.svg_file_var.set(svg_file)
 
         item_data = {
             'id': item_id,
             'name': name,
-            'tags': tags,
+            'tags': tags_categorized,
+            'tags_flat': tags_flat,
             'svgFile': svg_file,
             'originalImage': original_image,
             'description': description
         }
 
         if self.current_id:
-            # 更新已有
             for i, m in enumerate(self.metadata):
                 if m['id'] == self.current_id:
                     self.metadata[i] = item_data
                     break
         else:
-            # 新建
             self.metadata.append(item_data)
             self.current_id = item_id
 
         if self.save_metadata():
-            # 仅更新当前行而非全量刷新列表，避免大量条目时卡顿
             self.update_single_row(item_id)
             self.tree.selection_set(item_id)
             self.set_status(f"保存成功: {name} (id={item_id})")
