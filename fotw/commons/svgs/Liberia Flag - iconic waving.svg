@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="780"
+   height="525"
+   version="1.1"
+   id="svg41"
+   sodipodi:docname="Liberia Flag - iconic waving.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata45">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview43"
+     showgrid="false"
+     inkscape:zoom="1.1286948"
+     inkscape:cx="482.37636"
+     inkscape:cy="306.53815"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg41" />
+  <defs
+     id="defs15">
+    <linearGradient
+       id="BgGrad"
+       x1="0%"
+       x2="90%"
+       y1="50%"
+       y2="55%">
+      <stop
+         offset="0"
+         stop-color="#fff"
+         stop-opacity=".1"
+         id="stop2" />
+      <stop
+         offset=".3"
+         stop-color="#222"
+         stop-opacity=".3"
+         id="stop4" />
+      <stop
+         offset=".6"
+         stop-color="#fff"
+         stop-opacity=".1"
+         id="stop6" />
+      <stop
+         offset=".8"
+         stop-color="#fff"
+         stop-opacity=".1"
+         id="stop8" />
+      <stop
+         offset="1"
+         stop-color="#333"
+         stop-opacity=".5"
+         id="stop10" />
+    </linearGradient>
+    <style
+       id="style13">
+      path{fill-opacity:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-width:.6}
+    </style>
+  </defs>
+  <path
+     fill="#fff"
+     d="M15.5 499.8c246.6 38.9 509.1-153.7 743.3-126.6l-53.3-262.4c-93.7-41.7-182.2-44.3-375.1-44h-.4c-96.7.1-179-13.6-257.7-49.2L41.6 278.8z"
+     id="path17" />
+  <path
+     d="M72.3 17.6 41.6 278.8c84 18.1 171 23.3 282.3 2.1L330 66.8c-96.7.1-179-13.6-257.7-49.2z"
+     id="path19"
+     stroke="#005"
+     fill="#038" />
+  <g
+     id="g35"
+     style="fill:#dd1111;stroke:#aa0000">
+    <path
+       d="m 20.4,459.3 -4.9,40.5 C 262.1,538.7 524.6,346.1 758.8,373.2 l -4.5,-22.8 C 531.1,320.3 220.8,512.6 20.4,459.3 Z"
+       id="path21"
+       inkscape:connector-curvature="0"
+       style="fill-opacity:1;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1" />
+    <path
+       d="m 28.9,387.7 -5.1,40.7 c 234.5,46.3 491.4,-129.5 727.3,-93.3 l -4.6,-22.4 C 520.2,270.3 233.4,445.5 28.9,387.7 Z"
+       id="path23"
+       inkscape:connector-curvature="0"
+       style="fill-opacity:1;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1" />
+    <path
+       d="m 37.8,312.4 -4.3,40.4 C 259,407.7 518.3,248.9 742.3,293.2 l -4.2,-21.5 C 514.9,221.9 269.5,372.4 37.8,312.4 Z"
+       id="path25"
+       inkscape:connector-curvature="0"
+       style="fill-opacity:1;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1" />
+    <path
+       d="M 325.38598,229.7664 323.9,280.9 C 420.7,269.5 565.7,217.1 734,252.6 l -7.10093,-30.5168 c -168.9,-36.8 -228.11309,-11.1168 -401.51309,7.6832 z"
+       id="path27"
+       inkscape:connector-curvature="0"
+       style="fill-opacity:1;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       d="M 328.3,140.50371 326.4,190.6 c 106.9,-6.7 261.3,-39.5701 396.1,6.4299 l -7.77103,-35.94114 C 599.82897,123.08876 545.4,129.60371 328.3,140.50371 Z"
+       id="path31"
+       inkscape:connector-curvature="0"
+       style="fill-opacity:1;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       d="m 330.4,66.8 -1.34299,39.70185 c 121.4,-2.2 266.08598,-14.614017 380.98598,33.18598 L 705.5,110.8 C 611.8,69.1 523.3,66.5 330.4,66.8 Z"
+       id="path33"
+       inkscape:connector-curvature="0"
+       style="fill-opacity:1;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+       sodipodi:nodetypes="ccccc" />
+  </g>
+  <path
+     sodipodi:type="star"
+     style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000055;stroke-width:6.48219967;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+     id="path869"
+     sodipodi:sides="5"
+     sodipodi:cx="-38.841873"
+     sodipodi:cy="76.439018"
+     sodipodi:r1="106.91018"
+     sodipodi:r2="41.551956"
+     sodipodi:arg1="0.95190924"
+     sodipodi:arg2="1.5798306"
+     inkscape:flatsided="false"
+     inkscape:rounded="0"
+     inkscape:randomized="0"
+     d="m 23.179825,163.51999 -62.397085,-45.53071 -63.27778,44.34538 24.02052,-73.412919 -61.72887,-46.477268 77.242581,0.159032 25.127238,-73.069911 23.718022,73.511204 77.258359,1.31758 -62.58403802,45.273391 z"
+     inkscape:transform-center-x="-1.8306998"
+     inkscape:transform-center-y="-6.0768796"
+     transform="matrix(0.77635648,0.04729272,-0.04809334,0.76343239,224.21694,124.41592)" />
+  <path
+     d="m 15.5,499.8 57,-482.2 c 212,97.4 426.7,4 633.2,93.1 l 53.3,263 C 516.8,347.1 267.6,538.8 15.5,499.8 Z"
+     id="path39"
+     sodipodi:insensitive="true"
+     inkscape:connector-curvature="0"
+     style="fill:url(#BgGrad);fill-opacity:1;stroke:#eeeeee;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1" />
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xml:space="preserve"
+     width="1200" height="800">
+  
+  <rect width="1200" height="800" fill="#FFF"/>
+  <path d="M0,400h1200M600,0v800" stroke="#0057B7" stroke-width="160"/>
+  <rect width="600" height="400" fill="#0057B7"/>
+  <rect width="600" height="230" y="170" fill="#FFD700"/>
+  <path d="M0,400h1200M600,0v800" stroke="#FFF" stroke-width="120"/>
+  <path d="M0,400h1200M600,0v800" stroke="#0057B7" stroke-width="80"/>
+
+</svg>

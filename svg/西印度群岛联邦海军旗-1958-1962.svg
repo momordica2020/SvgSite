@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1354" height="722" version="1.1" viewBox="0 0 1354 722" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <path d="m0 0h1354v722h-1354z" fill="#ffffff"/>
+ <path d="m0 0h632v316h-632z" fill="#002d82"/>
+ <g fill="#ffffff">
+  <path id="a" d="m632 33c-14-8-23-11-50.5-11-47.5 0-41 21-88.5 21s-41-21-88.5-21-41 21-88.5 21-41-21-88.5-21-41 21-88.5 21-41-21-88.5-21c-28 0-37 3-50.5 11v23c13-8 22-10 50.5-10 47.5 0 41 20 88.5 20s41-20 88.5-20 41 20 88.5 20 41-20 88.5-20 41 20 88.5 20 41-20 88.5-20c28 0 37 2 50.5 10z"/>
+  <use transform="translate(0,26)" y="47" width="100%" height="100%" xlink:href="#a"/>
+  <path id="b" d="m632 283c-14 8-23 11-50.5 11-47.5 0-41-21-88.5-21s-41 21-88.5 21-41-21-88.5-21-41 21-88.5 21-41-21-88.5-21-41 21-88.5 21c-28 0-37-3-50.5-11v-24c13 9 22 11 50.5 11 47.5 0 41-21 88.5-21s41 21 88.5 21 41-21 88.5-21 41 21 88.5 21 41-21 88.5-21 41 21 88.5 21c28 0 37-2 50.5-11z"/>
+  <use transform="translate(0,-26)" y="-47" width="100%" height="100%" xlink:href="#b"/>
+ </g>
+ <circle cx="316" cy="158" r="79" fill="#ffa100" stroke-width=".9875"/>
+ <path d="m632 0v316h-632v90h632v316h90v-316h632v-90h-632v-316h-90z" fill="#cf142b" opacity=".999" stroke-width="23.5923"/>
+</svg>

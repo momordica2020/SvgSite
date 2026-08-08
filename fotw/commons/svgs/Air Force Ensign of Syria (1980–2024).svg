@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="500" viewBox="0 0 3600 3000">
+<defs>
+    <path id="a" fill="#007a3d" d="M 150,-45 L 160.103,-13.906 192.798,-13.906 L 166.347,5.312 176.45,36.406 L 150,17.188 123.55,36.406 L 133.653,5.312 107.202,-13.906 L 139.897,-13.906 z" />
+	<g id="s" transform="translate(270,450) scale(1.5)" fill="#007a3d">
+		<g id="c">
+			<path id="t" d="M 0,-65 V 0 H 40" transform="rotate(18 0,-65)"/>
+			<use xlink:href="#t" transform="scale(-1,1)"/>
+		</g>
+		<use xlink:href="#c" transform="rotate(72)"/>
+		<use xlink:href="#c" transform="rotate(144)"/>
+		<use xlink:href="#c" transform="rotate(216)"/>
+		<use xlink:href="#c" transform="rotate(288)"/>
+	</g>
+</defs>
+	<rect width="3600" height="3000" fill="#6399ab" />
+	<rect width="900" height="900" fill="#000"/>
+	<rect width="900" height="600" fill="#fff"/>
+	<rect width="900" height="300" fill="#ce1126"/>
+	<use xlink:href="#s"/>
+	<use xlink:href="#s" x="360"/>
+  <g transform="translate(1800,1500) scale(2)">
+    <circle r="300" fill="#ce1126"/>
+    <circle r="200" fill="#fff"/>
+    <circle r="100" fill="#000"/>
+    <use xlink:href="#a"/>
+    <use xlink:href="#a" transform="scale(-1,1)"/>
+  </g>
+</svg>

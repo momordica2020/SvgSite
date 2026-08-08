@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="600">
+	<rect width="610" height="310" fill="#00247d"/>
+	<path d="M 0,0 L 600,300 M 600,0 L 0,300" stroke="#fff" stroke-width="60"/>
+	<path d="M 0,0 L 600,300 M 600,0 L 0,300" stroke="#cf142b" stroke-width="40"/>
+	<path d="M 300,150 l -320,-160 h 50 l 320,160 z l 320,-160 v 25 l -320,160 z l 320,160 h -50 l -320,-160 z l -320,160 v -25 l 320,-160 z" fill="#fff"/>
+	<path d="M 300,0 V 310 M 0,150 H 610" stroke="#fff" stroke-width="100"/>
+	<path d="M 300,0 V 310 M 0,150 H 610" stroke="#cf142b" stroke-width="60"/>
+	<path d="M 600,0 H 1200 V 600 H 0 V 300 H 600 z" fill="#6399ab"/>
+	<circle cx="900" cy="300" r="230" fill="#00247d"/>
+	<circle cx="900" cy="300" r="138" fill="#fff"/>
+	<circle cx="900" cy="300" r="104.5" fill="#cf142b"/>
+	<g id="spear">
+		<path d="M 907.524,331.505 c 13.895,-8.344 5.701,-37.897 -1.069,-50.413 c -6.769,-12.516 -6.162,-26.771 -6.455,-26.771 c -0.325,0 0.314,14.255 -6.455,26.771 c -6.769,12.516 -14.964,42.069 -1.069,50.413" fill="#fff" stroke="#000"/>
+		<path d="M 900,259.505 v 71.8" stroke="#000"/>
+		<rect x="892.2" y="331.005" width="15.6" height="54.015" fill="#000"/>
+		<rect x="892.8" y="331.705" width="14.4" height="12" fill="#fff"/>
+	</g>
+	<use xlink:href="#spear" x="-38.899" y="-38.8403"/>
+	<use xlink:href="#spear" x="38.899" y="-38.8403"/>
+</svg>

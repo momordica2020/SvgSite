@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600">
+	<rect width="1200" height="600" fill="#6399ab"/>
+	<rect width="600" height="300" fill="#00247d"/>
+	<svg width="600" height="300">
+		<path d="M 0,0 L 600,300 M 600,0 L 0,300" stroke="#fff" stroke-width="60"/>
+		<path d="M 0,0 L 600,300 M 600,0 L 0,300" stroke="#cf142b" stroke-width="40"/>
+	</svg>
+	<path d="M 300,150 v -30 L 60,0 H 0 z h 60 L 600,30 V 0 z v 30 L 540,300 H 600 z h -60 L 0,270 V 300 z" fill="#fff"/>
+	<path d="M 300,0 V 300 M 0,150 H 600" stroke="#fff" stroke-width="100"/>
+	<path d="M 300,0 V 300 M 0,150 H 600" stroke="#cf142b" stroke-width="60"/>
+	<circle cx="900" cy="300" r="230" fill="#ed2939"/>
+	<circle cx="900" cy="300" r="138" fill="#fae042"/>
+	<circle cx="900" cy="300" r="46" fill="#000"/>
+</svg>

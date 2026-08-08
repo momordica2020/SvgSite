@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: CorelDRAW X6 -->
+
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xml:space="preserve" width="296.154mm" height="210mm" version="1.1" style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;fill-rule:evenodd;clip-rule:evenodd" viewBox="0 0 29615 21000" id="svg23" sodipodi:docname="Russian_military_space_troops_flag.svg" inkscape:version="0.92.3 (2405546, 2018-03-11)"><metadata id="metadata27"><rdf:RDF><cc:Work rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1920" inkscape:window-height="1001" id="namedview25" showgrid="false" inkscape:zoom="0.4205040563518231" inkscape:cx="457.8076537832769" inkscape:cy="531.7707684011402" inkscape:window-x="-9" inkscape:window-y="-9" inkscape:window-maximized="1" inkscape:current-layer="svg23" />
+ <defs id="defs4">
+  <style type="text/css" id="style2">
+   <![CDATA[
+    .str2 {stroke:#2B2A29;stroke-width:7.62}
+    .str1 {stroke:#7688A1;stroke-width:7.62}
+    .str0 {stroke:white;stroke-width:7.62}
+    .fil2 {fill:none}
+    .fil3 {fill:#0075BB}
+    .fil0 {fill:#009DE0}
+    .fil5 {fill:#182983}
+    .fil4 {fill:#E3001B}
+    .fil1 {fill:white}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer" />
+  <g id="_280218624">
+   <rect class="fil0" width="29615" height="21000" id="rect7" />
+   <path class="fil1 str0" d="M22679 12369c0,3028 -3510,5482 -7840,5482 -4330,0 -7840,-2454 -7840,-5482 0,-2885 3187,-5249 7233,-5466l607 -3536 607 3536c4046,217 7233,2581 7233,5466z" id="path9" />
+   <path class="fil2 str1" d="M7404 12533l14871 0c2,-51 3,-102 3,-153 0,-653 -178,-1278 -502,-1852l-13873 0c-324,574 -502,1199 -502,1852 0,51 1,102 3,153z" id="path11" style="stroke:white" />
+   <path class="fil3" d="M22252 12808l-14826 0c88,732 400,1420 889,2032l13047 0c489,-612 801,-1300 889,-2032z" id="path13" />
+   <polygon class="fil4" points="14839,14274 16859,17306 14839,16693 12820,17306 " id="polygon15" />
+   <path class="fil5 str2" d="M16075 12533l-329 -2006 -45 -275 -100 -612 -70 -429 -319 -1943 -62 -378 -310 -1888 -310 1888 -62 378 -319 1943 -71 430 -100 610 -45 275 -329 2006 -45 275 -334 2032 -45 275 -360 2190 1459 -2190 183 -275 377 -566 377 566 183 275 1459 2190 -360 -2190 -45 -275 -334 -2032 -45 -275zm3562 -4064c-868,588 -2192,1010 -3726,1147l109 636 5586 0c-459,-691 -1136,-1299 -1969,-1783zm-3799 721c1358,-112 2558,-447 3428,-923 -1068,-545 -2356,-898 -3756,-984l327 1907zm-5433 -919c873,476 2075,810 3435,920l327 -1908c-1403,86 -2693,441 -3763,988zm-2333 1982l5586 0 109 -633c-1539,-133 -2870,-553 -3744,-1140 -825,483 -1494,1087 -1950,1772z" id="path17" />
+   <path class="fil4" d="M12824 15116l-4272 0c904,981 2280,1736 3909,2114l363 -2114zm1455 0l-1459 2190 2020 -613 2020 613 -1459 -2190 -183 -275 -377 -566 -377 566 -183 275zm2576 0l363 2114c1629,-378 3005,-1133 3909,-2114l-4272 0z" id="path19" />
+  </g>
+ </g>
+</svg>

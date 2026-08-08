@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<svg width="610px" height="465px" xmlns="http://www.w3.org/2000/svg">
+    <polyline points="0,0 610,232.5 0,465" fill="red"/>
+    <path d="m47,232.5 v-33 h77 v-77 h66 v77 h77 v66 h-77 v77 h-66 v-77 h-77 z  " fill="#fff"/>
+</svg>

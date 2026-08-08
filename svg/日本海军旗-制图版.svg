@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+ width="750" height="500" viewBox="-325 -300 750 500">
+<title>Naval Ensign of Japan (Construction sheet)</title>
+<defs>
+	<marker id="ts" orient="auto" refX="9" refY="0" markerUnits="userSpaceOnUse" style="overflow:visible">
+		<path id="tf" d="M	19	-5	L	0	0	19	5" />
+	</marker>
+	<marker id="te" orient="auto" refX="-9" refY="0" markerUnits="userSpaceOnUse" style="overflow:visible">
+		<use xlink:href="#tf" transform="scale(-1,1)" />
+	</marker>
+	<marker id="tsc" orient="auto" refX="-1" refY="0" markerUnits="userSpaceOnUse" style="overflow:visible">
+		<use xlink:href="#tf" />
+	</marker>
+	<marker id="tec" orient="auto" refX="1" refY="0" markerUnits="userSpaceOnUse" style="overflow:visible">
+		<use xlink:href="#tf" transform="scale(-1,1)" />
+	</marker>
+	<clipPath id="ra">
+		<use xlink:href="#bg"/>
+	</clipPath>
+</defs>
+<rect fill="#FFF" x="-325" y="-300" width="100%" height="100%" />
+<g stroke="#000" stroke-width="2" fill="none">
+	<!-- 外形 -->
+	<g stroke-width="4">
+		<g clip-path="url(#ra)">
+			<g id="r">
+				<g id="q">
+					<path fill="#CCC" id="p" d="
+					M	406.1268155	40
+						-406.1268155	-40
+						-406.1268155	40
+						406.1268155	-40
+					Z
+					"/>
+					<use xlink:href="#p" transform="rotate(90)"/>
+				</g>
+				<use xlink:href="#q" transform="rotate(45)"/>
+			</g>
+			<use xlink:href="#r" transform="rotate(22.5)"/>
+		</g>
+		<circle r="75" fill="#CCC" />
+		<rect id="bg" x="-175" y="-150" width="450" height="300" />
+	</g>
+	<!-- 破線 -->
+	<path stroke-dasharray="90,3,3,3" d="
+	M	-185	0	H	285
+	M	0	-210	V	160
+	" />
+	<!-- 寸法補助線 -->
+	<path d="
+	M	-175	-150	v	-110
+	M	275	-150	v	-110
+	M	-175	-150	h	-110
+	M	-175	150	h	-110
+	M	0	-75	H	-235
+	M	0	75	H	-235
+		" />
+	<path d="M	0	0	H	335" transform="rotate(-16.875)" />
+	<path d="M	0	0	H	335" transform="rotate(-5.625)" />
+	<path d="M	0	0	H	335" transform="rotate(5.625)" />
+	<g marker-end="url(#te)" marker-start="url(#ts)">
+		<!-- 寸法線 直 両 -->
+		<path d="M	-165	-250	H	265	" />
+		<path d="M	-165	-200	H	-10	" />
+		<path d="M	-275	-140	V	140	" />
+		<path d="M	-225	-65	V	65	" />
+	</g>
+	<!-- 寸法線 曲 両 -->
+	<g marker-start="url(#tsc)" marker-end="url(#tec)">
+		<path d="M	323.4350362	31.85557061	A	325	325	0	0	0	323.4350362	-31.85557061" stroke-dasharray="0 10 44 10" />
+		<path d="M	323.4350362	-31.85557061	A	325	325	0	0	0	311.0056091	-94.34252011" stroke-dasharray="0 10 44 10" />
+	</g>
+</g>
+<g font-size="24" text-anchor="middle" font-family="Bitstream Vera Sans, sans-serif">
+	<!-- 寸法数値 -->
+	<text x="50" y="-256">18</text>
+	<text x="-87.5" y="-206">7</text>
+	<g transform="rotate(-90)">
+		<text x="0" y="-281">12</text>
+		<text x="0" y="-231">6</text>
+	</g>
+	<text x="380" y="6" transform="rotate(0)">11.25°</text>
+	<text x="380" y="6" transform="rotate(-11.25)">11.25°</text>
+</g>
+</svg>

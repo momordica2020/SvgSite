@@ -17,7 +17,7 @@ SVGS_DIR = COMMONS_DIR / "svgs"
 DATA_DIR = COMMONS_DIR / "data"
 
 API = "https://commons.wikimedia.org/w/api.php"
-USER_AGENT = "FOTW-SVG-Browser/1.0 (local educational project; contact: svg-browser@example.com)"
+USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
 HEADERS = {"User-Agent": USER_AGENT}
 
 SEARCH_QUERIES = [
@@ -226,7 +226,7 @@ def download_svg(url, dest_path, delay=60.0):
             if r.status_code in (429, 403):
                 wait = int(r.headers.get('Retry-After', 600)) or 600
                 wait = max(wait, 60)
-                print(f"    Rate limited, waiting {wait}s...", flush=True)
+                print(f"    HTTP {r.status_code}, waiting {wait}s...", flush=True)
                 time.sleep(wait)
                 continue
             r.raise_for_status()

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="800" height="600" viewBox="-750 -900 2400 1800" xmlns="http://www.w3.org/2000/svg">
+  <path style="fill:#000094;" d="M-750 -900 1650 -900 750 0 1650 900 -750 900z"/>
+  <g fill="#fff">
+    <path id="a" d="M0 209.83 L450 0 L0 -209.83 L-450 0 Z M209.83 0 L0 450 L-209.83 0 L0 -450 Z" />
+    <use transform="rotate(30)" href="#a"/>
+    <use transform="rotate(60)" href="#a"/>
+    <circle cx="0" cy="0" r="305" stroke="#000094" stroke-width="10"/>
+  </g>
+</svg>

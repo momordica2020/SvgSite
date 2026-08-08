@@ -1,0 +1,343 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1400" height="728" viewBox="-50000 -26000 100000 52000">
+	<title>Flag of Canada — construction sheet with full maple leaf geometry</title>
+	<defs>
+		<pattern patternUnits="userSpaceOnUse" width="1500" height="1500" id="g1">
+			<path stroke-width="30" stroke="#ddf" fill="none" d="m0 0h1500v1500H0z"/>
+		</pattern>
+		<pattern patternUnits="userSpaceOnUse" width="6000" height="6000" id="g2">
+			<path stroke-width="60" stroke="#ccc" fill="none" d="m0 0h6000v6000H0z"/>
+		</pattern>
+		<marker id="arrow1" orient="auto" markerWidth="2" markerHeight="4" refX="0.1" refY="2">
+			<path d="m0 0v4l2-2z" fill="#444"/>
+		</marker>
+		<marker id="arrow2" orient="auto" markerWidth="5" markerHeight="4" refX="-8" refY="2">
+			<path d="m2 2-2-2 5 2-5 2z" fill="#006"/>
+		</marker>
+	</defs>
+	<path fill="#fff" d="m-50000-26000H50000v52000H-50000z"/>
+	<path fill="#fee" d="m-48000-24000h24000v48000h-24000zm72000 0h24000v48000H24000zM-900 20300l452-8629a950 950 0 00-1113-985l-8589 1514 1165-3200a650 650 0 00-202-728l-9413-7622 2116-987a650 650 0 00344-790l-1860-5723 5418 1152a650 650 0 00734-382l1048-2470 4232 4538a650 650 0 001113-568l-2045-10520 3273 1890a650 650 0 00904-268L0-20000l3323 6522a650 650 0 00904 268l3273-1890L5455-4580a650 650 0 001113 568l4232-4538 1048 2470a650 650 0 00734 382l5418-1152-1860 5723a650 650 0 00344 790l2116 987-9413 7622a650 650 0 00-202 728l1165 3200-8589-1514a950 950 0 00-1113 985l452 8629z"/>
+	<path fill="url(#g1)" d="m-48000-24000h96000v48000h-96000z"/>
+	<path fill="url(#g2)" d="m-48000-24000h96000v48000h-96000z"/>
+	<g fill="#f88">
+		<circle cx="-900" cy="20300" r="250"/>
+		<circle cx="-10150" cy="12200" r="250"/>
+		<circle cx="-18600" cy="650" r="250"/>
+		<circle cx="-18000" cy="-6850" r="250"/>
+		<circle cx="-10800" cy="-8550" r="250"/>
+		<circle cx="-7500" cy="-15100" r="250"/>
+		<circle cx="0" cy="-20000" r="250"/>
+		<circle cx="7500" cy="-15100" r="250"/>
+		<circle cx="10800" cy="-8550" r="250"/>
+		<circle cx="18000" cy="-6850" r="250"/>
+		<circle cx="18600" cy="650" r="250"/>
+		<circle cx="10150" cy="12200" r="250"/>
+		<circle cx="900" cy="20300" r="250"/>
+		<circle r="250"/>
+	</g>
+	<g fill="#aaa">
+		<circle cx="-1396" cy="11621" r="200"/>
+		<circle cx="-9596" cy="8778" r="200"/>
+		<circle cx="-16759" cy="-926" r="200"/>
+		<circle cx="-12447" cy="-6334" r="200"/>
+		<circle cx="-6093" cy="-4456" r="200"/>
+		<circle cx="-3902" cy="-13773" r="200"/>
+		<circle cx="3902" cy="-13773" r="200"/>
+		<circle cx="6093" cy="-4456" r="200"/>
+		<circle cx="12447" cy="-6334" r="200"/>
+		<circle cx="16759" cy="-926" r="200"/>
+		<circle cx="9596" cy="8778" r="200"/>
+		<circle cx="1396" cy="11621" r="200"/>
+	</g>
+	<g fill="#bdb">
+		<circle cx="-448" cy="11671" r="200"/>
+		<circle cx="-1561" cy="10686" r="200"/>
+		<circle cx="-8985" cy="9000" r="200"/>
+		<circle cx="-9187" cy="8272" r="200"/>
+		<circle cx="-16484" cy="-337" r="200"/>
+		<circle cx="-16140" cy="-1127" r="200"/>
+		<circle cx="-12582" cy="-5698" r="200"/>
+		<circle cx="-11848" cy="-6080" r="200"/>
+		<circle cx="-6568" cy="-4012" r="200"/>
+		<circle cx="-5455" cy="-4580" r="200"/>
+		<circle cx="-4227" cy="-13210" r="200"/>
+		<circle cx="-3323" cy="-13478" r="200"/>
+		<circle cx="3323" cy="-13478" r="200"/>
+		<circle cx="4227" cy="-13210" r="200"/>
+		<circle cx="5455" cy="-4580" r="200"/>
+		<circle cx="6568" cy="-4012" r="200"/>
+		<circle cx="11848" cy="-6080" r="200"/>
+		<circle cx="12582" cy="-5698" r="200"/>
+		<circle cx="16140" cy="-1127" r="200"/>
+		<circle cx="16484" cy="-337" r="200"/>
+		<circle cx="9187" cy="8272" r="200"/>
+		<circle cx="8985" cy="9000" r="200"/>
+		<circle cx="1561" cy="10686" r="200"/>
+		<circle cx="448" cy="11671" r="200"/>
+	</g>
+	<path fill="none" stroke="#888" stroke-width="50" stroke-linejoin="round"  d="m-1396 11621 948 50a950 950 0 11-1113-985zm-8200-2843 611 222a650 650 0 11-202-728zm-7163-9704 275 589a650 650 0 11344-790zm4312-5408-135 636a650 650 0 11734-382zm6354 1878-475 444a650 650 0 111113-568zm2191-9317-325 563a650 650 0 11904-268zm7804 0-579 295a650 650 0 11904 268zm2191 9317-638-124a650 650 0 111113 568zm6354-1878-599 254a650 650 0 11734 382zm4312 5408-619-201a650 650 0 11344 790zM9596 8778l-409-506a650 650 0 11-202 728zm-8200 2843 165-935a950 950 0 11-1113 985z"/>
+	<path fill="none" stroke="#005" stroke-width="100" stroke-linecap="round" d="m-48000 24000h-500m500-6000h-500m500-6000h-500m500-6000h-500m500-6000h-500m500-6000h-500m500-6000h-500m500-6000h-500m500-6000h-500m96500 48000h500m-500-6000h500m-500-6000h500m-500-6000h500M48000 0h500m-500-6000h500m-500-6000h500m-500-6000h500m-500-6000h500m-96500 0v-500M0-24000v-500m48000 500v-500m-96000 48500v500m6000-500v500m6000-500v500m6000-500v500m6000-500v500m6000-500v500m6000-500v500m6000-500v500M0 24000v500m6000-500v500m6000-500v500m6000-500v500m6000-500v500m6000-500v500m6000-500v500m6000-500v500m6000-500v500"/>
+	<g fill="none" stroke-width="150">
+		<path stroke="#000" d="m-48000-24000h96000v48000h-96000zm24000 0v48000m48000 0v-48000"/>
+		<g stroke="#006" stroke-linecap="round">
+			<g marker-start="url(#arrow2)">
+				<path d="m-900 20300 452-8629"/>
+				<path d="m-10150 12200 8589-1514"/>
+				<path d="m-10150 12200 1165-3200"/>
+				<path d="m-18600 650 9413 7622"/>
+				<path d="m-18600 650 2116-987"/>
+				<path d="m-18000-6850 1860 5723"/>
+				<path d="m-18000-6850 5418 1152"/>
+				<path d="m-10800-8550-1048 2470"/>
+				<path d="m-10800-8550 4232 4538"/>
+				<path d="m-7500-15100 2045 10520"/>
+				<path d="m-7500-15100 3273 1890"/>
+				<path d="m0-20000-3323 6522"/>
+				<path d="m0-20000 3323 6522"/>
+				<path d="m7500-15100-3273 1890"/>
+				<path d="m7500-15100L5455-4580"/>
+				<path d="m10800-8550-4232 4538"/>
+				<path d="m10800-8550 1048 2470"/>
+				<path d="m18000-6850-5418 1152"/>
+				<path d="m18000-6850-1860 5723"/>
+				<path d="m18600 650-2116-987"/>
+				<path d="m18600 650-9413 7622"/>
+				<path d="m10150 12200-1165-3200"/>
+				<path d="m10150 12200-8589-1514"/>
+				<path d="m900 20300-452-8629"/>
+			</g>
+			<path d="m900 20300H-900"/>
+		</g>
+		<path stroke="#b00" d="m-1561 10686a950 950 0 011113 985m-8739-3399a650 650 0 01202 728m-7155-10127a650 650 0 01-344 790m4636-5743a650 650 0 01-734 382m7127 1118a650 650 0 01-1113 568m3245-9466a650 650 0 01-904 268m8454 0a650 650 0 01-904-268m3245 9466a650 650 0 01-1113-568m7127-1118a650 650 0 01-734-382m4636 5743a650 650 0 01-344-790M8985 9000a650 650 0 01202-728M448 11671a950 950 0 011113-985"/>
+	</g>
+	<g font-family="Calibri,Arial,sans-serif" fill="#000" transform="scale(50)">
+		<g font-size="24" font-style="oblique"  stroke-linecap="round">
+			<path fill="none" stroke="#444" stroke-width="3" marker-end="url(#arrow1)"  d="m0 0v-60"/>
+			<path fill="none" stroke="#444" stroke-width="3" marker-end="url(#arrow1)"  d="m0 0h60"/>
+			<text text-anchor="middle" y="-73">y</text>
+			<text text-anchor="start" x="69" y="5">x</text>
+		</g>
+		<g font-size="20" transform="translate(360,360)">
+			<g  marker-end="url(#arrow1)" fill="none" stroke="#444" stroke-width="3" >
+				<path d="m0 0h60"/>
+				<path  d="m0 0h-60"/>
+				<path  d="m0 0v60"/>
+				<path  d="m0 0v-60"/>
+			</g>
+			<text text-anchor="start"  x="70" y="5">0°</text>
+			<text text-anchor="end"    x="-70" y="5">180°</text>
+			<text text-anchor="middle" y="-70">90°</text>
+			<text text-anchor="middle" y="85">270°</text>
+		</g>
+		<g text-anchor="middle" font-size="26">
+			<text y="-485">
+				<tspan x="-480">Flag of Canada — construction sheet</tspan>
+				<tspan x="480">Drapeau du Canada — schéma de construction</tspan>
+			</text>
+		</g>
+		<g text-anchor="start" font-size="22">
+			<text>
+				<tspan x="-955" y="-455">Arc coordinates can be derived via trigonometry </tspan>
+				<tspan x="-955" y="-431">to any level of precision deemed appropriate. </tspan>
+				<tspan x="-955" y="-407">For reference, the coordinates of all 12 arcs </tspan>
+				<tspan x="-955" y="-383">have been calculated and listed in the side bars </tspan>
+				<tspan x="-955" y="-359">with values rounded arbitraily to three decimal </tspan>
+				<tspan x="-955" y="-335">places. </tspan>
+			</text>
+			<text>
+				<tspan x="485" y="-455">Les coordonnées des arcs peuvent être </tspan>
+				<tspan x="485" y="-431">calculées par trigonométrie pour </tspan>
+				<tspan x="485" y="-407">obtenir le niveau de précision nécessaire. </tspan>
+				<tspan x="485" y="-383">À titre de référence, les coordonnées </tspan>
+				<tspan x="485" y="-359">des 12 arcs ont été calculées et listées dans </tspan>
+				<tspan x="485" y="-335">les barres latérales avec des valeurs arrondies </tspan>
+				<tspan x="485" y="-311">arbitrairement au millième d'unité près. </tspan>
+			</text>
+		</g>
+		<g text-anchor="start" font-size="18">
+			<text>
+				<tspan x="-955" y="-220">arc F: </tspan>
+				<tspan x="-945" y="-197">defined radius: 13 </tspan>
+				<tspan x="-945" y="-174">central angle: 93° </tspan>
+				<tspan x="-945" y="-151">tangency points: (-84.543,264.208) &amp; (-66.460,269.565) </tspan>
+				<tspan x="-945" y="-128">centre: (-78.043,275.467) </tspan>
+				<tspan x="-955" y="-100">arc E: </tspan>
+				<tspan x="-945" y="-77">defined radius: 13 </tspan>
+				<tspan x="-945" y="-54">central angle: 148° </tspan>
+				<tspan x="-945" y="-31">tangency points: (-131.369,80.245) &amp; (-109.101,91.591) </tspan>
+				<tspan x="-945" y="-8">centre: (-121.862,89.111) </tspan>
+				<tspan x="-955" y="20">arc D: </tspan>
+				<tspan x="-945" y="43">defined radius: 13 </tspan>
+				<tspan x="-945" y="66">central angle: 79° </tspan>
+				<tspan x="-945" y="89">tangency points: (-251.637,113.967) &amp; (-236.968,121.603) </tspan>
+				<tspan x="-945" y="112">centre: (-248.934,126.683) </tspan>
+				<tspan x="-955" y="140">arc C: </tspan>
+				<tspan x="-945" y="163">defined radius: 13 </tspan>
+				<tspan x="-945" y="186">central angle: 83° </tspan>
+				<tspan x="-945" y="209">tangency points: (-329.678,6.735) &amp; (-322.808,22.534) </tspan>
+				<tspan x="-945" y="232">centre: (-335.172,18.517) </tspan>
+				<tspan x="-955" y="260">arc B: </tspan>
+				<tspan x="-945" y="283">defined radius: 13 </tspan>
+				<tspan x="-945" y="306">central angle: 71° </tspan>
+				<tspan x="-945" y="329">tangency points: (-179.705,-179.999) &amp; (-183.740,-165.450) </tspan>
+				<tspan x="-945" y="352">centre: (-191.921,-175.553) </tspan>
+				<tspan x="-955" y="380">arc A: </tspan>
+				<tspan x="-945" y="403">defined radius: 19 </tspan>
+				<tspan x="-945" y="426">central angle: 103° </tspan>
+				<tspan x="-945" y="449">tangency points: (-8.955,-233.418) &amp; (-31.229,-213.712) </tspan>
+				<tspan x="-945" y="472">centre: (-27.929,-232.423) </tspan>
+				<tspan x="485" y="-220">arc G&#8239;: </tspan>
+				<tspan x="495" y="-197">rayon défini&#8239;: 13 </tspan>
+				<tspan x="495" y="-174">angle central&#8239;: 93° </tspan>
+				<tspan x="495" y="-151">points de tangence&#8239;: (66.460,269.565) &amp; (84.543,264.208) </tspan>
+				<tspan x="495" y="-128">centre&#8239;: (78.043,275.467) </tspan>
+				<tspan x="485" y="-100">arc H&#8239;: </tspan>
+				<tspan x="495" y="-77">rayon défini&#8239;: 13 </tspan>
+				<tspan x="495" y="-54">angle central&#8239;: 148° </tspan>
+				<tspan x="495" y="-31">points de tangence&#8239;: (109.101,91.591) &amp; (131.369,80.245) </tspan>
+				<tspan x="495" y="-8">centre&#8239;: (121.862,89.111) </tspan>
+				<tspan x="485" y="20">arc I&#8239;: </tspan>
+				<tspan x="495" y="43">rayon défini&#8239;: 13 </tspan>
+				<tspan x="495" y="66">angle central&#8239;: 79° </tspan>
+				<tspan x="495" y="89">points de tangence&#8239;: (236.968,121.603) &amp; (251.637,113.967) </tspan>
+				<tspan x="495" y="112">centre&#8239;: (248.934,126.683) </tspan>
+				<tspan x="485" y="140">arc J&#8239;: </tspan>
+				<tspan x="495" y="163">rayon défini&#8239;: 13 </tspan>
+				<tspan x="495" y="186">angle central&#8239;: 83° </tspan>
+				<tspan x="495" y="209">points de tangence&#8239;: (322.808,22.534) &amp; (329.678,6.735) </tspan>
+				<tspan x="495" y="232">centre&#8239;: (335.172,18.517) </tspan>
+				<tspan x="485" y="260">arc K&#8239;: </tspan>
+				<tspan x="495" y="283">rayon défini&#8239;: 13 </tspan>
+				<tspan x="495" y="306">angle central&#8239;: 71° </tspan>
+				<tspan x="495" y="329">points de tangence&#8239;: (183.740,-165.450) &amp; (179.705,-179.999) </tspan>
+				<tspan x="495" y="352">centre&#8239;: (191.921,-175.553) </tspan>
+				<tspan x="485" y="380">arc L&#8239;: </tspan>
+				<tspan x="495" y="403">rayon défini&#8239;: 19 </tspan>
+				<tspan x="495" y="426">angle central&#8239;: 103° </tspan>
+				<tspan x="495" y="449">points de tangence&#8239;: (31.229,-213.712) &amp; (8.955,-233.418) </tspan>
+				<tspan x="495" y="472">centre&#8239;: (27.929,-232.423) </tspan>
+			</text>
+		</g>
+		<g font-size="22">
+			<g text-anchor="end">
+				<text x="-22" y="426">(-18,-406)</text>
+				<text x="-207" y="264">(-203,-244)</text>
+				<text x="-376" y="9">(-372,-13)</text>
+				<text x="-364" y="-141">(-360,137)</text>
+				<text x="-220" y="-175">(-216,171)</text>
+				<text x="-154" y="-306">(-150,302)</text>
+				<text x="-4" y="20">(0,0)</text>
+			</g>
+			<g text-anchor="middle">
+				<text x="0" y="-400" dx="0" dy="-7">(0,400)</text>
+			</g>
+			<g text-anchor="start">
+				<text x="150" y="-302" dx="4" dy="-4">(150,302)</text>
+				<text x="216" y="-171" dx="4" dy="-4">(216,171)</text>
+				<text x="360" y="-137" dx="4" dy="-4">(360,137)</text>
+				<text x="372" y="13" dx="4" dy="-4">(372,-13)</text>
+				<text x="203" y="244" dx="4" dy="20">(203,-244)</text>
+				<text x="18" y="406" dx="4" dy="20">(18,-406)</text>
+			</g>
+		</g>
+		<g font-size="22" text-anchor="middle" fill="#b00">
+			<text x="-29" y="186">arc A</text>
+			<text x="-29" y="206">r=19</text>
+			<text x="-153" y="169">arc B</text>
+			<text x="-153" y="189">r=13</text>
+			<text x="-294" y="-24">arc C</text>
+			<text x="-294" y="-4">r=13</text>
+			<text x="-248" y="-96">arc D</text>
+			<text x="-248" y="-76">r=13</text>
+			<text x="-121" y="-59">arc E</text>
+			<text x="-121" y="-39">r=13</text>
+			<text x="-78" y="-245">arc F</text>
+			<text x="-78" y="-225">r=13</text>
+			<text x="78" y="-245">arc G</text>
+			<text x="78" y="-225">r=13</text>
+			<text x="121" y="-59">arc H</text>
+			<text x="121" y="-39">r=13</text>
+			<text x="248" y="-96">arc I</text>
+			<text x="248" y="-76">r=13</text>
+			<text x="294" y="-24">arc J</text>
+			<text x="294" y="-4">r=13</text>
+			<text x="153" y="169">arc K</text>
+			<text x="153" y="189">r=13</text>
+			<text x="29" y="186">arc L</text>
+			<text x="29" y="206">r=19</text>
+		</g>
+		<g font-size="20" text-anchor="middle" fill="#006">
+			<text transform="rotate(-87,-18,406)" x="32" y="400">87°</text>
+			<text transform="rotate(-10,-203,244)" x="-153" y="265">10°</text>
+			<text transform="rotate(-70,-203,244)" x="-173" y="238">70°</text>
+			<text transform="rotate(-321,-372,13)" x="-322" y="34">321°</text>
+			<text transform="rotate(-25,-372,13)" x="-340" y="34">25°</text>
+			<text transform="rotate(-288,-360,-137)" x="-310" y="-116">288°</text>
+			<text transform="rotate(-348,-360,-137)" x="-310" y="-143">348°</text>
+			<text transform="rotate(-67,-216,-171)" x="-247" y="-150">247°</text>
+			<text transform="rotate(-313,-216,-171)" x="-166" y="-177">313°</text>
+			<text transform="rotate(-281,-150,-302)" x="-100" y="-281">281°</text>
+			<text transform="rotate(-330,-150,-302)" x="-108" y="-308">330°</text>
+			<text transform="rotate(-63,0,-400)" x="-50" y="-406">243°</text>
+			<text transform="rotate(-297,0,-400)" x="50" y="-406">297°</text>
+			<text transform="rotate(-30,150,-302)" x="112" y="-308">210°</text>
+			<text transform="rotate(-79,150,-302)" x="104" y="-281">259°</text>
+			<text transform="rotate(-47,216,-171)" x="170" y="-177">227°</text>
+			<text transform="rotate(-293,216,-171)" x="251" y="-150">293°</text>
+			<text transform="rotate(-12,360,-137)" x="314" y="-143">192°</text>
+			<text transform="rotate(-72,360,-137)" x="314" y="-116">252°</text>
+			<text transform="rotate(25,372,13)" x="344" y="34">155°</text>
+			<text transform="rotate(-39,372,13)" x="326" y="34">219°</text>
+			<text transform="rotate(70,203,244)" x="177" y="238">110°</text>
+			<text transform="rotate(10,203,244)" x="157" y="265">170°</text>
+			<text transform="rotate(87,18,406)" x="-28" y="400">93°</text>
+		</g>
+		<g font-size="18" text-anchor="middle" fill="#005">
+			<g transform="translate(0,-495)">
+				<text x="-960">-960</text>
+				<text x="0">0</text>
+				<text x="960">960</text>
+			</g>
+			<g transform="translate(0,508)">
+				<text x="-960">-960</text>
+				<text x="-840">-840</text>
+				<text x="-720">-720</text>
+				<text x="-600">-600</text>
+				<text x="-480">-480</text>
+				<text x="-360">-360</text>
+				<text x="-240">-240</text>
+				<text x="-120">-120</text>
+				<text x="0">0</text>
+				<text x="120">120</text>
+				<text x="240">240</text>
+				<text x="360">360</text>
+				<text x="480">480</text>
+				<text x="600">600</text>
+				<text x="720">720</text>
+				<text x="840">840</text>
+				<text x="960">960</text>
+			</g>
+			<g transform="translate(-975,0) rotate(-90)">
+				<text x="-480">-480</text>
+				<text x="-360">-360</text>
+				<text x="-240">-240</text>
+				<text x="-120">-120</text>
+				<text x="0">0</text>
+				<text x="120">120</text>
+				<text x="240">240</text>
+				<text x="360">360</text>
+				<text x="480">480</text>
+			</g>
+			<g transform="translate(975,0) rotate(90)">
+				<text x="-480">480</text>
+				<text x="-360">360</text>
+				<text x="-240">240</text>
+				<text x="-120">120</text>
+				<text x="0">0</text>
+				<text x="120">-120</text>
+				<text x="240">-240</text>
+				<text x="360">-360</text>
+				<text x="480">-480</text>
+			</g>
+		</g>
+	</g>
+</svg>

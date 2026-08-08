@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   sodipodi:docname="Flag of the United Wa State Party.svg"
+   version="1.1"
+   id="svg5"
+   width="1280"
+   height="800"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="0.5"
+     inkscape:cx="819"
+     inkscape:cy="314"
+     inkscape:window-width="1826"
+     inkscape:window-height="1046"
+     inkscape:window-x="83"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <rect
+       style="fill:#da251c;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect39567"
+       width="1280"
+       height="800"
+       x="0.0090786088"
+       y="0.01112771"
+       rx="0"
+       ry="0" />
+    <path
+       sodipodi:type="star"
+       style="opacity:1;fill:#da251c;fill-opacity:1;stroke:#ffd100;stroke-width:16.7115;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path39755"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="208.81821"
+       sodipodi:cy="472.01617"
+       sodipodi:r1="58.240467"
+       sodipodi:r2="149.33453"
+       sodipodi:arg1="-2.8458883"
+       sodipodi:arg2="-2.2175698"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 153.10554,455.0441 -34.27851,-102.20171 88.91642,60.94323 86.60695,-64.18287 -30.48377,103.39704 87.80456,62.53451 -107.75642,2.95965 -32.34076,102.83133 -36.11336,-101.56787 -107.792249,1.01874 z"
+       transform="matrix(0.69946571,-0.50386053,0.48211418,0.73101603,266.08796,81.529824)"
+       inkscape:transform-center-x="12.660844"
+       inkscape:transform-center-y="-28.292203" />
+    <path
+       id="rect15627-1-0"
+       style="display:inline;opacity:1;fill:#da251c;stroke:#ffd100;stroke-width:17.7389;stroke-linecap:round"
+       d="m 826.30078,513.97577 99.70425,45.57115 -101.43341,44.8173 -99.7038,-45.57117 z m -123.56068,-0.77156 99.70381,45.57116 -101.43296,44.81729 -99.70384,-45.57116 z m -123.73339,-3e-5 99.70378,45.57119 -101.43295,44.81729 -99.70384,-45.57116 z m -123.56072,-0.77155 99.7038,45.57118 -101.43295,44.81729 -99.7038,-45.57113 z" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2" />
+</svg>

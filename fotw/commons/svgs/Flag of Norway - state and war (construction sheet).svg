@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1175" height="730" viewBox="-30660 -30660 98700 61320" fill="none" font-family="Calibri,Arial,'Liberation Sans',sans-serif">
+	<title>Flag of Norway — state and war — construction sheet</title>
+	<!-- DIMENSIONS
+		SVG:
+			S_RAW:     98700.00 × 61320.00
+			S_DISPLAY:  1175.00 × 730.00
+		FLAG:
+			F_RAW:     90720.00 × 53760.00
+			F_DISPLAY:  1080.00 × 640.00
+			F_LABEL:      27.00 × 16.00
+			F_RATIO:      27.00 × 16.00
+	-->
+	<defs>
+		<clipPath id="f">
+			<path d="m-8-8h27L8-2l11 2L8 2l11 6H-8z"/>
+		</clipPath>
+		<marker id="left-arrow" viewBox="-4 -4 10 8" orient="auto" markerWidth="10" markerHeight="8">
+			<path fill="blue" d="m2 0 4 4-10-4L6-4z"/>
+		</marker>
+	</defs>
+	<path fill="#f8f8f8" d="m-30660-30660h98700v61320h-98700z"/>
+	<path fill="#fff" d="m-26880-26880h90720L26880-6720 63840 0 26880 6720l36960 20160h-90720z"/>
+	<g clip-path="url(#f)" opacity=".5" transform="scale(3360)">
+		<path fill="#fff" d="m-8-8h27V8H-8z"/>
+		<path fill="#ba0c2f" d="m-8-8h6v6h-6zM2-8h17v6H2zM2 2h17v6H2zM-8 2h6v6h-6z"/>
+		<path fill="#00205b" d="m-1-8h2V8h-2zm-7 7h27v2H-8"/>
+	</g>
+	<g stroke="#000" stroke-width="140" stroke-linejoin="round" stroke-linecap="round">
+		<g opacity=".2" stroke-width="100">
+			<path stroke-dashoffset="368" stroke-dasharray="735,315,105,315" d="m18480 0v-26880m0 26880v26880"/>
+		</g>
+		<g stroke="#569">
+			<path stroke-dasharray="1470,630,210,630" stroke-dashoffset="735" d="m0 0v-26880M0 0v26880M0 0h-26880M0 0h63840"/>
+		</g>
+		<path stroke="#444" stroke-width="250" d="m-26880-26880h90720L26880-6720 63840 0 26880 6720l36960 20160h-90720z"/>
+		<path d="m-26880-6720h20160v-20160M-26880-3360h23520v-23520M26880-6720H6720v-20160M45360-3360H3360v-23520M-26880 6720h20160v20160M-26880 3360h23520v23520M26880 6720H6720v20160M45360 3360H3360v23520"/>
+		<path stroke="#222" stroke-width="75" stroke-dasharray="210,210" d="m-26880-29400V0m0 29400V0m20160-29400v2520m3360-2520v2520m6720-2520v2520m3360-2520v2520m20160-2520V6720m36960-36120V0m0 29400v-2520m-93240-53760h47880m47880 0H18480M-29400-6720h2520m-2520 3360h2520m-2520 6720h2520m-2520 3360h2520M-6720-6720H6720V6720H-6720zm3360 3360h6720v6720h-6720zm-26040 30240h47880m47880 0H18480m8400-33600 36960-20160M26880-6720 63840 0M26880 6720 63840 0M26880 6720l36960 20160"/>
+	</g>
+	<g fill="#008" opacity=".8">
+		<circle r="200" cx="-6720" cy="-6720"/>
+		<circle r="200" cx="-3360" cy="-3360"/>
+		<circle r="200" cx="6720" cy="-6720"/>
+		<circle r="200" cx="3360" cy="-3360"/>
+		<circle r="200" cx="6720" cy="6720"/>
+		<circle r="200" cx="3360" cy="3360"/>
+		<circle r="200" cx="-6720" cy="6720"/>
+		<circle r="200" cx="-3360" cy="3360"/>
+		<circle r="200" cx="63840" cy="-26880"/>
+		<circle r="200" cx="26880" cy="-6720"/>
+		<circle r="200" cx="63840" cy="0"/>
+		<circle r="200" cx="26880" cy="6720"/>
+		<circle r="200" cx="63840" cy="26880"/>
+	</g>
+	<g stroke="#00f" stroke-width="75" marker-start="url(#left-arrow)">
+		<path d="m-26580-28455h8680"/>
+		<path d="m-7020-28455h-8680"/>
+		<path d="m-6420-28455h880"/>
+		<path d="m-3660-28455h-880"/>
+		<path d="m-3060-28455h1960"/>
+		<path d="m3060-28455H1100"/>
+		<path d="m3660-28455h880"/>
+		<path d="m6420-28455h-880"/>
+		<path d="m7020-28455h8680"/>
+		<path d="m26580-28455h-8680"/>
+		<path d="m27180-28455h16380"/>
+		<path d="m63540-28455H47160"/>
+		<path d="m-26580 28455h43260"/>
+		<path d="m63540 28455H20280"/>
+		<path d="m-28455 26580v-8680"/>
+		<path d="m-28455 7020v8680"/>
+		<path d="m-28455 6420v-880"/>
+		<path d="m-28455 3660v880"/>
+		<path d="m-28455 3060V1100"/>
+		<path d="m-28455-3060v1960"/>
+		<path d="m-28455-3660v-880"/>
+		<path d="m-28455-6420v880"/>
+		<path d="m-28455-7020v-8680"/>
+		<path d="m-28455-26580v8680"/>
+		<path d="m65415 26580V1800"/>
+		<path d="m65415-26580v24780"/>
+	</g>
+	<g fill="#000" text-anchor="middle" font-size="50" transform="scale(50)">
+		<g>
+			<text x="-336" y="-554">6</text>
+			<text x="-101" y="-554">1</text>
+			<text y="-554">2</text>
+			<text x="101" y="-554">1</text>
+			<text x="336" y="-554">6</text>
+			<text x="907" y="-554">11</text>
+			<text x="370" y="584">27</text>
+		</g>
+		<g transform="rotate(270)">
+			<text x="-336" y="-554" text-decoration="underline">6</text>
+			<text x="-101" y="-554">1</text>
+			<text y="-554">2</text>
+			<text x="101" y="-554">1</text>
+			<text x="336" y="-554" text-decoration="underline">6</text>
+			<text y="1323">16</text>
+		</g>
+		<g font-size="27">
+			<text x="-575" y="588">[<tspan font-weight="bold" fill="#080">NO</tspan>]</text>
+			<text x="1319" y="588">[<tspan font-weight="bold" fill="#080">16:27</tspan>]</text>
+		</g>
+	</g>
+</svg>

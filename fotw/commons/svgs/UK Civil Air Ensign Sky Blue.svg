@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 720 360">
+<clipPath id="c">
+<path d="M0,0V75H360V150H330zM330,0H165V180H0V150z"/>
+</clipPath>
+<rect width="720" height="360" fill="#60afe6"/>
+<rect width="360" height="180" fill="#012169"/>
+<path d="M0,0 330,150M0,150 330,0" stroke="#fff" stroke-width="30"/>
+<path d="M0,0 330,150M0,150 330,0" stroke="#c8102e" stroke-width="20" clip-path="url(#c)"/>
+<path d="M0,75H360M165,0V180" stroke="#fff" stroke-width="50"/>
+<path d="M0,75H360M165,0V180" stroke="#c8102e" stroke-width="30"/>
+<path d="M0,180H720M360,0V360" stroke="#fff" stroke-width="60"/>
+<path d="M0,180H720M360,0V360" stroke="#012169" stroke-width="36"/>
+</svg>
